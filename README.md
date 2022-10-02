@@ -8,3 +8,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/#std-setting-DATABASES:~:text
 
 For front end:
 https://youtu.be/eosXCVcgtPw
+
+Required Installations:
+pip install crispy-bootstrap5
+pip install -U django-jazzmin
