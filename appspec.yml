@@ -2,5 +2,5 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /opt
+    destination: /opt/foodrle
 file_exists_behavior: OVERWRITE
