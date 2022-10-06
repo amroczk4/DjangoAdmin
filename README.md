@@ -10,5 +10,5 @@ For front end:
 https://youtu.be/eosXCVcgtPw
 
 Required Installations:
-- pip install crispy-bootstrap5
-- pip install -U django-jazzmin
+- See mysitepsql/requirements.txt
+- Install packages using: pip install -r requirements.txt
