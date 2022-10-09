@@ -2,10 +2,10 @@ name: CI
 on:
   push:
     branches:
-    - main
+    - foodrle
   pull_request:
     branches:
-    - main
+    - foodrle
   workflow_dispatch:
 jobs:
   build:
