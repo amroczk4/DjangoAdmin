@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Colors(models.Model):
@@ -39,8 +40,9 @@ class Dishes(models.Model):
     main_ingredient_id = models.ForeignKey(MainIngredient, on_delete=models.CASCADE)
     calories = models.ForeignKey(Calories, on_delete=models.CASCADE)
 
+
 class UserStats(models.Model):
-    user_id = models.BigIntegerField()
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     curr_streak = models.BigIntegerField()
     max_streak = models.BigIntegerField()
     last_played = models.DateField()
@@ -51,3 +53,10 @@ class UserStats(models.Model):
     win_4 = models.IntegerField()
     win_5 = models.IntegerField()
     win_6 = models.IntegerField()
+
+
+class Puzzle(models.Model):
+    last_used = models.DateField()
+    dish_id = models.ForeignKey(Dishes, on_delete=models.CASCADE)
+
+
