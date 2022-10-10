@@ -1,49 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Home</title>
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body style="background-color:#121213;">
 
-    {% extends 'foodrle/header.html' %}
+{% extends 'foodrle/header.html' %}
 
-    {% block content %}
 
-    <!--Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="False" aria-label="Toggle navigation">
+{% block content %}
+
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Foodrle</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="False" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav mr-auto">
-            {% if user.is_authenticated %}
-            
-                <li class="nav-item">
-                    <a class="nav-link" href="/logout">Logout</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Welcome, {{user.username}}</a>
-                </li>
-                {% if user.is_superuser %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="/admin">Admin Panel</a>
-                    </li>
-                {% endif %}
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav ml-auto">
+            <li>
+                <button type="button" class="btn btn-link" data-toggle="modal" data-target="#ModalTutorial">
+                    <p>?</p>
+                </button>
+            </li>
 
-            {% else %}
-    
-                <li class="nav-item">
-                    <a class="nav-link" href="/login">Login</a>
-                </li>
-    
+            <li>
+                <button type="button" class="btn btn-link" data-toggle="modal" data-target="#ModalStats">
+                    <p>Stats</p>
+                </button>
+            </li>
+
+            {% if user.is_authenticated %}
+
+            {% if user.is_superuser %}
+            <li class="nav-item">
+                <a class="nav-link" href="/admin">Admin Panel</a>
+            </li>
+
             {% endif %}
 
-        </ul>
-        </div>
-    </nav>
+            <li class="nav-item">
+                <a class="nav-link" href="/logout">Logout</a>
+            </li>
 
-    {% endblock %}
-    </body>
+        </ul>
+    </div>
+</nav>
+<br>
+<h3 style="color:white; text-align:right; margin:20px;">Welcome, {{user.username}}</h3>
+
+{% else %}
+
+<li class="nav-item">
+    <a class="nav-link" href="/login">Login</a>
+</li>
+
+</ul>
+</div>
+</nav>
+<br>
+<h3 style="color:white; text-align:right; margin:20px;">Welcome Guest!</h3>
+
+{% endif %}
+
+</ul>
+</div>
+</nav>
+
+<!-- Modal for Tutorial -->
+<div class="modal fade" id="ModalTutorial" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Tutorial</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Just guess lol...
+            </div>
+            <div class="modal-footer">
+                <!--Add Socials here maybe?-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Stats -->
+<div class="modal fade" id="ModalStats" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Stats</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Bunch of stats here
+            </div>
+            <div class="modal-footer">
+                <h4>Share your stats with your friends.</h4>
+                <!--Add Socials here maybe?-->
+            </div>
+        </div>
+    </div>
+</div>
+<div data-guess-grid class="guess-grid">
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+</div>
+<div><input id="input" class="optional-styles" type="input" placeholder=="Type here..." /
+</div>
+</svg>
+</button>
+{% endblock %}
+</body>
 </html>
