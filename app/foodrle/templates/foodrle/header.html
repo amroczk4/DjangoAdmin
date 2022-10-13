@@ -12,7 +12,14 @@
 
   </head>
   <body>
-    
+    {% if messages %}
+        {% for message in messages %}
+          {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+            {{ message }}
+          {% endif %}
+        {% endfor %}
+    {% endif %}
+
     {% block content %}
 
     {% endblock %}
