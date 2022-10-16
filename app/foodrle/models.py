@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from math import sin, cos, radians, asin, sqrt
 
 
 class Colors(models.Model):
@@ -82,6 +83,9 @@ class Calories(models.Model):
     name = models.CharField(max_length=128)
     calories = models.IntegerField()
 
+    def get_difference(self, other):
+        return self.calories - other.calories
+
 
 class Dishes(models.Model):
     name = models.CharField(max_length=128)
@@ -90,6 +94,9 @@ class Dishes(models.Model):
     taste_id = models.ForeignKey(Taste, on_delete=models.CASCADE)
     main_ingredient_id = models.ForeignKey(MainIngredient, on_delete=models.CASCADE)
     calories = models.ForeignKey(Calories, on_delete=models.CASCADE)
+
+    def is_same(self, other):
+        return self.name == other.name
 
 
 class UserStats(models.Model):

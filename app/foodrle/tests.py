@@ -22,7 +22,7 @@ class CountryModelTests(TestCase):
         """
         # A = get_country(randint(1, 244))
         # B = get_country(randint(1, 244))
-        #
+
         for i in range(0, 9):
             A = country_list[i]
             for j in range(i+1, 10):
