@@ -23,9 +23,9 @@ class CountryModelTests(TestCase):
         # A = get_country(randint(1, 244))
         # B = get_country(randint(1, 244))
 
-        for i in range(0, 9):
+        for i in range(0, len(country_list)):
             A = country_list[i]
-            for j in range(i+1, 10):
+            for j in range(0, len(country_list)):
                 B = country_list[j]
                 self.assertEquals(A.distance(B), B.distance(A))
 
@@ -34,14 +34,14 @@ class CountryModelTests(TestCase):
             Checks that there is parity in direction computation
             (e.g., if a is north of b, b must be south of a)
         """
-        for i in range(0, 9):
+        for i in range(0, len(country_list)):
             a = country_list[i]
-            for j in range(i+1, 10):
+            for j in range(0, len(country_list)):
                 b = country_list[j]
                 direction = a.direction(b)
                 # try:
-                if direction == '':
-                    self.assertEqual(b.direction(a), '')
+                if direction == 'same':
+                    self.assertEqual(b.direction(a), 'same')
                 if direction == 'north':
                     self.assertEqual(b.direction(a), 'south')
                 elif direction == 'south':
