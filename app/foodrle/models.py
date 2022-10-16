@@ -40,7 +40,7 @@ class Country(models.Model):
 
     def direction(self, other):
         if self.name == other.name:
-            return ''
+            return 'same'
 
         dlat = self.latitude - other.latitude
         dlon = self.longitude - other.longitude
@@ -60,8 +60,11 @@ class Country(models.Model):
                     east_or_west = 'west'
             if (north_or_south + east_or_west) != '':
                 break
-            delta -= 5
-
+            delta -= 2
+        
+        if north_or_south + east_or_west == '':
+            print("ERROR: ", self.name, other.name)
+            assert north_or_south + east_or_west != ''
         # print(f"{other.name} is {north_or_south + east_or_west} of {self.name}")
         return north_or_south + east_or_west
 
