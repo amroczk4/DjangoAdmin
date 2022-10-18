@@ -12,7 +12,7 @@ def get_country(id):
 
 
 country_list = [get_country(randint(1, 244)) for i in range(10)]
-
+# country_list = [get_country(i) for i in range(1, 245)]
 
 class CountryModelTests(TestCase):
 

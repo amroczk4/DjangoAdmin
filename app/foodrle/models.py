@@ -1,18 +1,22 @@
 from django.db import models
 from django.contrib.auth.models import User
 from math import sin, cos, radians, asin, sqrt
+from django.core.validators import MaxValueValidator, MinValueValidator
 
-
-class Colors(models.Model):
-    name = models.CharField(max_length=128)
-    left_neighbor = models.CharField(max_length=128)
-    right_neighbor = models.CharField(max_length=128)
+# class Colors(models.Model):
+#     dish = models.ForeignKey(Dishes, on_delete=models.CASCADE)
+#     color_code = models.CharField(max_length=6)
+#     # left_neighbor = models.CharField(max_length=128)
+#     # right_neighbor = models.CharField(max_length=128)
 
 
 class Country(models.Model):
     name = models.CharField(max_length=128)
     latitude = models.FloatField()
     longitude = models.FloatField()
+
+    def __str__(self):
+        return self.name
 
     def distance(self, other, unit='mi'):
         """ Computes the distance ('mi' miles (default), or
@@ -39,6 +43,9 @@ class Country(models.Model):
             return c * 6371
 
     def direction(self, other):
+        """
+        Computes the direction of 'other' in relation to 'self'
+        """
         if self.name == other.name:
             return 'same'
 
@@ -76,30 +83,45 @@ class Taste(models.Model):
     bitter = models.BooleanField()
     umami = models.BooleanField()
 
+    def __str__(self):
+        str = ''
+        if self.sweet:
+            str = str + "Sweet "
+        if self.salty:
+            str = str + "Salty "
+        if self.sour:
+            str = str + "Sour "
+        if self.bitter:
+            str = str + "Bitter "
+        if self.umami:
+            str = str + "Umami "
+        return str
+
 
 class MainIngredient(models.Model):
     name = models.CharField(max_length=128)
-    food_group = models.CharField(max_length=128)
+    food_group = models.IntegerField(
+        validators=[MaxValueValidator(8), MinValueValidator(1)]
+    )
 
-
-class Calories(models.Model):
-    name = models.CharField(max_length=128)
-    calories = models.IntegerField()
-
-    def get_difference(self, other):
-        return self.calories - other.calories
+    def __str__(self):
+        return f"{self.name}: {self.food_group}"
 
 
 class Dishes(models.Model):
     name = models.CharField(max_length=128)
-    colors_id = models.ForeignKey(Colors, on_delete=models.CASCADE)
-    country_id = models.ForeignKey(Country, on_delete=models.CASCADE)
-    taste_id = models.ForeignKey(Taste, on_delete=models.CASCADE)
-    main_ingredient_id = models.ForeignKey(MainIngredient, on_delete=models.CASCADE)
-    calories = models.ForeignKey(Calories, on_delete=models.CASCADE)
+    # color = models.ForeignKey(Colors, on_delete=models.CASCADE)
+    country = models.ForeignKey(Country, on_delete=models.CASCADE)
+    taste = models.ForeignKey(Taste, on_delete=models.CASCADE)
+    main_ingredient = models.ForeignKey(
+        MainIngredient, on_delete=models.CASCADE)
+    calories = models.BigIntegerField(default=0)
 
-    def is_same(self, other):
+    def __eq__(self, other):
         return self.name == other.name
+
+    def __str__(self):
+        return self.name
 
 
 class UserStats(models.Model):
@@ -122,6 +144,6 @@ class UserStats(models.Model):
 
 class Puzzle(models.Model):
     last_used = models.DateField()
-    dish_id = models.ForeignKey(Dishes, on_delete=models.CASCADE)
+    dish = models.ForeignKey(Dishes, on_delete=models.CASCADE)
 
 
