@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
+    <link href='https://fonts.googleapis.com/css?family=Oleo Script' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Francois One' rel='stylesheet'>
 </head>
 <body style="background-color:#121213;">
 
@@ -13,7 +15,7 @@
 
 <!--Navbar-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Foodrle</a>
+    <a class="navbar-brand" href="/">Foodrle</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
             aria-controls="navbarText" aria-expanded="False" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -22,13 +24,13 @@
         <ul class="navbar-nav ml-auto">
             <li>
                 <button type="button" class="btn btn-link" data-toggle="modal" data-target="#ModalTutorial">
-                    <p>?</p>
+                    <p class="tutorial-btn">?</p>
                 </button>
             </li>
 
             <li>
                 <button type="button" class="btn btn-link" data-toggle="modal" data-target="#ModalStats">
-                    <p>Stats</p>
+                    <p class="stats-btn">Stats</p>
                 </button>
             </li>
 
@@ -49,7 +51,11 @@
     </div>
 </nav>
 <br>
-<h3 style="color:white; text-align:right; margin:20px;">Welcome, {{user.username}}</h3>
+<div class="alert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    Welcome, {{user.username}}
+  </div> 
+<!--<h3 style="color:white; text-align:right; margin:20px;">Welcome, {{user.username}}</h3>-->
 
 {% else %}
 
@@ -61,7 +67,7 @@
 </div>
 </nav>
 <br>
-<h3 style="color:white; text-align:right; margin:20px;">Welcome Guest!</h3>
+<!--<h3 style="color:white; text-align:right; margin:20px;">Welcome Guest!</h3>-->
 
 {% endif %}
 
@@ -111,6 +117,26 @@
         </div>
     </div>
 </div>
+
+
+<!--Pyramid?-->
+<div class="pyramid">
+    <div class="div1"> </div>
+    <div class="div2"> </div>
+    <div class="div3"> </div>
+    <div class="div4"> </div>
+    <div class="div5"> </div>
+    <div class="div6"> </div>
+    <div class="div7"> </div>
+    <div class="div8"> </div>
+    <div class="div9"> </div>
+    </div> 
+
+<br>
+<br>
+<br>
+
+
 <div data-guess-grid class="guess-grid">
     <div class="tile"></div>
     <div class="tile"></div>
@@ -143,10 +169,8 @@
     <div class="tile"></div>
     <div class="tile"></div>
 </div>
-<div><input id="input" class="optional-styles" type="input" placeholder="Type here..." /
-</div>
-</svg>
-</button>
+<br>
+<div class="input-box"><input id="input" class="optional-styles" type="input" placeholder="Type here..."></div>
 {% endblock %}
 </body>
 </html>
