@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-from math import sin, cos, radians, asin, sqrt
+from math import atan2, degrees, sin, cos, radians, asin, sqrt
 from django.core.validators import MaxValueValidator, MinValueValidator
 
 # class Colors(models.Model):
@@ -42,13 +42,55 @@ class Country(models.Model):
             # print(f"Distance from {self.name} to {other.name} is {c * 6371} km")
             return c * 6371
 
+    def bearing(self, other):
+        dest_lon = other.longitude
+        dest_lat = other.latitude
+        start_lat = self.latitude
+        start_lon = self.longitude
+
+        start_lat, start_lon, dest_lat, dest_lon = map(radians,
+                                                        [self.latitude, self.longitude, other.latitude, other.longitude])
+
+        y = sin(dest_lon - start_lon) * cos(dest_lat)
+        x = cos(start_lat) * sin(dest_lat) - sin(start_lat) * cos(dest_lat) * cos(dest_lon - start_lon)
+        brng = atan2(y, x)
+        brng = degrees(brng)
+        if brng < 0:
+            brng = brng + 360
+
+        def card_ord_dir(brng):
+            
+            if 0 <= brng <= 22 or 337 < brng <= 360:
+                return 'north'
+            elif 22 < brng <= 67:
+                return 'northeast'
+            elif 67 < brng <= 112:
+                return 'east'
+            elif 112 < brng <= 157:
+                return 'southeast'
+            elif 157< brng <= 202:
+                return 'south'
+            elif 202 < brng <= 247:
+                return 'southwest'
+            elif 247 < brng <= 292:
+                return 'west'
+            else:
+                return 'northwest'
+
+        print(f'{brng} from {self.name} to {other.name}' )           
+        return card_ord_dir(brng)
+
+
     def direction(self, other):
         """
         Computes the direction of 'other' in relation to 'self'
+        if the countries are within 'delta' degrees of latitude and
+        longitude of one another bearing is used to compute
+        direction instead
         """
         if self.name == other.name:
             return 'same'
-
+        
         dlat = self.latitude - other.latitude
         dlon = self.longitude - other.longitude
         north_or_south = ''
@@ -65,13 +107,12 @@ class Country(models.Model):
                     east_or_west = 'east'
                 else:
                     east_or_west = 'west'
-            if (north_or_south + east_or_west) != '':
+            if north_or_south + east_or_west != '':
                 break
-            delta -= 2
-        
+            delta = delta - 2
+
         if north_or_south + east_or_west == '':
-            print("ERROR: ", self.name, other.name)
-            assert north_or_south + east_or_west != ''
+            return self.bearing(other)
         # print(f"{other.name} is {north_or_south + east_or_west} of {self.name}")
         return north_or_south + east_or_west
 
@@ -106,6 +147,19 @@ class MainIngredient(models.Model):
 
     def __str__(self):
         return f"{self.name}: {self.food_group}"
+
+
+    def __eq__(self, other):
+        return self.name == other.name and self.food_group == other.food_group
+
+
+    def food_group_eq(self, other):
+        """
+            Returns True if the main ingredients share
+            the same food_group and False otherwise
+        """
+        return self.food_group == other.food_group
+
 
 
 class Dishes(models.Model):
