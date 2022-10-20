@@ -2,12 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from math import atan2, degrees, sin, cos, radians, asin, sqrt
 from django.core.validators import MaxValueValidator, MinValueValidator
-
-# class Colors(models.Model):
-#     dish = models.ForeignKey(Dishes, on_delete=models.CASCADE)
-#     color_code = models.CharField(max_length=6)
-#     # left_neighbor = models.CharField(max_length=128)
-#     # right_neighbor = models.CharField(max_length=128)
+import datetime
 
 
 class Country(models.Model):
@@ -148,10 +143,8 @@ class MainIngredient(models.Model):
     def __str__(self):
         return f"{self.name}: {self.food_group}"
 
-
-    def __eq__(self, other):
+    def same_name_same_group(self, other):
         return self.name == other.name and self.food_group == other.food_group
-
 
     def food_group_eq(self, other):
         """
@@ -161,8 +154,8 @@ class MainIngredient(models.Model):
         return self.food_group == other.food_group
 
 
-
 class Dishes(models.Model):
+    id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=128)
     # color = models.ForeignKey(Colors, on_delete=models.CASCADE)
     country = models.ForeignKey(Country, on_delete=models.CASCADE)
@@ -171,7 +164,7 @@ class Dishes(models.Model):
         MainIngredient, on_delete=models.CASCADE)
     calories = models.BigIntegerField(default=0)
 
-    def __eq__(self, other):
+    def dish_name_eq(self, other):
         return self.name == other.name
 
     def __str__(self):
@@ -179,7 +172,7 @@ class Dishes(models.Model):
 
 
 class UserStats(models.Model):
-    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     curr_streak = models.BigIntegerField(default=0)
     max_streak = models.BigIntegerField(default=0)
     last_played = models.DateField()
@@ -195,9 +188,26 @@ class UserStats(models.Model):
         wins = self.win_1 + self.win_2 + self.win_3 + self.win_4 + self.win_5 + self.win_6
         return wins / self.games_played * 100
 
+    def __str__(self):
+        return str(self.user)
+
 
 class Puzzle(models.Model):
     last_used = models.DateField()
     dish = models.ForeignKey(Dishes, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return str(dish) + " last used: " + str(last_used)
+
+    def was_used_recently(self):
+        now = datetime.datetime.now().date()
+        return now - datetime.timedelta(days=7) <= self.last_used <= now
+
+    def update_last_used(self):
+        today = datetime.datetime.now.date()
+        self.objects.get(dish=self.dish).update(last_used=today)
+
+
+
 
 
