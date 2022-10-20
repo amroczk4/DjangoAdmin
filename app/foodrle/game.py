@@ -133,7 +133,7 @@ def start_game():
             country_hint(answer.country, guess_dish.country)
             calorie_hint(answer, guess_dish)
             main_ingredient_hint(answer, guess_dish)
-            taste_hint(answer.taste, guess_dish.taste)  # TODO
+            taste_hint(answer.taste, guess_dish.taste)
             if guess_cnt >= 1:
                 reveal_main_ingredient(answer.main_ingredient)
             # if guess_cnt >= 4:
