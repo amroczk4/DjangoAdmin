@@ -1,6 +1,5 @@
 from random import randint
 from .models import Country, Dishes, Taste, MainIngredient
-# from django.core.exceptions import ObjectDoesNotExist
 from math import atan2, degrees, sin, cos, radians, asin, sqrt
 import os
 
@@ -138,21 +137,27 @@ def bearing(guessed_country: Country, answer: Country):
     x = cos(start_lat) * sin(dest_lat) - sin(start_lat) * cos(dest_lat) * cos(dest_lon - start_lon)
 
 
-
 def country_hint(answer_country: Country, guessed_country: Country):
     cntry_hint = str(distance(guessed_country, answer_country)) + ' miles'
     cntry_hint = cntry_hint + ' ' + direction(guessed_country, answer_country)
     print('\tFrom a country', cntry_hint, f'of {guessed_country}')
 
 
-def main_ingredient_hint(answer: Dishes, guess_dish: Dishes):
-    guess_main_ingr = guess_dish.main_ingredient
-    if answer.main_ingredient.same_name_same_group(guess_main_ingr):
-        print(f'\tCORRECT main ingredient: {answer.main_ingredient}')
-    elif guess_main_ingr.food_group_eq(answer.main_ingredient):
-        print(f'\tWRONG main ingredient: {guess_main_ingr.name}: CORRECT food group')
+def same_name(ingredient_a, ingredient_b):
+    return ingredient_a.name == ingredient_b.name
+
+
+def food_group_eq(ingredient_a, ingredient_b):
+    return ingredient_a.food_group == ingredient_b.food_group
+
+
+def main_ingredient_hint(answer: MainIngredient, guess_ingr: MainIngredient):
+    if same_name(answer, guess_ingr):
+        print(f'\tCORRECT main ingredient: {answer.name}')
+    elif food_group_eq(guess_ingr, answer):
+        print(f'\tWRONG main ingredient: {guess_ingr.name}; CORRECT food group')
     else:
-        print(f'\tWRONG main ingredient: {guess_main_ingr.name}: WRONG food group')
+        print(f'\tWRONG main ingredient: {guess_ingr.name}; WRONG food group')
 
 
 def reveal_main_ingredient(answer: MainIngredient):
@@ -217,7 +222,7 @@ def start_game():
             print("[Hints] The correct answer is: ")
             country_hint(answer.country, guess_dish.country)
             calorie_hint(answer, guess_dish)
-            main_ingredient_hint(answer, guess_dish)
+            main_ingredient_hint(answer.main_ingredient, guess_dish.main_ingredient)
             taste_hint(answer.taste, guess_dish.taste)
             if guess_cnt >= 1:
                 reveal_main_ingredient(answer.main_ingredient)

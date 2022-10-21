@@ -45,16 +45,6 @@ class MainIngredient(models.Model):
     def __str__(self):
         return f"{self.name}: {self.food_group}"
 
-    def same_name_same_group(self, other):
-        return self.name == other.name and self.food_group == other.food_group
-
-    def food_group_eq(self, other):
-        """
-            Returns True if the main ingredients share
-            the same food_group and False otherwise
-        """
-        return self.food_group == other.food_group
-
 
 class Dishes(models.Model):
     id = models.AutoField(primary_key=True)
