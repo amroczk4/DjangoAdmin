@@ -1,4 +1,4 @@
-# DjangoAdmin
+# Foodrle
  Basic Admin Page Using Django
 
 ## Useful Links:
