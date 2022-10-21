@@ -1,5 +1,5 @@
-# DjangoAdmin
- Basic Admin Page Using Django
+# Foodrle
+ Food-based Wordle-like web game using Django
 
 ## Useful Links:
 - https://docs.djangoproject.com/en/4.1/intro/tutorial01/
