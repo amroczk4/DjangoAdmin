@@ -3,8 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
+
+    <!--Fonts-->
     <link href='https://fonts.googleapis.com/css?family=Oleo Script' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Francois One' rel='stylesheet'>
+
+
+    <!--Script For AutoComplete-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js"></script>
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css"/>
+
 </head>
 <body style="background-color:#121213;">
 
@@ -160,7 +169,7 @@
                 <hr />
             </div>
             <div class="modal-footer">
-                <h8>Made By:</h8>
+                <h6>Made By:</h6>
                 <ul>
                     <li>Talal Ghafoor</li>
                     <li>Matt Congreve</li>
@@ -212,7 +221,22 @@
     <div class="tile"></div> -->
 </div>
 <br>
-<div class="input-box"><input id="input" class="optional-styles" type="input" placeholder="Type here..."></div>
+<div class="input-box">
+<input type="text" id="tags" class="optional-styles" placeholder="Type here...">
+<script>
+    $( function() {
+        var availableTags = [
+            {% for dish in dishes %}
+                "{{dish.name}}",
+            {% endfor %}
+        ];
+        sortedTags = availableTags.sort()
+        $( "#tags" ).autocomplete({
+        source: sortedTags
+        });
+    } );
+    </script>
+</div>
 {% endblock %}
 </body>
 </html>

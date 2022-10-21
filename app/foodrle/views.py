@@ -4,11 +4,18 @@ from .forms import NewUserForm
 from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
-
+from .models import Dishes
 
 def homepage(request):
-    return render(request=request, template_name='foodrle/home.html')
+    dishes = Dishes.objects.all()
+    return render(request=request, template_name='foodrle/home.html', context={"dishes":dishes})
 
+
+## Testing page
+## Test all functions here 
+def test(request):
+    dishes = Dishes.objects.all()
+    return render(request=request, template_name='foodrle/test.html', context={"dishes":dishes})
 
 def register_request(request):
     if request.method == "POST":

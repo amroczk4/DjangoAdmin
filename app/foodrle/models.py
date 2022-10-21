@@ -59,7 +59,7 @@ class Dishes(models.Model):
         return self.name == other.name
 
     def __str__(self):
-        return self.name
+        return f"{self.name}"
 
 
 class UserStats(models.Model):
