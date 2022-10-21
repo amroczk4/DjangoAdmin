@@ -1,10 +1,11 @@
 from random import randint
 from .models import Country, Dishes, Taste, MainIngredient
-from django.core.exceptions import ObjectDoesNotExist
+# from django.core.exceptions import ObjectDoesNotExist
+from math import atan2, degrees, sin, cos, radians, asin, sqrt
 import os
 
 
-TOTAL_PUZZLES = 32
+TOTAL_PUZZLES = 33
 user_stats = {
     1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 'games_played': 0
 }
@@ -12,6 +13,15 @@ user_stats = {
 
 def cls():
     os.system('cls' if os.name=='nt' else 'clear')
+
+
+def main():
+    cls()
+    start_game()
+
+
+if __name__ == '__main__':
+    main()
 
 
 def update_user_stats(guess_cnt: int, isWin: bool):
@@ -54,9 +64,84 @@ def play_again() -> bool:
     return answer == 'y'
 
 
+def distance(guessed_country: Country, answer: Country, unit='mi'):
+    """ Computes the distance ('mi' miles (default), or
+        'km' kilometers) between one country and another
+    """
+    if guessed_country.name == answer.name:
+        return 0
+
+    start_lat, start_lon, dest_lat, dest_lon = map(radians,
+                                                    [guessed_country.latitude, guessed_country.longitude, answer.latitude, answer.longitude])
+    # Haversine formula
+    dlon = start_lon - dest_lon
+    dlat = start_lat - dest_lat
+    a = sin(dlat / 2) ** 2 + cos(start_lat) * cos(dest_lat) * sin(dlon / 2) ** 2
+
+    c = 2 * asin(sqrt(a))
+
+    # Radius of earth in kilometers is 6371. Use 3956 for miles
+    if unit == 'mi':
+        # print(f"Distance from {self.name} to {other.name} is {c * 3956} mi")
+        return c * 3956
+    else:
+        # print(f"Distance from {self.name} to {other.name} is {c * 6371} km")
+        return c * 6371
+
+
+def direction(guessed_country: Country, answer: Country):
+        """
+        Computes the direction of 'other' in relation to 'self'
+        if the countries are within 'delta' degrees of latitude and
+        longitude of one another bearing is used to compute
+        direction instead
+        """
+        if guessed_country.name == answer.name:
+            return 'same'
+        
+        dlat = guessed_country.latitude - answer.latitude
+        dlon = guessed_country.longitude - answer.longitude
+        north_or_south = ''
+        east_or_west = ''
+        delta = 20
+        while delta > 0:
+            if abs(dlat) > delta:
+                if dlat < 0:
+                    north_or_south = 'north'
+                else:
+                    north_or_south = 'south'
+            if abs(dlon) > delta:
+                if dlon < 0:
+                    east_or_west = 'east'
+                else:
+                    east_or_west = 'west'
+            if north_or_south + east_or_west != '':
+                break
+            delta = delta - 2
+
+        if north_or_south + east_or_west == '':
+            return guessed_country.bearing(answer)
+        # print(f"{other.name} is {north_or_south + east_or_west} of {self.name}")
+        return north_or_south + east_or_west
+
+
+def bearing(guessed_country: Country, answer: Country):
+    dest_lon = answer.longitude
+    dest_lat = answer.latitude
+    start_lat = guessed_country.latitude
+    start_lon = guessed_country.longitude
+
+    start_lat, start_lon, dest_lat, dest_lon = map(radians,
+                                                    [guessed_country.latitude, guessed_country.longitude, answer.latitude, answer.longitude])
+
+    y = sin(dest_lon - start_lon) * cos(dest_lat)
+    x = cos(start_lat) * sin(dest_lat) - sin(start_lat) * cos(dest_lat) * cos(dest_lon - start_lon)
+
+
+
 def country_hint(answer_country: Country, guessed_country: Country):
-    cntry_hint = str(guessed_country.distance(answer_country)) + ' miles'
-    cntry_hint = cntry_hint + ' ' + guessed_country.direction(answer_country)
+    cntry_hint = str(distance(guessed_country, answer_country)) + ' miles'
+    cntry_hint = cntry_hint + ' ' + direction(guessed_country, answer_country)
     print('\tFrom a country', cntry_hint, f'of {guessed_country}')
 
 
