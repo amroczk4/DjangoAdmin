@@ -21,8 +21,8 @@
   justify-content: center;
   align-content: center;
   flex-grow: 1;
-  grid-template-columns: repeat(5, 4em);
-  grid-template-rows: repeat(6, 4em);
+  grid-template-columns: repeat(6, 12em); /*change back to 5 after demo 2 */
+  grid-template-rows: repeat(1, 12em); /*Change back to 6 after demo 2 */
   gap: .5em 2em;
   margin-bottom: 1em;
 }
@@ -38,6 +38,26 @@
   justify-content: center;
   align-items: center;
   user-select: none;
+}
+
+#hint1 {
+  background-color:red;
+}
+
+#hint2 {
+  background-color:red;
+}
+
+#hint3 {
+  background-color:red;
+}
+
+#hint4 {
+  background-color:red;
+}
+
+#hint5 {
+  background-color:green;
 }
 
 .input-box 
@@ -59,7 +79,7 @@
   
 }
 
-#input::placeholder {
+#tags::placeholder {
   color: blue;
   opacity: 0.5;
 }
