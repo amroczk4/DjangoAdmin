@@ -59,7 +59,7 @@ class Dishes(models.Model):
         return self.name == other.name
 
     def __str__(self):
-        return self.name
+        return f"{self.name}"
 
 
 class UserStats(models.Model):
@@ -95,7 +95,7 @@ class Puzzle(models.Model):
         return now - datetime.timedelta(days=7) <= self.last_used <= now
 
     def update_last_used(self):
-        today = datetime.datetime.now.date()
-        self.objects.get(dish=self.dish).update(last_used=today)
+        today = datetime.datetime.now().date()
+        Puzzle.objects.filter(id=self.id).update(last_used=today)
 
 

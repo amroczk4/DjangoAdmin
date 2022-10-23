@@ -1,8 +1,8 @@
 from random import randint
-from .models import Country, Dishes, Taste, MainIngredient
+from .models import Country, Dishes, Taste, MainIngredient, Puzzle
 from math import atan2, degrees, sin, cos, radians, asin, sqrt
 import os
-
+import datetime
 
 TOTAL_PUZZLES = 33
 user_stats = {
@@ -50,8 +50,14 @@ def print_welcome():
     print("\tYour game starts now")
 
 
-def get_puzzle(id: int) -> Dishes:
-    return Dishes.objects.get(pk=id)
+def get_puzzle() -> Dishes:
+    """
+    Selects a random puzzle from the database,
+    updates last used date and returns dish
+    """
+    puzzle = Puzzle.objects.get(pk=randint(1, TOTAL_PUZZLES))
+    puzzle.update_last_used()
+    return puzzle.dish
 
 
 def get_dish_by_name(dish_name) -> Dishes:
@@ -201,13 +207,12 @@ def taste_hint(answer: Taste, guess_dish: Taste):
 def start_game():
     print_welcome()
     # answer = get_dish_by_name('fries')
-    answer = get_puzzle(randint(1, TOTAL_PUZZLES))
+    answer = get_puzzle()
     guess_cnt = 0
     win = False
     while guess_cnt < 6:
         guess_str = input(f'Enter Guess {guess_cnt + 1}: ').lower()
 
-        # TODO: some manner of exception handling
         try:
             guess_dish = get_dish_by_name(guess_str)
         except Dishes.DoesNotExist:
@@ -236,7 +241,7 @@ def start_game():
             if play_again():
                 guess_cnt = 0
                 win = False
-                answer = get_puzzle(randint(1, TOTAL_PUZZLES))
+                answer = get_puzzle()
             else:
                 break
 
