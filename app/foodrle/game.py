@@ -125,7 +125,7 @@ def direction(guessed_country: Country, answer: Country):
             delta = delta - 2
 
         if north_or_south + east_or_west == '':
-            return guessed_country.bearing(answer)
+            return bearing(guessed_country, answer)
         # print(f"{other.name} is {north_or_south + east_or_west} of {self.name}")
         return north_or_south + east_or_west
 
@@ -136,11 +136,37 @@ def bearing(guessed_country: Country, answer: Country):
     start_lat = guessed_country.latitude
     start_lon = guessed_country.longitude
 
-    start_lat, start_lon, dest_lat, dest_lon = map(radians,
-                                                    [guessed_country.latitude, guessed_country.longitude, answer.latitude, answer.longitude])
+    #
+    def card_ord_dir(brng):
+        if 0 <= brng <= 22 or 337 < brng <= 360:
+            return 'north'
+        elif 22 < brng <= 67:
+            return 'northeast'
+        elif 67 < brng <= 112:
+            return 'east'
+        elif 112 < brng <= 157:
+            return 'southeast'
+        elif 157< brng <= 202:
+            return 'south'
+        elif 202 < brng <= 247:
+            return 'southwest'
+        elif 247 < brng <= 292:
+            return 'west'
+        else:
+            return 'northwest' 
+    #
+
+    start_lat, start_lon, dest_lat, dest_lon = map(radians, [start_lat, start_lon, dest_lat, dest_lon])
 
     y = sin(dest_lon - start_lon) * cos(dest_lat)
     x = cos(start_lat) * sin(dest_lat) - sin(start_lat) * cos(dest_lat) * cos(dest_lon - start_lon)
+    brng = atan2(y, x);
+    brng = degrees(brng);
+    if brng < 0:
+        brng = brng + 360
+
+    # print(f'bearing is {brng}')
+    return card_ord_dir(brng)
 
 
 def country_hint(answer_country: Country, guessed_country: Country):
@@ -207,7 +233,8 @@ def taste_hint(answer: Taste, guess_dish: Taste):
 def start_game():
     print_welcome()
     # answer = get_dish_by_name('fries')
-    answer = get_puzzle()
+    # answer = get_puzzle()
+    answer = Puzzle.objects.get(pk=17).dish
     guess_cnt = 0
     win = False
     while guess_cnt < 6:
