@@ -1,12 +1,12 @@
 from django.db import models
 from django.contrib.auth.models import User
 from math import sin, cos, radians, asin, sqrt
+from django.core.validators import MaxValueValidator, MinValueValidator
 
-
-class Colors(models.Model):
-    name = models.CharField(max_length=128)
-    left_neighbor = models.CharField(max_length=128)
-    right_neighbor = models.CharField(max_length=128)
+# class Colors(models.Model):
+#     name = models.CharField(max_length=128)
+#     left_neighbor = models.CharField(max_length=128)
+#     right_neighbor = models.CharField(max_length=128)
 
 
 class Country(models.Model):
@@ -79,31 +79,33 @@ class Taste(models.Model):
 
 class MainIngredient(models.Model):
     name = models.CharField(max_length=128)
-    food_group = models.CharField(max_length=128)
+    food_group = models.IntegerField(
+        validators=[MaxValueValidator(8), MinValueValidator(1)]
+    )
 
 
-class Calories(models.Model):
-    name = models.CharField(max_length=128)
-    calories = models.IntegerField()
+# class Calories(models.Model):
+#     name = models.CharField(max_length=128)
+#     calories = models.IntegerField()
 
-    def get_difference(self, other):
-        return self.calories - other.calories
+#     def get_difference(self, other):
+#         return self.calories - other.calories
 
 
 class Dishes(models.Model):
+    id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=128)
-    colors_id = models.ForeignKey(Colors, on_delete=models.CASCADE)
-    country_id = models.ForeignKey(Country, on_delete=models.CASCADE)
-    taste_id = models.ForeignKey(Taste, on_delete=models.CASCADE)
-    main_ingredient_id = models.ForeignKey(MainIngredient, on_delete=models.CASCADE)
-    calories = models.ForeignKey(Calories, on_delete=models.CASCADE)
-
+    # colors_id = models.ForeignKey(Colors, on_delete=models.CASCADE)
+    country = models.ForeignKey(Country, on_delete=models.CASCADE)
+    taste = models.ForeignKey(Taste, on_delete=models.CASCADE)
+    main_ingredient = models.ForeignKey(MainIngredient, on_delete=models.CASCADE)
+    calories = models.IntegerField(default=0)
     def is_same(self, other):
         return self.name == other.name
 
 
 class UserStats(models.Model):
-    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     curr_streak = models.BigIntegerField(default=0)
     max_streak = models.BigIntegerField(default=0)
     last_played = models.DateField()
@@ -122,6 +124,6 @@ class UserStats(models.Model):
 
 class Puzzle(models.Model):
     last_used = models.DateField()
-    dish_id = models.ForeignKey(Dishes, on_delete=models.CASCADE)
+    dish = models.ForeignKey(Dishes, on_delete=models.CASCADE)
 
 
