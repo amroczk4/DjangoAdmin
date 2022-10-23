@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-from math import atan2, degrees, sin, cos, radians, asin, sqrt
 from django.core.validators import MaxValueValidator, MinValueValidator
 import datetime
 
