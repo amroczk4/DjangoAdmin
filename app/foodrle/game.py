@@ -4,7 +4,7 @@ from math import atan2, degrees, sin, cos, radians, asin, sqrt
 import os
 import datetime
 
-TOTAL_PUZZLES = 33
+TOTAL_PUZZLES = Puzzle.objects.count()
 user_stats = {
     1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 'games_played': 0
 }
@@ -60,7 +60,7 @@ def get_puzzle() -> Dishes:
     return puzzle.dish
 
 
-def get_dish_by_name(dish_name) -> Dishes:
+def get_dish_by_name(dish_name: str) -> Dishes:
     return Dishes.objects.get(name=dish_name)
 
 
@@ -69,7 +69,7 @@ def play_again() -> bool:
     return answer == 'y'
 
 
-def distance(guessed_country: Country, answer: Country, unit='mi'):
+def distance(guessed_country: Country, answer: Country, unit='mi') -> float:
     """ Computes the distance ('mi' miles (default), or
         'km' kilometers) between one country and another
     """
@@ -94,7 +94,7 @@ def distance(guessed_country: Country, answer: Country, unit='mi'):
         return c * 6371
 
 
-def direction(guessed_country: Country, answer: Country):
+def direction(guessed_country: Country, answer: Country) -> str:
         """
         Computes the direction of 'other' in relation to 'self'
         if the countries are within 'delta' degrees of latitude and
@@ -130,14 +130,14 @@ def direction(guessed_country: Country, answer: Country):
         return north_or_south + east_or_west
 
 
-def bearing(guessed_country: Country, answer: Country):
+def bearing(guessed_country: Country, answer: Country) -> str:
     dest_lon = answer.longitude
     dest_lat = answer.latitude
     start_lat = guessed_country.latitude
     start_lon = guessed_country.longitude
 
     #
-    def card_ord_dir(brng):
+    def card_ord_dir(brng: float) -> str:
         if 0 <= brng <= 22 or 337 < brng <= 360:
             return 'north'
         elif 22 < brng <= 67:
@@ -160,8 +160,8 @@ def bearing(guessed_country: Country, answer: Country):
 
     y = sin(dest_lon - start_lon) * cos(dest_lat)
     x = cos(start_lat) * sin(dest_lat) - sin(start_lat) * cos(dest_lat) * cos(dest_lon - start_lon)
-    brng = atan2(y, x);
-    brng = degrees(brng);
+    brng = atan2(y, x)
+    brng = degrees(brng)
     if brng < 0:
         brng = brng + 360
 
@@ -175,11 +175,11 @@ def country_hint(answer_country: Country, guessed_country: Country):
     print('\tFrom a country', cntry_hint, f'of {guessed_country}')
 
 
-def same_name(ingredient_a, ingredient_b):
+def same_name(ingredient_a, ingredient_b) -> bool:
     return ingredient_a.name == ingredient_b.name
 
 
-def food_group_eq(ingredient_a, ingredient_b):
+def food_group_eq(ingredient_a, ingredient_b) -> bool:
     return ingredient_a.food_group == ingredient_b.food_group
 
 
@@ -204,7 +204,7 @@ def calorie_hint(answer: Dishes, guess_dish: Dishes):
         print(f'\t{abs(diff)} calories less than {guess_dish.name}')
 
 
-def taste_hint(answer: Taste, guess_dish: Taste):
+def taste_hint(answer: Taste, guess_dish: Taste) -> str:
     taste_res = ''
 
     if guess_dish.sweet:
@@ -233,8 +233,8 @@ def taste_hint(answer: Taste, guess_dish: Taste):
 def start_game():
     print_welcome()
     # answer = get_dish_by_name('fries')
-    # answer = get_puzzle()
-    answer = Puzzle.objects.get(pk=17).dish
+    answer = get_puzzle()
+    
     guess_cnt = 0
     win = False
     while guess_cnt < 6:
