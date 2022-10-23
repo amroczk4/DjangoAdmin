@@ -10,6 +10,17 @@
   text-align: center;
 }
 
+.navbar-p
+{
+  font-family: "Oleo Script";
+  font-size: 20px;
+  margin: 0;
+  text-align: center;
+  padding-left: 7px;
+  /* font-style:italic; */
+}
+
+
 .nav-link 
 {
   font-family: 'Francois One';font-size: 22px;
