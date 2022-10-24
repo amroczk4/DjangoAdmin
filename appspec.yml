@@ -5,4 +5,6 @@ files:
     destination: /opt/foodrle
 file_exists_behavior: OVERWRITE
 hooks:
-  AfterInstall: initscripts/after.sh
+  AfterInstall:
+  - location: initscripts/after.sh
+    timeout: 500
