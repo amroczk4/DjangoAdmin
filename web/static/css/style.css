@@ -12,12 +12,12 @@
 
 .navbar-p
 {
-  font-family: "Oleo Script";
-  font-size: 20px;
+  font-family: "Noticia Text", serif;
+  font-size: 18px;
   margin: 0;
   text-align: center;
   padding-left: 7px;
-  /* font-style:italic; */
+  font-style:italic;
 }
 
 
@@ -94,6 +94,8 @@
   color: blue;
   opacity: 0.5;
 }
+
+
 
 /* Notification Banner*/
 .alert {
