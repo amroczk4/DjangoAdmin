@@ -1,0 +1,6735 @@
+- model: foodrle.country
+  pk: 1
+  fields:
+    name: Andorra
+    latitude: 42.546245
+    longitude: 1.601554
+- model: foodrle.country
+  pk: 2
+  fields:
+    name: United Arab Emirates
+    latitude: 23.424076
+    longitude: 53.847818
+- model: foodrle.country
+  pk: 3
+  fields:
+    name: Afghanistan
+    latitude: 33.93911
+    longitude: 67.709953
+- model: foodrle.country
+  pk: 4
+  fields:
+    name: Antigua and Barbuda
+    latitude: 17.060816
+    longitude: -61.796428
+- model: foodrle.country
+  pk: 5
+  fields:
+    name: Anguilla
+    latitude: 18.220554
+    longitude: -63.068615
+- model: foodrle.country
+  pk: 6
+  fields:
+    name: Albania
+    latitude: 41.153332
+    longitude: 20.168331
+- model: foodrle.country
+  pk: 7
+  fields:
+    name: Armenia
+    latitude: 40.069099
+    longitude: 45.038189
+- model: foodrle.country
+  pk: 8
+  fields:
+    name: Netherlands Antilles
+    latitude: 12.226079
+    longitude: -69.060087
+- model: foodrle.country
+  pk: 9
+  fields:
+    name: Angola
+    latitude: -11.202692
+    longitude: 17.873887
+- model: foodrle.country
+  pk: 10
+  fields:
+    name: Antarctica
+    latitude: -75.250973
+    longitude: -0.071389
+- model: foodrle.country
+  pk: 11
+  fields:
+    name: Argentina
+    latitude: -38.416097
+    longitude: -63.616672
+- model: foodrle.country
+  pk: 12
+  fields:
+    name: American Samoa
+    latitude: -14.270972
+    longitude: -170.132217
+- model: foodrle.country
+  pk: 13
+  fields:
+    name: Austria
+    latitude: 47.516231
+    longitude: 14.550072
+- model: foodrle.country
+  pk: 14
+  fields:
+    name: Australia
+    latitude: -25.274398
+    longitude: 133.775136
+- model: foodrle.country
+  pk: 15
+  fields:
+    name: Aruba
+    latitude: 12.52111
+    longitude: -69.968338
+- model: foodrle.country
+  pk: 16
+  fields:
+    name: Azerbaijan
+    latitude: 40.143105
+    longitude: 47.576927
+- model: foodrle.country
+  pk: 17
+  fields:
+    name: Bosnia and Herzegovina
+    latitude: 43.915886
+    longitude: 17.679076
+- model: foodrle.country
+  pk: 18
+  fields:
+    name: Barbados
+    latitude: 13.193887
+    longitude: -59.543198
+- model: foodrle.country
+  pk: 19
+  fields:
+    name: Bangladesh
+    latitude: 23.684994
+    longitude: 90.356331
+- model: foodrle.country
+  pk: 20
+  fields:
+    name: Belgium
+    latitude: 50.503887
+    longitude: 4.469936
+- model: foodrle.country
+  pk: 21
+  fields:
+    name: Burkina Faso
+    latitude: 12.238333
+    longitude: -1.561593
+- model: foodrle.country
+  pk: 22
+  fields:
+    name: Bulgaria
+    latitude: 42.733883
+    longitude: 25.48583
+- model: foodrle.country
+  pk: 23
+  fields:
+    name: Bahrain
+    latitude: 25.930414
+    longitude: 50.637772
+- model: foodrle.country
+  pk: 24
+  fields:
+    name: Burundi
+    latitude: -3.373056
+    longitude: 29.918886
+- model: foodrle.country
+  pk: 25
+  fields:
+    name: Benin
+    latitude: 9.30769
+    longitude: 2.315834
+- model: foodrle.country
+  pk: 26
+  fields:
+    name: Bermuda
+    latitude: 32.321384
+    longitude: -64.75737
+- model: foodrle.country
+  pk: 27
+  fields:
+    name: Brunei
+    latitude: 4.535277
+    longitude: 114.727669
+- model: foodrle.country
+  pk: 28
+  fields:
+    name: Bolivia
+    latitude: -16.290154
+    longitude: -63.588653
+- model: foodrle.country
+  pk: 29
+  fields:
+    name: Brazil
+    latitude: -14.235004
+    longitude: -51.92528
+- model: foodrle.country
+  pk: 30
+  fields:
+    name: Bahamas
+    latitude: 25.03428
+    longitude: -77.39628
+- model: foodrle.country
+  pk: 31
+  fields:
+    name: Bhutan
+    latitude: 27.514162
+    longitude: 90.433601
+- model: foodrle.country
+  pk: 32
+  fields:
+    name: Bouvet Island
+    latitude: -54.423199
+    longitude: 3.413194
+- model: foodrle.country
+  pk: 33
+  fields:
+    name: Botswana
+    latitude: -22.328474
+    longitude: 24.684866
+- model: foodrle.country
+  pk: 34
+  fields:
+    name: Belarus
+    latitude: 53.709807
+    longitude: 27.953389
+- model: foodrle.country
+  pk: 35
+  fields:
+    name: Belize
+    latitude: 17.189877
+    longitude: -88.49765
+- model: foodrle.country
+  pk: 36
+  fields:
+    name: Canada
+    latitude: 56.130366
+    longitude: -106.346771
+- model: foodrle.country
+  pk: 37
+  fields:
+    name: Cocos [Keeling] Islands
+    latitude: -12.164165
+    longitude: 96.870956
+- model: foodrle.country
+  pk: 38
+  fields:
+    name: Congo [DRC]
+    latitude: -4.038333
+    longitude: 21.758664
+- model: foodrle.country
+  pk: 39
+  fields:
+    name: Central African Republic
+    latitude: 6.611111
+    longitude: 20.939444
+- model: foodrle.country
+  pk: 40
+  fields:
+    name: Congo [Republic]
+    latitude: -0.228021
+    longitude: 15.827659
+- model: foodrle.country
+  pk: 41
+  fields:
+    name: Switzerland
+    latitude: 46.818188
+    longitude: 8.227512
+- model: foodrle.country
+  pk: 42
+  fields:
+    name: Cote d'Ivoire
+    latitude: 7.539989
+    longitude: -5.54708
+- model: foodrle.country
+  pk: 43
+  fields:
+    name: Cook Islands
+    latitude: -21.236736
+    longitude: -159.777671
+- model: foodrle.country
+  pk: 44
+  fields:
+    name: Chile
+    latitude: -35.675147
+    longitude: -71.542969
+- model: foodrle.country
+  pk: 45
+  fields:
+    name: Cameroon
+    latitude: 7.369722
+    longitude: 12.354722
+- model: foodrle.country
+  pk: 46
+  fields:
+    name: China
+    latitude: 35.86166
+    longitude: 104.195397
+- model: foodrle.country
+  pk: 47
+  fields:
+    name: Colombia
+    latitude: 4.570868
+    longitude: -74.297333
+- model: foodrle.country
+  pk: 48
+  fields:
+    name: Costa Rica
+    latitude: 9.748917
+    longitude: -83.753428
+- model: foodrle.country
+  pk: 49
+  fields:
+    name: Cuba
+    latitude: 21.521757
+    longitude: -77.781167
+- model: foodrle.country
+  pk: 50
+  fields:
+    name: Cape Verde
+    latitude: 16.002082
+    longitude: -24.013197
+- model: foodrle.country
+  pk: 51
+  fields:
+    name: Christmas Island
+    latitude: -10.447525
+    longitude: 105.690449
+- model: foodrle.country
+  pk: 52
+  fields:
+    name: Cyprus
+    latitude: 35.126413
+    longitude: 33.429859
+- model: foodrle.country
+  pk: 53
+  fields:
+    name: Czech Republic
+    latitude: 49.817492
+    longitude: 15.472962
+- model: foodrle.country
+  pk: 54
+  fields:
+    name: Germany
+    latitude: 51.165691
+    longitude: 10.451526
+- model: foodrle.country
+  pk: 55
+  fields:
+    name: Djibouti
+    latitude: 11.825138
+    longitude: 42.590275
+- model: foodrle.country
+  pk: 56
+  fields:
+    name: Denmark
+    latitude: 56.26392
+    longitude: 9.501785
+- model: foodrle.country
+  pk: 57
+  fields:
+    name: Dominica
+    latitude: 15.414999
+    longitude: -61.370976
+- model: foodrle.country
+  pk: 58
+  fields:
+    name: Dominican Republic
+    latitude: 18.735693
+    longitude: -70.162651
+- model: foodrle.country
+  pk: 59
+  fields:
+    name: Algeria
+    latitude: 28.033886
+    longitude: 1.659626
+- model: foodrle.country
+  pk: 60
+  fields:
+    name: Ecuador
+    latitude: -1.831239
+    longitude: -78.183406
+- model: foodrle.country
+  pk: 61
+  fields:
+    name: Estonia
+    latitude: 58.595272
+    longitude: 25.013607
+- model: foodrle.country
+  pk: 62
+  fields:
+    name: Egypt
+    latitude: 26.820553
+    longitude: 30.802498
+- model: foodrle.country
+  pk: 63
+  fields:
+    name: Western Sahara
+    latitude: 24.215527
+    longitude: -12.885834
+- model: foodrle.country
+  pk: 64
+  fields:
+    name: Eritrea
+    latitude: 15.179384
+    longitude: 39.782334
+- model: foodrle.country
+  pk: 65
+  fields:
+    name: Spain
+    latitude: 40.463667
+    longitude: -3.74922
+- model: foodrle.country
+  pk: 66
+  fields:
+    name: Ethiopia
+    latitude: 9.145
+    longitude: 40.489673
+- model: foodrle.country
+  pk: 67
+  fields:
+    name: Finland
+    latitude: 61.92411
+    longitude: 25.748151
+- model: foodrle.country
+  pk: 68
+  fields:
+    name: Fiji
+    latitude: -16.578193
+    longitude: 179.414413
+- model: foodrle.country
+  pk: 69
+  fields:
+    name: Falkland Islands [Islas Malvinas]
+    latitude: -51.796253
+    longitude: -59.523613
+- model: foodrle.country
+  pk: 70
+  fields:
+    name: Micronesia
+    latitude: 7.425554
+    longitude: 150.550812
+- model: foodrle.country
+  pk: 71
+  fields:
+    name: Faroe Islands
+    latitude: 61.892635
+    longitude: -6.911806
+- model: foodrle.country
+  pk: 72
+  fields:
+    name: France
+    latitude: 46.227638
+    longitude: 2.213749
+- model: foodrle.country
+  pk: 73
+  fields:
+    name: Gabon
+    latitude: -0.803689
+    longitude: 11.609444
+- model: foodrle.country
+  pk: 74
+  fields:
+    name: United Kingdom
+    latitude: 55.378051
+    longitude: -3.435973
+- model: foodrle.country
+  pk: 75
+  fields:
+    name: Grenada
+    latitude: 12.262776
+    longitude: -61.604171
+- model: foodrle.country
+  pk: 76
+  fields:
+    name: Georgia
+    latitude: 42.315407
+    longitude: 43.356892
+- model: foodrle.country
+  pk: 77
+  fields:
+    name: French Guiana
+    latitude: 3.933889
+    longitude: -53.125782
+- model: foodrle.country
+  pk: 78
+  fields:
+    name: Guernsey
+    latitude: 49.465691
+    longitude: -2.585278
+- model: foodrle.country
+  pk: 79
+  fields:
+    name: Ghana
+    latitude: 7.946527
+    longitude: -1.023194
+- model: foodrle.country
+  pk: 80
+  fields:
+    name: Gibraltar
+    latitude: 36.137741
+    longitude: -5.345374
+- model: foodrle.country
+  pk: 81
+  fields:
+    name: Greenland
+    latitude: 71.706936
+    longitude: -42.604303
+- model: foodrle.country
+  pk: 82
+  fields:
+    name: Gambia
+    latitude: 13.443182
+    longitude: -15.310139
+- model: foodrle.country
+  pk: 83
+  fields:
+    name: Guinea
+    latitude: 9.945587
+    longitude: -9.696645
+- model: foodrle.country
+  pk: 84
+  fields:
+    name: Guadeloupe
+    latitude: 16.995971
+    longitude: -62.067641
+- model: foodrle.country
+  pk: 85
+  fields:
+    name: Equatorial Guinea
+    latitude: 1.650801
+    longitude: 10.267895
+- model: foodrle.country
+  pk: 86
+  fields:
+    name: Greece
+    latitude: 39.074208
+    longitude: 21.824312
+- model: foodrle.country
+  pk: 87
+  fields:
+    name: South Georgia and the South Sandwich Islands
+    latitude: -54.429579
+    longitude: -36.587909
+- model: foodrle.country
+  pk: 88
+  fields:
+    name: Guatemala
+    latitude: 15.783471
+    longitude: -90.230759
+- model: foodrle.country
+  pk: 89
+  fields:
+    name: Guam
+    latitude: 13.444304
+    longitude: 144.793731
+- model: foodrle.country
+  pk: 90
+  fields:
+    name: Guinea-Bissau
+    latitude: 11.803749
+    longitude: -15.180413
+- model: foodrle.country
+  pk: 91
+  fields:
+    name: Guyana
+    latitude: 4.860416
+    longitude: -58.93018
+- model: foodrle.country
+  pk: 92
+  fields:
+    name: Gaza Strip
+    latitude: 31.354676
+    longitude: 34.308825
+- model: foodrle.country
+  pk: 93
+  fields:
+    name: Hong Kong
+    latitude: 22.396428
+    longitude: 114.109497
+- model: foodrle.country
+  pk: 94
+  fields:
+    name: Heard Island and McDonald Islands
+    latitude: -53.08181
+    longitude: 73.504158
+- model: foodrle.country
+  pk: 95
+  fields:
+    name: Honduras
+    latitude: 15.199999
+    longitude: -86.241905
+- model: foodrle.country
+  pk: 96
+  fields:
+    name: Croatia
+    latitude: 45.1
+    longitude: 15.2
+- model: foodrle.country
+  pk: 97
+  fields:
+    name: Haiti
+    latitude: 18.971187
+    longitude: -72.285215
+- model: foodrle.country
+  pk: 98
+  fields:
+    name: Hungary
+    latitude: 47.162494
+    longitude: 19.503304
+- model: foodrle.country
+  pk: 99
+  fields:
+    name: Indonesia
+    latitude: -0.789275
+    longitude: 113.921327
+- model: foodrle.country
+  pk: 100
+  fields:
+    name: Ireland
+    latitude: 53.41291
+    longitude: -8.24389
+- model: foodrle.country
+  pk: 101
+  fields:
+    name: Israel
+    latitude: 31.046051
+    longitude: 34.851612
+- model: foodrle.country
+  pk: 102
+  fields:
+    name: Isle of Man
+    latitude: 54.236107
+    longitude: -4.548056
+- model: foodrle.country
+  pk: 103
+  fields:
+    name: India
+    latitude: 20.593684
+    longitude: 78.96288
+- model: foodrle.country
+  pk: 104
+  fields:
+    name: British Indian Ocean Territory
+    latitude: -6.343194
+    longitude: 71.876519
+- model: foodrle.country
+  pk: 105
+  fields:
+    name: Iraq
+    latitude: 33.223191
+    longitude: 43.679291
+- model: foodrle.country
+  pk: 106
+  fields:
+    name: Iran
+    latitude: 32.427908
+    longitude: 53.688046
+- model: foodrle.country
+  pk: 107
+  fields:
+    name: Iceland
+    latitude: 64.963051
+    longitude: -19.020835
+- model: foodrle.country
+  pk: 108
+  fields:
+    name: Italy
+    latitude: 41.87194
+    longitude: 12.56738
+- model: foodrle.country
+  pk: 109
+  fields:
+    name: Jersey
+    latitude: 49.214439
+    longitude: -2.13125
+- model: foodrle.country
+  pk: 110
+  fields:
+    name: Jamaica
+    latitude: 18.109581
+    longitude: -77.297508
+- model: foodrle.country
+  pk: 111
+  fields:
+    name: Jordan
+    latitude: 30.585164
+    longitude: 36.238414
+- model: foodrle.country
+  pk: 112
+  fields:
+    name: Japan
+    latitude: 36.204824
+    longitude: 138.252924
+- model: foodrle.country
+  pk: 113
+  fields:
+    name: Kenya
+    latitude: -0.023559
+    longitude: 37.906193
+- model: foodrle.country
+  pk: 114
+  fields:
+    name: Kyrgyzstan
+    latitude: 41.20438
+    longitude: 74.766098
+- model: foodrle.country
+  pk: 115
+  fields:
+    name: Cambodia
+    latitude: 12.565679
+    longitude: 104.990963
+- model: foodrle.country
+  pk: 116
+  fields:
+    name: Kiribati
+    latitude: -3.370417
+    longitude: -168.734039
+- model: foodrle.country
+  pk: 117
+  fields:
+    name: Comoros
+    latitude: -11.875001
+    longitude: 43.872219
+- model: foodrle.country
+  pk: 118
+  fields:
+    name: Saint Kitts and Nevis
+    latitude: 17.357822
+    longitude: -62.782998
+- model: foodrle.country
+  pk: 119
+  fields:
+    name: North Korea
+    latitude: 40.339852
+    longitude: 127.510093
+- model: foodrle.country
+  pk: 120
+  fields:
+    name: South Korea
+    latitude: 35.907757
+    longitude: 127.766922
+- model: foodrle.country
+  pk: 121
+  fields:
+    name: Kuwait
+    latitude: 29.31166
+    longitude: 47.481766
+- model: foodrle.country
+  pk: 122
+  fields:
+    name: Cayman Islands
+    latitude: 19.513469
+    longitude: -80.566956
+- model: foodrle.country
+  pk: 123
+  fields:
+    name: Kazakhstan
+    latitude: 48.019573
+    longitude: 66.923684
+- model: foodrle.country
+  pk: 124
+  fields:
+    name: Laos
+    latitude: 19.85627
+    longitude: 102.495496
+- model: foodrle.country
+  pk: 125
+  fields:
+    name: Lebanon
+    latitude: 33.854721
+    longitude: 35.862285
+- model: foodrle.country
+  pk: 126
+  fields:
+    name: Saint Lucia
+    latitude: 13.909444
+    longitude: -60.978893
+- model: foodrle.country
+  pk: 127
+  fields:
+    name: Liechtenstein
+    latitude: 47.166
+    longitude: 9.555373
+- model: foodrle.country
+  pk: 128
+  fields:
+    name: Sri Lanka
+    latitude: 7.873054
+    longitude: 80.771797
+- model: foodrle.country
+  pk: 129
+  fields:
+    name: Liberia
+    latitude: 6.428055
+    longitude: -9.429499
+- model: foodrle.country
+  pk: 130
+  fields:
+    name: Lesotho
+    latitude: -29.609988
+    longitude: 28.233608
+- model: foodrle.country
+  pk: 131
+  fields:
+    name: Lithuania
+    latitude: 55.169438
+    longitude: 23.881275
+- model: foodrle.country
+  pk: 132
+  fields:
+    name: Luxembourg
+    latitude: 49.815273
+    longitude: 6.129583
+- model: foodrle.country
+  pk: 133
+  fields:
+    name: Latvia
+    latitude: 56.879635
+    longitude: 24.603189
+- model: foodrle.country
+  pk: 134
+  fields:
+    name: Libya
+    latitude: 26.3351
+    longitude: 17.228331
+- model: foodrle.country
+  pk: 135
+  fields:
+    name: Morocco
+    latitude: 31.791702
+    longitude: -7.09262
+- model: foodrle.country
+  pk: 136
+  fields:
+    name: Monaco
+    latitude: 43.750298
+    longitude: 7.412841
+- model: foodrle.country
+  pk: 137
+  fields:
+    name: Moldova
+    latitude: 47.411631
+    longitude: 28.369885
+- model: foodrle.country
+  pk: 138
+  fields:
+    name: Montenegro
+    latitude: 42.708678
+    longitude: 19.37439
+- model: foodrle.country
+  pk: 139
+  fields:
+    name: Madagascar
+    latitude: -18.766947
+    longitude: 46.869107
+- model: foodrle.country
+  pk: 140
+  fields:
+    name: Marshall Islands
+    latitude: 7.131474
+    longitude: 171.184478
+- model: foodrle.country
+  pk: 141
+  fields:
+    name: Macedonia [FYROM]
+    latitude: 41.608635
+    longitude: 21.745275
+- model: foodrle.country
+  pk: 142
+  fields:
+    name: Mali
+    latitude: 17.570692
+    longitude: -3.996166
+- model: foodrle.country
+  pk: 143
+  fields:
+    name: Myanmar [Burma]
+    latitude: 21.913965
+    longitude: 95.956223
+- model: foodrle.country
+  pk: 144
+  fields:
+    name: Mongolia
+    latitude: 46.862496
+    longitude: 103.846656
+- model: foodrle.country
+  pk: 145
+  fields:
+    name: Macau
+    latitude: 22.198745
+    longitude: 113.543873
+- model: foodrle.country
+  pk: 146
+  fields:
+    name: Northern Mariana Islands
+    latitude: 17.33083
+    longitude: 145.38469
+- model: foodrle.country
+  pk: 147
+  fields:
+    name: Martinique
+    latitude: 14.641528
+    longitude: -61.024174
+- model: foodrle.country
+  pk: 148
+  fields:
+    name: Mauritania
+    latitude: 21.00789
+    longitude: -10.940835
+- model: foodrle.country
+  pk: 149
+  fields:
+    name: Montserrat
+    latitude: 16.742498
+    longitude: -62.187366
+- model: foodrle.country
+  pk: 150
+  fields:
+    name: Malta
+    latitude: 35.937496
+    longitude: 14.375416
+- model: foodrle.country
+  pk: 151
+  fields:
+    name: Mauritius
+    latitude: -20.348404
+    longitude: 57.552152
+- model: foodrle.country
+  pk: 152
+  fields:
+    name: Maldives
+    latitude: 3.202778
+    longitude: 73.22068
+- model: foodrle.country
+  pk: 153
+  fields:
+    name: Malawi
+    latitude: -13.254308
+    longitude: 34.301525
+- model: foodrle.country
+  pk: 154
+  fields:
+    name: Mexico
+    latitude: 23.634501
+    longitude: -102.552784
+- model: foodrle.country
+  pk: 155
+  fields:
+    name: Malaysia
+    latitude: 4.210484
+    longitude: 101.975766
+- model: foodrle.country
+  pk: 156
+  fields:
+    name: Mozambique
+    latitude: -18.665695
+    longitude: 35.529562
+- model: foodrle.country
+  pk: 157
+  fields:
+    name: Namibia
+    latitude: -22.95764
+    longitude: 18.49041
+- model: foodrle.country
+  pk: 158
+  fields:
+    name: New Caledonia
+    latitude: -20.904305
+    longitude: 165.618042
+- model: foodrle.country
+  pk: 159
+  fields:
+    name: Niger
+    latitude: 17.607789
+    longitude: 8.081666
+- model: foodrle.country
+  pk: 160
+  fields:
+    name: Norfolk Island
+    latitude: -29.040835
+    longitude: 167.954712
+- model: foodrle.country
+  pk: 161
+  fields:
+    name: Nigeria
+    latitude: 9.081999
+    longitude: 8.675277
+- model: foodrle.country
+  pk: 162
+  fields:
+    name: Nicaragua
+    latitude: 12.865416
+    longitude: -85.207229
+- model: foodrle.country
+  pk: 163
+  fields:
+    name: Netherlands
+    latitude: 52.132633
+    longitude: 5.291266
+- model: foodrle.country
+  pk: 164
+  fields:
+    name: Norway
+    latitude: 60.472024
+    longitude: 8.468946
+- model: foodrle.country
+  pk: 165
+  fields:
+    name: Nepal
+    latitude: 28.394857
+    longitude: 84.124008
+- model: foodrle.country
+  pk: 166
+  fields:
+    name: Nauru
+    latitude: -0.522778
+    longitude: 166.931503
+- model: foodrle.country
+  pk: 167
+  fields:
+    name: Niue
+    latitude: -19.054445
+    longitude: -169.867233
+- model: foodrle.country
+  pk: 168
+  fields:
+    name: New Zealand
+    latitude: -40.900557
+    longitude: 174.885971
+- model: foodrle.country
+  pk: 169
+  fields:
+    name: Oman
+    latitude: 21.512583
+    longitude: 55.923255
+- model: foodrle.country
+  pk: 170
+  fields:
+    name: Panama
+    latitude: 8.537981
+    longitude: -80.782127
+- model: foodrle.country
+  pk: 171
+  fields:
+    name: Peru
+    latitude: -9.189967
+    longitude: -75.015152
+- model: foodrle.country
+  pk: 172
+  fields:
+    name: French Polynesia
+    latitude: -17.679742
+    longitude: -149.406843
+- model: foodrle.country
+  pk: 173
+  fields:
+    name: Papua New Guinea
+    latitude: -6.314993
+    longitude: 143.95555
+- model: foodrle.country
+  pk: 174
+  fields:
+    name: Philippines
+    latitude: 12.879721
+    longitude: 121.774017
+- model: foodrle.country
+  pk: 175
+  fields:
+    name: Pakistan
+    latitude: 30.375321
+    longitude: 69.345116
+- model: foodrle.country
+  pk: 176
+  fields:
+    name: Poland
+    latitude: 51.919438
+    longitude: 19.145136
+- model: foodrle.country
+  pk: 177
+  fields:
+    name: Saint Pierre and Miquelon
+    latitude: 46.941936
+    longitude: -56.27111
+- model: foodrle.country
+  pk: 178
+  fields:
+    name: Pitcairn Islands
+    latitude: -24.703615
+    longitude: -127.439308
+- model: foodrle.country
+  pk: 179
+  fields:
+    name: Puerto Rico
+    latitude: 18.220833
+    longitude: -66.590149
+- model: foodrle.country
+  pk: 180
+  fields:
+    name: Palestinian Territories
+    latitude: 31.952162
+    longitude: 35.233154
+- model: foodrle.country
+  pk: 181
+  fields:
+    name: Portugal
+    latitude: 39.399872
+    longitude: -8.224454
+- model: foodrle.country
+  pk: 182
+  fields:
+    name: Palau
+    latitude: 7.51498
+    longitude: 134.58252
+- model: foodrle.country
+  pk: 183
+  fields:
+    name: Paraguay
+    latitude: -23.442503
+    longitude: -58.443832
+- model: foodrle.country
+  pk: 184
+  fields:
+    name: Qatar
+    latitude: 25.354826
+    longitude: 51.183884
+- model: foodrle.country
+  pk: 185
+  fields:
+    name: Reunion
+    latitude: -21.115141
+    longitude: 55.536384
+- model: foodrle.country
+  pk: 186
+  fields:
+    name: Romania
+    latitude: 45.943161
+    longitude: 24.96676
+- model: foodrle.country
+  pk: 187
+  fields:
+    name: Serbia
+    latitude: 44.016521
+    longitude: 21.005859
+- model: foodrle.country
+  pk: 188
+  fields:
+    name: Russia
+    latitude: 61.52401
+    longitude: 105.318756
+- model: foodrle.country
+  pk: 189
+  fields:
+    name: Rwanda
+    latitude: -1.940278
+    longitude: 29.873888
+- model: foodrle.country
+  pk: 190
+  fields:
+    name: Saudi Arabia
+    latitude: 23.885942
+    longitude: 45.079162
+- model: foodrle.country
+  pk: 191
+  fields:
+    name: Solomon Islands
+    latitude: -9.64571
+    longitude: 160.156194
+- model: foodrle.country
+  pk: 192
+  fields:
+    name: Seychelles
+    latitude: -4.679574
+    longitude: 55.491977
+- model: foodrle.country
+  pk: 193
+  fields:
+    name: Sudan
+    latitude: 12.862807
+    longitude: 30.217636
+- model: foodrle.country
+  pk: 194
+  fields:
+    name: Sweden
+    latitude: 60.128161
+    longitude: 18.643501
+- model: foodrle.country
+  pk: 195
+  fields:
+    name: Singapore
+    latitude: 1.352083
+    longitude: 103.819836
+- model: foodrle.country
+  pk: 196
+  fields:
+    name: Saint Helena
+    latitude: -24.143474
+    longitude: -10.030696
+- model: foodrle.country
+  pk: 197
+  fields:
+    name: Slovenia
+    latitude: 46.151241
+    longitude: 14.995463
+- model: foodrle.country
+  pk: 198
+  fields:
+    name: Svalbard and Jan Mayen
+    latitude: 77.553604
+    longitude: 23.670272
+- model: foodrle.country
+  pk: 199
+  fields:
+    name: Slovakia
+    latitude: 48.669026
+    longitude: 19.699024
+- model: foodrle.country
+  pk: 200
+  fields:
+    name: Sierra Leone
+    latitude: 8.460555
+    longitude: -11.779889
+- model: foodrle.country
+  pk: 201
+  fields:
+    name: San Marino
+    latitude: 43.94236
+    longitude: 12.457777
+- model: foodrle.country
+  pk: 202
+  fields:
+    name: Senegal
+    latitude: 14.497401
+    longitude: -14.452362
+- model: foodrle.country
+  pk: 203
+  fields:
+    name: Somalia
+    latitude: 5.152149
+    longitude: 46.199616
+- model: foodrle.country
+  pk: 204
+  fields:
+    name: Suriname
+    latitude: 3.919305
+    longitude: -56.027783
+- model: foodrle.country
+  pk: 205
+  fields:
+    name: Sao Tome and Principe
+    latitude: 0.18636
+    longitude: 6.613081
+- model: foodrle.country
+  pk: 206
+  fields:
+    name: El Salvador
+    latitude: 13.794185
+    longitude: -88.89653
+- model: foodrle.country
+  pk: 207
+  fields:
+    name: Syria
+    latitude: 34.802075
+    longitude: 38.996815
+- model: foodrle.country
+  pk: 208
+  fields:
+    name: Swaziland
+    latitude: -26.522503
+    longitude: 31.465866
+- model: foodrle.country
+  pk: 209
+  fields:
+    name: Turks and Caicos Islands
+    latitude: 21.694025
+    longitude: -71.797928
+- model: foodrle.country
+  pk: 210
+  fields:
+    name: Chad
+    latitude: 15.454166
+    longitude: 18.732207
+- model: foodrle.country
+  pk: 211
+  fields:
+    name: French Southern Territories
+    latitude: -49.280366
+    longitude: 69.348557
+- model: foodrle.country
+  pk: 212
+  fields:
+    name: Togo
+    latitude: 8.619543
+    longitude: 0.824782
+- model: foodrle.country
+  pk: 213
+  fields:
+    name: Thailand
+    latitude: 15.870032
+    longitude: 100.992541
+- model: foodrle.country
+  pk: 214
+  fields:
+    name: Tajikistan
+    latitude: 38.861034
+    longitude: 71.276093
+- model: foodrle.country
+  pk: 215
+  fields:
+    name: Tokelau
+    latitude: -8.967363
+    longitude: -171.855881
+- model: foodrle.country
+  pk: 216
+  fields:
+    name: Timor-Leste
+    latitude: -8.874217
+    longitude: 125.727539
+- model: foodrle.country
+  pk: 217
+  fields:
+    name: Turkmenistan
+    latitude: 38.969719
+    longitude: 59.556278
+- model: foodrle.country
+  pk: 218
+  fields:
+    name: Tunisia
+    latitude: 33.886917
+    longitude: 9.537499
+- model: foodrle.country
+  pk: 219
+  fields:
+    name: Tonga
+    latitude: -21.178986
+    longitude: -175.198242
+- model: foodrle.country
+  pk: 220
+  fields:
+    name: Turkey
+    latitude: 38.963745
+    longitude: 35.243322
+- model: foodrle.country
+  pk: 221
+  fields:
+    name: Trinidad and Tobago
+    latitude: 10.691803
+    longitude: -61.222503
+- model: foodrle.country
+  pk: 222
+  fields:
+    name: Tuvalu
+    latitude: -7.109535
+    longitude: 177.64933
+- model: foodrle.country
+  pk: 223
+  fields:
+    name: Taiwan
+    latitude: 23.69781
+    longitude: 120.960515
+- model: foodrle.country
+  pk: 224
+  fields:
+    name: Tanzania
+    latitude: -6.369028
+    longitude: 34.888822
+- model: foodrle.country
+  pk: 225
+  fields:
+    name: Ukraine
+    latitude: 48.379433
+    longitude: 31.16558
+- model: foodrle.country
+  pk: 226
+  fields:
+    name: Uganda
+    latitude: 1.373333
+    longitude: 32.290275
+- model: foodrle.country
+  pk: 227
+  fields:
+    name: United States
+    latitude: 37.09024
+    longitude: -95.712891
+- model: foodrle.country
+  pk: 228
+  fields:
+    name: Uruguay
+    latitude: -32.522779
+    longitude: -55.765835
+- model: foodrle.country
+  pk: 229
+  fields:
+    name: Uzbekistan
+    latitude: 41.377491
+    longitude: 64.585262
+- model: foodrle.country
+  pk: 230
+  fields:
+    name: Vatican City
+    latitude: 41.902916
+    longitude: 12.453389
+- model: foodrle.country
+  pk: 231
+  fields:
+    name: Saint Vincent and the Grenadines
+    latitude: 12.984305
+    longitude: -61.287228
+- model: foodrle.country
+  pk: 232
+  fields:
+    name: Venezuela
+    latitude: 6.42375
+    longitude: -66.58973
+- model: foodrle.country
+  pk: 233
+  fields:
+    name: British Virgin Islands
+    latitude: 18.420695
+    longitude: -64.639968
+- model: foodrle.country
+  pk: 234
+  fields:
+    name: U.S. Virgin Islands
+    latitude: 18.335765
+    longitude: -64.896335
+- model: foodrle.country
+  pk: 235
+  fields:
+    name: Vietnam
+    latitude: 14.058324
+    longitude: 108.277199
+- model: foodrle.country
+  pk: 236
+  fields:
+    name: Vanuatu
+    latitude: -15.376706
+    longitude: 166.959158
+- model: foodrle.country
+  pk: 237
+  fields:
+    name: Wallis and Futuna
+    latitude: -13.768752
+    longitude: -177.156097
+- model: foodrle.country
+  pk: 238
+  fields:
+    name: Samoa
+    latitude: -13.759029
+    longitude: -172.104629
+- model: foodrle.country
+  pk: 239
+  fields:
+    name: Kosovo
+    latitude: 42.602636
+    longitude: 20.902977
+- model: foodrle.country
+  pk: 240
+  fields:
+    name: Yemen
+    latitude: 15.552727
+    longitude: 48.516388
+- model: foodrle.country
+  pk: 241
+  fields:
+    name: Mayotte
+    latitude: -12.8275
+    longitude: 45.166244
+- model: foodrle.country
+  pk: 242
+  fields:
+    name: South Africa
+    latitude: -30.559482
+    longitude: 22.937506
+- model: foodrle.country
+  pk: 243
+  fields:
+    name: Zambia
+    latitude: -13.133897
+    longitude: 27.849332
+- model: foodrle.country
+  pk: 244
+  fields:
+    name: Zimbabwe
+    latitude: -19.015438
+    longitude: 29.154857
+- model: foodrle.taste
+  pk: 1
+  fields:
+    sweet: true
+    salty: false
+    sour: false
+    bitter: false
+    umami: false
+- model: foodrle.taste
+  pk: 2
+  fields:
+    sweet: true
+    salty: true
+    sour: false
+    bitter: false
+    umami: false
+- model: foodrle.taste
+  pk: 3
+  fields:
+    sweet: true
+    salty: false
+    sour: true
+    bitter: false
+    umami: false
+- model: foodrle.taste
+  pk: 4
+  fields:
+    sweet: true
+    salty: false
+    sour: false
+    bitter: true
+    umami: false
+- model: foodrle.taste
+  pk: 5
+  fields:
+    sweet: true
+    salty: false
+    sour: false
+    bitter: false
+    umami: true
+- model: foodrle.taste
+  pk: 6
+  fields:
+    sweet: true
+    salty: true
+    sour: true
+    bitter: false
+    umami: false
+- model: foodrle.taste
+  pk: 7
+  fields:
+    sweet: true
+    salty: true
+    sour: false
+    bitter: true
+    umami: false
+- model: foodrle.taste
+  pk: 8
+  fields:
+    sweet: true
+    salty: true
+    sour: false
+    bitter: false
+    umami: true
+- model: foodrle.taste
+  pk: 9
+  fields:
+    sweet: true
+    salty: false
+    sour: true
+    bitter: true
+    umami: false
+- model: foodrle.taste
+  pk: 10
+  fields:
+    sweet: true
+    salty: false
+    sour: true
+    bitter: false
+    umami: true
+- model: foodrle.taste
+  pk: 11
+  fields:
+    sweet: true
+    salty: false
+    sour: false
+    bitter: true
+    umami: true
+- model: foodrle.taste
+  pk: 12
+  fields:
+    sweet: false
+    salty: true
+    sour: false
+    bitter: false
+    umami: false
+- model: foodrle.taste
+  pk: 13
+  fields:
+    sweet: false
+    salty: true
+    sour: true
+    bitter: false
+    umami: false
+- model: foodrle.taste
+  pk: 14
+  fields:
+    sweet: false
+    salty: true
+    sour: false
+    bitter: true
+    umami: false
+- model: foodrle.taste
+  pk: 15
+  fields:
+    sweet: false
+    salty: true
+    sour: false
+    bitter: false
+    umami: true
+- model: foodrle.taste
+  pk: 16
+  fields:
+    sweet: false
+    salty: true
+    sour: true
+    bitter: true
+    umami: false
+- model: foodrle.taste
+  pk: 17
+  fields:
+    sweet: false
+    salty: true
+    sour: true
+    bitter: false
+    umami: true
+- model: foodrle.taste
+  pk: 18
+  fields:
+    sweet: false
+    salty: true
+    sour: false
+    bitter: true
+    umami: true
+- model: foodrle.taste
+  pk: 19
+  fields:
+    sweet: false
+    salty: false
+    sour: true
+    bitter: false
+    umami: false
+- model: foodrle.taste
+  pk: 20
+  fields:
+    sweet: false
+    salty: false
+    sour: true
+    bitter: true
+    umami: false
+- model: foodrle.taste
+  pk: 21
+  fields:
+    sweet: false
+    salty: false
+    sour: true
+    bitter: false
+    umami: true
+- model: foodrle.taste
+  pk: 22
+  fields:
+    sweet: false
+    salty: false
+    sour: true
+    bitter: true
+    umami: true
+- model: foodrle.taste
+  pk: 23
+  fields:
+    sweet: false
+    salty: false
+    sour: false
+    bitter: true
+    umami: false
+- model: foodrle.taste
+  pk: 24
+  fields:
+    sweet: false
+    salty: false
+    sour: false
+    bitter: true
+    umami: true
+- model: foodrle.taste
+  pk: 25
+  fields:
+    sweet: false
+    salty: false
+    sour: false
+    bitter: false
+    umami: true
+- model: foodrle.mainingredient
+  pk: 1
+  fields:
+    name: Red Meat
+    food_group: 1
+- model: foodrle.mainingredient
+  pk: 2
+  fields:
+    name: Butter
+    food_group: 1
+- model: foodrle.mainingredient
+  pk: 3
+  fields:
+    name: Refined Grains (e.g., White Flour)
+    food_group: 2
+- model: foodrle.mainingredient
+  pk: 4
+  fields:
+    name: White Flour/Bread Flour
+    food_group: 2
+- model: foodrle.mainingredient
+  pk: 5
+  fields:
+    name: White Rice
+    food_group: 2
+- model: foodrle.mainingredient
+  pk: 6
+  fields:
+    name: Pasta
+    food_group: 2
+- model: foodrle.mainingredient
+  pk: 7
+  fields:
+    name: Sugar
+    food_group: 2
+- model: foodrle.mainingredient
+  pk: 8
+  fields:
+    name: Dairy
+    food_group: 3
+- model: foodrle.mainingredient
+  pk: 9
+  fields:
+    name: Nuts
+    food_group: 4
+- model: foodrle.mainingredient
+  pk: 10
+  fields:
+    name: Seeds
+    food_group: 4
+- model: foodrle.mainingredient
+  pk: 11
+  fields:
+    name: Beans
+    food_group: 4
+- model: foodrle.mainingredient
+  pk: 12
+  fields:
+    name: Tofu
+    food_group: 4
+- model: foodrle.mainingredient
+  pk: 13
+  fields:
+    name: Fish
+    food_group: 5
+- model: foodrle.mainingredient
+  pk: 14
+  fields:
+    name: Poultry
+    food_group: 5
+- model: foodrle.mainingredient
+  pk: 15
+  fields:
+    name: Eggs
+    food_group: 5
+- model: foodrle.mainingredient
+  pk: 16
+  fields:
+    name: Fruits
+    food_group: 6
+- model: foodrle.mainingredient
+  pk: 17
+  fields:
+    name: Vegetables
+    food_group: 7
+- model: foodrle.mainingredient
+  pk: 18
+  fields:
+    name: Whole Grains
+    food_group: 8
+- model: foodrle.mainingredient
+  pk: 19
+  fields:
+    name: Brown Rice
+    food_group: 8
+- model: foodrle.mainingredient
+  pk: 20
+  fields:
+    name: Whole Wheat Pasta
+    food_group: 8
+- model: foodrle.mainingredient
+  pk: 21
+  fields:
+    name: Oats
+    food_group: 8
+- model: foodrle.mainingredient
+  pk: 22
+  fields:
+    name: Starchy Vegetables (e.g., corn, pumpkin, potato)
+    food_group: 8
+- model: foodrle.dishes
+  pk: 1
+  fields:
+    name: pavlova
+    country: 14
+    taste: 9
+    main_ingredient: 16
+    calories: 246
+- model: foodrle.dishes
+  pk: 2
+  fields:
+    name: fries
+    country: 20
+    taste: 15
+    main_ingredient: 22
+    calories: 365
+- model: foodrle.dishes
+  pk: 3
+  fields:
+    name: xialongbao
+    country: 46
+    taste: 8
+    main_ingredient: 1
+    calories: 61
+- model: foodrle.dishes
+  pk: 4
+  fields:
+    name: falafel
+    country: 62
+    taste: 18
+    main_ingredient: 11
+    calories: 57
+- model: foodrle.dishes
+  pk: 5
+  fields:
+    name: frankfurter
+    country: 54
+    taste: 8
+    main_ingredient: 1
+    calories: 400
+- model: foodrle.dishes
+  pk: 6
+  fields:
+    name: oatmeal
+    country: 86
+    taste: 5
+    main_ingredient: 21
+    calories: 158
+- model: foodrle.dishes
+  pk: 7
+  fields:
+    name: gyros
+    country: 86
+    taste: 17
+    main_ingredient: 1
+    calories: 600
+- model: foodrle.dishes
+  pk: 8
+  fields:
+    name: paneer
+    country: 103
+    taste: 25
+    main_ingredient: 8
+    calories: 600
+- model: foodrle.dishes
+  pk: 9
+  fields:
+    name: vindaloo
+    country: 103
+    taste: 22
+    main_ingredient: 14
+    calories: 130
+- model: foodrle.dishes
+  pk: 10
+  fields:
+    name: omelette
+    country: 72
+    taste: 18
+    main_ingredient: 15
+    calories: 154
+- model: foodrle.dishes
+  pk: 11
+  fields:
+    name: tiramisu
+    country: 108
+    taste: 11
+    main_ingredient: 7
+    calories: 600
+- model: foodrle.dishes
+  pk: 12
+  fields:
+    name: pizza
+    country: 108
+    taste: 8
+    main_ingredient: 4
+    calories: 285
+- model: foodrle.dishes
+  pk: 13
+  fields:
+    name: sushi
+    country: 112
+    taste: 8
+    main_ingredient: 5
+    calories: 142
+- model: foodrle.dishes
+  pk: 14
+  fields:
+    name: quesadilla
+    country: 154
+    taste: 15
+    main_ingredient: 8
+    calories: 460
+- model: foodrle.dishes
+  pk: 15
+  fields:
+    name: taco
+    country: 154
+    taste: 18
+    main_ingredient: 14
+    calories: 156
+- model: foodrle.dishes
+  pk: 16
+  fields:
+    name: pancake
+    country: 163
+    taste: 8
+    main_ingredient: 4
+    calories: 128
+- model: foodrle.dishes
+  pk: 17
+  fields:
+    name: paratha
+    country: 175
+    taste: 15
+    main_ingredient: 4
+    calories: 220
+- model: foodrle.dishes
+  pk: 18
+  fields:
+    name: ceviche
+    country: 171
+    taste: 17
+    main_ingredient: 13
+    calories: 250
+- model: foodrle.dishes
+  pk: 19
+  fields:
+    name: pierogi
+    country: 176
+    taste: 22
+    main_ingredient: 22
+    calories: 210
+- model: foodrle.dishes
+  pk: 20
+  fields:
+    name: flan
+    country: 179
+    taste: 1
+    main_ingredient: 15
+    calories: 223
+- model: foodrle.dishes
+  pk: 21
+  fields:
+    name: jollof
+    country: 202
+    taste: 11
+    main_ingredient: 19
+    calories: 284
+- model: foodrle.dishes
+  pk: 22
+  fields:
+    name: bobotie
+    country: 242
+    taste: 18
+    main_ingredient: 1
+    calories: 471
+- model: foodrle.dishes
+  pk: 23
+  fields:
+    name: bulgogi
+    country: 120
+    taste: 8
+    main_ingredient: 1
+    calories: 453
+- model: foodrle.dishes
+  pk: 24
+  fields:
+    name: bibimbap
+    country: 120
+    taste: 2
+    main_ingredient: 5
+    calories: 772
+- model: foodrle.dishes
+  pk: 25
+  fields:
+    name: gazpacho
+    country: 65
+    taste: 11
+    main_ingredient: 17
+    calories: 70
+- model: foodrle.dishes
+  pk: 26
+  fields:
+    name: jumbalaya
+    country: 227
+    taste: 18
+    main_ingredient: 13
+    calories: 393
+- model: foodrle.dishes
+  pk: 27
+  fields:
+    name: cereal
+    country: 227
+    taste: 5
+    main_ingredient: 3
+    calories: 350
+- model: foodrle.dishes
+  pk: 28
+  fields:
+    name: waffle
+    country: 227
+    taste: 8
+    main_ingredient: 3
+    calories: 450
+- model: foodrle.dishes
+  pk: 29
+  fields:
+    name: pho
+    country: 235
+    taste: 8
+    main_ingredient: 1
+    calories: 400
+- model: foodrle.dishes
+  pk: 30
+  fields:
+    name: poutine
+    country: 36
+    taste: 8
+    main_ingredient: 22
+    calories: 950
+- model: foodrle.dishes
+  pk: 31
+  fields:
+    name: arepa
+    country: 47
+    taste: 2
+    main_ingredient: 3
+    calories: 215
+- model: foodrle.dishes
+  pk: 32
+  fields:
+    name: calamari
+    country: 108
+    taste: 8
+    main_ingredient: 13
+    calories: 175
+- model: foodrle.dishes
+  pk: 33
+  fields:
+    name: brownie
+    country: 227
+    taste: 2
+    main_ingredient: 7
+    calories: 112
+- model: foodrle.dishes
+  pk: 34
+  fields:
+    name: cookie
+    country: 227
+    taste: 2
+    main_ingredient: 7
+    calories: 142
+- model: foodrle.dishes
+  pk: 35
+  fields:
+    name: cake
+    country: 72
+    taste: 1
+    main_ingredient: 4
+    calories: 129
+- model: foodrle.dishes
+  pk: 36
+  fields:
+    name: baklava
+    country: 86
+    taste: 1
+    main_ingredient: 9
+    calories: 230
+- model: foodrle.dishes
+  pk: 37
+  fields:
+    name: couscous
+    country: 135
+    taste: 4
+    main_ingredient: 18
+    calories: 176
+- model: foodrle.dishes
+  pk: 38
+  fields:
+    name: borscht
+    country: 188
+    taste: 9
+    main_ingredient: 17
+    calories: 160
+- model: foodrle.dishes
+  pk: 39
+  fields:
+    name: milkshake
+    country: 227
+    taste: 1
+    main_ingredient: 8
+    calories: 350
+- model: foodrle.dishes
+  pk: 40
+  fields:
+    name: hummus
+    country: 62
+    taste: 17
+    main_ingredient: 11
+    calories: 25
+- model: foodrle.dishes
+  pk: 41
+  fields:
+    name: spanakopita
+    country: 86
+    taste: 15
+    main_ingredient: 17
+    calories: 156
+- model: foodrle.dishes
+  pk: 42
+  fields:
+    name: naan
+    country: 103
+    taste: 15
+    main_ingredient: 4
+    calories: 262
+- model: foodrle.dishes
+  pk: 43
+  fields:
+    name: risoto
+    country: 108
+    taste: 15
+    main_ingredient: 5
+    calories: 209
+- model: foodrle.dishes
+  pk: 44
+  fields:
+    name: spaghetti
+    country: 108
+    taste: 17
+    main_ingredient: 6
+    calories: 221
+- model: foodrle.dishes
+  pk: 45
+  fields:
+    name: takoyaki
+    country: 112
+    taste: 15
+    main_ingredient: 4
+    calories: 79
+- model: foodrle.dishes
+  pk: 46
+  fields:
+    name: momo
+    country: 165
+    taste: 15
+    main_ingredient: 1
+    calories: 280
+- model: foodrle.dishes
+  pk: 47
+  fields:
+    name: lumpia
+    country: 174
+    taste: 15
+    main_ingredient: 1
+    calories: 85
+- model: foodrle.dishes
+  pk: 48
+  fields:
+    name: pancit
+    country: 174
+    taste: 15
+    main_ingredient: 6
+    calories: 255
+- model: foodrle.dishes
+  pk: 49
+  fields:
+    name: grits
+    country: 227
+    taste: 15
+    main_ingredient: 18
+    calories: 143
+- model: foodrle.dishes
+  pk: 50
+  fields:
+    name: tabbouleh
+    country: 125
+    taste: 22
+    main_ingredient: 18
+    calories: 136
+- model: foodrle.dishes
+  pk: 51
+  fields:
+    name: kimchi
+    country: 120
+    taste: 22
+    main_ingredient: 17
+    calories: 23
+- model: foodrle.puzzle
+  pk: 1
+  fields:
+    last_used: 2022-07-21
+    dish: 1
+- model: foodrle.puzzle
+  pk: 2
+  fields:
+    last_used: 2022-08-03
+    dish: 2
+- model: foodrle.puzzle
+  pk: 3
+  fields:
+    last_used: 2022-01-20
+    dish: 3
+- model: foodrle.puzzle
+  pk: 4
+  fields:
+    last_used: 2022-03-13
+    dish: 4
+- model: foodrle.puzzle
+  pk: 5
+  fields:
+    last_used: 2022-05-17
+    dish: 5
+- model: foodrle.puzzle
+  pk: 6
+  fields:
+    last_used: 2022-02-12
+    dish: 6
+- model: foodrle.puzzle
+  pk: 7
+  fields:
+    last_used: 2022-07-26
+    dish: 7
+- model: foodrle.puzzle
+  pk: 8
+  fields:
+    last_used: 2022-08-23
+    dish: 8
+- model: foodrle.puzzle
+  pk: 9
+  fields:
+    last_used: 2022-09-28
+    dish: 9
+- model: foodrle.puzzle
+  pk: 10
+  fields:
+    last_used: 2022-03-22
+    dish: 10
+- model: foodrle.puzzle
+  pk: 11
+  fields:
+    last_used: 2022-04-23
+    dish: 11
+- model: foodrle.puzzle
+  pk: 12
+  fields:
+    last_used: 2022-07-09
+    dish: 12
+- model: foodrle.puzzle
+  pk: 13
+  fields:
+    last_used: 2022-09-24
+    dish: 13
+- model: foodrle.puzzle
+  pk: 14
+  fields:
+    last_used: 2022-10-04
+    dish: 14
+- model: foodrle.puzzle
+  pk: 15
+  fields:
+    last_used: 2022-02-21
+    dish: 15
+- model: foodrle.puzzle
+  pk: 16
+  fields:
+    last_used: 2022-09-29
+    dish: 16
+- model: foodrle.puzzle
+  pk: 17
+  fields:
+    last_used: 2022-07-18
+    dish: 17
+- model: foodrle.puzzle
+  pk: 18
+  fields:
+    last_used: 2022-08-19
+    dish: 18
+- model: foodrle.puzzle
+  pk: 19
+  fields:
+    last_used: 2022-05-17
+    dish: 19
+- model: foodrle.puzzle
+  pk: 20
+  fields:
+    last_used: 2022-05-14
+    dish: 20
+- model: foodrle.puzzle
+  pk: 21
+  fields:
+    last_used: 2022-05-20
+    dish: 21
+- model: foodrle.puzzle
+  pk: 22
+  fields:
+    last_used: 2022-01-07
+    dish: 22
+- model: foodrle.puzzle
+  pk: 23
+  fields:
+    last_used: 2022-06-01
+    dish: 23
+- model: foodrle.puzzle
+  pk: 24
+  fields:
+    last_used: 2022-02-22
+    dish: 24
+- model: foodrle.puzzle
+  pk: 25
+  fields:
+    last_used: 2022-01-16
+    dish: 25
+- model: foodrle.puzzle
+  pk: 26
+  fields:
+    last_used: 2022-06-29
+    dish: 26
+- model: foodrle.puzzle
+  pk: 27
+  fields:
+    last_used: 2022-04-27
+    dish: 27
+- model: foodrle.puzzle
+  pk: 28
+  fields:
+    last_used: 2022-05-18
+    dish: 28
+- model: foodrle.puzzle
+  pk: 29
+  fields:
+    last_used: 2022-09-20
+    dish: 29
+- model: foodrle.puzzle
+  pk: 30
+  fields:
+    last_used: 2022-01-27
+    dish: 30
+- model: foodrle.puzzle
+  pk: 31
+  fields:
+    last_used: 2022-06-18
+    dish: 31
+- model: foodrle.puzzle
+  pk: 32
+  fields:
+    last_used: 2022-02-03
+    dish: 32
+- model: foodrle.puzzle
+  pk: 33
+  fields:
+    last_used: 2022-10-02
+    dish: 33
+- model: foodrle.puzzle
+  pk: 34
+  fields:
+    last_used: 2022-09-14
+    dish: 34
+- model: foodrle.puzzle
+  pk: 35
+  fields:
+    last_used: 2022-10-16
+    dish: 35
+- model: foodrle.puzzle
+  pk: 36
+  fields:
+    last_used: 2022-03-15
+    dish: 36
+- model: foodrle.puzzle
+  pk: 37
+  fields:
+    last_used: 2022-09-02
+    dish: 37
+- model: foodrle.puzzle
+  pk: 38
+  fields:
+    last_used: 2022-07-05
+    dish: 38
+- model: foodrle.puzzle
+  pk: 39
+  fields:
+    last_used: 2022-07-16
+    dish: 39
+- model: foodrle.puzzle
+  pk: 40
+  fields:
+    last_used: 2022-09-15
+    dish: 40
+- model: foodrle.puzzle
+  pk: 41
+  fields:
+    last_used: 2022-02-12
+    dish: 41
+- model: foodrle.puzzle
+  pk: 42
+  fields:
+    last_used: 2022-01-24
+    dish: 42
+- model: foodrle.puzzle
+  pk: 43
+  fields:
+    last_used: 2022-10-29
+    dish: 43
+- model: foodrle.puzzle
+  pk: 44
+  fields:
+    last_used: 2022-03-22
+    dish: 44
+- model: foodrle.puzzle
+  pk: 45
+  fields:
+    last_used: 2022-09-26
+    dish: 45
+- model: foodrle.puzzle
+  pk: 46
+  fields:
+    last_used: 2022-10-26
+    dish: 46
+- model: foodrle.puzzle
+  pk: 47
+  fields:
+    last_used: 2022-06-11
+    dish: 47
+- model: foodrle.puzzle
+  pk: 48
+  fields:
+    last_used: 2022-07-09
+    dish: 48
+- model: foodrle.puzzle
+  pk: 49
+  fields:
+    last_used: 2022-02-05
+    dish: 49
+- model: foodrle.puzzle
+  pk: 50
+  fields:
+    last_used: 2022-03-04
+    dish: 50
+- model: foodrle.puzzle
+  pk: 51
+  fields:
+    last_used: 2022-06-19
+    dish: 51
+- model: admin.logentry
+  pk: 1
+  fields:
+    action_time: 2022-10-30 18:32:45.280123+00:00
+    user: 1
+    content_type: 1
+    object_id: '1'
+    object_repr: Andorra
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 2
+  fields:
+    action_time: 2022-10-30 18:32:45.283835+00:00
+    user: 1
+    content_type: 1
+    object_id: '2'
+    object_repr: United Arab Emirates
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 3
+  fields:
+    action_time: 2022-10-30 18:32:45.286650+00:00
+    user: 1
+    content_type: 1
+    object_id: '3'
+    object_repr: Afghanistan
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 4
+  fields:
+    action_time: 2022-10-30 18:32:45.289496+00:00
+    user: 1
+    content_type: 1
+    object_id: '4'
+    object_repr: Antigua and Barbuda
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 5
+  fields:
+    action_time: 2022-10-30 18:32:45.292125+00:00
+    user: 1
+    content_type: 1
+    object_id: '5'
+    object_repr: Anguilla
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 6
+  fields:
+    action_time: 2022-10-30 18:32:45.294653+00:00
+    user: 1
+    content_type: 1
+    object_id: '6'
+    object_repr: Albania
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 7
+  fields:
+    action_time: 2022-10-30 18:32:45.297162+00:00
+    user: 1
+    content_type: 1
+    object_id: '7'
+    object_repr: Armenia
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 8
+  fields:
+    action_time: 2022-10-30 18:32:45.299667+00:00
+    user: 1
+    content_type: 1
+    object_id: '8'
+    object_repr: Netherlands Antilles
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 9
+  fields:
+    action_time: 2022-10-30 18:32:45.302475+00:00
+    user: 1
+    content_type: 1
+    object_id: '9'
+    object_repr: Angola
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 10
+  fields:
+    action_time: 2022-10-30 18:32:45.305396+00:00
+    user: 1
+    content_type: 1
+    object_id: '10'
+    object_repr: Antarctica
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 11
+  fields:
+    action_time: 2022-10-30 18:32:45.307970+00:00
+    user: 1
+    content_type: 1
+    object_id: '11'
+    object_repr: Argentina
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 12
+  fields:
+    action_time: 2022-10-30 18:32:45.310631+00:00
+    user: 1
+    content_type: 1
+    object_id: '12'
+    object_repr: American Samoa
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 13
+  fields:
+    action_time: 2022-10-30 18:32:45.313110+00:00
+    user: 1
+    content_type: 1
+    object_id: '13'
+    object_repr: Austria
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 14
+  fields:
+    action_time: 2022-10-30 18:32:45.315974+00:00
+    user: 1
+    content_type: 1
+    object_id: '14'
+    object_repr: Australia
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 15
+  fields:
+    action_time: 2022-10-30 18:32:45.318739+00:00
+    user: 1
+    content_type: 1
+    object_id: '15'
+    object_repr: Aruba
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 16
+  fields:
+    action_time: 2022-10-30 18:32:45.321474+00:00
+    user: 1
+    content_type: 1
+    object_id: '16'
+    object_repr: Azerbaijan
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 17
+  fields:
+    action_time: 2022-10-30 18:32:45.324284+00:00
+    user: 1
+    content_type: 1
+    object_id: '17'
+    object_repr: Bosnia and Herzegovina
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 18
+  fields:
+    action_time: 2022-10-30 18:32:45.327063+00:00
+    user: 1
+    content_type: 1
+    object_id: '18'
+    object_repr: Barbados
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 19
+  fields:
+    action_time: 2022-10-30 18:32:45.329441+00:00
+    user: 1
+    content_type: 1
+    object_id: '19'
+    object_repr: Bangladesh
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 20
+  fields:
+    action_time: 2022-10-30 18:32:45.331927+00:00
+    user: 1
+    content_type: 1
+    object_id: '20'
+    object_repr: Belgium
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 21
+  fields:
+    action_time: 2022-10-30 18:32:45.334332+00:00
+    user: 1
+    content_type: 1
+    object_id: '21'
+    object_repr: Burkina Faso
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 22
+  fields:
+    action_time: 2022-10-30 18:32:45.336987+00:00
+    user: 1
+    content_type: 1
+    object_id: '22'
+    object_repr: Bulgaria
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 23
+  fields:
+    action_time: 2022-10-30 18:32:45.339697+00:00
+    user: 1
+    content_type: 1
+    object_id: '23'
+    object_repr: Bahrain
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 24
+  fields:
+    action_time: 2022-10-30 18:32:45.342435+00:00
+    user: 1
+    content_type: 1
+    object_id: '24'
+    object_repr: Burundi
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 25
+  fields:
+    action_time: 2022-10-30 18:32:45.345158+00:00
+    user: 1
+    content_type: 1
+    object_id: '25'
+    object_repr: Benin
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 26
+  fields:
+    action_time: 2022-10-30 18:32:45.347607+00:00
+    user: 1
+    content_type: 1
+    object_id: '26'
+    object_repr: Bermuda
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 27
+  fields:
+    action_time: 2022-10-30 18:32:45.350262+00:00
+    user: 1
+    content_type: 1
+    object_id: '27'
+    object_repr: Brunei
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 28
+  fields:
+    action_time: 2022-10-30 18:32:45.353123+00:00
+    user: 1
+    content_type: 1
+    object_id: '28'
+    object_repr: Bolivia
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 29
+  fields:
+    action_time: 2022-10-30 18:32:45.355956+00:00
+    user: 1
+    content_type: 1
+    object_id: '29'
+    object_repr: Brazil
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 30
+  fields:
+    action_time: 2022-10-30 18:32:45.358647+00:00
+    user: 1
+    content_type: 1
+    object_id: '30'
+    object_repr: Bahamas
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 31
+  fields:
+    action_time: 2022-10-30 18:32:45.361587+00:00
+    user: 1
+    content_type: 1
+    object_id: '31'
+    object_repr: Bhutan
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 32
+  fields:
+    action_time: 2022-10-30 18:32:45.365178+00:00
+    user: 1
+    content_type: 1
+    object_id: '32'
+    object_repr: Bouvet Island
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 33
+  fields:
+    action_time: 2022-10-30 18:32:45.368056+00:00
+    user: 1
+    content_type: 1
+    object_id: '33'
+    object_repr: Botswana
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 34
+  fields:
+    action_time: 2022-10-30 18:32:45.371052+00:00
+    user: 1
+    content_type: 1
+    object_id: '34'
+    object_repr: Belarus
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 35
+  fields:
+    action_time: 2022-10-30 18:32:45.373939+00:00
+    user: 1
+    content_type: 1
+    object_id: '35'
+    object_repr: Belize
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 36
+  fields:
+    action_time: 2022-10-30 18:32:45.376565+00:00
+    user: 1
+    content_type: 1
+    object_id: '36'
+    object_repr: Canada
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 37
+  fields:
+    action_time: 2022-10-30 18:32:45.379401+00:00
+    user: 1
+    content_type: 1
+    object_id: '37'
+    object_repr: Cocos [Keeling] Islands
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 38
+  fields:
+    action_time: 2022-10-30 18:32:45.382353+00:00
+    user: 1
+    content_type: 1
+    object_id: '38'
+    object_repr: Congo [DRC]
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 39
+  fields:
+    action_time: 2022-10-30 18:32:45.384746+00:00
+    user: 1
+    content_type: 1
+    object_id: '39'
+    object_repr: Central African Republic
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 40
+  fields:
+    action_time: 2022-10-30 18:32:45.387385+00:00
+    user: 1
+    content_type: 1
+    object_id: '40'
+    object_repr: Congo [Republic]
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 41
+  fields:
+    action_time: 2022-10-30 18:32:45.390364+00:00
+    user: 1
+    content_type: 1
+    object_id: '41'
+    object_repr: Switzerland
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 42
+  fields:
+    action_time: 2022-10-30 18:32:45.393275+00:00
+    user: 1
+    content_type: 1
+    object_id: '42'
+    object_repr: Cote d'Ivoire
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 43
+  fields:
+    action_time: 2022-10-30 18:32:45.395803+00:00
+    user: 1
+    content_type: 1
+    object_id: '43'
+    object_repr: Cook Islands
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 44
+  fields:
+    action_time: 2022-10-30 18:32:45.398758+00:00
+    user: 1
+    content_type: 1
+    object_id: '44'
+    object_repr: Chile
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 45
+  fields:
+    action_time: 2022-10-30 18:32:45.401506+00:00
+    user: 1
+    content_type: 1
+    object_id: '45'
+    object_repr: Cameroon
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 46
+  fields:
+    action_time: 2022-10-30 18:32:45.404365+00:00
+    user: 1
+    content_type: 1
+    object_id: '46'
+    object_repr: China
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 47
+  fields:
+    action_time: 2022-10-30 18:32:45.407304+00:00
+    user: 1
+    content_type: 1
+    object_id: '47'
+    object_repr: Colombia
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 48
+  fields:
+    action_time: 2022-10-30 18:32:45.409843+00:00
+    user: 1
+    content_type: 1
+    object_id: '48'
+    object_repr: Costa Rica
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 49
+  fields:
+    action_time: 2022-10-30 18:32:45.412496+00:00
+    user: 1
+    content_type: 1
+    object_id: '49'
+    object_repr: Cuba
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 50
+  fields:
+    action_time: 2022-10-30 18:32:45.415212+00:00
+    user: 1
+    content_type: 1
+    object_id: '50'
+    object_repr: Cape Verde
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 51
+  fields:
+    action_time: 2022-10-30 18:32:45.417831+00:00
+    user: 1
+    content_type: 1
+    object_id: '51'
+    object_repr: Christmas Island
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 52
+  fields:
+    action_time: 2022-10-30 18:32:45.420604+00:00
+    user: 1
+    content_type: 1
+    object_id: '52'
+    object_repr: Cyprus
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 53
+  fields:
+    action_time: 2022-10-30 18:32:45.423349+00:00
+    user: 1
+    content_type: 1
+    object_id: '53'
+    object_repr: Czech Republic
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 54
+  fields:
+    action_time: 2022-10-30 18:32:45.426147+00:00
+    user: 1
+    content_type: 1
+    object_id: '54'
+    object_repr: Germany
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 55
+  fields:
+    action_time: 2022-10-30 18:32:45.428797+00:00
+    user: 1
+    content_type: 1
+    object_id: '55'
+    object_repr: Djibouti
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 56
+  fields:
+    action_time: 2022-10-30 18:32:45.431496+00:00
+    user: 1
+    content_type: 1
+    object_id: '56'
+    object_repr: Denmark
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 57
+  fields:
+    action_time: 2022-10-30 18:32:45.434006+00:00
+    user: 1
+    content_type: 1
+    object_id: '57'
+    object_repr: Dominica
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 58
+  fields:
+    action_time: 2022-10-30 18:32:45.436645+00:00
+    user: 1
+    content_type: 1
+    object_id: '58'
+    object_repr: Dominican Republic
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 59
+  fields:
+    action_time: 2022-10-30 18:32:45.439324+00:00
+    user: 1
+    content_type: 1
+    object_id: '59'
+    object_repr: Algeria
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 60
+  fields:
+    action_time: 2022-10-30 18:32:45.442067+00:00
+    user: 1
+    content_type: 1
+    object_id: '60'
+    object_repr: Ecuador
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 61
+  fields:
+    action_time: 2022-10-30 18:32:45.444816+00:00
+    user: 1
+    content_type: 1
+    object_id: '61'
+    object_repr: Estonia
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 62
+  fields:
+    action_time: 2022-10-30 18:32:45.447433+00:00
+    user: 1
+    content_type: 1
+    object_id: '62'
+    object_repr: Egypt
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 63
+  fields:
+    action_time: 2022-10-30 18:32:45.450186+00:00
+    user: 1
+    content_type: 1
+    object_id: '63'
+    object_repr: Western Sahara
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 64
+  fields:
+    action_time: 2022-10-30 18:32:45.452898+00:00
+    user: 1
+    content_type: 1
+    object_id: '64'
+    object_repr: Eritrea
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 65
+  fields:
+    action_time: 2022-10-30 18:32:45.455407+00:00
+    user: 1
+    content_type: 1
+    object_id: '65'
+    object_repr: Spain
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 66
+  fields:
+    action_time: 2022-10-30 18:32:45.457975+00:00
+    user: 1
+    content_type: 1
+    object_id: '66'
+    object_repr: Ethiopia
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 67
+  fields:
+    action_time: 2022-10-30 18:32:45.460896+00:00
+    user: 1
+    content_type: 1
+    object_id: '67'
+    object_repr: Finland
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 68
+  fields:
+    action_time: 2022-10-30 18:32:45.463624+00:00
+    user: 1
+    content_type: 1
+    object_id: '68'
+    object_repr: Fiji
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 69
+  fields:
+    action_time: 2022-10-30 18:32:45.466148+00:00
+    user: 1
+    content_type: 1
+    object_id: '69'
+    object_repr: Falkland Islands [Islas Malvinas]
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 70
+  fields:
+    action_time: 2022-10-30 18:32:45.468509+00:00
+    user: 1
+    content_type: 1
+    object_id: '70'
+    object_repr: Micronesia
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 71
+  fields:
+    action_time: 2022-10-30 18:32:45.471983+00:00
+    user: 1
+    content_type: 1
+    object_id: '71'
+    object_repr: Faroe Islands
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 72
+  fields:
+    action_time: 2022-10-30 18:32:45.474779+00:00
+    user: 1
+    content_type: 1
+    object_id: '72'
+    object_repr: France
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 73
+  fields:
+    action_time: 2022-10-30 18:32:45.477504+00:00
+    user: 1
+    content_type: 1
+    object_id: '73'
+    object_repr: Gabon
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 74
+  fields:
+    action_time: 2022-10-30 18:32:45.480487+00:00
+    user: 1
+    content_type: 1
+    object_id: '74'
+    object_repr: United Kingdom
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 75
+  fields:
+    action_time: 2022-10-30 18:32:45.483925+00:00
+    user: 1
+    content_type: 1
+    object_id: '75'
+    object_repr: Grenada
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 76
+  fields:
+    action_time: 2022-10-30 18:32:45.486671+00:00
+    user: 1
+    content_type: 1
+    object_id: '76'
+    object_repr: Georgia
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 77
+  fields:
+    action_time: 2022-10-30 18:32:45.489478+00:00
+    user: 1
+    content_type: 1
+    object_id: '77'
+    object_repr: French Guiana
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 78
+  fields:
+    action_time: 2022-10-30 18:32:45.492337+00:00
+    user: 1
+    content_type: 1
+    object_id: '78'
+    object_repr: Guernsey
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 79
+  fields:
+    action_time: 2022-10-30 18:32:45.494903+00:00
+    user: 1
+    content_type: 1
+    object_id: '79'
+    object_repr: Ghana
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 80
+  fields:
+    action_time: 2022-10-30 18:32:45.497348+00:00
+    user: 1
+    content_type: 1
+    object_id: '80'
+    object_repr: Gibraltar
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 81
+  fields:
+    action_time: 2022-10-30 18:32:45.500013+00:00
+    user: 1
+    content_type: 1
+    object_id: '81'
+    object_repr: Greenland
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 82
+  fields:
+    action_time: 2022-10-30 18:32:45.502462+00:00
+    user: 1
+    content_type: 1
+    object_id: '82'
+    object_repr: Gambia
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 83
+  fields:
+    action_time: 2022-10-30 18:32:45.505052+00:00
+    user: 1
+    content_type: 1
+    object_id: '83'
+    object_repr: Guinea
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 84
+  fields:
+    action_time: 2022-10-30 18:32:45.507741+00:00
+    user: 1
+    content_type: 1
+    object_id: '84'
+    object_repr: Guadeloupe
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 85
+  fields:
+    action_time: 2022-10-30 18:32:45.510477+00:00
+    user: 1
+    content_type: 1
+    object_id: '85'
+    object_repr: Equatorial Guinea
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 86
+  fields:
+    action_time: 2022-10-30 18:32:45.513395+00:00
+    user: 1
+    content_type: 1
+    object_id: '86'
+    object_repr: Greece
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 87
+  fields:
+    action_time: 2022-10-30 18:32:45.516397+00:00
+    user: 1
+    content_type: 1
+    object_id: '87'
+    object_repr: South Georgia and the South Sandwich Islands
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 88
+  fields:
+    action_time: 2022-10-30 18:32:45.518925+00:00
+    user: 1
+    content_type: 1
+    object_id: '88'
+    object_repr: Guatemala
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 89
+  fields:
+    action_time: 2022-10-30 18:32:45.521780+00:00
+    user: 1
+    content_type: 1
+    object_id: '89'
+    object_repr: Guam
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 90
+  fields:
+    action_time: 2022-10-30 18:32:45.524593+00:00
+    user: 1
+    content_type: 1
+    object_id: '90'
+    object_repr: Guinea-Bissau
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 91
+  fields:
+    action_time: 2022-10-30 18:32:45.527279+00:00
+    user: 1
+    content_type: 1
+    object_id: '91'
+    object_repr: Guyana
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 92
+  fields:
+    action_time: 2022-10-30 18:32:45.529997+00:00
+    user: 1
+    content_type: 1
+    object_id: '92'
+    object_repr: Gaza Strip
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 93
+  fields:
+    action_time: 2022-10-30 18:32:45.532545+00:00
+    user: 1
+    content_type: 1
+    object_id: '93'
+    object_repr: Hong Kong
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 94
+  fields:
+    action_time: 2022-10-30 18:32:45.535481+00:00
+    user: 1
+    content_type: 1
+    object_id: '94'
+    object_repr: Heard Island and McDonald Islands
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 95
+  fields:
+    action_time: 2022-10-30 18:32:45.538348+00:00
+    user: 1
+    content_type: 1
+    object_id: '95'
+    object_repr: Honduras
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 96
+  fields:
+    action_time: 2022-10-30 18:32:45.541101+00:00
+    user: 1
+    content_type: 1
+    object_id: '96'
+    object_repr: Croatia
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 97
+  fields:
+    action_time: 2022-10-30 18:32:45.543835+00:00
+    user: 1
+    content_type: 1
+    object_id: '97'
+    object_repr: Haiti
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 98
+  fields:
+    action_time: 2022-10-30 18:32:45.546706+00:00
+    user: 1
+    content_type: 1
+    object_id: '98'
+    object_repr: Hungary
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 99
+  fields:
+    action_time: 2022-10-30 18:32:45.549422+00:00
+    user: 1
+    content_type: 1
+    object_id: '99'
+    object_repr: Indonesia
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 100
+  fields:
+    action_time: 2022-10-30 18:32:45.551798+00:00
+    user: 1
+    content_type: 1
+    object_id: '100'
+    object_repr: Ireland
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 101
+  fields:
+    action_time: 2022-10-30 18:32:45.554375+00:00
+    user: 1
+    content_type: 1
+    object_id: '101'
+    object_repr: Israel
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 102
+  fields:
+    action_time: 2022-10-30 18:32:45.556651+00:00
+    user: 1
+    content_type: 1
+    object_id: '102'
+    object_repr: Isle of Man
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 103
+  fields:
+    action_time: 2022-10-30 18:32:45.559369+00:00
+    user: 1
+    content_type: 1
+    object_id: '103'
+    object_repr: India
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 104
+  fields:
+    action_time: 2022-10-30 18:32:45.562127+00:00
+    user: 1
+    content_type: 1
+    object_id: '104'
+    object_repr: British Indian Ocean Territory
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 105
+  fields:
+    action_time: 2022-10-30 18:32:45.564719+00:00
+    user: 1
+    content_type: 1
+    object_id: '105'
+    object_repr: Iraq
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 106
+  fields:
+    action_time: 2022-10-30 18:32:45.567220+00:00
+    user: 1
+    content_type: 1
+    object_id: '106'
+    object_repr: Iran
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 107
+  fields:
+    action_time: 2022-10-30 18:32:45.570056+00:00
+    user: 1
+    content_type: 1
+    object_id: '107'
+    object_repr: Iceland
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 108
+  fields:
+    action_time: 2022-10-30 18:32:45.572676+00:00
+    user: 1
+    content_type: 1
+    object_id: '108'
+    object_repr: Italy
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 109
+  fields:
+    action_time: 2022-10-30 18:32:45.575461+00:00
+    user: 1
+    content_type: 1
+    object_id: '109'
+    object_repr: Jersey
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 110
+  fields:
+    action_time: 2022-10-30 18:32:45.577995+00:00
+    user: 1
+    content_type: 1
+    object_id: '110'
+    object_repr: Jamaica
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 111
+  fields:
+    action_time: 2022-10-30 18:32:45.580418+00:00
+    user: 1
+    content_type: 1
+    object_id: '111'
+    object_repr: Jordan
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 112
+  fields:
+    action_time: 2022-10-30 18:32:45.583018+00:00
+    user: 1
+    content_type: 1
+    object_id: '112'
+    object_repr: Japan
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 113
+  fields:
+    action_time: 2022-10-30 18:32:45.585875+00:00
+    user: 1
+    content_type: 1
+    object_id: '113'
+    object_repr: Kenya
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 114
+  fields:
+    action_time: 2022-10-30 18:32:45.588612+00:00
+    user: 1
+    content_type: 1
+    object_id: '114'
+    object_repr: Kyrgyzstan
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 115
+  fields:
+    action_time: 2022-10-30 18:32:45.591280+00:00
+    user: 1
+    content_type: 1
+    object_id: '115'
+    object_repr: Cambodia
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 116
+  fields:
+    action_time: 2022-10-30 18:32:45.594122+00:00
+    user: 1
+    content_type: 1
+    object_id: '116'
+    object_repr: Kiribati
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 117
+  fields:
+    action_time: 2022-10-30 18:32:45.597026+00:00
+    user: 1
+    content_type: 1
+    object_id: '117'
+    object_repr: Comoros
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 118
+  fields:
+    action_time: 2022-10-30 18:32:45.599875+00:00
+    user: 1
+    content_type: 1
+    object_id: '118'
+    object_repr: Saint Kitts and Nevis
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 119
+  fields:
+    action_time: 2022-10-30 18:32:45.602503+00:00
+    user: 1
+    content_type: 1
+    object_id: '119'
+    object_repr: North Korea
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 120
+  fields:
+    action_time: 2022-10-30 18:32:45.605134+00:00
+    user: 1
+    content_type: 1
+    object_id: '120'
+    object_repr: South Korea
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 121
+  fields:
+    action_time: 2022-10-30 18:32:45.607791+00:00
+    user: 1
+    content_type: 1
+    object_id: '121'
+    object_repr: Kuwait
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 122
+  fields:
+    action_time: 2022-10-30 18:32:45.610365+00:00
+    user: 1
+    content_type: 1
+    object_id: '122'
+    object_repr: Cayman Islands
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 123
+  fields:
+    action_time: 2022-10-30 18:32:45.612904+00:00
+    user: 1
+    content_type: 1
+    object_id: '123'
+    object_repr: Kazakhstan
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 124
+  fields:
+    action_time: 2022-10-30 18:32:45.615764+00:00
+    user: 1
+    content_type: 1
+    object_id: '124'
+    object_repr: Laos
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 125
+  fields:
+    action_time: 2022-10-30 18:32:45.618345+00:00
+    user: 1
+    content_type: 1
+    object_id: '125'
+    object_repr: Lebanon
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 126
+  fields:
+    action_time: 2022-10-30 18:32:45.621067+00:00
+    user: 1
+    content_type: 1
+    object_id: '126'
+    object_repr: Saint Lucia
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 127
+  fields:
+    action_time: 2022-10-30 18:32:45.623450+00:00
+    user: 1
+    content_type: 1
+    object_id: '127'
+    object_repr: Liechtenstein
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 128
+  fields:
+    action_time: 2022-10-30 18:32:45.626134+00:00
+    user: 1
+    content_type: 1
+    object_id: '128'
+    object_repr: Sri Lanka
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 129
+  fields:
+    action_time: 2022-10-30 18:32:45.628971+00:00
+    user: 1
+    content_type: 1
+    object_id: '129'
+    object_repr: Liberia
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 130
+  fields:
+    action_time: 2022-10-30 18:32:45.631766+00:00
+    user: 1
+    content_type: 1
+    object_id: '130'
+    object_repr: Lesotho
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 131
+  fields:
+    action_time: 2022-10-30 18:32:45.634560+00:00
+    user: 1
+    content_type: 1
+    object_id: '131'
+    object_repr: Lithuania
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 132
+  fields:
+    action_time: 2022-10-30 18:32:45.637257+00:00
+    user: 1
+    content_type: 1
+    object_id: '132'
+    object_repr: Luxembourg
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 133
+  fields:
+    action_time: 2022-10-30 18:32:45.640062+00:00
+    user: 1
+    content_type: 1
+    object_id: '133'
+    object_repr: Latvia
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 134
+  fields:
+    action_time: 2022-10-30 18:32:45.642825+00:00
+    user: 1
+    content_type: 1
+    object_id: '134'
+    object_repr: Libya
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 135
+  fields:
+    action_time: 2022-10-30 18:32:45.645363+00:00
+    user: 1
+    content_type: 1
+    object_id: '135'
+    object_repr: Morocco
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 136
+  fields:
+    action_time: 2022-10-30 18:32:45.648314+00:00
+    user: 1
+    content_type: 1
+    object_id: '136'
+    object_repr: Monaco
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 137
+  fields:
+    action_time: 2022-10-30 18:32:45.651120+00:00
+    user: 1
+    content_type: 1
+    object_id: '137'
+    object_repr: Moldova
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 138
+  fields:
+    action_time: 2022-10-30 18:32:45.653849+00:00
+    user: 1
+    content_type: 1
+    object_id: '138'
+    object_repr: Montenegro
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 139
+  fields:
+    action_time: 2022-10-30 18:32:45.656420+00:00
+    user: 1
+    content_type: 1
+    object_id: '139'
+    object_repr: Madagascar
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 140
+  fields:
+    action_time: 2022-10-30 18:32:45.659281+00:00
+    user: 1
+    content_type: 1
+    object_id: '140'
+    object_repr: Marshall Islands
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 141
+  fields:
+    action_time: 2022-10-30 18:32:45.661868+00:00
+    user: 1
+    content_type: 1
+    object_id: '141'
+    object_repr: Macedonia [FYROM]
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 142
+  fields:
+    action_time: 2022-10-30 18:32:45.664527+00:00
+    user: 1
+    content_type: 1
+    object_id: '142'
+    object_repr: Mali
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 143
+  fields:
+    action_time: 2022-10-30 18:32:45.666897+00:00
+    user: 1
+    content_type: 1
+    object_id: '143'
+    object_repr: Myanmar [Burma]
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 144
+  fields:
+    action_time: 2022-10-30 18:32:45.669527+00:00
+    user: 1
+    content_type: 1
+    object_id: '144'
+    object_repr: Mongolia
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 145
+  fields:
+    action_time: 2022-10-30 18:32:45.672964+00:00
+    user: 1
+    content_type: 1
+    object_id: '145'
+    object_repr: Macau
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 146
+  fields:
+    action_time: 2022-10-30 18:32:45.676148+00:00
+    user: 1
+    content_type: 1
+    object_id: '146'
+    object_repr: Northern Mariana Islands
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 147
+  fields:
+    action_time: 2022-10-30 18:32:45.679075+00:00
+    user: 1
+    content_type: 1
+    object_id: '147'
+    object_repr: Martinique
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 148
+  fields:
+    action_time: 2022-10-30 18:32:45.682466+00:00
+    user: 1
+    content_type: 1
+    object_id: '148'
+    object_repr: Mauritania
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 149
+  fields:
+    action_time: 2022-10-30 18:32:45.685797+00:00
+    user: 1
+    content_type: 1
+    object_id: '149'
+    object_repr: Montserrat
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 150
+  fields:
+    action_time: 2022-10-30 18:32:45.688599+00:00
+    user: 1
+    content_type: 1
+    object_id: '150'
+    object_repr: Malta
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 151
+  fields:
+    action_time: 2022-10-30 18:32:45.691796+00:00
+    user: 1
+    content_type: 1
+    object_id: '151'
+    object_repr: Mauritius
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 152
+  fields:
+    action_time: 2022-10-30 18:32:45.694821+00:00
+    user: 1
+    content_type: 1
+    object_id: '152'
+    object_repr: Maldives
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 153
+  fields:
+    action_time: 2022-10-30 18:32:45.697442+00:00
+    user: 1
+    content_type: 1
+    object_id: '153'
+    object_repr: Malawi
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 154
+  fields:
+    action_time: 2022-10-30 18:32:45.700192+00:00
+    user: 1
+    content_type: 1
+    object_id: '154'
+    object_repr: Mexico
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 155
+  fields:
+    action_time: 2022-10-30 18:32:45.702546+00:00
+    user: 1
+    content_type: 1
+    object_id: '155'
+    object_repr: Malaysia
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 156
+  fields:
+    action_time: 2022-10-30 18:32:45.705150+00:00
+    user: 1
+    content_type: 1
+    object_id: '156'
+    object_repr: Mozambique
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 157
+  fields:
+    action_time: 2022-10-30 18:32:45.707532+00:00
+    user: 1
+    content_type: 1
+    object_id: '157'
+    object_repr: Namibia
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 158
+  fields:
+    action_time: 2022-10-30 18:32:45.709975+00:00
+    user: 1
+    content_type: 1
+    object_id: '158'
+    object_repr: New Caledonia
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 159
+  fields:
+    action_time: 2022-10-30 18:32:45.712520+00:00
+    user: 1
+    content_type: 1
+    object_id: '159'
+    object_repr: Niger
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 160
+  fields:
+    action_time: 2022-10-30 18:32:45.715485+00:00
+    user: 1
+    content_type: 1
+    object_id: '160'
+    object_repr: Norfolk Island
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 161
+  fields:
+    action_time: 2022-10-30 18:32:45.718153+00:00
+    user: 1
+    content_type: 1
+    object_id: '161'
+    object_repr: Nigeria
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 162
+  fields:
+    action_time: 2022-10-30 18:32:45.720543+00:00
+    user: 1
+    content_type: 1
+    object_id: '162'
+    object_repr: Nicaragua
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 163
+  fields:
+    action_time: 2022-10-30 18:32:45.723052+00:00
+    user: 1
+    content_type: 1
+    object_id: '163'
+    object_repr: Netherlands
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 164
+  fields:
+    action_time: 2022-10-30 18:32:45.725870+00:00
+    user: 1
+    content_type: 1
+    object_id: '164'
+    object_repr: Norway
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 165
+  fields:
+    action_time: 2022-10-30 18:32:45.728391+00:00
+    user: 1
+    content_type: 1
+    object_id: '165'
+    object_repr: Nepal
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 166
+  fields:
+    action_time: 2022-10-30 18:32:45.731106+00:00
+    user: 1
+    content_type: 1
+    object_id: '166'
+    object_repr: Nauru
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 167
+  fields:
+    action_time: 2022-10-30 18:32:45.733756+00:00
+    user: 1
+    content_type: 1
+    object_id: '167'
+    object_repr: Niue
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 168
+  fields:
+    action_time: 2022-10-30 18:32:45.736248+00:00
+    user: 1
+    content_type: 1
+    object_id: '168'
+    object_repr: New Zealand
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 169
+  fields:
+    action_time: 2022-10-30 18:32:45.738962+00:00
+    user: 1
+    content_type: 1
+    object_id: '169'
+    object_repr: Oman
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 170
+  fields:
+    action_time: 2022-10-30 18:32:45.741623+00:00
+    user: 1
+    content_type: 1
+    object_id: '170'
+    object_repr: Panama
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 171
+  fields:
+    action_time: 2022-10-30 18:32:45.744263+00:00
+    user: 1
+    content_type: 1
+    object_id: '171'
+    object_repr: Peru
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 172
+  fields:
+    action_time: 2022-10-30 18:32:45.746771+00:00
+    user: 1
+    content_type: 1
+    object_id: '172'
+    object_repr: French Polynesia
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 173
+  fields:
+    action_time: 2022-10-30 18:32:45.750529+00:00
+    user: 1
+    content_type: 1
+    object_id: '173'
+    object_repr: Papua New Guinea
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 174
+  fields:
+    action_time: 2022-10-30 18:32:45.753426+00:00
+    user: 1
+    content_type: 1
+    object_id: '174'
+    object_repr: Philippines
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 175
+  fields:
+    action_time: 2022-10-30 18:32:45.755919+00:00
+    user: 1
+    content_type: 1
+    object_id: '175'
+    object_repr: Pakistan
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 176
+  fields:
+    action_time: 2022-10-30 18:32:45.758766+00:00
+    user: 1
+    content_type: 1
+    object_id: '176'
+    object_repr: Poland
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 177
+  fields:
+    action_time: 2022-10-30 18:32:45.761625+00:00
+    user: 1
+    content_type: 1
+    object_id: '177'
+    object_repr: Saint Pierre and Miquelon
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 178
+  fields:
+    action_time: 2022-10-30 18:32:45.764152+00:00
+    user: 1
+    content_type: 1
+    object_id: '178'
+    object_repr: Pitcairn Islands
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 179
+  fields:
+    action_time: 2022-10-30 18:32:45.766772+00:00
+    user: 1
+    content_type: 1
+    object_id: '179'
+    object_repr: Puerto Rico
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 180
+  fields:
+    action_time: 2022-10-30 18:32:45.769627+00:00
+    user: 1
+    content_type: 1
+    object_id: '180'
+    object_repr: Palestinian Territories
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 181
+  fields:
+    action_time: 2022-10-30 18:32:45.772964+00:00
+    user: 1
+    content_type: 1
+    object_id: '181'
+    object_repr: Portugal
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 182
+  fields:
+    action_time: 2022-10-30 18:32:45.775850+00:00
+    user: 1
+    content_type: 1
+    object_id: '182'
+    object_repr: Palau
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 183
+  fields:
+    action_time: 2022-10-30 18:32:45.778429+00:00
+    user: 1
+    content_type: 1
+    object_id: '183'
+    object_repr: Paraguay
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 184
+  fields:
+    action_time: 2022-10-30 18:32:45.781322+00:00
+    user: 1
+    content_type: 1
+    object_id: '184'
+    object_repr: Qatar
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 185
+  fields:
+    action_time: 2022-10-30 18:32:45.785932+00:00
+    user: 1
+    content_type: 1
+    object_id: '185'
+    object_repr: Reunion
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 186
+  fields:
+    action_time: 2022-10-30 18:32:45.788869+00:00
+    user: 1
+    content_type: 1
+    object_id: '186'
+    object_repr: Romania
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 187
+  fields:
+    action_time: 2022-10-30 18:32:45.791983+00:00
+    user: 1
+    content_type: 1
+    object_id: '187'
+    object_repr: Serbia
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 188
+  fields:
+    action_time: 2022-10-30 18:32:45.795944+00:00
+    user: 1
+    content_type: 1
+    object_id: '188'
+    object_repr: Russia
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 189
+  fields:
+    action_time: 2022-10-30 18:32:45.799194+00:00
+    user: 1
+    content_type: 1
+    object_id: '189'
+    object_repr: Rwanda
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 190
+  fields:
+    action_time: 2022-10-30 18:32:45.802425+00:00
+    user: 1
+    content_type: 1
+    object_id: '190'
+    object_repr: Saudi Arabia
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 191
+  fields:
+    action_time: 2022-10-30 18:32:45.805633+00:00
+    user: 1
+    content_type: 1
+    object_id: '191'
+    object_repr: Solomon Islands
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 192
+  fields:
+    action_time: 2022-10-30 18:32:45.809751+00:00
+    user: 1
+    content_type: 1
+    object_id: '192'
+    object_repr: Seychelles
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 193
+  fields:
+    action_time: 2022-10-30 18:32:45.812539+00:00
+    user: 1
+    content_type: 1
+    object_id: '193'
+    object_repr: Sudan
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 194
+  fields:
+    action_time: 2022-10-30 18:32:45.816257+00:00
+    user: 1
+    content_type: 1
+    object_id: '194'
+    object_repr: Sweden
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 195
+  fields:
+    action_time: 2022-10-30 18:32:45.819504+00:00
+    user: 1
+    content_type: 1
+    object_id: '195'
+    object_repr: Singapore
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 196
+  fields:
+    action_time: 2022-10-30 18:32:45.821870+00:00
+    user: 1
+    content_type: 1
+    object_id: '196'
+    object_repr: Saint Helena
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 197
+  fields:
+    action_time: 2022-10-30 18:32:45.824715+00:00
+    user: 1
+    content_type: 1
+    object_id: '197'
+    object_repr: Slovenia
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 198
+  fields:
+    action_time: 2022-10-30 18:32:45.828043+00:00
+    user: 1
+    content_type: 1
+    object_id: '198'
+    object_repr: Svalbard and Jan Mayen
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 199
+  fields:
+    action_time: 2022-10-30 18:32:45.830989+00:00
+    user: 1
+    content_type: 1
+    object_id: '199'
+    object_repr: Slovakia
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 200
+  fields:
+    action_time: 2022-10-30 18:32:45.833313+00:00
+    user: 1
+    content_type: 1
+    object_id: '200'
+    object_repr: Sierra Leone
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 201
+  fields:
+    action_time: 2022-10-30 18:32:45.835945+00:00
+    user: 1
+    content_type: 1
+    object_id: '201'
+    object_repr: San Marino
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 202
+  fields:
+    action_time: 2022-10-30 18:32:45.839413+00:00
+    user: 1
+    content_type: 1
+    object_id: '202'
+    object_repr: Senegal
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 203
+  fields:
+    action_time: 2022-10-30 18:32:45.843106+00:00
+    user: 1
+    content_type: 1
+    object_id: '203'
+    object_repr: Somalia
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 204
+  fields:
+    action_time: 2022-10-30 18:32:45.845706+00:00
+    user: 1
+    content_type: 1
+    object_id: '204'
+    object_repr: Suriname
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 205
+  fields:
+    action_time: 2022-10-30 18:32:45.848772+00:00
+    user: 1
+    content_type: 1
+    object_id: '205'
+    object_repr: Sao Tome and Principe
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 206
+  fields:
+    action_time: 2022-10-30 18:32:45.852530+00:00
+    user: 1
+    content_type: 1
+    object_id: '206'
+    object_repr: El Salvador
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 207
+  fields:
+    action_time: 2022-10-30 18:32:45.854989+00:00
+    user: 1
+    content_type: 1
+    object_id: '207'
+    object_repr: Syria
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 208
+  fields:
+    action_time: 2022-10-30 18:32:45.857328+00:00
+    user: 1
+    content_type: 1
+    object_id: '208'
+    object_repr: Swaziland
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 209
+  fields:
+    action_time: 2022-10-30 18:32:45.860849+00:00
+    user: 1
+    content_type: 1
+    object_id: '209'
+    object_repr: Turks and Caicos Islands
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 210
+  fields:
+    action_time: 2022-10-30 18:32:45.864165+00:00
+    user: 1
+    content_type: 1
+    object_id: '210'
+    object_repr: Chad
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 211
+  fields:
+    action_time: 2022-10-30 18:32:45.866709+00:00
+    user: 1
+    content_type: 1
+    object_id: '211'
+    object_repr: French Southern Territories
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 212
+  fields:
+    action_time: 2022-10-30 18:32:45.869740+00:00
+    user: 1
+    content_type: 1
+    object_id: '212'
+    object_repr: Togo
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 213
+  fields:
+    action_time: 2022-10-30 18:32:45.873799+00:00
+    user: 1
+    content_type: 1
+    object_id: '213'
+    object_repr: Thailand
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 214
+  fields:
+    action_time: 2022-10-30 18:32:45.876515+00:00
+    user: 1
+    content_type: 1
+    object_id: '214'
+    object_repr: Tajikistan
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 215
+  fields:
+    action_time: 2022-10-30 18:32:45.878816+00:00
+    user: 1
+    content_type: 1
+    object_id: '215'
+    object_repr: Tokelau
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 216
+  fields:
+    action_time: 2022-10-30 18:32:45.881508+00:00
+    user: 1
+    content_type: 1
+    object_id: '216'
+    object_repr: Timor-Leste
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 217
+  fields:
+    action_time: 2022-10-30 18:32:45.886105+00:00
+    user: 1
+    content_type: 1
+    object_id: '217'
+    object_repr: Turkmenistan
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 218
+  fields:
+    action_time: 2022-10-30 18:32:45.888831+00:00
+    user: 1
+    content_type: 1
+    object_id: '218'
+    object_repr: Tunisia
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 219
+  fields:
+    action_time: 2022-10-30 18:32:45.891417+00:00
+    user: 1
+    content_type: 1
+    object_id: '219'
+    object_repr: Tonga
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 220
+  fields:
+    action_time: 2022-10-30 18:32:45.894662+00:00
+    user: 1
+    content_type: 1
+    object_id: '220'
+    object_repr: Turkey
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 221
+  fields:
+    action_time: 2022-10-30 18:32:45.897540+00:00
+    user: 1
+    content_type: 1
+    object_id: '221'
+    object_repr: Trinidad and Tobago
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 222
+  fields:
+    action_time: 2022-10-30 18:32:45.900397+00:00
+    user: 1
+    content_type: 1
+    object_id: '222'
+    object_repr: Tuvalu
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 223
+  fields:
+    action_time: 2022-10-30 18:32:45.903544+00:00
+    user: 1
+    content_type: 1
+    object_id: '223'
+    object_repr: Taiwan
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 224
+  fields:
+    action_time: 2022-10-30 18:32:45.907511+00:00
+    user: 1
+    content_type: 1
+    object_id: '224'
+    object_repr: Tanzania
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 225
+  fields:
+    action_time: 2022-10-30 18:32:45.910411+00:00
+    user: 1
+    content_type: 1
+    object_id: '225'
+    object_repr: Ukraine
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 226
+  fields:
+    action_time: 2022-10-30 18:32:45.913043+00:00
+    user: 1
+    content_type: 1
+    object_id: '226'
+    object_repr: Uganda
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 227
+  fields:
+    action_time: 2022-10-30 18:32:45.916252+00:00
+    user: 1
+    content_type: 1
+    object_id: '227'
+    object_repr: United States
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 228
+  fields:
+    action_time: 2022-10-30 18:32:45.919767+00:00
+    user: 1
+    content_type: 1
+    object_id: '228'
+    object_repr: Uruguay
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 229
+  fields:
+    action_time: 2022-10-30 18:32:45.922468+00:00
+    user: 1
+    content_type: 1
+    object_id: '229'
+    object_repr: Uzbekistan
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 230
+  fields:
+    action_time: 2022-10-30 18:32:45.925382+00:00
+    user: 1
+    content_type: 1
+    object_id: '230'
+    object_repr: Vatican City
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 231
+  fields:
+    action_time: 2022-10-30 18:32:45.928504+00:00
+    user: 1
+    content_type: 1
+    object_id: '231'
+    object_repr: Saint Vincent and the Grenadines
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 232
+  fields:
+    action_time: 2022-10-30 18:32:45.931513+00:00
+    user: 1
+    content_type: 1
+    object_id: '232'
+    object_repr: Venezuela
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 233
+  fields:
+    action_time: 2022-10-30 18:32:45.934291+00:00
+    user: 1
+    content_type: 1
+    object_id: '233'
+    object_repr: British Virgin Islands
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 234
+  fields:
+    action_time: 2022-10-30 18:32:45.936922+00:00
+    user: 1
+    content_type: 1
+    object_id: '234'
+    object_repr: U.S. Virgin Islands
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 235
+  fields:
+    action_time: 2022-10-30 18:32:45.940021+00:00
+    user: 1
+    content_type: 1
+    object_id: '235'
+    object_repr: Vietnam
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 236
+  fields:
+    action_time: 2022-10-30 18:32:45.942623+00:00
+    user: 1
+    content_type: 1
+    object_id: '236'
+    object_repr: Vanuatu
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 237
+  fields:
+    action_time: 2022-10-30 18:32:45.945341+00:00
+    user: 1
+    content_type: 1
+    object_id: '237'
+    object_repr: Wallis and Futuna
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 238
+  fields:
+    action_time: 2022-10-30 18:32:45.948413+00:00
+    user: 1
+    content_type: 1
+    object_id: '238'
+    object_repr: Samoa
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 239
+  fields:
+    action_time: 2022-10-30 18:32:45.951677+00:00
+    user: 1
+    content_type: 1
+    object_id: '239'
+    object_repr: Kosovo
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 240
+  fields:
+    action_time: 2022-10-30 18:32:45.954694+00:00
+    user: 1
+    content_type: 1
+    object_id: '240'
+    object_repr: Yemen
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 241
+  fields:
+    action_time: 2022-10-30 18:32:45.957480+00:00
+    user: 1
+    content_type: 1
+    object_id: '241'
+    object_repr: Mayotte
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 242
+  fields:
+    action_time: 2022-10-30 18:32:45.960903+00:00
+    user: 1
+    content_type: 1
+    object_id: '242'
+    object_repr: South Africa
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 243
+  fields:
+    action_time: 2022-10-30 18:32:45.963763+00:00
+    user: 1
+    content_type: 1
+    object_id: '243'
+    object_repr: Zambia
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 244
+  fields:
+    action_time: 2022-10-30 18:32:45.966580+00:00
+    user: 1
+    content_type: 1
+    object_id: '244'
+    object_repr: Zimbabwe
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 245
+  fields:
+    action_time: 2022-10-30 18:33:03.903967+00:00
+    user: 1
+    content_type: 3
+    object_id: '22'
+    object_repr: 'Starchy Vegetables (e.g., corn, pumpkin, potato): 8'
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 246
+  fields:
+    action_time: 2022-10-30 18:33:03.907050+00:00
+    user: 1
+    content_type: 3
+    object_id: '21'
+    object_repr: 'Oats: 8'
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 247
+  fields:
+    action_time: 2022-10-30 18:33:03.909760+00:00
+    user: 1
+    content_type: 3
+    object_id: '20'
+    object_repr: 'Whole Wheat Pasta: 8'
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 248
+  fields:
+    action_time: 2022-10-30 18:33:03.912495+00:00
+    user: 1
+    content_type: 3
+    object_id: '19'
+    object_repr: 'Brown Rice: 8'
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 249
+  fields:
+    action_time: 2022-10-30 18:33:03.915628+00:00
+    user: 1
+    content_type: 3
+    object_id: '18'
+    object_repr: 'Whole Grains: 8'
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 250
+  fields:
+    action_time: 2022-10-30 18:33:03.918427+00:00
+    user: 1
+    content_type: 3
+    object_id: '17'
+    object_repr: 'Vegetables: 7'
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 251
+  fields:
+    action_time: 2022-10-30 18:33:03.921403+00:00
+    user: 1
+    content_type: 3
+    object_id: '16'
+    object_repr: 'Fruits: 6'
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 252
+  fields:
+    action_time: 2022-10-30 18:33:03.924150+00:00
+    user: 1
+    content_type: 3
+    object_id: '15'
+    object_repr: 'Eggs: 5'
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 253
+  fields:
+    action_time: 2022-10-30 18:33:03.926841+00:00
+    user: 1
+    content_type: 3
+    object_id: '14'
+    object_repr: 'Poultry: 5'
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 254
+  fields:
+    action_time: 2022-10-30 18:33:03.929266+00:00
+    user: 1
+    content_type: 3
+    object_id: '13'
+    object_repr: 'Fish: 5'
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 255
+  fields:
+    action_time: 2022-10-30 18:33:03.932034+00:00
+    user: 1
+    content_type: 3
+    object_id: '12'
+    object_repr: 'Tofu: 4'
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 256
+  fields:
+    action_time: 2022-10-30 18:33:03.934763+00:00
+    user: 1
+    content_type: 3
+    object_id: '11'
+    object_repr: 'Beans: 4'
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 257
+  fields:
+    action_time: 2022-10-30 18:33:03.937656+00:00
+    user: 1
+    content_type: 3
+    object_id: '10'
+    object_repr: 'Seeds: 4'
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 258
+  fields:
+    action_time: 2022-10-30 18:33:03.940263+00:00
+    user: 1
+    content_type: 3
+    object_id: '9'
+    object_repr: 'Nuts: 4'
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 259
+  fields:
+    action_time: 2022-10-30 18:33:03.943046+00:00
+    user: 1
+    content_type: 3
+    object_id: '8'
+    object_repr: 'Dairy: 3'
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 260
+  fields:
+    action_time: 2022-10-30 18:33:03.945723+00:00
+    user: 1
+    content_type: 3
+    object_id: '7'
+    object_repr: 'Sugar: 2'
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 261
+  fields:
+    action_time: 2022-10-30 18:33:03.948559+00:00
+    user: 1
+    content_type: 3
+    object_id: '6'
+    object_repr: 'Pasta: 2'
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 262
+  fields:
+    action_time: 2022-10-30 18:33:03.951347+00:00
+    user: 1
+    content_type: 3
+    object_id: '5'
+    object_repr: 'White Rice: 2'
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 263
+  fields:
+    action_time: 2022-10-30 18:33:03.954020+00:00
+    user: 1
+    content_type: 3
+    object_id: '4'
+    object_repr: 'White Flour/Bread Flour: 2'
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 264
+  fields:
+    action_time: 2022-10-30 18:33:03.956315+00:00
+    user: 1
+    content_type: 3
+    object_id: '3'
+    object_repr: 'Refined Grains (e.g., White Flour): 2'
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 265
+  fields:
+    action_time: 2022-10-30 18:33:03.958789+00:00
+    user: 1
+    content_type: 3
+    object_id: '2'
+    object_repr: 'Butter: 1'
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 266
+  fields:
+    action_time: 2022-10-30 18:33:03.961329+00:00
+    user: 1
+    content_type: 3
+    object_id: '1'
+    object_repr: 'Red Meat: 1'
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 267
+  fields:
+    action_time: 2022-10-30 18:33:40.455324+00:00
+    user: 1
+    content_type: 4
+    object_id: '1'
+    object_repr: 'Sweet '
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 268
+  fields:
+    action_time: 2022-10-30 18:33:40.458840+00:00
+    user: 1
+    content_type: 4
+    object_id: '2'
+    object_repr: 'Sweet Salty '
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 269
+  fields:
+    action_time: 2022-10-30 18:33:40.461722+00:00
+    user: 1
+    content_type: 4
+    object_id: '3'
+    object_repr: 'Sweet Sour '
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 270
+  fields:
+    action_time: 2022-10-30 18:33:40.464622+00:00
+    user: 1
+    content_type: 4
+    object_id: '4'
+    object_repr: 'Sweet Bitter '
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 271
+  fields:
+    action_time: 2022-10-30 18:33:40.467272+00:00
+    user: 1
+    content_type: 4
+    object_id: '5'
+    object_repr: 'Sweet Umami '
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 272
+  fields:
+    action_time: 2022-10-30 18:33:40.470284+00:00
+    user: 1
+    content_type: 4
+    object_id: '6'
+    object_repr: 'Sweet Salty Sour '
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 273
+  fields:
+    action_time: 2022-10-30 18:33:40.472942+00:00
+    user: 1
+    content_type: 4
+    object_id: '7'
+    object_repr: 'Sweet Salty Bitter '
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 274
+  fields:
+    action_time: 2022-10-30 18:33:40.475736+00:00
+    user: 1
+    content_type: 4
+    object_id: '8'
+    object_repr: 'Sweet Salty Umami '
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 275
+  fields:
+    action_time: 2022-10-30 18:33:40.478181+00:00
+    user: 1
+    content_type: 4
+    object_id: '9'
+    object_repr: 'Sweet Sour Bitter '
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 276
+  fields:
+    action_time: 2022-10-30 18:33:40.481134+00:00
+    user: 1
+    content_type: 4
+    object_id: '10'
+    object_repr: 'Sweet Sour Umami '
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 277
+  fields:
+    action_time: 2022-10-30 18:33:40.483732+00:00
+    user: 1
+    content_type: 4
+    object_id: '11'
+    object_repr: 'Sweet Bitter Umami '
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 278
+  fields:
+    action_time: 2022-10-30 18:33:40.486478+00:00
+    user: 1
+    content_type: 4
+    object_id: '12'
+    object_repr: 'Salty '
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 279
+  fields:
+    action_time: 2022-10-30 18:33:40.489170+00:00
+    user: 1
+    content_type: 4
+    object_id: '13'
+    object_repr: 'Salty Sour '
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 280
+  fields:
+    action_time: 2022-10-30 18:33:40.492237+00:00
+    user: 1
+    content_type: 4
+    object_id: '14'
+    object_repr: 'Salty Bitter '
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 281
+  fields:
+    action_time: 2022-10-30 18:33:40.494786+00:00
+    user: 1
+    content_type: 4
+    object_id: '15'
+    object_repr: 'Salty Umami '
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 282
+  fields:
+    action_time: 2022-10-30 18:33:40.497324+00:00
+    user: 1
+    content_type: 4
+    object_id: '16'
+    object_repr: 'Salty Sour Bitter '
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 283
+  fields:
+    action_time: 2022-10-30 18:33:40.500125+00:00
+    user: 1
+    content_type: 4
+    object_id: '17'
+    object_repr: 'Salty Sour Umami '
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 284
+  fields:
+    action_time: 2022-10-30 18:33:40.502939+00:00
+    user: 1
+    content_type: 4
+    object_id: '18'
+    object_repr: 'Salty Bitter Umami '
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 285
+  fields:
+    action_time: 2022-10-30 18:33:40.505759+00:00
+    user: 1
+    content_type: 4
+    object_id: '19'
+    object_repr: 'Sour '
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 286
+  fields:
+    action_time: 2022-10-30 18:33:40.508443+00:00
+    user: 1
+    content_type: 4
+    object_id: '20'
+    object_repr: 'Sour Bitter '
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 287
+  fields:
+    action_time: 2022-10-30 18:33:40.511076+00:00
+    user: 1
+    content_type: 4
+    object_id: '21'
+    object_repr: 'Sour Umami '
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 288
+  fields:
+    action_time: 2022-10-30 18:33:40.513883+00:00
+    user: 1
+    content_type: 4
+    object_id: '22'
+    object_repr: 'Sour Bitter Umami '
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 289
+  fields:
+    action_time: 2022-10-30 18:33:40.516514+00:00
+    user: 1
+    content_type: 4
+    object_id: '23'
+    object_repr: 'Bitter '
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 290
+  fields:
+    action_time: 2022-10-30 18:33:40.519145+00:00
+    user: 1
+    content_type: 4
+    object_id: '24'
+    object_repr: 'Bitter Umami '
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 291
+  fields:
+    action_time: 2022-10-30 18:33:40.521733+00:00
+    user: 1
+    content_type: 4
+    object_id: '25'
+    object_repr: 'Umami '
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 292
+  fields:
+    action_time: 2022-10-30 18:34:50.040592+00:00
+    user: 1
+    content_type: 2
+    object_id: '1'
+    object_repr: pavlova
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 293
+  fields:
+    action_time: 2022-10-30 18:34:50.043576+00:00
+    user: 1
+    content_type: 2
+    object_id: '2'
+    object_repr: fries
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 294
+  fields:
+    action_time: 2022-10-30 18:34:50.046955+00:00
+    user: 1
+    content_type: 2
+    object_id: '3'
+    object_repr: xialongbao
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 295
+  fields:
+    action_time: 2022-10-30 18:34:50.049890+00:00
+    user: 1
+    content_type: 2
+    object_id: '4'
+    object_repr: falafel
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 296
+  fields:
+    action_time: 2022-10-30 18:34:50.052758+00:00
+    user: 1
+    content_type: 2
+    object_id: '5'
+    object_repr: frankfurter
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 297
+  fields:
+    action_time: 2022-10-30 18:34:50.055850+00:00
+    user: 1
+    content_type: 2
+    object_id: '6'
+    object_repr: oatmeal
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 298
+  fields:
+    action_time: 2022-10-30 18:34:50.059190+00:00
+    user: 1
+    content_type: 2
+    object_id: '7'
+    object_repr: gyros
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 299
+  fields:
+    action_time: 2022-10-30 18:34:50.062008+00:00
+    user: 1
+    content_type: 2
+    object_id: '8'
+    object_repr: paneer
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 300
+  fields:
+    action_time: 2022-10-30 18:34:50.064865+00:00
+    user: 1
+    content_type: 2
+    object_id: '9'
+    object_repr: vindaloo
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 301
+  fields:
+    action_time: 2022-10-30 18:34:50.067601+00:00
+    user: 1
+    content_type: 2
+    object_id: '10'
+    object_repr: omelette
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 302
+  fields:
+    action_time: 2022-10-30 18:34:50.070694+00:00
+    user: 1
+    content_type: 2
+    object_id: '11'
+    object_repr: tiramisu
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 303
+  fields:
+    action_time: 2022-10-30 18:34:50.073500+00:00
+    user: 1
+    content_type: 2
+    object_id: '12'
+    object_repr: pizza
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 304
+  fields:
+    action_time: 2022-10-30 18:34:50.076166+00:00
+    user: 1
+    content_type: 2
+    object_id: '13'
+    object_repr: sushi
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 305
+  fields:
+    action_time: 2022-10-30 18:34:50.079140+00:00
+    user: 1
+    content_type: 2
+    object_id: '14'
+    object_repr: quesadilla
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 306
+  fields:
+    action_time: 2022-10-30 18:34:50.082310+00:00
+    user: 1
+    content_type: 2
+    object_id: '15'
+    object_repr: taco
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 307
+  fields:
+    action_time: 2022-10-30 18:34:50.085186+00:00
+    user: 1
+    content_type: 2
+    object_id: '16'
+    object_repr: pancake
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 308
+  fields:
+    action_time: 2022-10-30 18:34:50.088246+00:00
+    user: 1
+    content_type: 2
+    object_id: '17'
+    object_repr: paratha
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 309
+  fields:
+    action_time: 2022-10-30 18:34:50.092094+00:00
+    user: 1
+    content_type: 2
+    object_id: '18'
+    object_repr: ceviche
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 310
+  fields:
+    action_time: 2022-10-30 18:34:50.095257+00:00
+    user: 1
+    content_type: 2
+    object_id: '19'
+    object_repr: pierogi
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 311
+  fields:
+    action_time: 2022-10-30 18:34:50.098375+00:00
+    user: 1
+    content_type: 2
+    object_id: '20'
+    object_repr: flan
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 312
+  fields:
+    action_time: 2022-10-30 18:34:50.101580+00:00
+    user: 1
+    content_type: 2
+    object_id: '21'
+    object_repr: jollof
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 313
+  fields:
+    action_time: 2022-10-30 18:34:50.104986+00:00
+    user: 1
+    content_type: 2
+    object_id: '22'
+    object_repr: bobotie
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 314
+  fields:
+    action_time: 2022-10-30 18:34:50.108000+00:00
+    user: 1
+    content_type: 2
+    object_id: '23'
+    object_repr: bulgogi
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 315
+  fields:
+    action_time: 2022-10-30 18:34:50.110846+00:00
+    user: 1
+    content_type: 2
+    object_id: '24'
+    object_repr: bibimbap
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 316
+  fields:
+    action_time: 2022-10-30 18:34:50.114063+00:00
+    user: 1
+    content_type: 2
+    object_id: '25'
+    object_repr: gazpacho
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 317
+  fields:
+    action_time: 2022-10-30 18:34:50.116812+00:00
+    user: 1
+    content_type: 2
+    object_id: '26'
+    object_repr: jumbalaya
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 318
+  fields:
+    action_time: 2022-10-30 18:34:50.119544+00:00
+    user: 1
+    content_type: 2
+    object_id: '27'
+    object_repr: cereal
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 319
+  fields:
+    action_time: 2022-10-30 18:34:50.122375+00:00
+    user: 1
+    content_type: 2
+    object_id: '28'
+    object_repr: waffle
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 320
+  fields:
+    action_time: 2022-10-30 18:34:50.125446+00:00
+    user: 1
+    content_type: 2
+    object_id: '29'
+    object_repr: pho
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 321
+  fields:
+    action_time: 2022-10-30 18:34:50.128238+00:00
+    user: 1
+    content_type: 2
+    object_id: '30'
+    object_repr: poutine
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 322
+  fields:
+    action_time: 2022-10-30 18:34:50.131041+00:00
+    user: 1
+    content_type: 2
+    object_id: '31'
+    object_repr: arepa
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 323
+  fields:
+    action_time: 2022-10-30 18:34:50.133677+00:00
+    user: 1
+    content_type: 2
+    object_id: '32'
+    object_repr: calamari
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 324
+  fields:
+    action_time: 2022-10-30 18:34:50.136619+00:00
+    user: 1
+    content_type: 2
+    object_id: '33'
+    object_repr: brownie
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 325
+  fields:
+    action_time: 2022-10-30 18:34:50.139451+00:00
+    user: 1
+    content_type: 2
+    object_id: '34'
+    object_repr: cookie
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 326
+  fields:
+    action_time: 2022-10-30 18:34:50.142072+00:00
+    user: 1
+    content_type: 2
+    object_id: '35'
+    object_repr: cake
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 327
+  fields:
+    action_time: 2022-10-30 18:34:50.145040+00:00
+    user: 1
+    content_type: 2
+    object_id: '36'
+    object_repr: baklava
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 328
+  fields:
+    action_time: 2022-10-30 18:34:50.148254+00:00
+    user: 1
+    content_type: 2
+    object_id: '37'
+    object_repr: couscous
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 329
+  fields:
+    action_time: 2022-10-30 18:34:50.151231+00:00
+    user: 1
+    content_type: 2
+    object_id: '38'
+    object_repr: borscht
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 330
+  fields:
+    action_time: 2022-10-30 18:34:50.153973+00:00
+    user: 1
+    content_type: 2
+    object_id: '39'
+    object_repr: milkshake
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 331
+  fields:
+    action_time: 2022-10-30 18:34:50.156811+00:00
+    user: 1
+    content_type: 2
+    object_id: '40'
+    object_repr: hummus
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 332
+  fields:
+    action_time: 2022-10-30 18:34:50.159783+00:00
+    user: 1
+    content_type: 2
+    object_id: '41'
+    object_repr: spanakopita
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 333
+  fields:
+    action_time: 2022-10-30 18:34:50.162546+00:00
+    user: 1
+    content_type: 2
+    object_id: '42'
+    object_repr: naan
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 334
+  fields:
+    action_time: 2022-10-30 18:34:50.165292+00:00
+    user: 1
+    content_type: 2
+    object_id: '43'
+    object_repr: risoto
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 335
+  fields:
+    action_time: 2022-10-30 18:34:50.168197+00:00
+    user: 1
+    content_type: 2
+    object_id: '44'
+    object_repr: spaghetti
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 336
+  fields:
+    action_time: 2022-10-30 18:34:50.171314+00:00
+    user: 1
+    content_type: 2
+    object_id: '45'
+    object_repr: takoyaki
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 337
+  fields:
+    action_time: 2022-10-30 18:34:50.174167+00:00
+    user: 1
+    content_type: 2
+    object_id: '46'
+    object_repr: momo
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 338
+  fields:
+    action_time: 2022-10-30 18:34:50.176705+00:00
+    user: 1
+    content_type: 2
+    object_id: '47'
+    object_repr: lumpia
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 339
+  fields:
+    action_time: 2022-10-30 18:34:50.179799+00:00
+    user: 1
+    content_type: 2
+    object_id: '48'
+    object_repr: pancit
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 340
+  fields:
+    action_time: 2022-10-30 18:34:50.182792+00:00
+    user: 1
+    content_type: 2
+    object_id: '49'
+    object_repr: grits
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 341
+  fields:
+    action_time: 2022-10-30 18:34:50.185624+00:00
+    user: 1
+    content_type: 2
+    object_id: '50'
+    object_repr: tabbouleh
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 342
+  fields:
+    action_time: 2022-10-30 18:34:50.188536+00:00
+    user: 1
+    content_type: 2
+    object_id: '51'
+    object_repr: kimchi
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 343
+  fields:
+    action_time: 2022-10-30 18:35:13.303998+00:00
+    user: 1
+    content_type: 6
+    object_id: '1'
+    object_repr: pavlova
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 344
+  fields:
+    action_time: 2022-10-30 18:35:13.306911+00:00
+    user: 1
+    content_type: 6
+    object_id: '2'
+    object_repr: fries
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 345
+  fields:
+    action_time: 2022-10-30 18:35:13.309678+00:00
+    user: 1
+    content_type: 6
+    object_id: '3'
+    object_repr: xialongbao
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 346
+  fields:
+    action_time: 2022-10-30 18:35:13.312454+00:00
+    user: 1
+    content_type: 6
+    object_id: '4'
+    object_repr: falafel
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 347
+  fields:
+    action_time: 2022-10-30 18:35:13.315163+00:00
+    user: 1
+    content_type: 6
+    object_id: '5'
+    object_repr: frankfurter
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 348
+  fields:
+    action_time: 2022-10-30 18:35:13.318010+00:00
+    user: 1
+    content_type: 6
+    object_id: '6'
+    object_repr: oatmeal
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 349
+  fields:
+    action_time: 2022-10-30 18:35:13.320793+00:00
+    user: 1
+    content_type: 6
+    object_id: '7'
+    object_repr: gyros
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 350
+  fields:
+    action_time: 2022-10-30 18:35:13.323639+00:00
+    user: 1
+    content_type: 6
+    object_id: '8'
+    object_repr: paneer
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 351
+  fields:
+    action_time: 2022-10-30 18:35:13.326404+00:00
+    user: 1
+    content_type: 6
+    object_id: '9'
+    object_repr: vindaloo
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 352
+  fields:
+    action_time: 2022-10-30 18:35:13.329084+00:00
+    user: 1
+    content_type: 6
+    object_id: '10'
+    object_repr: omelette
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 353
+  fields:
+    action_time: 2022-10-30 18:35:13.331786+00:00
+    user: 1
+    content_type: 6
+    object_id: '11'
+    object_repr: tiramisu
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 354
+  fields:
+    action_time: 2022-10-30 18:35:13.334690+00:00
+    user: 1
+    content_type: 6
+    object_id: '12'
+    object_repr: pizza
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 355
+  fields:
+    action_time: 2022-10-30 18:35:13.337184+00:00
+    user: 1
+    content_type: 6
+    object_id: '13'
+    object_repr: sushi
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 356
+  fields:
+    action_time: 2022-10-30 18:35:13.339881+00:00
+    user: 1
+    content_type: 6
+    object_id: '14'
+    object_repr: quesadilla
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 357
+  fields:
+    action_time: 2022-10-30 18:35:13.342572+00:00
+    user: 1
+    content_type: 6
+    object_id: '15'
+    object_repr: taco
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 358
+  fields:
+    action_time: 2022-10-30 18:35:13.345545+00:00
+    user: 1
+    content_type: 6
+    object_id: '16'
+    object_repr: pancake
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 359
+  fields:
+    action_time: 2022-10-30 18:35:13.348150+00:00
+    user: 1
+    content_type: 6
+    object_id: '17'
+    object_repr: paratha
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 360
+  fields:
+    action_time: 2022-10-30 18:35:13.350854+00:00
+    user: 1
+    content_type: 6
+    object_id: '18'
+    object_repr: ceviche
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 361
+  fields:
+    action_time: 2022-10-30 18:35:13.353582+00:00
+    user: 1
+    content_type: 6
+    object_id: '19'
+    object_repr: pierogi
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 362
+  fields:
+    action_time: 2022-10-30 18:35:13.356226+00:00
+    user: 1
+    content_type: 6
+    object_id: '20'
+    object_repr: flan
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 363
+  fields:
+    action_time: 2022-10-30 18:35:13.358938+00:00
+    user: 1
+    content_type: 6
+    object_id: '21'
+    object_repr: jollof
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 364
+  fields:
+    action_time: 2022-10-30 18:35:13.361351+00:00
+    user: 1
+    content_type: 6
+    object_id: '22'
+    object_repr: bobotie
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 365
+  fields:
+    action_time: 2022-10-30 18:35:13.364041+00:00
+    user: 1
+    content_type: 6
+    object_id: '23'
+    object_repr: bulgogi
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 366
+  fields:
+    action_time: 2022-10-30 18:35:13.366435+00:00
+    user: 1
+    content_type: 6
+    object_id: '24'
+    object_repr: bibimbap
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 367
+  fields:
+    action_time: 2022-10-30 18:35:13.369162+00:00
+    user: 1
+    content_type: 6
+    object_id: '25'
+    object_repr: gazpacho
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 368
+  fields:
+    action_time: 2022-10-30 18:35:13.372028+00:00
+    user: 1
+    content_type: 6
+    object_id: '26'
+    object_repr: jumbalaya
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 369
+  fields:
+    action_time: 2022-10-30 18:35:13.374539+00:00
+    user: 1
+    content_type: 6
+    object_id: '27'
+    object_repr: cereal
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 370
+  fields:
+    action_time: 2022-10-30 18:35:13.377193+00:00
+    user: 1
+    content_type: 6
+    object_id: '28'
+    object_repr: waffle
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 371
+  fields:
+    action_time: 2022-10-30 18:35:13.380470+00:00
+    user: 1
+    content_type: 6
+    object_id: '29'
+    object_repr: pho
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 372
+  fields:
+    action_time: 2022-10-30 18:35:13.383194+00:00
+    user: 1
+    content_type: 6
+    object_id: '30'
+    object_repr: poutine
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 373
+  fields:
+    action_time: 2022-10-30 18:35:13.385910+00:00
+    user: 1
+    content_type: 6
+    object_id: '31'
+    object_repr: arepa
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 374
+  fields:
+    action_time: 2022-10-30 18:35:13.389098+00:00
+    user: 1
+    content_type: 6
+    object_id: '32'
+    object_repr: calamari
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 375
+  fields:
+    action_time: 2022-10-30 18:35:13.392454+00:00
+    user: 1
+    content_type: 6
+    object_id: '33'
+    object_repr: brownie
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 376
+  fields:
+    action_time: 2022-10-30 18:35:13.395742+00:00
+    user: 1
+    content_type: 6
+    object_id: '34'
+    object_repr: cookie
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 377
+  fields:
+    action_time: 2022-10-30 18:35:13.399325+00:00
+    user: 1
+    content_type: 6
+    object_id: '35'
+    object_repr: cake
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 378
+  fields:
+    action_time: 2022-10-30 18:35:13.402802+00:00
+    user: 1
+    content_type: 6
+    object_id: '36'
+    object_repr: baklava
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 379
+  fields:
+    action_time: 2022-10-30 18:35:13.405969+00:00
+    user: 1
+    content_type: 6
+    object_id: '37'
+    object_repr: couscous
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 380
+  fields:
+    action_time: 2022-10-30 18:35:13.408750+00:00
+    user: 1
+    content_type: 6
+    object_id: '38'
+    object_repr: borscht
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 381
+  fields:
+    action_time: 2022-10-30 18:35:13.411599+00:00
+    user: 1
+    content_type: 6
+    object_id: '39'
+    object_repr: milkshake
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 382
+  fields:
+    action_time: 2022-10-30 18:35:13.414426+00:00
+    user: 1
+    content_type: 6
+    object_id: '40'
+    object_repr: hummus
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 383
+  fields:
+    action_time: 2022-10-30 18:35:13.416895+00:00
+    user: 1
+    content_type: 6
+    object_id: '41'
+    object_repr: spanakopita
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 384
+  fields:
+    action_time: 2022-10-30 18:35:13.419585+00:00
+    user: 1
+    content_type: 6
+    object_id: '42'
+    object_repr: naan
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 385
+  fields:
+    action_time: 2022-10-30 18:35:13.422741+00:00
+    user: 1
+    content_type: 6
+    object_id: '43'
+    object_repr: risoto
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 386
+  fields:
+    action_time: 2022-10-30 18:35:13.427444+00:00
+    user: 1
+    content_type: 6
+    object_id: '44'
+    object_repr: spaghetti
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 387
+  fields:
+    action_time: 2022-10-30 18:35:13.430594+00:00
+    user: 1
+    content_type: 6
+    object_id: '45'
+    object_repr: takoyaki
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 388
+  fields:
+    action_time: 2022-10-30 18:35:13.433637+00:00
+    user: 1
+    content_type: 6
+    object_id: '46'
+    object_repr: momo
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 389
+  fields:
+    action_time: 2022-10-30 18:35:13.437102+00:00
+    user: 1
+    content_type: 6
+    object_id: '47'
+    object_repr: lumpia
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 390
+  fields:
+    action_time: 2022-10-30 18:35:13.439822+00:00
+    user: 1
+    content_type: 6
+    object_id: '48'
+    object_repr: pancit
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 391
+  fields:
+    action_time: 2022-10-30 18:35:13.442805+00:00
+    user: 1
+    content_type: 6
+    object_id: '49'
+    object_repr: grits
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 392
+  fields:
+    action_time: 2022-10-30 18:35:13.445796+00:00
+    user: 1
+    content_type: 6
+    object_id: '50'
+    object_repr: tabbouleh
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 393
+  fields:
+    action_time: 2022-10-30 18:35:13.448721+00:00
+    user: 1
+    content_type: 6
+    object_id: '51'
+    object_repr: kimchi
+    action_flag: 1
+    change_message: new through import_export
+- model: auth.permission
+  pk: 1
+  fields:
+    name: Can add country
+    content_type: 1
+    codename: add_country
+- model: auth.permission
+  pk: 2
+  fields:
+    name: Can change country
+    content_type: 1
+    codename: change_country
+- model: auth.permission
+  pk: 3
+  fields:
+    name: Can delete country
+    content_type: 1
+    codename: delete_country
+- model: auth.permission
+  pk: 4
+  fields:
+    name: Can view country
+    content_type: 1
+    codename: view_country
+- model: auth.permission
+  pk: 5
+  fields:
+    name: Can add dishes
+    content_type: 2
+    codename: add_dishes
+- model: auth.permission
+  pk: 6
+  fields:
+    name: Can change dishes
+    content_type: 2
+    codename: change_dishes
+- model: auth.permission
+  pk: 7
+  fields:
+    name: Can delete dishes
+    content_type: 2
+    codename: delete_dishes
+- model: auth.permission
+  pk: 8
+  fields:
+    name: Can view dishes
+    content_type: 2
+    codename: view_dishes
+- model: auth.permission
+  pk: 9
+  fields:
+    name: Can add main ingredient
+    content_type: 3
+    codename: add_mainingredient
+- model: auth.permission
+  pk: 10
+  fields:
+    name: Can change main ingredient
+    content_type: 3
+    codename: change_mainingredient
+- model: auth.permission
+  pk: 11
+  fields:
+    name: Can delete main ingredient
+    content_type: 3
+    codename: delete_mainingredient
+- model: auth.permission
+  pk: 12
+  fields:
+    name: Can view main ingredient
+    content_type: 3
+    codename: view_mainingredient
+- model: auth.permission
+  pk: 13
+  fields:
+    name: Can add taste
+    content_type: 4
+    codename: add_taste
+- model: auth.permission
+  pk: 14
+  fields:
+    name: Can change taste
+    content_type: 4
+    codename: change_taste
+- model: auth.permission
+  pk: 15
+  fields:
+    name: Can delete taste
+    content_type: 4
+    codename: delete_taste
+- model: auth.permission
+  pk: 16
+  fields:
+    name: Can view taste
+    content_type: 4
+    codename: view_taste
+- model: auth.permission
+  pk: 17
+  fields:
+    name: Can add user stats
+    content_type: 5
+    codename: add_userstats
+- model: auth.permission
+  pk: 18
+  fields:
+    name: Can change user stats
+    content_type: 5
+    codename: change_userstats
+- model: auth.permission
+  pk: 19
+  fields:
+    name: Can delete user stats
+    content_type: 5
+    codename: delete_userstats
+- model: auth.permission
+  pk: 20
+  fields:
+    name: Can view user stats
+    content_type: 5
+    codename: view_userstats
+- model: auth.permission
+  pk: 21
+  fields:
+    name: Can add puzzle
+    content_type: 6
+    codename: add_puzzle
+- model: auth.permission
+  pk: 22
+  fields:
+    name: Can change puzzle
+    content_type: 6
+    codename: change_puzzle
+- model: auth.permission
+  pk: 23
+  fields:
+    name: Can delete puzzle
+    content_type: 6
+    codename: delete_puzzle
+- model: auth.permission
+  pk: 24
+  fields:
+    name: Can view puzzle
+    content_type: 6
+    codename: view_puzzle
+- model: auth.permission
+  pk: 25
+  fields:
+    name: Can add log entry
+    content_type: 7
+    codename: add_logentry
+- model: auth.permission
+  pk: 26
+  fields:
+    name: Can change log entry
+    content_type: 7
+    codename: change_logentry
+- model: auth.permission
+  pk: 27
+  fields:
+    name: Can delete log entry
+    content_type: 7
+    codename: delete_logentry
+- model: auth.permission
+  pk: 28
+  fields:
+    name: Can view log entry
+    content_type: 7
+    codename: view_logentry
+- model: auth.permission
+  pk: 29
+  fields:
+    name: Can add permission
+    content_type: 8
+    codename: add_permission
+- model: auth.permission
+  pk: 30
+  fields:
+    name: Can change permission
+    content_type: 8
+    codename: change_permission
+- model: auth.permission
+  pk: 31
+  fields:
+    name: Can delete permission
+    content_type: 8
+    codename: delete_permission
+- model: auth.permission
+  pk: 32
+  fields:
+    name: Can view permission
+    content_type: 8
+    codename: view_permission
+- model: auth.permission
+  pk: 33
+  fields:
+    name: Can add group
+    content_type: 9
+    codename: add_group
+- model: auth.permission
+  pk: 34
+  fields:
+    name: Can change group
+    content_type: 9
+    codename: change_group
+- model: auth.permission
+  pk: 35
+  fields:
+    name: Can delete group
+    content_type: 9
+    codename: delete_group
+- model: auth.permission
+  pk: 36
+  fields:
+    name: Can view group
+    content_type: 9
+    codename: view_group
+- model: auth.permission
+  pk: 37
+  fields:
+    name: Can add user
+    content_type: 10
+    codename: add_user
+- model: auth.permission
+  pk: 38
+  fields:
+    name: Can change user
+    content_type: 10
+    codename: change_user
+- model: auth.permission
+  pk: 39
+  fields:
+    name: Can delete user
+    content_type: 10
+    codename: delete_user
+- model: auth.permission
+  pk: 40
+  fields:
+    name: Can view user
+    content_type: 10
+    codename: view_user
+- model: auth.permission
+  pk: 41
+  fields:
+    name: Can add content type
+    content_type: 11
+    codename: add_contenttype
+- model: auth.permission
+  pk: 42
+  fields:
+    name: Can change content type
+    content_type: 11
+    codename: change_contenttype
+- model: auth.permission
+  pk: 43
+  fields:
+    name: Can delete content type
+    content_type: 11
+    codename: delete_contenttype
+- model: auth.permission
+  pk: 44
+  fields:
+    name: Can view content type
+    content_type: 11
+    codename: view_contenttype
+- model: auth.permission
+  pk: 45
+  fields:
+    name: Can add session
+    content_type: 12
+    codename: add_session
+- model: auth.permission
+  pk: 46
+  fields:
+    name: Can change session
+    content_type: 12
+    codename: change_session
+- model: auth.permission
+  pk: 47
+  fields:
+    name: Can delete session
+    content_type: 12
+    codename: delete_session
+- model: auth.permission
+  pk: 48
+  fields:
+    name: Can view session
+    content_type: 12
+    codename: view_session
+- model: auth.user
+  pk: 1
+  fields:
+    password: pbkdf2_sha256$390000$iNIAs9wgvZmCdu6d6vDtYO$TTqVmLFB8KSL6PcYGX/hPfjlakGtYfOP/UhDgu+2p3Y=
+    last_login: 2022-10-30 18:28:02.709121+00:00
+    is_superuser: true
+    username: admin
+    first_name: ''
+    last_name: ''
+    email: dummyemail@example.com
+    is_staff: true
+    is_active: true
+    date_joined: 2022-10-30 18:10:11.415555+00:00
+    groups: []
+    user_permissions: []
+- model: contenttypes.contenttype
+  pk: 1
+  fields:
+    app_label: foodrle
+    model: country
+- model: contenttypes.contenttype
+  pk: 2
+  fields:
+    app_label: foodrle
+    model: dishes
+- model: contenttypes.contenttype
+  pk: 3
+  fields:
+    app_label: foodrle
+    model: mainingredient
+- model: contenttypes.contenttype
+  pk: 4
+  fields:
+    app_label: foodrle
+    model: taste
+- model: contenttypes.contenttype
+  pk: 5
+  fields:
+    app_label: foodrle
+    model: userstats
+- model: contenttypes.contenttype
+  pk: 6
+  fields:
+    app_label: foodrle
+    model: puzzle
+- model: contenttypes.contenttype
+  pk: 7
+  fields:
+    app_label: admin
+    model: logentry
+- model: contenttypes.contenttype
+  pk: 8
+  fields:
+    app_label: auth
+    model: permission
+- model: contenttypes.contenttype
+  pk: 9
+  fields:
+    app_label: auth
+    model: group
+- model: contenttypes.contenttype
+  pk: 10
+  fields:
+    app_label: auth
+    model: user
+- model: contenttypes.contenttype
+  pk: 11
+  fields:
+    app_label: contenttypes
+    model: contenttype
+- model: contenttypes.contenttype
+  pk: 12
+  fields:
+    app_label: sessions
+    model: session
+- model: sessions.session
+  pk: csdhh9r4olt5rirmukjcaa1yy4q5g4md
+  fields:
+    session_data: .eJxVjDsOwjAQRO_iGllZe21jSnrOYO36gwPIkeKkQtydREoBzRTz3sxbBFqXGtae5zAmcREgTr8dU3zmtoP0oHafZJzaMo8sd0UetMvblPLrerh_B5V63dYRkMAze-WcMTpTUWgUclbO8mBxSzVAwULZOLbnonRC9El7AAarxecLzSk3Cw:1opD2Q:KSsZeVqrkY6v5EF9U_MHw4XSBfHxNhKQzGHegW7tr5U
+    expire_date: 2022-11-13 18:28:02.713706+00:00
