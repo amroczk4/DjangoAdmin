@@ -9,6 +9,6 @@
 For front end:
 https://youtu.be/eosXCVcgtPw
 
-Required Installations:
+## Required Installations:
 - See mysitepsql/requirements.txt
 - Install packages using: pip install -r requirements.txt
