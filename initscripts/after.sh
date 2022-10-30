@@ -1,2 +1,2 @@
 #!/bin/bash
-docker compose -f ./docker-compose.yml down && docker compose -f ./docker-compose.yml up -d --no-deps --build
+docker compose -f /opt/foodrle/docker-compose.yml down && docker compose -f /opt/foodrle/docker-compose.yml up -d --no-deps --build
