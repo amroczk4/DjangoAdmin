@@ -7,4 +7,5 @@ file_exists_behavior: OVERWRITE
 hooks:
   AfterInstall:
   - location: initscripts/after.sh
+    runas: root
     timeout: 500
