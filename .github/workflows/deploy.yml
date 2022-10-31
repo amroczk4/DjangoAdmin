@@ -3,9 +3,11 @@ on:
   push:
     branches:
     - main
+    - mcongrev_aws_automation
   pull_request:
     branches:
     - main
+    - mcongrev_aws_automation
   workflow_dispatch:
 jobs:
   build:
