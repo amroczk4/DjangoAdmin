@@ -53,7 +53,7 @@ TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 # Tell nose to measure coverage on the 'foo' and 'bar' apps
 NOSE_ARGS = [
     '--with-coverage',
-    '--cover-package=foodrle',
+    '--cover-package=\'.\'',
     '--cover-html',
 ]
 
