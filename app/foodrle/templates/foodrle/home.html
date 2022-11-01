@@ -16,7 +16,7 @@
  
 
 </head>
-<body style="background-color:#121213;">
+<body>
 
 {% extends 'foodrle/header.html' %}
 
@@ -60,7 +60,7 @@
 
             <li>
                 <button type="button" class="btn btn-link" data-toggle="modal" data-target="#ModalSettings">
-                    <p class="stats-btn">
+                    <p class="settings-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
                             <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
                         </svg>
@@ -126,7 +126,7 @@
                 <br>
                 <p>Guess the Foodle in 6 guesses</p>
                 <br>
-                <h4>>Insert Exmaple Here<</h4>
+                <h4>>Insert Example Here<</h4>
                 <br>
                 <p>After each guess, you will get the main ingredient, distance from target 
                 country of origin and 3 hints on the taste profile.</p>
@@ -179,10 +179,10 @@
             <div class="modal-body">
                 <hr />
                 <h4>Dark Theme</h4>
-                <div>
-                    <label class="light-switch">
-                        <input type="checkbox" checked>
-                        <span class="slider round"></span>
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox"/>
+                        <div class="slider round"></div>
                     </label>
                 </div>
                 <hr />
@@ -201,11 +201,31 @@
     </div>
 </div>
 
-
-<br>
-<br>
-<br>
-
+<!-- Script for dark/light mode -->
+<script>
+    const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+    const currentTheme = localStorage.getItem('theme');
+  
+    if (currentTheme) {
+        document.documentElement.setAttribute('data-theme', currentTheme);
+  
+    if (currentTheme === 'dark') {
+        toggleSwitch.checked = true;
+    }
+  }
+  
+    function switchTheme(e) {
+        if (e.target.checked) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+        }
+        else {        document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+        }    
+  }
+  
+    toggleSwitch.addEventListener('change', switchTheme, false);
+  </script>
 
 <div data-guess-grid class="guess-grid">
     <div class="tile" id="hint1"></div>
@@ -213,34 +233,33 @@
     <div class="tile" id="hint3"></div>
     <div class="tile" id="hint4"></div>
     <div class="tile" id="hint5"></div>
-    <div class="tile" id="hint6"></div>
+    <div class="tile" id="hint1"></div>
+    <div class="tile" id="hint2"></div>
+    <div class="tile" id="hint3"></div>
+    <div class="tile" id="hint4"></div>
+    <div class="tile" id="hint5"></div>
+    <div class="tile" id="hint1"></div>
+    <div class="tile" id="hint2"></div>
+    <div class="tile" id="hint3"></div>
+    <div class="tile" id="hint4"></div>
+    <div class="tile" id="hint5"></div>
+    <div class="tile" id="hint1"></div>
+    <div class="tile" id="hint2"></div>
+    <div class="tile" id="hint3"></div>
+    <div class="tile" id="hint4"></div>
+    <div class="tile" id="hint5"></div>
+    <div class="tile" id="hint1"></div>
+    <div class="tile" id="hint2"></div>
+    <div class="tile" id="hint3"></div>
+    <div class="tile" id="hint4"></div>
+    <div class="tile" id="hint5"></div>
+    <div class="tile" id="hint1"></div>
+    <div class="tile" id="hint2"></div>
+    <div class="tile" id="hint3"></div>
+    <div class="tile" id="hint4"></div>
+    <div class="tile" id="hint5"></div> 
 </div>
-<hr />
-    <!--<div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div> -->
+
 <div class="input-box">
 <input type="text" id="tags" class="optional-styles" placeholder="Type here...">
 <script>

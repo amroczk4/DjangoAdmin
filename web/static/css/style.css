@@ -2,6 +2,19 @@
   box-sizing: border-box;
   font-family: 'Francois One';
 }
+:root
+{
+  --background-color:white;
+  --alternate-background-color:#121213;
+  --text-color:black;
+  --text-color-dark:white;
+}
+
+[data-theme="dark"] body, .login, .register
+{
+  background: var(--alternate-background-color);
+  color:var(--text-color-dark);
+}
 
 .navbar-brand
 {
@@ -18,8 +31,24 @@
   text-align: center;
   padding-left: 7px;
   font-style:italic;
+  color:black;
 }
 
+/*Modals*/
+#ModalTutorial
+{
+  color:black;
+}
+
+#ModalStats
+{
+  color:black;
+}
+
+#ModalSettings
+{
+  color:black;
+}
 
 .nav-link 
 {
@@ -32,8 +61,8 @@
   justify-content: center;
   align-content: center;
   flex-grow: 1;
-  grid-template-columns: repeat(6, 12em); /*change back to 5 after demo 2 */
-  grid-template-rows: repeat(1, 12em); /*Change back to 6 after demo 2 */
+  grid-template-columns: repeat(5, 6em); /*change back to 5 after demo 2 */
+  grid-template-rows: repeat(6, 6em); /*Change back to 6 after demo 2 */
   gap: .5em 2em;
   margin-bottom: 1em;
 }
@@ -51,6 +80,7 @@
   user-select: none;
 }
 
+/*
 #hint1 {
   background-color:red;
 }
@@ -70,6 +100,7 @@
 #hint5 {
   background-color:green;
 }
+*/
 
 .input-box 
 {
@@ -124,7 +155,14 @@
 
 
 /* CSS For Toggle Button in Settings Modal */
-.light-switch {
+.light-switch-wrapper {
+  display:flex;
+  align-items:center;
+
+}
+
+.theme-switch
+{
   position: relative;
   display: inline-block;
   padding-left:10px;
@@ -132,10 +170,8 @@
   height: 34px;
 }
 
-.light-switch input { 
-  opacity: 0;
-  width: 0;
-  height: 0;
+.theme-switch input { 
+  display:none;
 }
 
 .slider {
