@@ -7,7 +7,11 @@
         <link href='https://fonts.googleapis.com/css?family=Francois One' rel='stylesheet'>
     </head>
     <body>
-      
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Foodrle</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="False" aria-label="Toggle navigation"> 
+      </nav>
 
         {% extends "foodrle/header.html" %}
 
@@ -15,11 +19,7 @@
         
         {% load crispy_forms_tags %}
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="/">Foodrle</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
-                  aria-controls="navbarText" aria-expanded="False" aria-label="Toggle navigation"> 
-        </nav>
+
         
         <!--Login--> 
         <div class="container py-5">
