@@ -148,19 +148,11 @@ def country_hint(answer_country: Country, guessed_country: Country):
     return res
 
 
-def ingredient_eq(ingredient_a, ingredient_b) -> bool:
-    return ingredient_a.name == ingredient_b.name
-
-
-def food_group_eq(ingredient_a, ingredient_b) -> bool:
-    return ingredient_a.food_group == ingredient_b.food_group
-
-
 def main_ingredient_hint(answer: MainIngredient, guess_ingr: MainIngredient):
-    res = {guess_ingr.name: RED}
-    if ingredient_eq(answer, guess_ingr):
+    res = {}
+    if answer.name == guess_ingr.name:
         res.update({guess_ingr.name: GREEN})
-    elif food_group_eq(guess_ingr, answer):
+    elif answer.food_group == guess_ingr.food_group:
         res.update({guess_ingr.name: YELLOW})
     else:
         res.update({guess_ingr.name: RED})
@@ -202,7 +194,7 @@ def get_hints(guess_str: str):
     if guess == None:
         # TODO: how do I handle this?
         print("You guessed a dish that doesn't exist!!")
-        return {}
+        return list()
     
     ans = get_puzzle_of_day()
     print(ans.name)
