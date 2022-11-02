@@ -15,14 +15,12 @@ def get_country(id):
 country_list = [get_country(randint(1, 244)) for i in range(10)]
 # country_list = [get_country(i) for i in range(1, 245)]
 
-class CountryModelTests(TestCase):
+class GameTests(TestCase):
 
     def test_dist_equality(self):
         """Test to ensure the distance from Country A to Country B
             is the same as the distance from B to A
         """
-        # A = get_country(randint(1, 244))
-        # B = get_country(randint(1, 244))
 
         for i in range(0, len(country_list)):
             A = country_list[i]
@@ -59,7 +57,5 @@ class CountryModelTests(TestCase):
                     self.assertEqual(direction(b, a), 'southeast')
                 elif dir == 'southeast':
                     self.assertEqual(direction(b, a), 'northwest')
-                # except AssertionError as e:
-                #     e.args += (a.name, b.name)
 
 
