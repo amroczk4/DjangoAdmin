@@ -1,9 +1,8 @@
-from random import randint
+from random import choice
 from .models import Dishes, MainIngredient, Puzzle
 import foodrle.game as game
 import os
 
-TOTAL_PUZZLES = Puzzle.objects.count()
 
 user_stats = {
     1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 'games_played': 0
@@ -55,8 +54,9 @@ def get_puzzle() -> Dishes:
     Selects a random puzzle from 
     the database and returns dish
     """
-    puzzle = Puzzle.objects.get(pk=randint(1, TOTAL_PUZZLES))
-    return puzzle.dish
+    puzzles = Puzzle.objects.all()
+    rand_puzzle = choice(puzzles)
+    return rand_puzzle.dish
 
 
 def play_again() -> bool:

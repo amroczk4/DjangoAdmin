@@ -1,9 +1,8 @@
-from random import randint
+from random import choice
 from .models import Country, Dishes, Taste, MainIngredient, Puzzle
 from math import atan2, degrees, sin, cos, radians, asin, sqrt
 from datetime import datetime
 
-TOTAL_PUZZLES = Puzzle.objects.count()
 RED = 0
 YELLOW = 1
 GREEN = 2
@@ -18,7 +17,8 @@ def get_puzzle_of_day() -> Dishes:
         pod = Puzzle.objects.get(last_used=today)
     except Puzzle.DoesNotExist:
         # select a random puzzle, update last used, and return it
-        pod = Puzzle.objects.get(pk=randint(1, TOTAL_PUZZLES))
+        puzzles = Puzzle.objects.all()
+        pod = choice(puzzles)
         pod.update_last_used()
     
     return pod.dish
