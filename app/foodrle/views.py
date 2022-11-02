@@ -6,25 +6,25 @@ from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 from .models import Dishes
 from .game import get_puzzle_of_day, get_hints
-from .shellgame import get_puzzle as random_dish
+from random import choice
+# from .shellgame import get_puzzle as random_dish
 
 def homepage(request):
-    puzzle_str = get_puzzle_of_day().name
-    dishes = Dishes.objects.all()
-    # answer = get_puzzle_of_day().name
-    # guess_sim = random_dish().name
-    # hints = get_hints(guess_sim)
-    # return render(request=request, template_name='foodrle/home.html', context={"dishes":dishes, "guess": guess_sim, "answer": answer, "hints": hints})
-    return render(request=request, template_name='foodrle/home.html', context={"dishes":dishes})
+    answer = get_puzzle_of_day().name
+    dishes = Dishes.objects.values_list('name', flat=True)
+    guess_sim = choice(dishes)
+    hints = get_hints(guess_sim)
+    return render(request=request, template_name='foodrle/home.html', context={"dishes":dishes, "guess": guess_sim, "answer": answer, "hints": hints})
+    # return render(request=request, template_name='foodrle/home.html', context={"dishes":dishes})
 
 
 ## Testing page
 ## Test all functions here 
 def test(request):
     answer = get_puzzle_of_day().name
-    guess_sim = random_dish().name
+    dishes = Dishes.objects.values_list('name', flat=True)
+    guess_sim = choice(dishes)
     hints = get_hints(guess_sim)
-    dishes = Dishes.objects.all()
     return render(request=request, template_name='foodrle/test.html', context={"dishes":dishes, "guess": guess_sim, "answer": answer, "hints": hints})
 
 def register_request(request):
