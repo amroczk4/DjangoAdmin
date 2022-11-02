@@ -197,7 +197,7 @@ def get_hints(guess_str: str):
         return list()
     
     ans = get_puzzle_of_day()
-    print(ans.name)
+    # print(ans.name)
     country_dict = country_hint(ans.country, guess.country)
     taste_dict = taste_hint(ans.taste, guess.taste)
     calorie_dict = calorie_hint(ans, guess)

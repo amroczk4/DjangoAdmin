@@ -52,8 +52,8 @@ def print_welcome():
 
 def get_puzzle() -> Dishes:
     """
-    Selects a random puzzle from the database,
-    updates last used date and returns dish
+    Selects a random puzzle from 
+    the database and returns dish
     """
     puzzle = Puzzle.objects.get(pk=randint(1, TOTAL_PUZZLES))
     return puzzle.dish
