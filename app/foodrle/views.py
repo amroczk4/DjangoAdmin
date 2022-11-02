@@ -5,7 +5,7 @@ from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 from .models import Dishes
-from .game import get_puzzle
+from .game import get_puzzle_of_day
 
 def homepage(request):
     dishes = Dishes.objects.all()
@@ -16,7 +16,7 @@ def homepage(request):
 ## Testing page
 ## Test all functions here 
 def test(request):
-    answer = get_puzzle()
+    answer = get_puzzle_of_day().name
     dishes = Dishes.objects.all()
     return render(request=request, template_name='foodrle/test.html', context={"dishes":dishes, "answer": answer})
 
