@@ -8,9 +8,9 @@ from .models import Dishes
 from .game import get_puzzle_of_day
 
 def homepage(request):
+    puzzle_str = get_puzzle_of_day().name
     dishes = Dishes.objects.all()
-    dishes_list = list(dishes)
-    return render(request=request, template_name='foodrle/home.html', context={"dishes":dishes_list})
+    return render(request=request, template_name='foodrle/home.html', context={"dishes":dishes, "puzzle_str": puzzle_str})
 
 
 ## Testing page
@@ -18,7 +18,7 @@ def homepage(request):
 def test(request):
     answer = get_puzzle_of_day().name
     dishes = Dishes.objects.all()
-    return render(request=request, template_name='foodrle/test.html', context={"dishes":dishes, "answer": answer})
+    return render(request=request, template_name='foodrle/test.html', context={"dishes":dishes_list, "answer": answer})
 
 def register_request(request):
     if request.method == "POST":
