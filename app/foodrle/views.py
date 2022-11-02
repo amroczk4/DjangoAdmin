@@ -5,20 +5,17 @@ from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 from .models import Dishes
-from .game import get_puzzle
 
 def homepage(request):
     dishes = Dishes.objects.all()
-    dishes_list = list(dishes)
-    return render(request=request, template_name='foodrle/home.html', context={"dishes":dishes_list})
+    return render(request=request, template_name='foodrle/home.html', context={"dishes":dishes})
 
 
 ## Testing page
 ## Test all functions here 
 def test(request):
-    answer = get_puzzle()
     dishes = Dishes.objects.all()
-    return render(request=request, template_name='foodrle/test.html', context={"dishes":dishes, "answer": answer})
+    return render(request=request, template_name='foodrle/test.html', context={"dishes":dishes})
 
 def register_request(request):
     if request.method == "POST":
