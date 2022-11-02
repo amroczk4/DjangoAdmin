@@ -2,9 +2,12 @@ from random import randint
 from .models import Country, Dishes, Taste, MainIngredient, Puzzle
 from math import atan2, degrees, sin, cos, radians, asin, sqrt
 import os
-import datetime
 
 TOTAL_PUZZLES = Puzzle.objects.count()
+RED = 0
+YELLOW = 1
+GREEN = 2
+
 user_stats = {
     1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 'games_played': 0
 }
@@ -60,16 +63,18 @@ def get_puzzle() -> Dishes:
     return puzzle.dish
 
 
-def get_dish_by_name(dish_name: str) -> Dishes:
-    return Dishes.objects.get(name=dish_name)
-
+def get_dish_by_name(dish_name: str):
+    try:
+        return Dishes.objects.get(name=dish_name)
+    except Dishes.DoesNotExist:
+        return None
 
 def play_again() -> bool:
     answer = input('Would you like to play again [y/N]: ').lower()
     return answer == 'y'
 
 
-def distance(guessed_country: Country, answer: Country, unit='mi') -> float:
+def distance(guessed_country: Country, answer: Country, unit='mi') -> int:
     """ Computes the distance ('mi' miles (default), or
         'km' kilometers) between one country and another
     """
@@ -77,7 +82,8 @@ def distance(guessed_country: Country, answer: Country, unit='mi') -> float:
         return 0
 
     start_lat, start_lon, dest_lat, dest_lon = map(radians,
-                                                    [guessed_country.latitude, guessed_country.longitude, answer.latitude, answer.longitude])
+                                                    [guessed_country.latitude, guessed_country.longitude, 
+                                                    answer.latitude, answer.longitude])
     # Haversine formula
     dlon = start_lon - dest_lon
     dlat = start_lat - dest_lat
@@ -87,11 +93,9 @@ def distance(guessed_country: Country, answer: Country, unit='mi') -> float:
 
     # Radius of earth in kilometers is 6371. Use 3956 for miles
     if unit == 'mi':
-        # print(f"Distance from {self.name} to {other.name} is {c * 3956} mi")
-        return c * 3956
-    else:
-        # print(f"Distance from {self.name} to {other.name} is {c * 6371} km")
-        return c * 6371
+        return round(c * 3956)
+    else: # km
+        return round(c * 6371)
 
 
 def direction(guessed_country: Country, answer: Country) -> str:
@@ -125,57 +129,36 @@ def direction(guessed_country: Country, answer: Country) -> str:
             delta = delta - 2
 
         if north_or_south + east_or_west == '':
-            return bearing(guessed_country, answer)
-        # print(f"{other.name} is {north_or_south + east_or_west} of {self.name}")
+            return guessed_country.bearing(answer)
+
         return north_or_south + east_or_west
 
 
-def bearing(guessed_country: Country, answer: Country) -> str:
+def bearing(guessed_country: Country, answer: Country):
     dest_lon = answer.longitude
     dest_lat = answer.latitude
     start_lat = guessed_country.latitude
     start_lon = guessed_country.longitude
 
-    #
-    def card_ord_dir(brng: float) -> str:
-        if 0 <= brng <= 22 or 337 < brng <= 360:
-            return 'north'
-        elif 22 < brng <= 67:
-            return 'northeast'
-        elif 67 < brng <= 112:
-            return 'east'
-        elif 112 < brng <= 157:
-            return 'southeast'
-        elif 157< brng <= 202:
-            return 'south'
-        elif 202 < brng <= 247:
-            return 'southwest'
-        elif 247 < brng <= 292:
-            return 'west'
-        else:
-            return 'northwest' 
-    #
-
-    start_lat, start_lon, dest_lat, dest_lon = map(radians, [start_lat, start_lon, dest_lat, dest_lon])
+    start_lat, start_lon, dest_lat, dest_lon = map(radians,
+                                                    [guessed_country.latitude, guessed_country.longitude, answer.latitude, answer.longitude])
 
     y = sin(dest_lon - start_lon) * cos(dest_lat)
     x = cos(start_lat) * sin(dest_lat) - sin(start_lat) * cos(dest_lat) * cos(dest_lon - start_lon)
-    brng = atan2(y, x)
-    brng = degrees(brng)
-    if brng < 0:
-        brng = brng + 360
-
-    # print(f'bearing is {brng}')
-    return card_ord_dir(brng)
 
 
 def country_hint(answer_country: Country, guessed_country: Country):
-    cntry_hint = str(distance(guessed_country, answer_country)) + ' miles'
-    cntry_hint = cntry_hint + ' ' + direction(guessed_country, answer_country)
-    print('\tFrom a country', cntry_hint, f'of {guessed_country}')
+    res = {
+        'country': guessed_country.name, 
+        'dist': distance(guessed_country, answer_country),
+        'dir': direction(guessed_country, answer_country)
+        }
+    
+    print(f'\tCountry: {res}')
+    return res
 
 
-def same_name(ingredient_a, ingredient_b) -> bool:
+def ingredient_eq(ingredient_a, ingredient_b) -> bool:
     return ingredient_a.name == ingredient_b.name
 
 
@@ -184,12 +167,18 @@ def food_group_eq(ingredient_a, ingredient_b) -> bool:
 
 
 def main_ingredient_hint(answer: MainIngredient, guess_ingr: MainIngredient):
-    if same_name(answer, guess_ingr):
-        print(f'\tCORRECT main ingredient: {answer.name}')
+    res = {guess_ingr.name: RED}
+    if ingredient_eq(answer, guess_ingr):
+        res.update({guess_ingr.name: GREEN})
     elif food_group_eq(guess_ingr, answer):
-        print(f'\tWRONG main ingredient: {guess_ingr.name}; CORRECT food group')
+        res.update({guess_ingr.name: YELLOW})
     else:
-        print(f'\tWRONG main ingredient: {guess_ingr.name}; WRONG food group')
+        res.update({guess_ingr.name: RED})
+        
+    print(f'\tIngredient: {res}')
+    return res
+    
+
 
 
 def reveal_main_ingredient(answer: MainIngredient):
@@ -198,51 +187,42 @@ def reveal_main_ingredient(answer: MainIngredient):
 
 def calorie_hint(answer: Dishes, guess_dish: Dishes):
     diff = guess_dish.calories - answer.calories
-    if diff > 0:
-        print(f'\t{diff} calories more than {guess_dish.name}')
+    if diff >= 0:
+        print('\tCalorie: '+ str({'+': diff}))
+        return {'+': diff}
     else:
-        print(f'\t{abs(diff)} calories less than {guess_dish.name}')
+        print('\tCalorie: '+ str({'-': abs(diff)}))
+        return {'-': abs(diff)}
 
 
-def taste_hint(answer: Taste, guess_dish: Taste) -> str:
-    taste_res = ''
-
-    if guess_dish.sweet:
-        if not answer.sweet:
-            taste_res = taste_res + 'NOT '
-        taste_res = taste_res + 'sweet; '
-    if guess_dish.salty:
-        if not answer.salty:
-            taste_res = taste_res + 'NOT '
-        taste_res = taste_res + 'salty; '
-    if guess_dish.sour:
-        if not answer.sour:
-            taste_res = taste_res + 'NOT '
-        taste_res = taste_res + 'sour; '
-    if guess_dish.bitter:
-        if not answer.bitter:
-            taste_res = taste_res + 'NOT '
-        taste_res = taste_res + 'bitter; '
-    if guess_dish.umami:
-        if not answer.umami:
-            taste_res = taste_res + 'NOT '
-        taste_res = taste_res + 'umami; '
-    print('\t'+taste_res)
+def taste_hint (answer: Taste, guess_dish: Taste):
+    res = {}
+    ans_dict = answer.__dict__
+    guess_dict = guess_dish.__dict__
+    
+    for k, v in guess_dict.items():
+        # NEEDS to be nested if-then-else to work!!!
+        if v == True: 
+            if ans_dict.get(k) == True:
+                res.update({k: GREEN})
+            else:
+                res.update({k: RED})
+    print("\tTaste: "+ str(res))
+    return res
 
 
 def start_game():
     print_welcome()
-    # answer = get_dish_by_name('fries')
-    answer = get_puzzle()
+    answer = get_dish_by_name('pizza')
+    # answer = get_puzzle()
     
     guess_cnt = 0
     win = False
     while guess_cnt < 6:
         guess_str = input(f'Enter Guess {guess_cnt + 1}: ').lower()
 
-        try:
-            guess_dish = get_dish_by_name(guess_str)
-        except Dishes.DoesNotExist:
+        guess_dish = get_dish_by_name(guess_str)
+        if guess_dish == None:
             print("Invalid answer: dish doesn\'t exist (yet)")
             continue
 
@@ -258,8 +238,6 @@ def start_game():
             taste_hint(answer.taste, guess_dish.taste)
             if guess_cnt >= 1:
                 reveal_main_ingredient(answer.main_ingredient)
-            # if guess_cnt >= 4:
-            #     print("\tI am displaying a pixilated image of the answer")
 
         guess_cnt = guess_cnt + 1
         if guess_cnt == 6 or win:

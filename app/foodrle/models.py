@@ -32,7 +32,7 @@ class Taste(models.Model):
             str = str + "Bitter "
         if self.umami:
             str = str + "Umami "
-        return str
+        return f"{str}"
 
 
 class MainIngredient(models.Model):

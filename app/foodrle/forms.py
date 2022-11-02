@@ -28,4 +28,3 @@ class GuessAnswerForm(forms.Form):
 	class Meta:
 		model = Dishes
 		fields = ("name")
-

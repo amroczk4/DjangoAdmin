@@ -15,18 +15,57 @@
 		rel="stylesheet" type="text/css" />
 </head>
 <body>
-	<input type="text" id="tags">
+	<input type="text" id="tags" class="ui-autocomplete-input" autocomplete="on" role="textbox">
+	<p>Dish: {{ dishes[0] }}</p>
 	<script>
 $( function() {
 	var availableTags = [
 		{% for dish in dishes %}
-			"{{dish.name}}",
+			"{{dish}}",
 		{% endfor %}
 	];
 	$( "#tags" ).autocomplete({
-	source: availableTags
+		source: availableTags
 	});
 } );
 </script>
+{% comment %} <p>Dish 1: {{dishes.get(name)=answer.name}} </p> {% endcomment %}
+
+<p>Answer: {{answer.name}}</p>
+<p>Has Tastes: {{answer.taste.bitter}}</p>
+<p>From Country: {{answer.country.latitude}}</p>
+
+
+<!--
+<h1>Guess the Number!</h1>
+  <p>I am thinking of a number between 1 and 100. Can you guess what it is?</p>
+
+  <form>
+    <label for="guess">My Guess</label>
+    <input type="number" id="guess">
+    <input type="submit" id="submitGuess" value="Check My Guess">
+  </form>
+
+  <p id="feedback"></p>
+
+  <script>
+    const randomNumber = Math.floor(Math.random() * 100) + 1
+    console.log('Random Number', randomNumber)
+
+    function checkGuess() {
+      let myGuess = guess.value
+      if (myGuess === randomNumber) {
+        feedback.textContent = "You got it right!"
+      } else if (myGuess > randomNumber) {
+        feedback.textContent = "Your guess was " + myGuess + ". That's too high. Try Again!"
+      } else if (myGuess < randomNumber) {
+       feedback.textContent = "Your guess was " + myGuess + ". That's too low. Try Again!"
+     }
+   }
+   submitGuess.addEventListener('click', checkGuess)
+ </script>
+-->
+
+
 </body>
 </html>
