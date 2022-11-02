@@ -33,6 +33,14 @@
 <p> Answer: {{ answer }}</p>
 
 
+{% for hint in hints %}
+	{% for key, value in hint.items %}
+	<ul>
+		<li> {{key}} : {{value}}</li>
+	</ul>
+	{% endfor %}
+{% endfor %}
+
 
 </body>
 </html>
