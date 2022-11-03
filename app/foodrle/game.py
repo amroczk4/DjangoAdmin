@@ -16,7 +16,6 @@ def get_puzzle_of_day() -> Dishes:
     try:
         pod = Puzzle.objects.get(last_used=today)
     except Puzzle.DoesNotExist:
-        # select a random puzzle, update last used, and return it
         puzzles = Puzzle.objects.all()
         pod = choice(puzzles)
         pod.update_last_used()
