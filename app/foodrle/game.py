@@ -1,27 +1,12 @@
 from random import choice
 from .models import Country, Dishes, Taste, MainIngredient, Puzzle
 from math import atan2, degrees, sin, cos, radians, asin, sqrt
-from datetime import datetime
 
 RED = 0
 YELLOW = 1
 GREEN = 2
 
-# def get_puzzle_of_day() -> Puzzle:
-#     """ Finds the puzzle of the day (pod) and returns
-#         a dish, if the puzzle hasn't been selected
-#         yet, a random puzzle is chosen as the pod
-#     """
-#     today = datetime.now().date()
-#     try:
-#         pod = Puzzle.objects.get(last_used=today)
-#     except Puzzle.DoesNotExist:
-#         puzzles = Puzzle.objects.all()
-#         pod = choice(puzzles)
-#         pod.update_last_used()
-    
-#     return pod
-    
+   
 def create_puzzle_answer() -> Puzzle:
     """ Chooses a random dish to serve as the
         user puzzle, creates a puzzle entry
@@ -180,7 +165,7 @@ def calorie_hint(answer: Dishes, guess_dish: Dishes):
         a positive number is returned
     """
     diff = answer.calories - guess_dish.calories
-    res = {'calories': str(diff)}
+    res = {'calories': diff}
     print(f'\tCalories: {res}')
     return res
 
