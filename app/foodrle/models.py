@@ -82,22 +82,6 @@ class UserStats(models.Model):
         return str(self.user)
 
 
-# class Puzzle(models.Model):
-#     last_used = models.DateField()
-#     dish = models.ForeignKey(Dishes, on_delete=models.CASCADE)
-
-#     def __str__(self):
-#         return str(self.dish)
-
-#     def was_used_recently(self):
-#         now = datetime.datetime.now().date()
-#         return now - datetime.timedelta(days=7) <= self.last_used <= now
-
-#     def update_last_used(self):
-#         today = datetime.datetime.now().date()
-#         Puzzle.objects.filter(id=self.id).update(last_used=today)
-
-
 class Puzzle(models.Model):
     # last_used = models.DateField()
     id = models.BigAutoField(primary_key=True)

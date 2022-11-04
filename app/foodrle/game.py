@@ -28,7 +28,7 @@ def get_dish_by_name(dish_name: str):
         return None
 
 
-def is_guess_valid_dish(guess_str: str) -> bool:
+def guess_is_valid_dish(guess_str: str) -> bool:
     if get_dish_by_name(guess_str) == None:
         return False
     else:

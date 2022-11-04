@@ -56,7 +56,7 @@ def get_puzzle() -> Dishes:
     """
     puzzles = Puzzle.objects.all()
     rand_puzzle = choice(puzzles)
-    return rand_puzzle.dish
+    return rand_puzzle.ans_dish
 
 
 def play_again() -> bool:
