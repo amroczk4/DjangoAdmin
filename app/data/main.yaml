@@ -1838,7 +1838,7 @@
   fields:
     name: paneer
     country: 103
-    taste: 25
+    taste: 15
     main_ingredient: 9
     calories: 600
 - model: foodrle.dishes
@@ -1934,7 +1934,7 @@
   fields:
     name: flan
     country: 179
-    taste: 1
+    taste: 5
     main_ingredient: 16
     calories: 223
 - model: foodrle.dishes
@@ -2054,7 +2054,7 @@
   fields:
     name: cake
     country: 72
-    taste: 1
+    taste: 5
     main_ingredient: 5
     calories: 129
 - model: foodrle.dishes
@@ -2062,7 +2062,7 @@
   fields:
     name: baklava
     country: 86
-    taste: 1
+    taste: 5
     main_ingredient: 10
     calories: 230
 - model: foodrle.dishes
@@ -2086,7 +2086,7 @@
   fields:
     name: milkshake
     country: 227
-    taste: 1
+    taste: 5
     main_ingredient: 9
     calories: 350
 - model: foodrle.dishes
@@ -2287,6 +2287,96 @@
     win_4: 2
     win_5: 0
     win_6: 1
+- model: foodrle.puzzle
+  pk: 1
+  fields:
+    ans_dish: 47
+    guess1: ''
+    guess2: ''
+    guess3: ''
+    guess4: ''
+    guess5: ''
+    guess6: ''
+- model: foodrle.puzzle
+  pk: 2
+  fields:
+    ans_dish: 10
+    guess1: ''
+    guess2: ''
+    guess3: ''
+    guess4: ''
+    guess5: ''
+    guess6: ''
+- model: foodrle.puzzle
+  pk: 3
+  fields:
+    ans_dish: 14
+    guess1: ''
+    guess2: ''
+    guess3: ''
+    guess4: ''
+    guess5: ''
+    guess6: ''
+- model: foodrle.puzzle
+  pk: 4
+  fields:
+    ans_dish: 36
+    guess1: ''
+    guess2: ''
+    guess3: ''
+    guess4: ''
+    guess5: ''
+    guess6: ''
+- model: foodrle.puzzle
+  pk: 5
+  fields:
+    ans_dish: 36
+    guess1: ''
+    guess2: ''
+    guess3: ''
+    guess4: ''
+    guess5: ''
+    guess6: ''
+- model: foodrle.puzzle
+  pk: 6
+  fields:
+    ans_dish: 6
+    guess1: ''
+    guess2: ''
+    guess3: ''
+    guess4: ''
+    guess5: ''
+    guess6: ''
+- model: foodrle.puzzle
+  pk: 7
+  fields:
+    ans_dish: 41
+    guess1: ''
+    guess2: ''
+    guess3: ''
+    guess4: ''
+    guess5: ''
+    guess6: ''
+- model: foodrle.puzzle
+  pk: 8
+  fields:
+    ans_dish: 3
+    guess1: ''
+    guess2: ''
+    guess3: ''
+    guess4: ''
+    guess5: ''
+    guess6: ''
+- model: foodrle.puzzle
+  pk: 9
+  fields:
+    ans_dish: 12
+    guess1: ''
+    guess2: ''
+    guess3: ''
+    guess4: ''
+    guess5: ''
+    guess6: ''
 - model: admin.logentry
   pk: 1
   fields:
@@ -10067,6 +10157,56 @@
     object_repr: pavlova
     action_flag: 3
     change_message: ''
+- model: admin.logentry
+  pk: 779
+  fields:
+    action_time: 2022-11-04 19:54:30.774224+00:00
+    user: 1
+    content_type: 2
+    object_id: '39'
+    object_repr: milkshake
+    action_flag: 2
+    change_message: '[{"changed": {"fields": ["Taste"]}}]'
+- model: admin.logentry
+  pk: 780
+  fields:
+    action_time: 2022-11-04 19:54:39.861246+00:00
+    user: 1
+    content_type: 2
+    object_id: '36'
+    object_repr: baklava
+    action_flag: 2
+    change_message: '[{"changed": {"fields": ["Taste"]}}]'
+- model: admin.logentry
+  pk: 781
+  fields:
+    action_time: 2022-11-04 19:54:49.600969+00:00
+    user: 1
+    content_type: 2
+    object_id: '35'
+    object_repr: cake
+    action_flag: 2
+    change_message: '[{"changed": {"fields": ["Taste"]}}]'
+- model: admin.logentry
+  pk: 782
+  fields:
+    action_time: 2022-11-04 19:54:57.455123+00:00
+    user: 1
+    content_type: 2
+    object_id: '20'
+    object_repr: flan
+    action_flag: 2
+    change_message: '[{"changed": {"fields": ["Taste"]}}]'
+- model: admin.logentry
+  pk: 783
+  fields:
+    action_time: 2022-11-04 19:55:22.422586+00:00
+    user: 1
+    content_type: 2
+    object_id: '8'
+    object_repr: paneer
+    action_flag: 2
+    change_message: '[{"changed": {"fields": ["Taste"]}}]'
 - model: auth.permission
   pk: 1
   fields:
@@ -10435,6 +10575,11 @@
   fields:
     session_data: .eJxVjDsOwjAQRO_iGllZe21jSnrOYO36gwPIkeKkQtydREoBzRTz3sxbBFqXGtae5zAmcREgTr8dU3zmtoP0oHafZJzaMo8sd0UetMvblPLrerh_B5V63dYRkMAze-WcMTpTUWgUclbO8mBxSzVAwULZOLbnonRC9El7AAarxecLzSk3Cw:1opD2Q:KSsZeVqrkY6v5EF9U_MHw4XSBfHxNhKQzGHegW7tr5U
     expire_date: 2022-11-13 18:28:02.713706+00:00
+- model: sessions.session
+  pk: e8myx7584q7fapbpy8dr3v1brkmjb1yx
+  fields:
+    session_data: .eJxVjDEOwjAMRe-SGUUxuGnNyM4ZIttxSQG1UtNOiLtDpQ6w_vfef7nE61LSWm1OQ3ZnB-7wuwnrw8YN5DuPt8nrNC7zIH5T_E6rv07Znpfd_TsoXMu3RmogGGNvABr4RBpEiQ2QpetRJFImyRHIGEJsWxVsUTvCeLRGGvf-APSZOC4:1or168:fIdnJ8cIzRG4Tycgab0AaE6sqCFPHOVVnsuDLs10Pk0
+    expire_date: 2022-11-18 18:07:20.259238+00:00
 - model: sessions.session
   pk: nbp1w5rjl9hw8i9rfit1guurjjw2neun
   fields:
