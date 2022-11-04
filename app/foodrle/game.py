@@ -33,7 +33,7 @@ def get_dish_by_name(dish_name: str):
         return None
         
         
-def distance(guessed_country: Country, answer: Country, unit='mi') -> int:
+def distance(guessed_country: Country, answer: Country) -> int:
     """ Computes the distance ('mi' miles (default), or
         'km' kilometers) between one country and another
     """
@@ -50,11 +50,8 @@ def distance(guessed_country: Country, answer: Country, unit='mi') -> int:
 
     c = 2 * asin(sqrt(a))
 
-    # Radius of earth in kilometers is 6371. Use 3956 for miles
-    if unit == 'mi':
-        return round(c * 3956)
-    else: # km
-        return round(c * 6371)
+    return round(c * 3956)
+
 
 
 def direction(guessed_country: Country, answer: Country) -> str:
@@ -139,7 +136,7 @@ def bearing(guessed_country: Country, answer: Country) -> str:
 def country_hint(answer_country: Country, guessed_country: Country):
     res = {
         'country': guessed_country.name, 
-        'dist': str(distance(guessed_country, answer_country)),
+        'dist': str(distance(guessed_country, answer_country))+' Mi',
         'dir': direction(guessed_country, answer_country)
         }
     
@@ -167,7 +164,7 @@ def calorie_hint(answer: Dishes, guess_dish: Dishes):
         a positive number is returned
     """
     diff = answer.calories - guess_dish.calories
-    res = {'calories': str(diff)}
+    res = {'calories': diff}
     print(f'\tCalories: {res}')
     return res
 
