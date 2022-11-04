@@ -139,7 +139,7 @@ def bearing(guessed_country: Country, answer: Country) -> str:
 def country_hint(answer_country: Country, guessed_country: Country):
     res = {
         'country': guessed_country.name, 
-        'dist': distance(guessed_country, answer_country),
+        'dist': str(distance(guessed_country, answer_country)),
         'dir': direction(guessed_country, answer_country)
         }
     
@@ -166,7 +166,8 @@ def calorie_hint(answer: Dishes, guess_dish: Dishes):
         If guess has fewer cals than answer
         a positive number is returned
     """
-    res = {'Calories': answer.calories - guess_dish.calories}
+    diff = answer.calories - guess_dish.calories
+    res = {'calories': str(diff)}
     print(f'\tCalories: {res}')
     return res
 
