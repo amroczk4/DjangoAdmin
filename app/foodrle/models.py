@@ -82,19 +82,30 @@ class UserStats(models.Model):
         return str(self.user)
 
 
+# class Puzzle(models.Model):
+#     last_used = models.DateField()
+#     dish = models.ForeignKey(Dishes, on_delete=models.CASCADE)
+
+#     def __str__(self):
+#         return str(self.dish)
+
+#     def was_used_recently(self):
+#         now = datetime.datetime.now().date()
+#         return now - datetime.timedelta(days=7) <= self.last_used <= now
+
+#     def update_last_used(self):
+#         today = datetime.datetime.now().date()
+#         Puzzle.objects.filter(id=self.id).update(last_used=today)
+
+
 class Puzzle(models.Model):
-    last_used = models.DateField()
-    dish = models.ForeignKey(Dishes, on_delete=models.CASCADE)
-
-    def __str__(self):
-        return str(self.dish)
-
-    def was_used_recently(self):
-        now = datetime.datetime.now().date()
-        return now - datetime.timedelta(days=7) <= self.last_used <= now
-
-    def update_last_used(self):
-        today = datetime.datetime.now().date()
-        Puzzle.objects.filter(id=self.id).update(last_used=today)
-
+    # last_used = models.DateField()
+    id = models.BigAutoField(primary_key=True)
+    ans_dish = models.ForeignKey(Dishes, on_delete=models.CASCADE)
+    guess1 = models.CharField(max_length=128, blank=True, default='')
+    guess2 = models.CharField(max_length=128, blank=True, default='')
+    guess3 = models.CharField(max_length=128, blank=True, default='')
+    guess4 = models.CharField(max_length=128, blank=True, default='')
+    guess5 = models.CharField(max_length=128, blank=True, default='')
+    guess6 = models.CharField(max_length=128, blank=True, default='')
 

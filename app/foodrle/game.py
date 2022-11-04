@@ -7,21 +7,31 @@ RED = 0
 YELLOW = 1
 GREEN = 2
 
-def get_puzzle_of_day() -> Dishes:
-    """ Finds the puzzle of the day (pod) and returns
-        a dish, if the puzzle hasn't been selected
-        yet, a random puzzle is chosen as the pod
+# def get_puzzle_of_day() -> Puzzle:
+#     """ Finds the puzzle of the day (pod) and returns
+#         a dish, if the puzzle hasn't been selected
+#         yet, a random puzzle is chosen as the pod
+#     """
+#     today = datetime.now().date()
+#     try:
+#         pod = Puzzle.objects.get(last_used=today)
+#     except Puzzle.DoesNotExist:
+#         puzzles = Puzzle.objects.all()
+#         pod = choice(puzzles)
+#         pod.update_last_used()
+    
+#     return pod
+    
+def create_puzzle_answer() -> Puzzle:
+    """ Chooses a random dish to serve as the
+        user puzzle, creates a puzzle entry
+        and returns it
     """
-    today = datetime.now().date()
-    try:
-        pod = Puzzle.objects.get(last_used=today)
-    except Puzzle.DoesNotExist:
-        puzzles = Puzzle.objects.all()
-        pod = choice(puzzles)
-        pod.update_last_used()
-    
-    return pod
-    
+    answer = choice(Dishes.objects.all())
+    puzzle = Puzzle(ans_dish=answer)
+    puzzle.save()
+    return puzzle
+
 
 def get_dish_by_name(dish_name: str):
     """ SELECT * FROM Dishes WHERE name=dish_name
@@ -31,9 +41,16 @@ def get_dish_by_name(dish_name: str):
         return Dishes.objects.get(name=dish_name)
     except Dishes.DoesNotExist:
         return None
+
+
+def is_guess_valid_dish(guess_str: str) -> bool:
+    if get_dish_by_name(guess_str) == None:
+        return False
+    else:
+        return True
+
         
-        
-def distance(guessed_country: Country, answer: Country, unit='mi') -> int:
+def distance(guessed_country: Country, answer: Country) -> int:
     """ Computes the distance ('mi' miles (default), or
         'km' kilometers) between one country and another
     """
@@ -50,11 +67,7 @@ def distance(guessed_country: Country, answer: Country, unit='mi') -> int:
 
     c = 2 * asin(sqrt(a))
 
-    # Radius of earth in kilometers is 6371. Use 3956 for miles
-    if unit == 'mi':
-        return round(c * 3956)
-    else: # km
-        return round(c * 6371)
+    return round(c * 3956)
 
 
 def direction(guessed_country: Country, answer: Country) -> str:
@@ -139,7 +152,7 @@ def bearing(guessed_country: Country, answer: Country) -> str:
 def country_hint(answer_country: Country, guessed_country: Country):
     res = {
         'country': guessed_country.name, 
-        'dist': str(distance(guessed_country, answer_country)),
+        'dist': str(distance(guessed_country, answer_country))+' Mi',
         'dir': direction(guessed_country, answer_country)
         }
     
@@ -188,7 +201,7 @@ def taste_hint (answer: Taste, guess_dish: Taste):
     return res
 
 
-def get_hints(guess_str: str):
+def get_hints(guess_str: str, ans):
     guess = get_dish_by_name(guess_str)
     
     if guess == None:
@@ -196,7 +209,6 @@ def get_hints(guess_str: str):
         print("You guessed a dish that doesn't exist!!")
         return list()
     
-    ans = get_puzzle_of_day().dish
     # print(ans.name)
     country_dict = country_hint(ans.country, guess.country)
     taste_dict = taste_hint(ans.taste, guess.taste)
