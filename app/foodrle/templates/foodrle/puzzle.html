@@ -227,16 +227,26 @@
     toggleSwitch.addEventListener('change', switchTheme, false);
   </script>
 
-<a href="/puzzle/new">newgame</a>
-{% comment %} <div data-guess-grid class="guess-grid">
-  {% for hint in hints|slice:":1" %}
-    <div class="tile" id="hint1">{{}} <br> {{value}}</div> 
+
+<div data-guess-grid class="guess-grid">
+    {% comment %} {% for hint in hints|slice:":1" %}
+    <div class="tile" id="hint1">{{}} <br> {{value}}</div> {% endcomment %}
     {% for hint in hints %}
         {% for key, value in hint.items %}
+        {% if value == 2 %}
+            <div class="tile" id="hint2">{{key}} <br>{{value}}</div>
+        {% elif value == 1 %}
             <div class="tile" id="hint1">{{key}} <br>{{value}}</div>
+        {% elif value == 0 %}
+            <div class="tile" id="hint0">{{key}} <br>{{value}}</div>
+        {% else %}
+        <div class="tile" id="blank">{{key}} <br>{{value}}</div>
+        {%endif%}
         {% endfor %}
     {% endfor %}
-</div>  {% endcomment %}
+    <div class="tile" id="blank">Real answer <br> {{answer}}</div>
+    <div class="tile" id="blank">Guess <br> {{guess}}</div>
+</div> 
 
 
 {% comment %} {% autoescape off %}

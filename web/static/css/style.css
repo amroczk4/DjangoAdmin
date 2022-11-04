@@ -69,7 +69,7 @@
 
 .tile {
   font-size: 2em;
-  color: white;
+  background-color:--alternate-background-color;
   border: .05em solid hsl(240, 2%, 23%);
   border-radius:50%;
   text-transform: uppercase;
@@ -80,27 +80,30 @@
   user-select: none;
 }
 
-/*
-#hint1 {
+#blank {
+  font-size: 15px;
+  text-align: center;
+}
+
+
+
+#hint0 {
   background-color:red;
+  font-size: 15px;
+  text-align: center;
+}
+
+#hint1 {
+  background-color:rgb(179, 117, 2);
+  font-size: 15px;
+  text-align: center;
 }
 
 #hint2 {
-  background-color:red;
-}
-
-#hint3 {
-  background-color:red;
-}
-
-#hint4 {
-  background-color:red;
-}
-
-#hint5 {
   background-color:green;
+  font-size: 15px;
+  text-align: center;
 }
-*/
 
 .input-box 
 {

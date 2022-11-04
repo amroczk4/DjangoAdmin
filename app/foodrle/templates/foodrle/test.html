@@ -33,8 +33,8 @@
 <p> Answer: {{ answer }}</p>
 
 
-{% for hint in hints %}
-	{% for key, value in hint.items %}
+{% for hint in hints|slice:'1:' %}
+	{% for key, value in hint.items%}
 	<ul>
 		<li> {{key}} : {{value}}</li>
 	</ul>

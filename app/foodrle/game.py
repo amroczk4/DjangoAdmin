@@ -20,7 +20,7 @@ def get_puzzle_of_day() -> Dishes:
         pod = choice(puzzles)
         pod.update_last_used()
     
-    return pod.dish
+    return pod
     
 
 def get_dish_by_name(dish_name: str):
@@ -88,7 +88,7 @@ def direction(guessed_country: Country, answer: Country) -> str:
             delta = delta - 2
 
         if north_or_south + east_or_west == '':
-            return guessed_country.bearing(answer)
+            return bearing(guessed_country, answer)
 
         return north_or_south + east_or_west
 
@@ -149,7 +149,7 @@ def country_hint(answer_country: Country, guessed_country: Country):
 
 def main_ingredient_hint(answer: MainIngredient, guess_ingr: MainIngredient):
     res = {}
-    if answer.name == guess_ingr.name:
+    if answer.id == guess_ingr.id:
         res.update({guess_ingr.name: GREEN})
     elif answer.food_group == guess_ingr.food_group:
         res.update({guess_ingr.name: YELLOW})
@@ -195,7 +195,7 @@ def get_hints(guess_str: str):
         print("You guessed a dish that doesn't exist!!")
         return list()
     
-    ans = get_puzzle_of_day()
+    ans = get_puzzle_of_day().dish
     # print(ans.name)
     country_dict = country_hint(ans.country, guess.country)
     taste_dict = taste_hint(ans.taste, guess.taste)

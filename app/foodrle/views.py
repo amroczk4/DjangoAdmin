@@ -5,18 +5,33 @@ from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 from .models import Dishes
+from .models import Puzzle
 from .game import get_puzzle_of_day, get_hints
 from random import choice
 # from .shellgame import get_puzzle as random_dish
 
 def homepage(request):
-    answer = get_puzzle_of_day().name
+    answer = get_puzzle_of_day().dish.name
     dishes = Dishes.objects.values_list('name', flat=True)
     guess_sim = choice(dishes)
     hints = get_hints(guess_sim)
     return render(request=request, template_name='foodrle/home.html', context={"dishes":dishes, "guess": guess_sim, "answer": answer, "hints": hints})
     # return render(request=request, template_name='foodrle/home.html', context={"dishes":dishes})
 
+def create_puzzle(request):
+    answer = get_puzzle_of_day()
+    # Create new puzzle record
+    return redirect(f'/puzzles/{answer.id}',context={"answer":answer.dish.name})
+    #return render(request=request, template_name='foodrle/home.html', context={"dishes":dishes, "guess": guess_sim, "answer": answer, "hints": hints}) 
+
+def get_puzzle(request, id):
+    answer = Puzzle.objects.get(pk=id).dish.name
+    dishes = Dishes.objects.values_list('name', flat=True)
+    guess_sim = choice(dishes)
+    hints = get_hints(guess_sim)
+    return render(request=request, template_name='foodrle/puzzle.html', context={"dishes":dishes, "guess": guess_sim, "answer": answer, "hints": hints})
+
+#create new function to take input, send to server, pass the id of the puzzle, create logic to respond to guess
 
 ## Testing page
 ## Test all functions here 
