@@ -18,6 +18,21 @@ def create_puzzle_answer() -> Puzzle:
     return puzzle
 
 
+def submit_guess(puzzle_id: int, guess_str: str, guess_no: int) -> bool:
+    if guess_no not in range(1,7):
+        print("submit_guess: game over")
+        return False
+    if not guess_is_valid_dish(guess_str):
+        print("submit_guess: invalid guess!")
+        return False
+    else:
+        #TODO: make sure guess{guess_no} has not already been made; otherwise return False
+        guess_dict = {f'guess{guess_no}': guess_str}
+        Puzzle.objects.filter(pk=puzzle_id).update(**guess_dict)
+        print(f'submit_guess: {guess_dict} add successful!')
+        return True
+
+
 def get_dish_by_name(dish_name: str):
     """ SELECT * FROM Dishes WHERE name=dish_name
         Returns None if dish_name represents a non-existent dish
@@ -182,6 +197,8 @@ def taste_hint (answer: Taste, guess_dish: Taste):
                 res.update({k: GREEN})
             else:
                 res.update({k: RED})
+    if len(res) < 3:
+        res.update({'placeholder': ''})
     print("\tTaste: "+ str(res))
     return res
 
