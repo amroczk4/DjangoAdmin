@@ -24,8 +24,6 @@
 {% block content %}
 
 
-
-
 <!--Navbar-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="/">Foodrle</a>
@@ -229,19 +227,50 @@
 
 
 <div data-guess-grid class="guess-grid">
-    {% comment %} {% for hint in hints|slice:":1" %}
-    <div class="tile" id="hint1">{{}} <br> {{value}}</div> {% endcomment %}
-    {% for hint in hints %}
-        {% for key, value in hint.items %}
-        {% if value == 2 %}
-            <div class="tile" id="hint2">{{key}} <br>{{value}}</div>
-        {% elif value == 1 %}
-            <div class="tile" id="hint1">{{key}} <br>{{value}}</div>
-        {% elif value == 0 %}
-            <div class="tile" id="hint0">{{key}} <br>{{value}}</div>
+    {% for hint in hints|slice:":1" %}
+        {% if hint.dir == 'south' %}
+            <div class="tile" id="blank">{{hint.country}}<br>{{hint.dist}}<br> <i class="bi bi-arrow-down"></i></div> 
+        {% elif hint.dir == 'southeast' %}
+              <div class="tile" id="blank">{{hint.country}}<br>{{hint.dist}}<br> <i class="bi bi-arrow-down-right"></i></div>
+        {% elif hint.dir == 'southwest' %}
+                <div class="tile" id="blank">{{hint.country}}<br>{{hint.dist}}<br> <i class="bi bi-arrow-down-left"></i></div>
+        {% elif hint.dir == 'north' %}
+            <div class="tile" id="blank">{{hint.country}}<br>{{hint.dist}}<br> <i class="bi bi-arrow-up"></i></div>
+        {% elif hint.dir == 'northwest' %}
+              <div class="tile" id="blank">{{hint.country}}<br>{{hint.dist}}<br> <i class="bi bi-arrow-up-left"></i></div>
+        {% elif hint.dir == 'northeast' %}
+              <div class="tile" id="blank">{{hint.country}}<br>{{hint.dist}}<br> <i class="bi bi-arrow-up-right"></i></div>
+        {% elif hint.dir == 'west' %}
+            <div class="tile" id="blank">{{hint.country}}<br>{{hint.dist}}<br> <i class="bi bi-arrow-left"></i></div>
+        {% elif hint.dir == 'east' %}
+            <div class="tile" id="blank">{{hint.country}}<br>{{hint.dist}}<br> <i class="bi bi-arrow-right"></i></div>
         {% else %}
-        <div class="tile" id="blank">{{key}} <br>{{value}}</div>
-        {%endif%}
+            <div class="tile" id="hint2">{{hint.country}}</div>  
+        {% endif%} 
+    {% endfor%}
+
+
+
+    {% for hint in hints|slice:"1:"  %}
+    
+        {% for key, value in hint.items %}
+            {% if key == 'calories'%}
+                {% if value > 0 %}
+                    <div class="tile" id="blank">{{key}} <br>{{value}} <i class="bi bi-arrow-up"></i> </div>
+                {%elif value < 0%}
+                    <div class="tile" id="blank">{{key}} <br>{{value}} <i class="bi bi-arrow-down"></i> </div>
+                {%else%}
+                    <div class="tile" id="hint2">{{key}} <br>{{value}}</div>
+                {%endif%}
+            {%else%}
+                {% if value == 2 %}
+                    <div class="tile" id="hint2">{{key}}</div>
+                {% elif value == 1 %}
+                    <div class="tile" id="hint1">{{key}}</div>
+                {% elif value == 0 %}
+                    <div class="tile" id="hint0">{{key}}</div>  
+                {%endif%}
+            {%endif%}
         {% endfor %}
     {% endfor %}
     <div class="tile" id="blank">Real answer <br> {{answer}}</div>
