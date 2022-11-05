@@ -32,7 +32,7 @@ def get_puzzle(request, id):
     # hints = get_hints(guess_sim, answer)
     # return render(request=request, template_name='foodrle/puzzle.html', context={"dishes":dishes, "guess": guess_sim, "answer": answer.name, "hints": hints})
 
-    answer = Puzzle.objects.get(pk=1).ans_dish
+    answer = Puzzle.objects.get(pk=id).ans_dish
     dishes = Dishes.objects.values_list('name', flat=True)
     guess_sim = choice(dishes)
     hints = get_hints(guess_sim, answer)
