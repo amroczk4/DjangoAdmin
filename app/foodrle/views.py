@@ -5,9 +5,9 @@ from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 from .models import Dishes, Puzzle
-from .game import create_puzzle_answer, get_hints, guess_is_valid_dish
+import foodrle.game as game
 from random import choice
-# from .shellgame import get_puzzle as random_dish
+
 
 def homepage(request):
     # answer = get_puzzle_of_day().ans_dish.name
@@ -17,68 +17,128 @@ def homepage(request):
 
 
 def create_puzzle(request):
-    answer = create_puzzle_answer()
-    # Create new puzzle record
-    return redirect(f'/puzzles/{answer.id}',context={"answer":answer.ans_dish.name})
-    #return render(request=request, template_name='foodrle/home.html', context={"dishes":dishes, "guess": guess_sim, "answer": answer, "hints": hints}) 
+    answer = game.create_puzzle_answer()
+    guess_cnt = 0
+    return redirect(f'/puzzles/{answer.id}/{guess_cnt}',context={"answer":answer.ans_dish.name})
+    # return render(request=request, template_name='foodrle/home.html', context={"dishes":dishes, "guess": guess_sim, "answer": answer, "hints": hints}) 
 
 
-def get_puzzle(request, id):
-    # ORIGINAL
-    # answer = Puzzle.objects.get(pk=id).ans_dish
-    # dishes = Dishes.objects.values_list('name', flat=True)
-    # guess_sim = choice(dishes)
-    # #TODO: submit_guess(guess_sim)
-    # hints = get_hints(guess_sim, answer)
-    # return render(request=request, template_name='foodrle/puzzle.html', context={"dishes":dishes, "guess": guess_sim, "answer": answer.name, "hints": hints})
+def get_puzzle(request, id, guess_cnt):
+    if guess_cnt < 0 or guess_cnt >= 6:
+        return render(
+            request=request, 
+            template_name='foodrle/lose.html',
+            context={ 
+                "guess": 'GAME OVER', 
+                "answer": "CHEATER!!!", 
+                "hints_list": [], 
+                })
 
     answer = Puzzle.objects.get(pk=id).ans_dish
     dishes = Dishes.objects.values_list('name', flat=True)
-    guess_sim = choice(dishes)
-    hints = get_hints(guess_sim, answer)
+    guess_str = 'INVALID'
     if request.method == "POST":
-        print(request.POST)
         form = GuessAnswerForm(request.POST)
         if form.is_valid():
-            guess = form.cleaned_data.get('dish_name')
-            print(guess)
-            if guess_is_valid_dish(guess):
-                hints = get_hints(guess, answer)
-                messages.success(request, "guess went through!")
-                return render(request=request, template_name='foodrle/puzzle.html', context={"dishes":dishes, "guess": guess, "answer": answer.name, "hints": hints, "form": form})
-            else:
-                messages.error(request, "Invalid dish, guess again")
-        else:
-            messages.error(request, "Bad Form!")
-    form = GuessAnswerForm()    
-    return render(request=request, template_name='foodrle/puzzle.html', context={"dishes":dishes, "guess": guess_sim, "answer": answer.name, "hints": hints, "form": form})
+            guess_str = form.cleaned_data.get('dish_name').lower()
+            if game.guess_is_valid_dish(guess_str):
+                guess_cnt = guess_cnt + 1
+                game.submit_guess(id, guess_str, guess_cnt)
+                return display_hints(request, id, guess_cnt)
+        messages.error(request, "Invalid dish, guess again")
+    form = GuessAnswerForm()
+    if guess_cnt > 0:
+        hints_list = game.get_hints(Puzzle.objects.get(pk=id), guess_cnt)
+    else:
+        hints_list = []
+    return render(
+        request=request, template_name='foodrle/puzzle.html', 
+        context={
+            "dishes":dishes, 
+            "guess": guess_str, 
+            "answer": answer.name, 
+            "hints_list": hints_list, 
+            "form": form,
+            })
 
-#create new function to take input, send to server, pass the id of the puzzle, create logic to respond to guess
+
+def display_hints(request, id, guess_cnt):
+    if guess_cnt <= 0 or guess_cnt > 6:
+        return render(
+            request=request, 
+            template_name='foodrle/lose.html',
+            context={ 
+                "guess": 'GAME OVER', 
+                "answer": 'CHEATER!!!', 
+                "hints_list": [], 
+                })
+    
+    answer = Puzzle.objects.get(pk=id)
+    win = game.is_guess_correct(answer, guess_cnt)
+    hints_list = game.get_hints(answer, guess_cnt)
+    if win:
+        return render(
+            request=request, 
+            template_name='foodrle/win.html',
+            context={ 
+                "guess": 'WIN!!!', 
+                "answer": answer.ans_dish.name, 
+                "hints_list": hints_list, 
+                })
+    
+    elif guess_cnt == 6 and not win:
+        return render(
+            request=request, 
+            template_name='foodrle/lose.html',
+            context={
+                "guess": 'LOSE :(', 
+                "answer": answer.ans_dish.name, 
+                "hints_list": hints_list, 
+                })
+            
+    else:
+        dishes = Dishes.objects.values_list('name', flat=True)
+        return redirect(
+            f'/puzzles/{id}/{guess_cnt}',
+            context={
+                "dishes":dishes, 
+                "guess": 'foo', 
+                "answer": answer.ans_dish.name, 
+                "hints_list": hints_list,
+                "form": GuessAnswerForm(),
+                })
+
 
 ## Testing page
-## Test all functions here 
-def test(request):
-    answer = Puzzle.objects.get(pk=1).ans_dish
-    dishes = Dishes.objects.values_list('name', flat=True)
-    guess_sim = choice(dishes)
-    hints = get_hints(guess_sim, answer)
-    if request.method == "POST":
-        print(request.POST)
-        form = GuessAnswerForm(request.POST)
-        if form.is_valid():
-            guess = form.cleaned_data.get('dish_name')
-            print(guess)
-            # test valid dish ? return hint : idk
-            if guess_is_valid_dish(guess):
-                hints = get_hints(guess, answer)
-                messages.success(request, "guess went through!")
-                return render(request=request, template_name='foodrle/test.html', context={"dishes":dishes, "guess": guess, "answer": answer.name, "hints": hints, "form": form})
-            else:
-                messages.error(request, "Invalid dish, guess again")
-        else:
-            messages.error(request, "Bad Form!")
-    form = GuessAnswerForm()    
-    return render(request=request, template_name='foodrle/test.html', context={"dishes":dishes, "guess": guess_sim, "answer": answer.name, "hints": hints, "form": form})
+## Test all functions here (TODO: remove before merge)
+# def test(request):
+#     answer = Puzzle.objects.get(pk=1).ans_dish
+#     dishes = Dishes.objects.values_list('name', flat=True)
+#     guess_sim = choice(dishes)
+#     hints = game.collect_hints(game.get_dish_by_name(guess_sim), answer)
+#     if request.method == "POST":
+#         print(request.POST)
+#         form = GuessAnswerForm(request.POST)
+#         if form.is_valid():
+#             guess_str = form.cleaned_data.get('dish_name')
+#             print(guess_str)
+#             # test valid dish ? return hint : idk
+#             if game.guess_is_valid_dish(guess_str):
+#                 guess_dish = game.get_dish_by_name(guess_str)
+#                 hints = game.collect_hints(guess_dish, answer)
+#                 messages.success(request, "guess went through!")
+#                 return render(request=request, template_name='foodrle/test.html', context={"dishes":dishes, "guess": guess_str, "answer": answer.name, "hints": hints, "form": form})
+#             else:
+#                 messages.error(request, "Invalid dish, guess again")
+#         else:
+#             messages.error(request, "Bad Form!")
+#     form = GuessAnswerForm()    
+#     return render(
+#         request=request, template_name='foodrle/test.html', 
+#         context={
+#             "dishes":dishes, "guess": guess_sim, "answer": answer.name, 
+#             "hints": hints, "form": form})
+
 
 def register_request(request):
     if request.method == "POST":
@@ -90,7 +150,9 @@ def register_request(request):
             return redirect("foodrle:homepage")
         messages.error(request, "Unsuccessful registration. Invalid information.")
     form = NewUserForm()
-    return render(request=request, template_name="foodrle/register.html", context={"register_form": form})
+    return render(
+        request=request, template_name="foodrle/register.html", 
+        context={"register_form": form})
 
 
 def login_request(request):
