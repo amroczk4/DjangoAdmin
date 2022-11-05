@@ -87,7 +87,6 @@
     <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
     Welcome, {{user.username}}
   </div> 
-<!--<h3 style="color:white; text-align:right; margin:20px;">Welcome, {{user.username}}</h3>-->
 
 {% else %}
 
@@ -99,8 +98,6 @@
 </div>
 </nav>
 <br>
-<!--<h3 style="color:white; text-align:right; margin:20px;">Welcome Guest!</h3>-->
-
 {% endif %}
 
 </ul>
@@ -252,7 +249,7 @@
 
 
     {% for hint in hints|slice:"1:"  %}
-    
+
         {% for key, value in hint.items %}
             {% if key == 'calories'%}
                 {% if value > 0 %}
@@ -268,7 +265,9 @@
                 {% elif value == 1 %}
                     <div class="tile" id="hint1">{{key}}</div>
                 {% elif value == 0 %}
-                    <div class="tile" id="hint0">{{key}}</div>  
+                    <div class="tile" id="hint0">{{key}}</div>
+                {% else %}
+                    <div class="tile" id="blank"></div>  
                 {%endif%}
             {%endif%}
         {% endfor %}
@@ -277,74 +276,18 @@
     <div class="tile" id="blank">Guess <br> {{guess}}</div>
 </div> 
 
-
-{% comment %} {% autoescape off %}
-<script type="text/javascript">
-    var hintList= {{hints}};
-    var hintOne = hintList[0];
-    document.getElementById('potato').innerHTML = hintOne;
-</script> 
-{% endautoescape %}
-
-<div data-guess-grid class="guess-grid">
-    <div class="tile" id="hint1"><p id="potato"></p></div>
-</div> {% endcomment %}
-
-{% comment %} <div data-guess-grid class="guess-grid">
-    <div class="tile" id="hint1"></div>
-    <div class="tile" id="hint2"></div>
-    <div class="tile" id="hint3"></div>
-    <div class="tile" id="hint4"></div>
-    <div class="tile" id="hint5"></div>
-    <div class="tile" id="hint6"></div>
-    <div class="tile" id="hint1"></div>
-    <div class="tile" id="hint2"></div>
-    <div class="tile" id="hint3"></div>
-    <div class="tile" id="hint4"></div>
-    <div class="tile" id="hint5"></div>
-    <div class="tile" id="hint6"></div>
-    <div class="tile" id="hint1"></div>
-    <div class="tile" id="hint2"></div>
-    <div class="tile" id="hint3"></div>
-    <div class="tile" id="hint4"></div>
-    <div class="tile" id="hint5"></div>
-    <div class="tile" id="hint6"></div>
-    <div class="tile" id="hint1"></div>
-    <div class="tile" id="hint2"></div>
-    <div class="tile" id="hint3"></div>
-    <div class="tile" id="hint4"></div>
-    <div class="tile" id="hint5"></div>
-    <div class="tile" id="hint6"></div>
-    <div class="tile" id="hint1"></div>
-    <div class="tile" id="hint2"></div>
-    <div class="tile" id="hint3"></div>
-    <div class="tile" id="hint4"></div>
-    <div class="tile" id="hint5"></div>
-    <div class="tile" id="hint6"></div>
-    <div class="tile" id="hint1"></div>
-    <div class="tile" id="hint2"></div>
-    <div class="tile" id="hint3"></div>
-    <div class="tile" id="hint4"></div>
-    <div class="tile" id="hint5"></div>
-    <div class="tile" id="hint6"></div> 
-</div> {% endcomment %}
-
-<div class="input-box">
-<input type="text" id="tags" class="optional-styles" placeholder="Type here...">
-<script>
-    $( function() {
-        var availableTags = [
+<div class ="input-box">
+    <form method="post", class="form-group">
+        {% csrf_token %}
+        {{form.dish_name}}
+        <datalist id="dishes">
             {% for dish in dishes %}
-                "{{dish}}",
+                <option value="{{ dish }}"></option>
             {% endfor %}
-        ];
-        sortedTags = availableTags.sort()
-        $( "#tags" ).autocomplete({
-        source: sortedTags
-        });
-    } );
-    </script>
+        </datalist>
+    </form>
 </div>
+
 {% endblock %}
 </body>
 </html>

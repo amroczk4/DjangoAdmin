@@ -23,5 +23,5 @@ class NewUserForm(UserCreationForm):
 
 
 class GuessAnswerForm(forms.Form):
-	dish_name = forms.CharField(max_length=128, widget=forms.TextInput(attrs={'class': 'optional-styles'}))
+	dish_name = forms.CharField(max_length=128, widget=forms.TextInput(attrs={'class': 'optional-styles', 'list': 'dishes', 'placeholder': 'Guess Here'}))
 
