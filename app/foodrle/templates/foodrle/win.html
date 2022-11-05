@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <title>Win</title>
 
     <!--Fonts-->
     <link href='https://fonts.googleapis.com/css?family=Oleo Script' rel='stylesheet'>
@@ -83,10 +83,10 @@
     </div>
 </nav>
 <br>
-{% comment %} <div class="alert">
+<div class="alert">
     <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-    Welcome, {{user.username}}
-  </div>  {% endcomment %}
+    Congratulations, {{user.username}}
+  </div> 
 
 {% else %}
 
@@ -223,19 +223,6 @@
   </script>
 
 
-<div class ="input-box">
-    <form method="post", class="form-group">
-        {% csrf_token %}
-        {{form.dish_name}}
-        <datalist id="dishes">
-            {% for dish in dishes %}
-                <option value="{{ dish }}"></option>
-            {% endfor %}
-        </datalist>
-    </form>
-</div>
-
-
 <div data-guess-grid class="guess-grid">
     {% for hints in hints_list %}
         {% for hint in hints|slice:":1" %}
@@ -287,10 +274,22 @@
             {% endfor %}
         {% endfor %}
     {% endfor %}
-    {% comment %} <div class="tile" id="blank">Real answer <br> {{answer}}</div> {% endcomment %}
+    <div class="tile" id="blank">Real answer <br> {{answer}}</div>
     <div class="tile" id="blank">Guess <br> {{guess}}</div>
 </div> 
 
+<a href="/puzzle/new">Play again?</a>
+{% comment %} <div class ="input-box">
+    <form method="post", class="form-group">
+        {% csrf_token %}
+        {{form.dish_name}}
+        <datalist id="dishes">
+            {% for dish in dishes %}
+                <option value="{{ dish }}"></option>
+            {% endfor %}
+        </datalist>
+    </form>
+</div> {% endcomment %}
 
 {% endblock %}
 </body>
