@@ -1,6 +1,6 @@
 from django.test import TestCase
-
-from .models import Country
+import re
+from .models import Country, Puzzle, Dishes
 from .game import distance, direction
 from random import randint
 
@@ -15,7 +15,7 @@ def get_country(id):
 country_list = [get_country(randint(1, 244)) for i in range(10)]
 # country_list = [get_country(i) for i in range(1, 245)]
 
-class CountryModelTests(TestCase):
+class CountryHintsTests(TestCase):
 
     def test_dist_equality(self):
         """Test to ensure the distance from Country A to Country B
@@ -63,3 +63,12 @@ class CountryModelTests(TestCase):
                 #     e.args += (a.name, b.name)
 
 
+class PuzzleModelTests(TestCase):
+    def test_dict_contents(self):
+        dish = Dishes(name="foo", calories=200)
+        puzzle = Puzzle(ans_dish=dish)
+
+        test_dict = puzzle.get_guesses_as_dict()
+        for k, v in test_dict.items():
+            self.assertTrue(re.match('guess[1-6]', k), msg=f'{k} does not match guess[1-6] pattern')
+        
