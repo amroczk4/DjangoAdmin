@@ -58,8 +58,7 @@ def distance(guessed_country: Country, answer: Country) -> int:
         return 0
 
     start_lat, start_lon, dest_lat, dest_lon = map(radians,
-                                                    [guessed_country.latitude, guessed_country.longitude, 
-                                                    answer.latitude, answer.longitude])
+                                                    [guessed_country.latitude, guessed_country.longitude, answer.latitude, answer.longitude])
     # Haversine formula
     dlon = start_lon - dest_lon
     dlat = start_lat - dest_lat
