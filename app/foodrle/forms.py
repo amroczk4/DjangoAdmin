@@ -23,8 +23,5 @@ class NewUserForm(UserCreationForm):
 
 
 class GuessAnswerForm(forms.Form):
-	dish_name = forms.CharField(max_length=128)
+	dish_name = forms.CharField(max_length=128, widget=forms.TextInput(attrs={'class': 'optional-styles'}))
 
-	class Meta:
-		model = Dishes
-		fields = ("name")
