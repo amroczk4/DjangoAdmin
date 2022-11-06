@@ -214,13 +214,14 @@ def is_guess_correct(puzzle: Puzzle, guess_cnt: int) -> bool:
 
 
 def collect_hints(guess_dish: Dishes, answer_dish: Dishes):
-        
+    
+    guess_dict = {'guess': guess_dish.name}
     country_dict = country_hint(answer_dish.country, guess_dish.country)
     taste_dict = taste_hint(answer_dish.taste, guess_dish.taste)
     calorie_dict = calorie_hint(answer_dish, guess_dish)
     ingr_dict = main_ingredient_hint(answer_dish.main_ingredient, guess_dish.main_ingredient)
     
-    return [country_dict, taste_dict, calorie_dict, ingr_dict]
+    return [guess_dict, country_dict, taste_dict, calorie_dict, ingr_dict]
 
 
 def get_hints(puzzle: Puzzle, guess_cnt: int):
