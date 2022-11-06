@@ -24,8 +24,6 @@
 {% block content %}
 
 
-
-
 <!--Navbar-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="/">Foodrle</a>
@@ -85,11 +83,10 @@
     </div>
 </nav>
 <br>
-<div class="alert">
+{% comment %} <div class="alert">
     <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
     Welcome, {{user.username}}
-  </div> 
-<!--<h3 style="color:white; text-align:right; margin:20px;">Welcome, {{user.username}}</h3>-->
+  </div>  {% endcomment %}
 
 {% else %}
 
@@ -101,8 +98,6 @@
 </div>
 </nav>
 <br>
-<!--<h3 style="color:white; text-align:right; margin:20px;">Welcome Guest!</h3>-->
-
 {% endif %}
 
 </ul>
@@ -227,85 +222,76 @@
     toggleSwitch.addEventListener('change', switchTheme, false);
   </script>
 
-<a href="/puzzle/new">newgame</a>
-{% comment %} <div data-guess-grid class="guess-grid">
-  {% for hint in hints|slice:":1" %}
-    <div class="tile" id="hint1">{{}} <br> {{value}}</div> 
-    {% for hint in hints %}
-        {% for key, value in hint.items %}
-            <div class="tile" id="hint1">{{key}} <br>{{value}}</div>
-        {% endfor %}
-    {% endfor %}
-</div>  {% endcomment %}
 
+<div class ="input-box">
+    <form method="post", class="form-group">
+        {% csrf_token %}
+        {{form.dish_name}}
+        <datalist id="dishes">
+            {% for dish in dishes %}
+                <option value="{{ dish }}"></option>
+            {% endfor %}
+        </datalist>
+    </form>
+</div>
 
-{% comment %} {% autoescape off %}
-<script type="text/javascript">
-    var hintList= {{hints}};
-    var hintOne = hintList[0];
-    document.getElementById('potato').innerHTML = hintOne;
-</script> 
-{% endautoescape %}
 
 <div data-guess-grid class="guess-grid">
-    <div class="tile" id="hint1"><p id="potato"></p></div>
-</div> {% endcomment %}
+    {% for hints in hints_list %}
+        {% for hint in hints|slice:":1" %}
+            {% if hint.dir == 'south' %}
+                <div class="tile" id="blank">{{hint.country}}<br>{{hint.dist}}<br> <i class="bi bi-arrow-down"></i></div> 
+            {% elif hint.dir == 'southeast' %}
+                <div class="tile" id="blank">{{hint.country}}<br>{{hint.dist}}<br> <i class="bi bi-arrow-down-right"></i></div>
+            {% elif hint.dir == 'southwest' %}
+                    <div class="tile" id="blank">{{hint.country}}<br>{{hint.dist}}<br> <i class="bi bi-arrow-down-left"></i></div>
+            {% elif hint.dir == 'north' %}
+                <div class="tile" id="blank">{{hint.country}}<br>{{hint.dist}}<br> <i class="bi bi-arrow-up"></i></div>
+            {% elif hint.dir == 'northwest' %}
+                <div class="tile" id="blank">{{hint.country}}<br>{{hint.dist}}<br> <i class="bi bi-arrow-up-left"></i></div>
+            {% elif hint.dir == 'northeast' %}
+                <div class="tile" id="blank">{{hint.country}}<br>{{hint.dist}}<br> <i class="bi bi-arrow-up-right"></i></div>
+            {% elif hint.dir == 'west' %}
+                <div class="tile" id="blank">{{hint.country}}<br>{{hint.dist}}<br> <i class="bi bi-arrow-left"></i></div>
+            {% elif hint.dir == 'east' %}
+                <div class="tile" id="blank">{{hint.country}}<br>{{hint.dist}}<br> <i class="bi bi-arrow-right"></i></div>
+            {% else %}
+                <div class="tile" id="hint2">{{hint.country}}</div>  
+            {% endif%} 
+        {% endfor%}
 
-{% comment %} <div data-guess-grid class="guess-grid">
-    <div class="tile" id="hint1"></div>
-    <div class="tile" id="hint2"></div>
-    <div class="tile" id="hint3"></div>
-    <div class="tile" id="hint4"></div>
-    <div class="tile" id="hint5"></div>
-    <div class="tile" id="hint6"></div>
-    <div class="tile" id="hint1"></div>
-    <div class="tile" id="hint2"></div>
-    <div class="tile" id="hint3"></div>
-    <div class="tile" id="hint4"></div>
-    <div class="tile" id="hint5"></div>
-    <div class="tile" id="hint6"></div>
-    <div class="tile" id="hint1"></div>
-    <div class="tile" id="hint2"></div>
-    <div class="tile" id="hint3"></div>
-    <div class="tile" id="hint4"></div>
-    <div class="tile" id="hint5"></div>
-    <div class="tile" id="hint6"></div>
-    <div class="tile" id="hint1"></div>
-    <div class="tile" id="hint2"></div>
-    <div class="tile" id="hint3"></div>
-    <div class="tile" id="hint4"></div>
-    <div class="tile" id="hint5"></div>
-    <div class="tile" id="hint6"></div>
-    <div class="tile" id="hint1"></div>
-    <div class="tile" id="hint2"></div>
-    <div class="tile" id="hint3"></div>
-    <div class="tile" id="hint4"></div>
-    <div class="tile" id="hint5"></div>
-    <div class="tile" id="hint6"></div>
-    <div class="tile" id="hint1"></div>
-    <div class="tile" id="hint2"></div>
-    <div class="tile" id="hint3"></div>
-    <div class="tile" id="hint4"></div>
-    <div class="tile" id="hint5"></div>
-    <div class="tile" id="hint6"></div> 
-</div> {% endcomment %}
 
-<div class="input-box">
-<input type="text" id="tags" class="optional-styles" placeholder="Type here...">
-<script>
-    $( function() {
-        var availableTags = [
-            {% for dish in dishes %}
-                "{{dish}}",
+
+        {% for hint in hints|slice:"1:"  %}
+
+            {% for key, value in hint.items %}
+                {% if key == 'calories'%}
+                    {% if value > 0 %}
+                        <div class="tile" id="blank">{{key}} <br>{{value}} <i class="bi bi-arrow-up"></i> </div>
+                    {%elif value < 0%}
+                        <div class="tile" id="blank">{{key}} <br>{{value}} <i class="bi bi-arrow-down"></i> </div>
+                    {%else%}
+                        <div class="tile" id="hint2">{{key}} <br>{{value}}</div>
+                    {%endif%}
+                {%else%}
+                    {% if value == 2 %}
+                        <div class="tile" id="hint2">{{key}}</div>
+                    {% elif value == 1 %}
+                        <div class="tile" id="hint1">{{key}}</div>
+                    {% elif value == 0 %}
+                        <div class="tile" id="hint0">{{key}}</div>
+                    {% else %}
+                        <div class="tile" id="blank"></div>  
+                    {%endif%}
+                {%endif%}
             {% endfor %}
-        ];
-        sortedTags = availableTags.sort()
-        $( "#tags" ).autocomplete({
-        source: sortedTags
-        });
-    } );
-    </script>
-</div>
+        {% endfor %}
+    {% endfor %}
+    {% comment %} <div class="tile" id="blank">Real answer <br> {{answer}}</div> {% endcomment %}
+    <div class="tile" id="blank">Guess <br> {{guess}}</div>
+</div> 
+
+
 {% endblock %}
 </body>
 </html>

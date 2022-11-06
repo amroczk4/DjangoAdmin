@@ -83,18 +83,24 @@ class UserStats(models.Model):
 
 
 class Puzzle(models.Model):
-    last_used = models.DateField()
-    dish = models.ForeignKey(Dishes, on_delete=models.CASCADE)
+    id = models.BigAutoField(primary_key=True)
+    ans_dish = models.ForeignKey(Dishes, on_delete=models.CASCADE)
+    guess1 = models.CharField(max_length=128, blank=True, default='')
+    guess2 = models.CharField(max_length=128, blank=True, default='')
+    guess3 = models.CharField(max_length=128, blank=True, default='')
+    guess4 = models.CharField(max_length=128, blank=True, default='')
+    guess5 = models.CharField(max_length=128, blank=True, default='')
+    guess6 = models.CharField(max_length=128, blank=True, default='')
 
-    def __str__(self):
-        return str(self.dish)
-
-    def was_used_recently(self):
-        now = datetime.datetime.now().date()
-        return now - datetime.timedelta(days=7) <= self.last_used <= now
-
-    def update_last_used(self):
-        today = datetime.datetime.now().date()
-        Puzzle.objects.filter(id=self.id).update(last_used=today)
+    def get_guesses_as_dict(self):
+        """ returns guess1 ... guess6 as a dictionary
+        """
+        full_dict = self.__dict__
+        ignore_keys = ['_state', 'id', 'ans_dish_id']
+        guess_dict = {
+            key: full_dict[key] for key in full_dict
+            if key not in ignore_keys
+        }
+        return guess_dict
 
 

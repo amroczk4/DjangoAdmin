@@ -15,18 +15,67 @@
 		rel="stylesheet" type="text/css" />
 </head>
 <body>
-	<input type="text" id="tags">
+	{% extends 'foodrle/header.html' %}
+	{% block content %}
+    {% if messages %}
+        {% for message in messages %}
+          <div class="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            {{ message }}
+          </div> 
+        {% endfor %}
+    {% endif %}
+
+<div class="input-box">
+	<div class="container">
+		<div class="row">
+			<div class="col-6 mx-auto text-center mt-5">
+				<input type="text" list="dishes" placeholder="guess here" class="optional-styles">
+				<datalist id="dishes">
+					{% for dish in dishes %}
+						<option value="{{ dish }}"></option>
+					{% endfor %}
+				</datalist>
+			</div>
+		</div>
+	</div>
+
+	<form method="post", class="form-group">
+		{% csrf_token %}
+		<div class="input-group mb-3">
+			{{form.dish_name}}
+			<div class="input-group-prepend">
+				<button name="save", type="submit", class="btn btn-success">Guess</button>
+			</div>
+		</div>
+	</form>
+</div>
+	{% comment %} <input type="text" id="tags" class="ui-autocomplete-input" autocomplete="on" role="textbox">
 	<script>
-$( function() {
-	var availableTags = [
-		{% for dish in dishes %}
-			"{{dish.name}}",
-		{% endfor %}
-	];
-	$( "#tags" ).autocomplete({
-	source: availableTags
-	});
-} );
-</script>
+    $( function() {
+      var availableTags = [
+        {% for dish in dishes %}
+          "{{dish}}",
+        {% endfor %}
+      ];
+      $( "#tags" ).autocomplete({
+        source: availableTags
+      });
+    } );
+ </script> {% endcomment %}
+<p> Guess: {{ guess }}</p>
+<p> Hints: {{ hints }}</p>
+<p> Answer: {{ answer }}</p>
+
+
+{% for hint in hints|slice:'1:' %}
+	{% for key, value in hint.items%}
+	<ul>
+		<li> {{key}} : {{value}}</li>
+	</ul>
+	{% endfor %}
+{% endfor %}
+
+{% endblock %}
 </body>
 </html>

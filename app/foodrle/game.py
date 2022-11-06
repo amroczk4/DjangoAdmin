@@ -1,83 +1,68 @@
-from random import randint
+from random import choice
 from .models import Country, Dishes, Taste, MainIngredient, Puzzle
 from math import atan2, degrees, sin, cos, radians, asin, sqrt
-import os
-import datetime
 
-TOTAL_PUZZLES = Puzzle.objects.count()
-user_stats = {
-    1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 'games_played': 0
-}
+RED = 0
+YELLOW = 1
+GREEN = 2
 
-
-def cls():
-    os.system('cls' if os.name=='nt' else 'clear')
-
-
-def main():
-    cls()
-    start_game()
-
-
-if __name__ == '__main__':
-    main()
+   
+def create_puzzle_answer() -> Puzzle:
+    """ Chooses a random dish to serve as the
+        user puzzle, creates a puzzle entry
+        and returns it
+    """
+    answer = choice(Dishes.objects.all())
+    puzzle = Puzzle(ans_dish=answer)
+    puzzle.save()
+    return puzzle
 
 
-def update_user_stats(guess_cnt: int, isWin: bool):
-    if isWin:
-        cnt = user_stats.get(guess_cnt)
-        if cnt is None:
-            user_stats.update({guess_cnt: 1})
-        else:
-            user_stats.update({guess_cnt: cnt + 1})
-    played_games = user_stats.get('games_played')
-    if played_games is None:
-        user_stats.update({'games_played': 1})
+def submit_guess(puzzle_id: int, guess_str: str, guess_no: int) -> bool:
+    if guess_no not in range(1,7):
+        print("submit_guess: game over")
+        return False
+    if not guess_is_valid_dish(guess_str):
+        print("submit_guess: invalid guess!")
+        return False
     else:
-        user_stats.update({'games_played': played_games + 1})
-
-    show_user_stats()
-    return
-
-
-def show_user_stats():
-    print(user_stats)
+        #TODO: make sure guess{guess_no} has not already been made; otherwise return False
+        #TODO: make sure that e.g. guess4 only enters if guess3 exists and so on
+        guess_dict = {f'guess{guess_no}': guess_str}
+        Puzzle.objects.filter(pk=puzzle_id).update(**guess_dict)
+        print(f'submit_guess: {guess_dict} add successful!')
+        return True
 
 
-def print_welcome():
-    print("Welcome to Foodrle:")
-    print("\tYou have 6 guesses to Determine the right food")
-    print("\tYour game starts now")
-
-
-def get_puzzle() -> Dishes:
+def get_dish_by_name(dish_name: str):
+    """ SELECT * FROM Dishes WHERE name=dish_name
+        Returns None if dish_name represents a non-existent dish
     """
-    Selects a random puzzle from the database,
-    updates last used date and returns dish
+    try:
+        return Dishes.objects.get(name=dish_name)
+    except Dishes.DoesNotExist:
+        return None
+
+
+def guess_is_valid_dish(guess_str: str) -> bool:
+    if get_dish_by_name(guess_str) == None:
+        return False
+    else:
+        return True
+
+        
+def distance(guessed_country: Country, answer_country: Country) -> int:
+    """ Computes the distance in miles
+        between guessed_country and answer_country
     """
-    puzzle = Puzzle.objects.get(pk=randint(1, TOTAL_PUZZLES))
-    puzzle.update_last_used()
-    return puzzle.dish
-
-
-def get_dish_by_name(dish_name: str) -> Dishes:
-    return Dishes.objects.get(name=dish_name)
-
-
-def play_again() -> bool:
-    answer = input('Would you like to play again [y/N]: ').lower()
-    return answer == 'y'
-
-
-def distance(guessed_country: Country, answer: Country, unit='mi') -> float:
-    """ Computes the distance ('mi' miles (default), or
-        'km' kilometers) between one country and another
-    """
-    if guessed_country.name == answer.name:
+    if guessed_country.name == answer_country.name:
         return 0
 
     start_lat, start_lon, dest_lat, dest_lon = map(radians,
-                                                    [guessed_country.latitude, guessed_country.longitude, answer.latitude, answer.longitude])
+                                                    [guessed_country.latitude, 
+                                                    guessed_country.longitude, 
+                                                    answer_country.latitude, 
+                                                    answer_country.longitude])
     # Haversine formula
     dlon = start_lon - dest_lon
     dlat = start_lat - dest_lat
@@ -85,27 +70,21 @@ def distance(guessed_country: Country, answer: Country, unit='mi') -> float:
 
     c = 2 * asin(sqrt(a))
 
-    # Radius of earth in kilometers is 6371. Use 3956 for miles
-    if unit == 'mi':
-        # print(f"Distance from {self.name} to {other.name} is {c * 3956} mi")
-        return c * 3956
-    else:
-        # print(f"Distance from {self.name} to {other.name} is {c * 6371} km")
-        return c * 6371
+    return round(c * 3956)
 
 
-def direction(guessed_country: Country, answer: Country) -> str:
+def direction(guessed_country: Country, answer_country: Country) -> str:
         """
         Computes the direction of 'other' in relation to 'self'
         if the countries are within 'delta' degrees of latitude and
         longitude of one another bearing is used to compute
         direction instead
         """
-        if guessed_country.name == answer.name:
+        if guessed_country.name == answer_country.name:
             return 'same'
         
-        dlat = guessed_country.latitude - answer.latitude
-        dlon = guessed_country.longitude - answer.longitude
+        dlat = guessed_country.latitude - answer_country.latitude
+        dlon = guessed_country.longitude - answer_country.longitude
         north_or_south = ''
         east_or_west = ''
         delta = 20
@@ -125,14 +104,19 @@ def direction(guessed_country: Country, answer: Country) -> str:
             delta = delta - 2
 
         if north_or_south + east_or_west == '':
-            return bearing(guessed_country, answer)
-        # print(f"{other.name} is {north_or_south + east_or_west} of {self.name}")
+            return bearing(guessed_country, answer_country)
+
         return north_or_south + east_or_west
 
 
-def bearing(guessed_country: Country, answer: Country) -> str:
-    dest_lon = answer.longitude
-    dest_lat = answer.latitude
+def bearing(guessed_country: Country, answer_country: Country) -> str:
+    """ Serving as a backup to direction function,
+        computes the bearing angle between
+        two countries and returns a direction string
+    """
+    
+    dest_lon = answer_country.longitude
+    dest_lat = answer_country.latitude
     start_lat = guessed_country.latitude
     start_lon = guessed_country.longitude
 
@@ -165,116 +149,91 @@ def bearing(guessed_country: Country, answer: Country) -> str:
     if brng < 0:
         brng = brng + 360
 
-    # print(f'bearing is {brng}')
     return card_ord_dir(brng)
 
 
 def country_hint(answer_country: Country, guessed_country: Country):
-    cntry_hint = str(distance(guessed_country, answer_country)) + ' miles'
-    cntry_hint = cntry_hint + ' ' + direction(guessed_country, answer_country)
-    print('\tFrom a country', cntry_hint, f'of {guessed_country}')
-
-
-def same_name(ingredient_a, ingredient_b) -> bool:
-    return ingredient_a.name == ingredient_b.name
-
-
-def food_group_eq(ingredient_a, ingredient_b) -> bool:
-    return ingredient_a.food_group == ingredient_b.food_group
+    res = {
+        'country': guessed_country.name, 
+        'dist': str(distance(guessed_country, answer_country))+' Mi',
+        'dir': direction(guessed_country, answer_country)
+        }
+    
+    print(f'\tCountry: {res}')
+    return res
 
 
 def main_ingredient_hint(answer: MainIngredient, guess_ingr: MainIngredient):
-    if same_name(answer, guess_ingr):
-        print(f'\tCORRECT main ingredient: {answer.name}')
-    elif food_group_eq(guess_ingr, answer):
-        print(f'\tWRONG main ingredient: {guess_ingr.name}; CORRECT food group')
+    res = {}
+    if answer.id == guess_ingr.id:
+        res.update({guess_ingr.name: GREEN})
+    elif answer.food_group == guess_ingr.food_group:
+        res.update({guess_ingr.name: YELLOW})
     else:
-        print(f'\tWRONG main ingredient: {guess_ingr.name}; WRONG food group')
-
-
-def reveal_main_ingredient(answer: MainIngredient):
-    print(f"\t[BIG HINT] The main ingredient in the Answer is: {answer.name}")
+        res.update({guess_ingr.name: RED})
+        
+    print(f'\tIngredient: {res}')
+    return res
 
 
 def calorie_hint(answer: Dishes, guess_dish: Dishes):
-    diff = guess_dish.calories - answer.calories
-    if diff > 0:
-        print(f'\t{diff} calories more than {guess_dish.name}')
-    else:
-        print(f'\t{abs(diff)} calories less than {guess_dish.name}')
+    """ If guess has more cals than answer 
+        a negative number is returned
+        If guess has fewer cals than answer
+        a positive number is returned
+    """
+    diff = answer.calories - guess_dish.calories
+    res = {'calories': diff}
+    print(f'\tCalories: {res}')
+    return res
 
 
-def taste_hint(answer: Taste, guess_dish: Taste) -> str:
-    taste_res = ''
-
-    if guess_dish.sweet:
-        if not answer.sweet:
-            taste_res = taste_res + 'NOT '
-        taste_res = taste_res + 'sweet; '
-    if guess_dish.salty:
-        if not answer.salty:
-            taste_res = taste_res + 'NOT '
-        taste_res = taste_res + 'salty; '
-    if guess_dish.sour:
-        if not answer.sour:
-            taste_res = taste_res + 'NOT '
-        taste_res = taste_res + 'sour; '
-    if guess_dish.bitter:
-        if not answer.bitter:
-            taste_res = taste_res + 'NOT '
-        taste_res = taste_res + 'bitter; '
-    if guess_dish.umami:
-        if not answer.umami:
-            taste_res = taste_res + 'NOT '
-        taste_res = taste_res + 'umami; '
-    print('\t'+taste_res)
-
-
-def start_game():
-    print_welcome()
-    # answer = get_dish_by_name('fries')
-    answer = get_puzzle()
+def taste_hint (answer: Taste, guess_dish: Taste):
+    res = {}
+    ans_dict = answer.__dict__
+    guess_dict = guess_dish.__dict__
     
-    guess_cnt = 0
-    win = False
-    while guess_cnt < 6:
-        guess_str = input(f'Enter Guess {guess_cnt + 1}: ').lower()
-
-        try:
-            guess_dish = get_dish_by_name(guess_str)
-        except Dishes.DoesNotExist:
-            print("Invalid answer: dish doesn\'t exist (yet)")
-            continue
-
-        if guess_dish.name == answer.name:
-            print("congratulations, you win!")
-            print(f'correct guess in {guess_cnt + 1} tries')
-            win = True
-        else:
-            print("[Hints] The correct answer is: ")
-            country_hint(answer.country, guess_dish.country)
-            calorie_hint(answer, guess_dish)
-            main_ingredient_hint(answer.main_ingredient, guess_dish.main_ingredient)
-            taste_hint(answer.taste, guess_dish.taste)
-            if guess_cnt >= 1:
-                reveal_main_ingredient(answer.main_ingredient)
-            # if guess_cnt >= 4:
-            #     print("\tI am displaying a pixilated image of the answer")
-
-        guess_cnt = guess_cnt + 1
-        if guess_cnt == 6 or win:
-            print(f'The correct answer was: {answer.name}')
-            update_user_stats(guess_cnt, win)
-            if play_again():
-                guess_cnt = 0
-                win = False
-                answer = get_puzzle()
+    for k, v in guess_dict.items():
+        # NEEDS to be nested if-then-else to work!!!
+        if v == True: 
+            if ans_dict.get(k) == True:
+                res.update({k: GREEN})
             else:
-                break
+                res.update({k: RED})
+    if len(res) < 3:
+        res.update({'placeholder': ''})
+    print("\tTaste: "+ str(res))
+    return res
 
-    if guess_cnt == 6 and not win:
-        print('Better luck next time!')
-    else:
-        print('Way to go!')
 
-    show_user_stats()
+def is_guess_correct(puzzle: Puzzle, guess_cnt: int) -> bool:
+    answer = puzzle.ans_dish.name
+    guess_dict = puzzle.get_guesses_as_dict()
+    current_guess = guess_dict.get(f'guess{guess_cnt}')
+    return current_guess == answer
+
+
+def collect_hints(guess_dish: Dishes, answer_dish: Dishes):
+        
+    country_dict = country_hint(answer_dish.country, guess_dish.country)
+    taste_dict = taste_hint(answer_dish.taste, guess_dish.taste)
+    calorie_dict = calorie_hint(answer_dish, guess_dish)
+    ingr_dict = main_ingredient_hint(answer_dish.main_ingredient, guess_dish.main_ingredient)
+    
+    return [country_dict, taste_dict, calorie_dict, ingr_dict]
+
+
+def get_hints(puzzle: Puzzle, guess_cnt: int):
+    if guess_cnt not in range(1,7):
+        return []
+    guess_dict = puzzle.get_guesses_as_dict()
+    answer = puzzle.ans_dish
+    hints_list = []
+    for i in range(1, guess_cnt+1):
+        guess_n = guess_dict.get(f'guess{i}')
+        dish_n = get_dish_by_name(guess_n)
+        hint_n = collect_hints(dish_n, answer)
+        hints_list.append(hint_n)
+    
+    return hints_list
+

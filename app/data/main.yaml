@@ -1675,102 +1675,107 @@
 - model: foodrle.mainingredient
   pk: 3
   fields:
-    name: Refined Grains (e.g., White Flour)
+    name: Refined Grains
     food_group: 2
 - model: foodrle.mainingredient
   pk: 4
   fields:
-    name: White Flour/Bread Flour
+    name: Bread Flour
     food_group: 2
 - model: foodrle.mainingredient
   pk: 5
   fields:
-    name: White Rice
+    name: White Flour
     food_group: 2
 - model: foodrle.mainingredient
   pk: 6
   fields:
-    name: Pasta
+    name: White Rice
     food_group: 2
 - model: foodrle.mainingredient
   pk: 7
   fields:
-    name: Sugar
+    name: Pasta
     food_group: 2
 - model: foodrle.mainingredient
   pk: 8
   fields:
+    name: Sugar
+    food_group: 2
+- model: foodrle.mainingredient
+  pk: 9
+  fields:
     name: Dairy
     food_group: 3
 - model: foodrle.mainingredient
-  pk: 9
+  pk: 10
   fields:
     name: Nuts
     food_group: 4
 - model: foodrle.mainingredient
-  pk: 10
+  pk: 11
   fields:
     name: Seeds
     food_group: 4
 - model: foodrle.mainingredient
-  pk: 11
+  pk: 12
   fields:
     name: Beans
     food_group: 4
 - model: foodrle.mainingredient
-  pk: 12
+  pk: 13
   fields:
     name: Tofu
     food_group: 4
 - model: foodrle.mainingredient
-  pk: 13
+  pk: 14
   fields:
     name: Fish
     food_group: 5
 - model: foodrle.mainingredient
-  pk: 14
+  pk: 15
   fields:
     name: Poultry
     food_group: 5
 - model: foodrle.mainingredient
-  pk: 15
+  pk: 16
   fields:
     name: Eggs
     food_group: 5
 - model: foodrle.mainingredient
-  pk: 16
+  pk: 17
   fields:
     name: Fruits
     food_group: 6
 - model: foodrle.mainingredient
-  pk: 17
+  pk: 18
   fields:
     name: Vegetables
     food_group: 7
 - model: foodrle.mainingredient
-  pk: 18
+  pk: 19
   fields:
     name: Whole Grains
     food_group: 8
 - model: foodrle.mainingredient
-  pk: 19
+  pk: 20
   fields:
     name: Brown Rice
     food_group: 8
 - model: foodrle.mainingredient
-  pk: 20
+  pk: 21
   fields:
     name: Whole Wheat Pasta
     food_group: 8
 - model: foodrle.mainingredient
-  pk: 21
+  pk: 22
   fields:
     name: Oats
     food_group: 8
 - model: foodrle.mainingredient
-  pk: 22
+  pk: 23
   fields:
-    name: Starchy Vegetables (e.g., corn, pumpkin, potato)
+    name: Starchy Vegetables
     food_group: 8
 - model: foodrle.dishes
   pk: 1
@@ -1778,7 +1783,7 @@
     name: pavlova
     country: 14
     taste: 9
-    main_ingredient: 16
+    main_ingredient: 17
     calories: 246
 - model: foodrle.dishes
   pk: 2
@@ -1786,7 +1791,7 @@
     name: fries
     country: 20
     taste: 15
-    main_ingredient: 22
+    main_ingredient: 23
     calories: 365
 - model: foodrle.dishes
   pk: 3
@@ -1802,7 +1807,7 @@
     name: falafel
     country: 62
     taste: 18
-    main_ingredient: 11
+    main_ingredient: 12
     calories: 57
 - model: foodrle.dishes
   pk: 5
@@ -1818,7 +1823,7 @@
     name: oatmeal
     country: 86
     taste: 5
-    main_ingredient: 21
+    main_ingredient: 22
     calories: 158
 - model: foodrle.dishes
   pk: 7
@@ -1833,8 +1838,8 @@
   fields:
     name: paneer
     country: 103
-    taste: 25
-    main_ingredient: 8
+    taste: 15
+    main_ingredient: 9
     calories: 600
 - model: foodrle.dishes
   pk: 9
@@ -1842,7 +1847,7 @@
     name: vindaloo
     country: 103
     taste: 22
-    main_ingredient: 14
+    main_ingredient: 15
     calories: 130
 - model: foodrle.dishes
   pk: 10
@@ -1850,7 +1855,7 @@
     name: omelette
     country: 72
     taste: 18
-    main_ingredient: 15
+    main_ingredient: 16
     calories: 154
 - model: foodrle.dishes
   pk: 11
@@ -1858,7 +1863,7 @@
     name: tiramisu
     country: 108
     taste: 11
-    main_ingredient: 7
+    main_ingredient: 8
     calories: 600
 - model: foodrle.dishes
   pk: 12
@@ -1866,7 +1871,7 @@
     name: pizza
     country: 108
     taste: 8
-    main_ingredient: 4
+    main_ingredient: 5
     calories: 285
 - model: foodrle.dishes
   pk: 13
@@ -1874,7 +1879,7 @@
     name: sushi
     country: 112
     taste: 8
-    main_ingredient: 5
+    main_ingredient: 6
     calories: 142
 - model: foodrle.dishes
   pk: 14
@@ -1882,7 +1887,7 @@
     name: quesadilla
     country: 154
     taste: 15
-    main_ingredient: 8
+    main_ingredient: 9
     calories: 460
 - model: foodrle.dishes
   pk: 15
@@ -1890,7 +1895,7 @@
     name: taco
     country: 154
     taste: 18
-    main_ingredient: 14
+    main_ingredient: 15
     calories: 156
 - model: foodrle.dishes
   pk: 16
@@ -1898,7 +1903,7 @@
     name: pancake
     country: 163
     taste: 8
-    main_ingredient: 4
+    main_ingredient: 5
     calories: 128
 - model: foodrle.dishes
   pk: 17
@@ -1914,7 +1919,7 @@
     name: ceviche
     country: 171
     taste: 17
-    main_ingredient: 13
+    main_ingredient: 14
     calories: 250
 - model: foodrle.dishes
   pk: 19
@@ -1922,15 +1927,15 @@
     name: pierogi
     country: 176
     taste: 22
-    main_ingredient: 22
+    main_ingredient: 23
     calories: 210
 - model: foodrle.dishes
   pk: 20
   fields:
     name: flan
     country: 179
-    taste: 1
-    main_ingredient: 15
+    taste: 5
+    main_ingredient: 16
     calories: 223
 - model: foodrle.dishes
   pk: 21
@@ -1938,7 +1943,7 @@
     name: jollof
     country: 202
     taste: 11
-    main_ingredient: 19
+    main_ingredient: 20
     calories: 284
 - model: foodrle.dishes
   pk: 22
@@ -1962,7 +1967,7 @@
     name: bibimbap
     country: 120
     taste: 2
-    main_ingredient: 5
+    main_ingredient: 6
     calories: 772
 - model: foodrle.dishes
   pk: 25
@@ -1970,7 +1975,7 @@
     name: gazpacho
     country: 65
     taste: 11
-    main_ingredient: 17
+    main_ingredient: 18
     calories: 70
 - model: foodrle.dishes
   pk: 26
@@ -1978,7 +1983,7 @@
     name: jumbalaya
     country: 227
     taste: 18
-    main_ingredient: 13
+    main_ingredient: 14
     calories: 393
 - model: foodrle.dishes
   pk: 27
@@ -1994,7 +1999,7 @@
     name: waffle
     country: 227
     taste: 8
-    main_ingredient: 3
+    main_ingredient: 5
     calories: 450
 - model: foodrle.dishes
   pk: 29
@@ -2010,7 +2015,7 @@
     name: poutine
     country: 36
     taste: 8
-    main_ingredient: 22
+    main_ingredient: 23
     calories: 950
 - model: foodrle.dishes
   pk: 31
@@ -2018,7 +2023,7 @@
     name: arepa
     country: 47
     taste: 2
-    main_ingredient: 3
+    main_ingredient: 4
     calories: 215
 - model: foodrle.dishes
   pk: 32
@@ -2026,7 +2031,7 @@
     name: calamari
     country: 108
     taste: 8
-    main_ingredient: 13
+    main_ingredient: 14
     calories: 175
 - model: foodrle.dishes
   pk: 33
@@ -2034,7 +2039,7 @@
     name: brownie
     country: 227
     taste: 2
-    main_ingredient: 7
+    main_ingredient: 8
     calories: 112
 - model: foodrle.dishes
   pk: 34
@@ -2042,23 +2047,23 @@
     name: cookie
     country: 227
     taste: 2
-    main_ingredient: 7
+    main_ingredient: 8
     calories: 142
 - model: foodrle.dishes
   pk: 35
   fields:
     name: cake
     country: 72
-    taste: 1
-    main_ingredient: 4
+    taste: 5
+    main_ingredient: 5
     calories: 129
 - model: foodrle.dishes
   pk: 36
   fields:
     name: baklava
     country: 86
-    taste: 1
-    main_ingredient: 9
+    taste: 5
+    main_ingredient: 10
     calories: 230
 - model: foodrle.dishes
   pk: 37
@@ -2066,7 +2071,7 @@
     name: couscous
     country: 135
     taste: 4
-    main_ingredient: 18
+    main_ingredient: 19
     calories: 176
 - model: foodrle.dishes
   pk: 38
@@ -2074,15 +2079,15 @@
     name: borscht
     country: 188
     taste: 9
-    main_ingredient: 17
+    main_ingredient: 18
     calories: 160
 - model: foodrle.dishes
   pk: 39
   fields:
     name: milkshake
     country: 227
-    taste: 1
-    main_ingredient: 8
+    taste: 5
+    main_ingredient: 9
     calories: 350
 - model: foodrle.dishes
   pk: 40
@@ -2090,7 +2095,7 @@
     name: hummus
     country: 62
     taste: 17
-    main_ingredient: 11
+    main_ingredient: 12
     calories: 25
 - model: foodrle.dishes
   pk: 41
@@ -2098,7 +2103,7 @@
     name: spanakopita
     country: 86
     taste: 15
-    main_ingredient: 17
+    main_ingredient: 18
     calories: 156
 - model: foodrle.dishes
   pk: 42
@@ -2114,7 +2119,7 @@
     name: risoto
     country: 108
     taste: 15
-    main_ingredient: 5
+    main_ingredient: 6
     calories: 209
 - model: foodrle.dishes
   pk: 44
@@ -2122,7 +2127,7 @@
     name: spaghetti
     country: 108
     taste: 17
-    main_ingredient: 6
+    main_ingredient: 7
     calories: 221
 - model: foodrle.dishes
   pk: 45
@@ -2130,7 +2135,7 @@
     name: takoyaki
     country: 112
     taste: 15
-    main_ingredient: 4
+    main_ingredient: 5
     calories: 79
 - model: foodrle.dishes
   pk: 46
@@ -2154,7 +2159,7 @@
     name: pancit
     country: 174
     taste: 15
-    main_ingredient: 6
+    main_ingredient: 7
     calories: 255
 - model: foodrle.dishes
   pk: 49
@@ -2162,7 +2167,7 @@
     name: grits
     country: 227
     taste: 15
-    main_ingredient: 18
+    main_ingredient: 19
     calories: 143
 - model: foodrle.dishes
   pk: 50
@@ -2170,7 +2175,7 @@
     name: tabbouleh
     country: 125
     taste: 22
-    main_ingredient: 18
+    main_ingredient: 19
     calories: 136
 - model: foodrle.dishes
   pk: 51
@@ -2178,263 +2183,200 @@
     name: kimchi
     country: 120
     taste: 22
-    main_ingredient: 17
+    main_ingredient: 18
     calories: 23
+- model: foodrle.dishes
+  pk: 52
+  fields:
+    name: rendang
+    country: 99
+    taste: 5
+    main_ingredient: 1
+    calories: 137
+- model: foodrle.dishes
+  pk: 53
+  fields:
+    name: bakso
+    country: 99
+    taste: 15
+    main_ingredient: 1
+    calories: 444
+- model: foodrle.dishes
+  pk: 54
+  fields:
+    name: murtabak
+    country: 99
+    taste: 15
+    main_ingredient: 5
+    calories: 296
+- model: foodrle.dishes
+  pk: 55
+  fields:
+    name: pot-au-feu
+    country: 72
+    taste: 22
+    main_ingredient: 1
+    calories: 1271
+- model: foodrle.dishes
+  pk: 56
+  fields:
+    name: injera
+    country: 66
+    taste: 20
+    main_ingredient: 3
+    calories: 89
+- model: foodrle.dishes
+  pk: 57
+  fields:
+    name: pastilla
+    country: 135
+    taste: 5
+    main_ingredient: 1
+    calories: 193
+- model: foodrle.dishes
+  pk: 58
+  fields:
+    name: goulash
+    country: 98
+    taste: 5
+    main_ingredient: 1
+    calories: 256
+- model: foodrle.dishes
+  pk: 59
+  fields:
+    name: larb
+    country: 124
+    taste: 17
+    main_ingredient: 1
+    calories: 96
+- model: foodrle.dishes
+  pk: 60
+  fields:
+    name: sisig
+    country: 174
+    taste: 10
+    main_ingredient: 1
+    calories: 215
+- model: foodrle.dishes
+  pk: 61
+  fields:
+    name: yakitori
+    country: 112
+    taste: 8
+    main_ingredient: 15
+    calories: 170
+- model: foodrle.dishes
+  pk: 62
+  fields:
+    name: chaat
+    country: 103
+    taste: 7
+    main_ingredient: 5
+    calories: 300
+- model: foodrle.userstats
+  pk: 1
+  fields:
+    user: 1
+    curr_streak: 1
+    max_streak: 4
+    last_played: 2022-10-31
+    games_played: 11
+    win_1: 2
+    win_2: 0
+    win_3: 4
+    win_4: 2
+    win_5: 0
+    win_6: 1
 - model: foodrle.puzzle
   pk: 1
   fields:
-    last_used: 2022-07-21
-    dish: 1
+    ans_dish: 47
+    guess1: ''
+    guess2: ''
+    guess3: ''
+    guess4: ''
+    guess5: ''
+    guess6: ''
 - model: foodrle.puzzle
   pk: 2
   fields:
-    last_used: 2022-08-03
-    dish: 2
+    ans_dish: 10
+    guess1: ''
+    guess2: ''
+    guess3: ''
+    guess4: ''
+    guess5: ''
+    guess6: ''
 - model: foodrle.puzzle
   pk: 3
   fields:
-    last_used: 2022-01-20
-    dish: 3
+    ans_dish: 14
+    guess1: ''
+    guess2: ''
+    guess3: ''
+    guess4: ''
+    guess5: ''
+    guess6: ''
 - model: foodrle.puzzle
   pk: 4
   fields:
-    last_used: 2022-03-13
-    dish: 4
+    ans_dish: 36
+    guess1: ''
+    guess2: ''
+    guess3: ''
+    guess4: ''
+    guess5: ''
+    guess6: ''
 - model: foodrle.puzzle
   pk: 5
   fields:
-    last_used: 2022-05-17
-    dish: 5
+    ans_dish: 36
+    guess1: ''
+    guess2: ''
+    guess3: ''
+    guess4: ''
+    guess5: ''
+    guess6: ''
 - model: foodrle.puzzle
   pk: 6
   fields:
-    last_used: 2022-02-12
-    dish: 6
+    ans_dish: 6
+    guess1: ''
+    guess2: ''
+    guess3: ''
+    guess4: ''
+    guess5: ''
+    guess6: ''
 - model: foodrle.puzzle
   pk: 7
   fields:
-    last_used: 2022-07-26
-    dish: 7
+    ans_dish: 41
+    guess1: ''
+    guess2: ''
+    guess3: ''
+    guess4: ''
+    guess5: ''
+    guess6: ''
 - model: foodrle.puzzle
   pk: 8
   fields:
-    last_used: 2022-08-23
-    dish: 8
+    ans_dish: 3
+    guess1: ''
+    guess2: ''
+    guess3: ''
+    guess4: ''
+    guess5: ''
+    guess6: ''
 - model: foodrle.puzzle
   pk: 9
   fields:
-    last_used: 2022-09-28
-    dish: 9
-- model: foodrle.puzzle
-  pk: 10
-  fields:
-    last_used: 2022-03-22
-    dish: 10
-- model: foodrle.puzzle
-  pk: 11
-  fields:
-    last_used: 2022-04-23
-    dish: 11
-- model: foodrle.puzzle
-  pk: 12
-  fields:
-    last_used: 2022-07-09
-    dish: 12
-- model: foodrle.puzzle
-  pk: 13
-  fields:
-    last_used: 2022-09-24
-    dish: 13
-- model: foodrle.puzzle
-  pk: 14
-  fields:
-    last_used: 2022-10-04
-    dish: 14
-- model: foodrle.puzzle
-  pk: 15
-  fields:
-    last_used: 2022-02-21
-    dish: 15
-- model: foodrle.puzzle
-  pk: 16
-  fields:
-    last_used: 2022-09-29
-    dish: 16
-- model: foodrle.puzzle
-  pk: 17
-  fields:
-    last_used: 2022-07-18
-    dish: 17
-- model: foodrle.puzzle
-  pk: 18
-  fields:
-    last_used: 2022-08-19
-    dish: 18
-- model: foodrle.puzzle
-  pk: 19
-  fields:
-    last_used: 2022-05-17
-    dish: 19
-- model: foodrle.puzzle
-  pk: 20
-  fields:
-    last_used: 2022-05-14
-    dish: 20
-- model: foodrle.puzzle
-  pk: 21
-  fields:
-    last_used: 2022-05-20
-    dish: 21
-- model: foodrle.puzzle
-  pk: 22
-  fields:
-    last_used: 2022-01-07
-    dish: 22
-- model: foodrle.puzzle
-  pk: 23
-  fields:
-    last_used: 2022-06-01
-    dish: 23
-- model: foodrle.puzzle
-  pk: 24
-  fields:
-    last_used: 2022-02-22
-    dish: 24
-- model: foodrle.puzzle
-  pk: 25
-  fields:
-    last_used: 2022-01-16
-    dish: 25
-- model: foodrle.puzzle
-  pk: 26
-  fields:
-    last_used: 2022-06-29
-    dish: 26
-- model: foodrle.puzzle
-  pk: 27
-  fields:
-    last_used: 2022-04-27
-    dish: 27
-- model: foodrle.puzzle
-  pk: 28
-  fields:
-    last_used: 2022-05-18
-    dish: 28
-- model: foodrle.puzzle
-  pk: 29
-  fields:
-    last_used: 2022-09-20
-    dish: 29
-- model: foodrle.puzzle
-  pk: 30
-  fields:
-    last_used: 2022-01-27
-    dish: 30
-- model: foodrle.puzzle
-  pk: 31
-  fields:
-    last_used: 2022-06-18
-    dish: 31
-- model: foodrle.puzzle
-  pk: 32
-  fields:
-    last_used: 2022-02-03
-    dish: 32
-- model: foodrle.puzzle
-  pk: 33
-  fields:
-    last_used: 2022-10-02
-    dish: 33
-- model: foodrle.puzzle
-  pk: 34
-  fields:
-    last_used: 2022-09-14
-    dish: 34
-- model: foodrle.puzzle
-  pk: 35
-  fields:
-    last_used: 2022-10-16
-    dish: 35
-- model: foodrle.puzzle
-  pk: 36
-  fields:
-    last_used: 2022-03-15
-    dish: 36
-- model: foodrle.puzzle
-  pk: 37
-  fields:
-    last_used: 2022-09-02
-    dish: 37
-- model: foodrle.puzzle
-  pk: 38
-  fields:
-    last_used: 2022-07-05
-    dish: 38
-- model: foodrle.puzzle
-  pk: 39
-  fields:
-    last_used: 2022-07-16
-    dish: 39
-- model: foodrle.puzzle
-  pk: 40
-  fields:
-    last_used: 2022-09-15
-    dish: 40
-- model: foodrle.puzzle
-  pk: 41
-  fields:
-    last_used: 2022-02-12
-    dish: 41
-- model: foodrle.puzzle
-  pk: 42
-  fields:
-    last_used: 2022-01-24
-    dish: 42
-- model: foodrle.puzzle
-  pk: 43
-  fields:
-    last_used: 2022-10-29
-    dish: 43
-- model: foodrle.puzzle
-  pk: 44
-  fields:
-    last_used: 2022-03-22
-    dish: 44
-- model: foodrle.puzzle
-  pk: 45
-  fields:
-    last_used: 2022-09-26
-    dish: 45
-- model: foodrle.puzzle
-  pk: 46
-  fields:
-    last_used: 2022-10-26
-    dish: 46
-- model: foodrle.puzzle
-  pk: 47
-  fields:
-    last_used: 2022-06-11
-    dish: 47
-- model: foodrle.puzzle
-  pk: 48
-  fields:
-    last_used: 2022-07-09
-    dish: 48
-- model: foodrle.puzzle
-  pk: 49
-  fields:
-    last_used: 2022-02-05
-    dish: 49
-- model: foodrle.puzzle
-  pk: 50
-  fields:
-    last_used: 2022-03-04
-    dish: 50
-- model: foodrle.puzzle
-  pk: 51
-  fields:
-    last_used: 2022-06-19
-    dish: 51
+    ans_dish: 12
+    guess1: ''
+    guess2: ''
+    guess3: ''
+    guess4: ''
+    guess5: ''
+    guess6: ''
 - model: admin.logentry
   pk: 1
   fields:
@@ -6365,6 +6307,3906 @@
     object_repr: kimchi
     action_flag: 1
     change_message: new through import_export
+- model: admin.logentry
+  pk: 394
+  fields:
+    action_time: 2022-10-31 17:14:59.438483+00:00
+    user: 1
+    content_type: 2
+    object_id: '54'
+    object_repr: martabak
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 395
+  fields:
+    action_time: 2022-10-31 17:14:59.441275+00:00
+    user: 1
+    content_type: 2
+    object_id: '53'
+    object_repr: bakso
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 396
+  fields:
+    action_time: 2022-10-31 17:14:59.443201+00:00
+    user: 1
+    content_type: 2
+    object_id: '52'
+    object_repr: rendang
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 397
+  fields:
+    action_time: 2022-10-31 17:14:59.445707+00:00
+    user: 1
+    content_type: 2
+    object_id: '51'
+    object_repr: kimchi
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 398
+  fields:
+    action_time: 2022-10-31 17:14:59.447709+00:00
+    user: 1
+    content_type: 2
+    object_id: '50'
+    object_repr: tabbouleh
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 399
+  fields:
+    action_time: 2022-10-31 17:14:59.449709+00:00
+    user: 1
+    content_type: 2
+    object_id: '49'
+    object_repr: grits
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 400
+  fields:
+    action_time: 2022-10-31 17:14:59.451733+00:00
+    user: 1
+    content_type: 2
+    object_id: '48'
+    object_repr: pancit
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 401
+  fields:
+    action_time: 2022-10-31 17:14:59.453518+00:00
+    user: 1
+    content_type: 2
+    object_id: '47'
+    object_repr: lumpia
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 402
+  fields:
+    action_time: 2022-10-31 17:14:59.455454+00:00
+    user: 1
+    content_type: 2
+    object_id: '46'
+    object_repr: momo
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 403
+  fields:
+    action_time: 2022-10-31 17:14:59.457261+00:00
+    user: 1
+    content_type: 2
+    object_id: '45'
+    object_repr: takoyaki
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 404
+  fields:
+    action_time: 2022-10-31 17:14:59.459188+00:00
+    user: 1
+    content_type: 2
+    object_id: '44'
+    object_repr: spaghetti
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 405
+  fields:
+    action_time: 2022-10-31 17:14:59.460947+00:00
+    user: 1
+    content_type: 2
+    object_id: '43'
+    object_repr: risoto
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 406
+  fields:
+    action_time: 2022-10-31 17:14:59.462764+00:00
+    user: 1
+    content_type: 2
+    object_id: '42'
+    object_repr: naan
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 407
+  fields:
+    action_time: 2022-10-31 17:14:59.466194+00:00
+    user: 1
+    content_type: 2
+    object_id: '41'
+    object_repr: spanakopita
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 408
+  fields:
+    action_time: 2022-10-31 17:14:59.468306+00:00
+    user: 1
+    content_type: 2
+    object_id: '40'
+    object_repr: hummus
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 409
+  fields:
+    action_time: 2022-10-31 17:14:59.470229+00:00
+    user: 1
+    content_type: 2
+    object_id: '39'
+    object_repr: milkshake
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 410
+  fields:
+    action_time: 2022-10-31 17:14:59.472147+00:00
+    user: 1
+    content_type: 2
+    object_id: '38'
+    object_repr: borscht
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 411
+  fields:
+    action_time: 2022-10-31 17:14:59.474049+00:00
+    user: 1
+    content_type: 2
+    object_id: '37'
+    object_repr: couscous
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 412
+  fields:
+    action_time: 2022-10-31 17:14:59.475949+00:00
+    user: 1
+    content_type: 2
+    object_id: '36'
+    object_repr: baklava
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 413
+  fields:
+    action_time: 2022-10-31 17:14:59.477680+00:00
+    user: 1
+    content_type: 2
+    object_id: '35'
+    object_repr: cake
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 414
+  fields:
+    action_time: 2022-10-31 17:14:59.479670+00:00
+    user: 1
+    content_type: 2
+    object_id: '34'
+    object_repr: cookie
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 415
+  fields:
+    action_time: 2022-10-31 17:14:59.482389+00:00
+    user: 1
+    content_type: 2
+    object_id: '33'
+    object_repr: brownie
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 416
+  fields:
+    action_time: 2022-10-31 17:14:59.484778+00:00
+    user: 1
+    content_type: 2
+    object_id: '32'
+    object_repr: calamari
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 417
+  fields:
+    action_time: 2022-10-31 17:14:59.486730+00:00
+    user: 1
+    content_type: 2
+    object_id: '31'
+    object_repr: arepa
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 418
+  fields:
+    action_time: 2022-10-31 17:14:59.488561+00:00
+    user: 1
+    content_type: 2
+    object_id: '30'
+    object_repr: poutine
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 419
+  fields:
+    action_time: 2022-10-31 17:14:59.490577+00:00
+    user: 1
+    content_type: 2
+    object_id: '29'
+    object_repr: pho
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 420
+  fields:
+    action_time: 2022-10-31 17:14:59.492281+00:00
+    user: 1
+    content_type: 2
+    object_id: '28'
+    object_repr: waffle
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 421
+  fields:
+    action_time: 2022-10-31 17:14:59.494116+00:00
+    user: 1
+    content_type: 2
+    object_id: '27'
+    object_repr: cereal
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 422
+  fields:
+    action_time: 2022-10-31 17:14:59.495758+00:00
+    user: 1
+    content_type: 2
+    object_id: '26'
+    object_repr: jumbalaya
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 423
+  fields:
+    action_time: 2022-10-31 17:14:59.497484+00:00
+    user: 1
+    content_type: 2
+    object_id: '25'
+    object_repr: gazpacho
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 424
+  fields:
+    action_time: 2022-10-31 17:14:59.499687+00:00
+    user: 1
+    content_type: 2
+    object_id: '24'
+    object_repr: bibimbap
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 425
+  fields:
+    action_time: 2022-10-31 17:14:59.501574+00:00
+    user: 1
+    content_type: 2
+    object_id: '23'
+    object_repr: bulgogi
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 426
+  fields:
+    action_time: 2022-10-31 17:14:59.503697+00:00
+    user: 1
+    content_type: 2
+    object_id: '22'
+    object_repr: bobotie
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 427
+  fields:
+    action_time: 2022-10-31 17:14:59.505662+00:00
+    user: 1
+    content_type: 2
+    object_id: '21'
+    object_repr: jollof
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 428
+  fields:
+    action_time: 2022-10-31 17:14:59.507569+00:00
+    user: 1
+    content_type: 2
+    object_id: '20'
+    object_repr: flan
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 429
+  fields:
+    action_time: 2022-10-31 17:14:59.509603+00:00
+    user: 1
+    content_type: 2
+    object_id: '19'
+    object_repr: pierogi
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 430
+  fields:
+    action_time: 2022-10-31 17:14:59.511584+00:00
+    user: 1
+    content_type: 2
+    object_id: '18'
+    object_repr: ceviche
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 431
+  fields:
+    action_time: 2022-10-31 17:14:59.513313+00:00
+    user: 1
+    content_type: 2
+    object_id: '17'
+    object_repr: paratha
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 432
+  fields:
+    action_time: 2022-10-31 17:14:59.515519+00:00
+    user: 1
+    content_type: 2
+    object_id: '16'
+    object_repr: pancake
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 433
+  fields:
+    action_time: 2022-10-31 17:14:59.517441+00:00
+    user: 1
+    content_type: 2
+    object_id: '15'
+    object_repr: taco
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 434
+  fields:
+    action_time: 2022-10-31 17:14:59.519419+00:00
+    user: 1
+    content_type: 2
+    object_id: '14'
+    object_repr: quesadilla
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 435
+  fields:
+    action_time: 2022-10-31 17:14:59.521316+00:00
+    user: 1
+    content_type: 2
+    object_id: '13'
+    object_repr: sushi
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 436
+  fields:
+    action_time: 2022-10-31 17:14:59.523320+00:00
+    user: 1
+    content_type: 2
+    object_id: '12'
+    object_repr: pizza
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 437
+  fields:
+    action_time: 2022-10-31 17:14:59.525251+00:00
+    user: 1
+    content_type: 2
+    object_id: '11'
+    object_repr: tiramisu
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 438
+  fields:
+    action_time: 2022-10-31 17:14:59.527357+00:00
+    user: 1
+    content_type: 2
+    object_id: '10'
+    object_repr: omelette
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 439
+  fields:
+    action_time: 2022-10-31 17:14:59.529302+00:00
+    user: 1
+    content_type: 2
+    object_id: '9'
+    object_repr: vindaloo
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 440
+  fields:
+    action_time: 2022-10-31 17:14:59.531408+00:00
+    user: 1
+    content_type: 2
+    object_id: '8'
+    object_repr: paneer
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 441
+  fields:
+    action_time: 2022-10-31 17:14:59.534125+00:00
+    user: 1
+    content_type: 2
+    object_id: '7'
+    object_repr: gyros
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 442
+  fields:
+    action_time: 2022-10-31 17:14:59.536551+00:00
+    user: 1
+    content_type: 2
+    object_id: '6'
+    object_repr: oatmeal
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 443
+  fields:
+    action_time: 2022-10-31 17:14:59.538452+00:00
+    user: 1
+    content_type: 2
+    object_id: '5'
+    object_repr: frankfurter
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 444
+  fields:
+    action_time: 2022-10-31 17:14:59.540432+00:00
+    user: 1
+    content_type: 2
+    object_id: '4'
+    object_repr: falafel
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 445
+  fields:
+    action_time: 2022-10-31 17:14:59.542411+00:00
+    user: 1
+    content_type: 2
+    object_id: '3'
+    object_repr: xialongbao
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 446
+  fields:
+    action_time: 2022-10-31 17:14:59.544333+00:00
+    user: 1
+    content_type: 2
+    object_id: '2'
+    object_repr: fries
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 447
+  fields:
+    action_time: 2022-10-31 17:14:59.546120+00:00
+    user: 1
+    content_type: 2
+    object_id: '1'
+    object_repr: pavlova
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 448
+  fields:
+    action_time: 2022-10-31 17:15:20.042619+00:00
+    user: 1
+    content_type: 6
+    object_id: '1'
+    object_repr: pavlova
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 449
+  fields:
+    action_time: 2022-10-31 17:15:20.045180+00:00
+    user: 1
+    content_type: 6
+    object_id: '2'
+    object_repr: fries
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 450
+  fields:
+    action_time: 2022-10-31 17:15:20.047472+00:00
+    user: 1
+    content_type: 6
+    object_id: '3'
+    object_repr: xialongbao
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 451
+  fields:
+    action_time: 2022-10-31 17:15:20.049745+00:00
+    user: 1
+    content_type: 6
+    object_id: '4'
+    object_repr: falafel
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 452
+  fields:
+    action_time: 2022-10-31 17:15:20.052920+00:00
+    user: 1
+    content_type: 6
+    object_id: '5'
+    object_repr: frankfurter
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 453
+  fields:
+    action_time: 2022-10-31 17:15:20.055019+00:00
+    user: 1
+    content_type: 6
+    object_id: '6'
+    object_repr: oatmeal
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 454
+  fields:
+    action_time: 2022-10-31 17:15:20.056950+00:00
+    user: 1
+    content_type: 6
+    object_id: '7'
+    object_repr: gyros
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 455
+  fields:
+    action_time: 2022-10-31 17:15:20.058847+00:00
+    user: 1
+    content_type: 6
+    object_id: '8'
+    object_repr: paneer
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 456
+  fields:
+    action_time: 2022-10-31 17:15:20.060776+00:00
+    user: 1
+    content_type: 6
+    object_id: '9'
+    object_repr: vindaloo
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 457
+  fields:
+    action_time: 2022-10-31 17:15:20.062529+00:00
+    user: 1
+    content_type: 6
+    object_id: '10'
+    object_repr: omelette
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 458
+  fields:
+    action_time: 2022-10-31 17:15:20.064808+00:00
+    user: 1
+    content_type: 6
+    object_id: '11'
+    object_repr: tiramisu
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 459
+  fields:
+    action_time: 2022-10-31 17:15:20.066638+00:00
+    user: 1
+    content_type: 6
+    object_id: '12'
+    object_repr: pizza
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 460
+  fields:
+    action_time: 2022-10-31 17:15:20.068653+00:00
+    user: 1
+    content_type: 6
+    object_id: '13'
+    object_repr: sushi
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 461
+  fields:
+    action_time: 2022-10-31 17:15:20.070451+00:00
+    user: 1
+    content_type: 6
+    object_id: '14'
+    object_repr: quesadilla
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 462
+  fields:
+    action_time: 2022-10-31 17:15:20.072442+00:00
+    user: 1
+    content_type: 6
+    object_id: '15'
+    object_repr: taco
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 463
+  fields:
+    action_time: 2022-10-31 17:15:20.074466+00:00
+    user: 1
+    content_type: 6
+    object_id: '16'
+    object_repr: pancake
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 464
+  fields:
+    action_time: 2022-10-31 17:15:20.076315+00:00
+    user: 1
+    content_type: 6
+    object_id: '17'
+    object_repr: paratha
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 465
+  fields:
+    action_time: 2022-10-31 17:15:20.078641+00:00
+    user: 1
+    content_type: 6
+    object_id: '18'
+    object_repr: ceviche
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 466
+  fields:
+    action_time: 2022-10-31 17:15:20.080687+00:00
+    user: 1
+    content_type: 6
+    object_id: '19'
+    object_repr: pierogi
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 467
+  fields:
+    action_time: 2022-10-31 17:15:20.082560+00:00
+    user: 1
+    content_type: 6
+    object_id: '20'
+    object_repr: flan
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 468
+  fields:
+    action_time: 2022-10-31 17:15:20.084274+00:00
+    user: 1
+    content_type: 6
+    object_id: '21'
+    object_repr: jollof
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 469
+  fields:
+    action_time: 2022-10-31 17:15:20.086096+00:00
+    user: 1
+    content_type: 6
+    object_id: '22'
+    object_repr: bobotie
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 470
+  fields:
+    action_time: 2022-10-31 17:15:20.087850+00:00
+    user: 1
+    content_type: 6
+    object_id: '23'
+    object_repr: bulgogi
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 471
+  fields:
+    action_time: 2022-10-31 17:15:20.089700+00:00
+    user: 1
+    content_type: 6
+    object_id: '24'
+    object_repr: bibimbap
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 472
+  fields:
+    action_time: 2022-10-31 17:15:20.091360+00:00
+    user: 1
+    content_type: 6
+    object_id: '25'
+    object_repr: gazpacho
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 473
+  fields:
+    action_time: 2022-10-31 17:15:20.093162+00:00
+    user: 1
+    content_type: 6
+    object_id: '26'
+    object_repr: jumbalaya
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 474
+  fields:
+    action_time: 2022-10-31 17:15:20.094814+00:00
+    user: 1
+    content_type: 6
+    object_id: '27'
+    object_repr: cereal
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 475
+  fields:
+    action_time: 2022-10-31 17:15:20.096741+00:00
+    user: 1
+    content_type: 6
+    object_id: '28'
+    object_repr: waffle
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 476
+  fields:
+    action_time: 2022-10-31 17:15:20.099974+00:00
+    user: 1
+    content_type: 6
+    object_id: '29'
+    object_repr: pho
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 477
+  fields:
+    action_time: 2022-10-31 17:15:20.102109+00:00
+    user: 1
+    content_type: 6
+    object_id: '30'
+    object_repr: poutine
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 478
+  fields:
+    action_time: 2022-10-31 17:15:20.104401+00:00
+    user: 1
+    content_type: 6
+    object_id: '31'
+    object_repr: arepa
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 479
+  fields:
+    action_time: 2022-10-31 17:15:20.106749+00:00
+    user: 1
+    content_type: 6
+    object_id: '32'
+    object_repr: calamari
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 480
+  fields:
+    action_time: 2022-10-31 17:15:20.108721+00:00
+    user: 1
+    content_type: 6
+    object_id: '33'
+    object_repr: brownie
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 481
+  fields:
+    action_time: 2022-10-31 17:15:20.111533+00:00
+    user: 1
+    content_type: 6
+    object_id: '34'
+    object_repr: cookie
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 482
+  fields:
+    action_time: 2022-10-31 17:15:20.113785+00:00
+    user: 1
+    content_type: 6
+    object_id: '35'
+    object_repr: cake
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 483
+  fields:
+    action_time: 2022-10-31 17:15:20.116610+00:00
+    user: 1
+    content_type: 6
+    object_id: '36'
+    object_repr: baklava
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 484
+  fields:
+    action_time: 2022-10-31 17:15:20.118624+00:00
+    user: 1
+    content_type: 6
+    object_id: '37'
+    object_repr: couscous
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 485
+  fields:
+    action_time: 2022-10-31 17:15:20.120801+00:00
+    user: 1
+    content_type: 6
+    object_id: '38'
+    object_repr: borscht
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 486
+  fields:
+    action_time: 2022-10-31 17:15:20.122940+00:00
+    user: 1
+    content_type: 6
+    object_id: '39'
+    object_repr: milkshake
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 487
+  fields:
+    action_time: 2022-10-31 17:15:20.124904+00:00
+    user: 1
+    content_type: 6
+    object_id: '40'
+    object_repr: hummus
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 488
+  fields:
+    action_time: 2022-10-31 17:15:20.127001+00:00
+    user: 1
+    content_type: 6
+    object_id: '41'
+    object_repr: spanakopita
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 489
+  fields:
+    action_time: 2022-10-31 17:15:20.129045+00:00
+    user: 1
+    content_type: 6
+    object_id: '42'
+    object_repr: naan
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 490
+  fields:
+    action_time: 2022-10-31 17:15:20.130974+00:00
+    user: 1
+    content_type: 6
+    object_id: '43'
+    object_repr: risoto
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 491
+  fields:
+    action_time: 2022-10-31 17:15:20.132963+00:00
+    user: 1
+    content_type: 6
+    object_id: '44'
+    object_repr: spaghetti
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 492
+  fields:
+    action_time: 2022-10-31 17:15:20.134992+00:00
+    user: 1
+    content_type: 6
+    object_id: '45'
+    object_repr: takoyaki
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 493
+  fields:
+    action_time: 2022-10-31 17:15:20.136959+00:00
+    user: 1
+    content_type: 6
+    object_id: '46'
+    object_repr: momo
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 494
+  fields:
+    action_time: 2022-10-31 17:15:20.138700+00:00
+    user: 1
+    content_type: 6
+    object_id: '47'
+    object_repr: lumpia
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 495
+  fields:
+    action_time: 2022-10-31 17:15:20.140846+00:00
+    user: 1
+    content_type: 6
+    object_id: '48'
+    object_repr: pancit
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 496
+  fields:
+    action_time: 2022-10-31 17:15:20.142823+00:00
+    user: 1
+    content_type: 6
+    object_id: '49'
+    object_repr: grits
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 497
+  fields:
+    action_time: 2022-10-31 17:15:20.144743+00:00
+    user: 1
+    content_type: 6
+    object_id: '50'
+    object_repr: tabbouleh
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 498
+  fields:
+    action_time: 2022-10-31 17:15:20.147076+00:00
+    user: 1
+    content_type: 6
+    object_id: '51'
+    object_repr: kimchi
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 499
+  fields:
+    action_time: 2022-10-31 17:15:20.149178+00:00
+    user: 1
+    content_type: 6
+    object_id: '52'
+    object_repr: rendang
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 500
+  fields:
+    action_time: 2022-10-31 17:15:20.151711+00:00
+    user: 1
+    content_type: 6
+    object_id: '53'
+    object_repr: bakso
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 501
+  fields:
+    action_time: 2022-10-31 17:15:20.153614+00:00
+    user: 1
+    content_type: 6
+    object_id: '54'
+    object_repr: martabak
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 502
+  fields:
+    action_time: 2022-10-31 19:12:08.351277+00:00
+    user: 1
+    content_type: 5
+    object_id: '1'
+    object_repr: admin
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 503
+  fields:
+    action_time: 2022-11-02 06:29:11.963474+00:00
+    user: 1
+    content_type: 2
+    object_id: '62'
+    object_repr: chaat
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 504
+  fields:
+    action_time: 2022-11-02 06:29:11.966575+00:00
+    user: 1
+    content_type: 2
+    object_id: '61'
+    object_repr: yakitori
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 505
+  fields:
+    action_time: 2022-11-02 06:29:11.969092+00:00
+    user: 1
+    content_type: 2
+    object_id: '60'
+    object_repr: sisig
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 506
+  fields:
+    action_time: 2022-11-02 06:29:11.971563+00:00
+    user: 1
+    content_type: 2
+    object_id: '59'
+    object_repr: larb
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 507
+  fields:
+    action_time: 2022-11-02 06:29:11.974343+00:00
+    user: 1
+    content_type: 2
+    object_id: '58'
+    object_repr: goulash
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 508
+  fields:
+    action_time: 2022-11-02 06:29:11.978102+00:00
+    user: 1
+    content_type: 2
+    object_id: '57'
+    object_repr: pastilla
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 509
+  fields:
+    action_time: 2022-11-02 06:29:11.981159+00:00
+    user: 1
+    content_type: 2
+    object_id: '56'
+    object_repr: injera
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 510
+  fields:
+    action_time: 2022-11-02 06:29:11.983860+00:00
+    user: 1
+    content_type: 2
+    object_id: '55'
+    object_repr: pot-au-feu
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 511
+  fields:
+    action_time: 2022-11-02 06:29:11.986144+00:00
+    user: 1
+    content_type: 2
+    object_id: '54'
+    object_repr: martabak
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 512
+  fields:
+    action_time: 2022-11-02 06:29:11.988483+00:00
+    user: 1
+    content_type: 2
+    object_id: '53'
+    object_repr: bakso
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 513
+  fields:
+    action_time: 2022-11-02 06:29:11.995505+00:00
+    user: 1
+    content_type: 2
+    object_id: '52'
+    object_repr: rendang
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 514
+  fields:
+    action_time: 2022-11-02 06:29:11.998899+00:00
+    user: 1
+    content_type: 2
+    object_id: '51'
+    object_repr: kimchi
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 515
+  fields:
+    action_time: 2022-11-02 06:29:12.001930+00:00
+    user: 1
+    content_type: 2
+    object_id: '50'
+    object_repr: tabbouleh
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 516
+  fields:
+    action_time: 2022-11-02 06:29:12.004375+00:00
+    user: 1
+    content_type: 2
+    object_id: '49'
+    object_repr: grits
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 517
+  fields:
+    action_time: 2022-11-02 06:29:12.007350+00:00
+    user: 1
+    content_type: 2
+    object_id: '48'
+    object_repr: pancit
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 518
+  fields:
+    action_time: 2022-11-02 06:29:12.010199+00:00
+    user: 1
+    content_type: 2
+    object_id: '47'
+    object_repr: lumpia
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 519
+  fields:
+    action_time: 2022-11-02 06:29:12.012697+00:00
+    user: 1
+    content_type: 2
+    object_id: '46'
+    object_repr: momo
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 520
+  fields:
+    action_time: 2022-11-02 06:29:12.015077+00:00
+    user: 1
+    content_type: 2
+    object_id: '45'
+    object_repr: takoyaki
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 521
+  fields:
+    action_time: 2022-11-02 06:29:12.017145+00:00
+    user: 1
+    content_type: 2
+    object_id: '44'
+    object_repr: spaghetti
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 522
+  fields:
+    action_time: 2022-11-02 06:29:12.019441+00:00
+    user: 1
+    content_type: 2
+    object_id: '43'
+    object_repr: risoto
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 523
+  fields:
+    action_time: 2022-11-02 06:29:12.021832+00:00
+    user: 1
+    content_type: 2
+    object_id: '42'
+    object_repr: naan
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 524
+  fields:
+    action_time: 2022-11-02 06:29:12.024032+00:00
+    user: 1
+    content_type: 2
+    object_id: '41'
+    object_repr: spanakopita
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 525
+  fields:
+    action_time: 2022-11-02 06:29:12.026261+00:00
+    user: 1
+    content_type: 2
+    object_id: '40'
+    object_repr: hummus
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 526
+  fields:
+    action_time: 2022-11-02 06:29:12.028327+00:00
+    user: 1
+    content_type: 2
+    object_id: '39'
+    object_repr: milkshake
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 527
+  fields:
+    action_time: 2022-11-02 06:29:12.030444+00:00
+    user: 1
+    content_type: 2
+    object_id: '38'
+    object_repr: borscht
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 528
+  fields:
+    action_time: 2022-11-02 06:29:12.032680+00:00
+    user: 1
+    content_type: 2
+    object_id: '37'
+    object_repr: couscous
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 529
+  fields:
+    action_time: 2022-11-02 06:29:12.034859+00:00
+    user: 1
+    content_type: 2
+    object_id: '36'
+    object_repr: baklava
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 530
+  fields:
+    action_time: 2022-11-02 06:29:12.036885+00:00
+    user: 1
+    content_type: 2
+    object_id: '35'
+    object_repr: cake
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 531
+  fields:
+    action_time: 2022-11-02 06:29:12.039003+00:00
+    user: 1
+    content_type: 2
+    object_id: '34'
+    object_repr: cookie
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 532
+  fields:
+    action_time: 2022-11-02 06:29:12.041431+00:00
+    user: 1
+    content_type: 2
+    object_id: '33'
+    object_repr: brownie
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 533
+  fields:
+    action_time: 2022-11-02 06:29:12.044361+00:00
+    user: 1
+    content_type: 2
+    object_id: '32'
+    object_repr: calamari
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 534
+  fields:
+    action_time: 2022-11-02 06:29:12.046799+00:00
+    user: 1
+    content_type: 2
+    object_id: '31'
+    object_repr: arepa
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 535
+  fields:
+    action_time: 2022-11-02 06:29:12.049656+00:00
+    user: 1
+    content_type: 2
+    object_id: '30'
+    object_repr: poutine
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 536
+  fields:
+    action_time: 2022-11-02 06:29:12.051939+00:00
+    user: 1
+    content_type: 2
+    object_id: '29'
+    object_repr: pho
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 537
+  fields:
+    action_time: 2022-11-02 06:29:12.054386+00:00
+    user: 1
+    content_type: 2
+    object_id: '28'
+    object_repr: waffle
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 538
+  fields:
+    action_time: 2022-11-02 06:29:12.056882+00:00
+    user: 1
+    content_type: 2
+    object_id: '27'
+    object_repr: cereal
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 539
+  fields:
+    action_time: 2022-11-02 06:29:12.059854+00:00
+    user: 1
+    content_type: 2
+    object_id: '26'
+    object_repr: jumbalaya
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 540
+  fields:
+    action_time: 2022-11-02 06:29:12.062709+00:00
+    user: 1
+    content_type: 2
+    object_id: '25'
+    object_repr: gazpacho
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 541
+  fields:
+    action_time: 2022-11-02 06:29:12.064863+00:00
+    user: 1
+    content_type: 2
+    object_id: '24'
+    object_repr: bibimbap
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 542
+  fields:
+    action_time: 2022-11-02 06:29:12.067033+00:00
+    user: 1
+    content_type: 2
+    object_id: '23'
+    object_repr: bulgogi
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 543
+  fields:
+    action_time: 2022-11-02 06:29:12.069617+00:00
+    user: 1
+    content_type: 2
+    object_id: '22'
+    object_repr: bobotie
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 544
+  fields:
+    action_time: 2022-11-02 06:29:12.071548+00:00
+    user: 1
+    content_type: 2
+    object_id: '21'
+    object_repr: jollof
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 545
+  fields:
+    action_time: 2022-11-02 06:29:12.073694+00:00
+    user: 1
+    content_type: 2
+    object_id: '20'
+    object_repr: flan
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 546
+  fields:
+    action_time: 2022-11-02 06:29:12.075892+00:00
+    user: 1
+    content_type: 2
+    object_id: '19'
+    object_repr: pierogi
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 547
+  fields:
+    action_time: 2022-11-02 06:29:12.077831+00:00
+    user: 1
+    content_type: 2
+    object_id: '18'
+    object_repr: ceviche
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 548
+  fields:
+    action_time: 2022-11-02 06:29:12.079642+00:00
+    user: 1
+    content_type: 2
+    object_id: '17'
+    object_repr: paratha
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 549
+  fields:
+    action_time: 2022-11-02 06:29:12.081678+00:00
+    user: 1
+    content_type: 2
+    object_id: '16'
+    object_repr: pancake
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 550
+  fields:
+    action_time: 2022-11-02 06:29:12.083738+00:00
+    user: 1
+    content_type: 2
+    object_id: '15'
+    object_repr: taco
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 551
+  fields:
+    action_time: 2022-11-02 06:29:12.085733+00:00
+    user: 1
+    content_type: 2
+    object_id: '14'
+    object_repr: quesadilla
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 552
+  fields:
+    action_time: 2022-11-02 06:29:12.087930+00:00
+    user: 1
+    content_type: 2
+    object_id: '13'
+    object_repr: sushi
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 553
+  fields:
+    action_time: 2022-11-02 06:29:12.090341+00:00
+    user: 1
+    content_type: 2
+    object_id: '12'
+    object_repr: pizza
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 554
+  fields:
+    action_time: 2022-11-02 06:29:12.092987+00:00
+    user: 1
+    content_type: 2
+    object_id: '11'
+    object_repr: tiramisu
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 555
+  fields:
+    action_time: 2022-11-02 06:29:12.095202+00:00
+    user: 1
+    content_type: 2
+    object_id: '10'
+    object_repr: omelette
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 556
+  fields:
+    action_time: 2022-11-02 06:29:12.097385+00:00
+    user: 1
+    content_type: 2
+    object_id: '9'
+    object_repr: vindaloo
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 557
+  fields:
+    action_time: 2022-11-02 06:29:12.099697+00:00
+    user: 1
+    content_type: 2
+    object_id: '8'
+    object_repr: paneer
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 558
+  fields:
+    action_time: 2022-11-02 06:29:12.101803+00:00
+    user: 1
+    content_type: 2
+    object_id: '7'
+    object_repr: gyros
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 559
+  fields:
+    action_time: 2022-11-02 06:29:12.103985+00:00
+    user: 1
+    content_type: 2
+    object_id: '6'
+    object_repr: oatmeal
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 560
+  fields:
+    action_time: 2022-11-02 06:29:12.106175+00:00
+    user: 1
+    content_type: 2
+    object_id: '5'
+    object_repr: frankfurter
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 561
+  fields:
+    action_time: 2022-11-02 06:29:12.108814+00:00
+    user: 1
+    content_type: 2
+    object_id: '4'
+    object_repr: falafel
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 562
+  fields:
+    action_time: 2022-11-02 06:29:12.111391+00:00
+    user: 1
+    content_type: 2
+    object_id: '3'
+    object_repr: xialongbao
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 563
+  fields:
+    action_time: 2022-11-02 06:29:12.113455+00:00
+    user: 1
+    content_type: 2
+    object_id: '2'
+    object_repr: fries
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 564
+  fields:
+    action_time: 2022-11-02 06:29:12.115637+00:00
+    user: 1
+    content_type: 2
+    object_id: '1'
+    object_repr: pavlova
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 565
+  fields:
+    action_time: 2022-11-02 06:29:50.989484+00:00
+    user: 1
+    content_type: 6
+    object_id: '1'
+    object_repr: pavlova
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 566
+  fields:
+    action_time: 2022-11-02 06:29:50.994137+00:00
+    user: 1
+    content_type: 6
+    object_id: '2'
+    object_repr: fries
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 567
+  fields:
+    action_time: 2022-11-02 06:29:50.997381+00:00
+    user: 1
+    content_type: 6
+    object_id: '3'
+    object_repr: xialongbao
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 568
+  fields:
+    action_time: 2022-11-02 06:29:51.000503+00:00
+    user: 1
+    content_type: 6
+    object_id: '4'
+    object_repr: falafel
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 569
+  fields:
+    action_time: 2022-11-02 06:29:51.003708+00:00
+    user: 1
+    content_type: 6
+    object_id: '5'
+    object_repr: frankfurter
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 570
+  fields:
+    action_time: 2022-11-02 06:29:51.006564+00:00
+    user: 1
+    content_type: 6
+    object_id: '6'
+    object_repr: oatmeal
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 571
+  fields:
+    action_time: 2022-11-02 06:29:51.009070+00:00
+    user: 1
+    content_type: 6
+    object_id: '7'
+    object_repr: gyros
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 572
+  fields:
+    action_time: 2022-11-02 06:29:51.014440+00:00
+    user: 1
+    content_type: 6
+    object_id: '8'
+    object_repr: paneer
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 573
+  fields:
+    action_time: 2022-11-02 06:29:51.017340+00:00
+    user: 1
+    content_type: 6
+    object_id: '9'
+    object_repr: vindaloo
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 574
+  fields:
+    action_time: 2022-11-02 06:29:51.019344+00:00
+    user: 1
+    content_type: 6
+    object_id: '10'
+    object_repr: omelette
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 575
+  fields:
+    action_time: 2022-11-02 06:29:51.021035+00:00
+    user: 1
+    content_type: 6
+    object_id: '11'
+    object_repr: tiramisu
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 576
+  fields:
+    action_time: 2022-11-02 06:29:51.022684+00:00
+    user: 1
+    content_type: 6
+    object_id: '12'
+    object_repr: pizza
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 577
+  fields:
+    action_time: 2022-11-02 06:29:51.024386+00:00
+    user: 1
+    content_type: 6
+    object_id: '13'
+    object_repr: sushi
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 578
+  fields:
+    action_time: 2022-11-02 06:29:51.025777+00:00
+    user: 1
+    content_type: 6
+    object_id: '14'
+    object_repr: quesadilla
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 579
+  fields:
+    action_time: 2022-11-02 06:29:51.028046+00:00
+    user: 1
+    content_type: 6
+    object_id: '15'
+    object_repr: taco
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 580
+  fields:
+    action_time: 2022-11-02 06:29:51.030877+00:00
+    user: 1
+    content_type: 6
+    object_id: '16'
+    object_repr: pancake
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 581
+  fields:
+    action_time: 2022-11-02 06:29:51.032517+00:00
+    user: 1
+    content_type: 6
+    object_id: '17'
+    object_repr: paratha
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 582
+  fields:
+    action_time: 2022-11-02 06:29:51.033854+00:00
+    user: 1
+    content_type: 6
+    object_id: '18'
+    object_repr: ceviche
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 583
+  fields:
+    action_time: 2022-11-02 06:29:51.035152+00:00
+    user: 1
+    content_type: 6
+    object_id: '19'
+    object_repr: pierogi
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 584
+  fields:
+    action_time: 2022-11-02 06:29:51.036425+00:00
+    user: 1
+    content_type: 6
+    object_id: '20'
+    object_repr: flan
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 585
+  fields:
+    action_time: 2022-11-02 06:29:51.037652+00:00
+    user: 1
+    content_type: 6
+    object_id: '21'
+    object_repr: jollof
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 586
+  fields:
+    action_time: 2022-11-02 06:29:51.038928+00:00
+    user: 1
+    content_type: 6
+    object_id: '22'
+    object_repr: bobotie
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 587
+  fields:
+    action_time: 2022-11-02 06:29:51.040148+00:00
+    user: 1
+    content_type: 6
+    object_id: '23'
+    object_repr: bulgogi
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 588
+  fields:
+    action_time: 2022-11-02 06:29:51.041333+00:00
+    user: 1
+    content_type: 6
+    object_id: '24'
+    object_repr: bibimbap
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 589
+  fields:
+    action_time: 2022-11-02 06:29:51.042553+00:00
+    user: 1
+    content_type: 6
+    object_id: '25'
+    object_repr: gazpacho
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 590
+  fields:
+    action_time: 2022-11-02 06:29:51.044286+00:00
+    user: 1
+    content_type: 6
+    object_id: '26'
+    object_repr: jumbalaya
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 591
+  fields:
+    action_time: 2022-11-02 06:29:51.045627+00:00
+    user: 1
+    content_type: 6
+    object_id: '27'
+    object_repr: cereal
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 592
+  fields:
+    action_time: 2022-11-02 06:29:51.046840+00:00
+    user: 1
+    content_type: 6
+    object_id: '28'
+    object_repr: waffle
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 593
+  fields:
+    action_time: 2022-11-02 06:29:51.048145+00:00
+    user: 1
+    content_type: 6
+    object_id: '29'
+    object_repr: pho
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 594
+  fields:
+    action_time: 2022-11-02 06:29:51.049484+00:00
+    user: 1
+    content_type: 6
+    object_id: '30'
+    object_repr: poutine
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 595
+  fields:
+    action_time: 2022-11-02 06:29:51.050666+00:00
+    user: 1
+    content_type: 6
+    object_id: '31'
+    object_repr: arepa
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 596
+  fields:
+    action_time: 2022-11-02 06:29:51.051829+00:00
+    user: 1
+    content_type: 6
+    object_id: '32'
+    object_repr: calamari
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 597
+  fields:
+    action_time: 2022-11-02 06:29:51.053005+00:00
+    user: 1
+    content_type: 6
+    object_id: '33'
+    object_repr: brownie
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 598
+  fields:
+    action_time: 2022-11-02 06:29:51.054402+00:00
+    user: 1
+    content_type: 6
+    object_id: '34'
+    object_repr: cookie
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 599
+  fields:
+    action_time: 2022-11-02 06:29:51.055548+00:00
+    user: 1
+    content_type: 6
+    object_id: '35'
+    object_repr: cake
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 600
+  fields:
+    action_time: 2022-11-02 06:29:51.056731+00:00
+    user: 1
+    content_type: 6
+    object_id: '36'
+    object_repr: baklava
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 601
+  fields:
+    action_time: 2022-11-02 06:29:51.057914+00:00
+    user: 1
+    content_type: 6
+    object_id: '37'
+    object_repr: couscous
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 602
+  fields:
+    action_time: 2022-11-02 06:29:51.059085+00:00
+    user: 1
+    content_type: 6
+    object_id: '38'
+    object_repr: borscht
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 603
+  fields:
+    action_time: 2022-11-02 06:29:51.060947+00:00
+    user: 1
+    content_type: 6
+    object_id: '39'
+    object_repr: milkshake
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 604
+  fields:
+    action_time: 2022-11-02 06:29:51.062295+00:00
+    user: 1
+    content_type: 6
+    object_id: '40'
+    object_repr: hummus
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 605
+  fields:
+    action_time: 2022-11-02 06:29:51.063518+00:00
+    user: 1
+    content_type: 6
+    object_id: '41'
+    object_repr: spanakopita
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 606
+  fields:
+    action_time: 2022-11-02 06:29:51.065317+00:00
+    user: 1
+    content_type: 6
+    object_id: '42'
+    object_repr: naan
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 607
+  fields:
+    action_time: 2022-11-02 06:29:51.066683+00:00
+    user: 1
+    content_type: 6
+    object_id: '43'
+    object_repr: risoto
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 608
+  fields:
+    action_time: 2022-11-02 06:29:51.067907+00:00
+    user: 1
+    content_type: 6
+    object_id: '44'
+    object_repr: spaghetti
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 609
+  fields:
+    action_time: 2022-11-02 06:29:51.069085+00:00
+    user: 1
+    content_type: 6
+    object_id: '45'
+    object_repr: takoyaki
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 610
+  fields:
+    action_time: 2022-11-02 06:29:51.070276+00:00
+    user: 1
+    content_type: 6
+    object_id: '46'
+    object_repr: momo
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 611
+  fields:
+    action_time: 2022-11-02 06:29:51.071481+00:00
+    user: 1
+    content_type: 6
+    object_id: '47'
+    object_repr: lumpia
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 612
+  fields:
+    action_time: 2022-11-02 06:29:51.072700+00:00
+    user: 1
+    content_type: 6
+    object_id: '48'
+    object_repr: pancit
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 613
+  fields:
+    action_time: 2022-11-02 06:29:51.073897+00:00
+    user: 1
+    content_type: 6
+    object_id: '49'
+    object_repr: grits
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 614
+  fields:
+    action_time: 2022-11-02 06:29:51.075095+00:00
+    user: 1
+    content_type: 6
+    object_id: '50'
+    object_repr: tabbouleh
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 615
+  fields:
+    action_time: 2022-11-02 06:29:51.076593+00:00
+    user: 1
+    content_type: 6
+    object_id: '51'
+    object_repr: kimchi
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 616
+  fields:
+    action_time: 2022-11-02 06:29:51.079422+00:00
+    user: 1
+    content_type: 6
+    object_id: '52'
+    object_repr: rendang
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 617
+  fields:
+    action_time: 2022-11-02 06:29:51.081590+00:00
+    user: 1
+    content_type: 6
+    object_id: '53'
+    object_repr: bakso
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 618
+  fields:
+    action_time: 2022-11-02 06:29:51.082977+00:00
+    user: 1
+    content_type: 6
+    object_id: '54'
+    object_repr: martabak
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 619
+  fields:
+    action_time: 2022-11-02 06:29:51.084291+00:00
+    user: 1
+    content_type: 6
+    object_id: '55'
+    object_repr: pot-au-feu
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 620
+  fields:
+    action_time: 2022-11-02 06:29:51.085483+00:00
+    user: 1
+    content_type: 6
+    object_id: '56'
+    object_repr: injera
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 621
+  fields:
+    action_time: 2022-11-02 06:29:51.086705+00:00
+    user: 1
+    content_type: 6
+    object_id: '57'
+    object_repr: pastilla
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 622
+  fields:
+    action_time: 2022-11-02 06:29:51.087916+00:00
+    user: 1
+    content_type: 6
+    object_id: '58'
+    object_repr: goulash
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 623
+  fields:
+    action_time: 2022-11-02 06:29:51.089089+00:00
+    user: 1
+    content_type: 6
+    object_id: '59'
+    object_repr: larb
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 624
+  fields:
+    action_time: 2022-11-02 06:29:51.090289+00:00
+    user: 1
+    content_type: 6
+    object_id: '60'
+    object_repr: sisig
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 625
+  fields:
+    action_time: 2022-11-02 06:29:51.091492+00:00
+    user: 1
+    content_type: 6
+    object_id: '61'
+    object_repr: yakitori
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 626
+  fields:
+    action_time: 2022-11-02 06:29:51.092845+00:00
+    user: 1
+    content_type: 6
+    object_id: '62'
+    object_repr: chaat
+    action_flag: 1
+    change_message: new through import_export
+- model: admin.logentry
+  pk: 627
+  fields:
+    action_time: 2022-11-02 06:52:41.886908+00:00
+    user: 1
+    content_type: 3
+    object_id: '22'
+    object_repr: 'Starchy Vegetables: 8'
+    action_flag: 2
+    change_message: '[{"changed": {"fields": ["Name"]}}]'
+- model: admin.logentry
+  pk: 628
+  fields:
+    action_time: 2022-11-02 06:53:11.810565+00:00
+    user: 1
+    content_type: 3
+    object_id: '4'
+    object_repr: 'Bread Flour: 2'
+    action_flag: 2
+    change_message: '[{"changed": {"fields": ["Name"]}}]'
+- model: admin.logentry
+  pk: 629
+  fields:
+    action_time: 2022-11-02 06:53:24.914777+00:00
+    user: 1
+    content_type: 3
+    object_id: '3'
+    object_repr: 'Refined Grains: 2'
+    action_flag: 2
+    change_message: '[{"changed": {"fields": ["Name"]}}]'
+- model: admin.logentry
+  pk: 630
+  fields:
+    action_time: 2022-11-02 06:53:44.419434+00:00
+    user: 1
+    content_type: 3
+    object_id: '23'
+    object_repr: 'White Flour: 2'
+    action_flag: 1
+    change_message: '[{"added": {}}]'
+- model: admin.logentry
+  pk: 631
+  fields:
+    action_time: 2022-11-02 22:18:56.398183+00:00
+    user: 1
+    content_type: 3
+    object_id: '23'
+    object_repr: 'Starchy Vegetables: 8'
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 632
+  fields:
+    action_time: 2022-11-02 22:18:56.403072+00:00
+    user: 1
+    content_type: 3
+    object_id: '22'
+    object_repr: 'Oats: 8'
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 633
+  fields:
+    action_time: 2022-11-02 22:18:56.408563+00:00
+    user: 1
+    content_type: 3
+    object_id: '21'
+    object_repr: 'Whole Wheat Pasta: 8'
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 634
+  fields:
+    action_time: 2022-11-02 22:18:56.412563+00:00
+    user: 1
+    content_type: 3
+    object_id: '20'
+    object_repr: 'Brown Rice: 8'
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 635
+  fields:
+    action_time: 2022-11-02 22:18:56.416971+00:00
+    user: 1
+    content_type: 3
+    object_id: '19'
+    object_repr: 'Whole Grains: 8'
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 636
+  fields:
+    action_time: 2022-11-02 22:18:56.421699+00:00
+    user: 1
+    content_type: 3
+    object_id: '18'
+    object_repr: 'Vegetables: 7'
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 637
+  fields:
+    action_time: 2022-11-02 22:18:56.426283+00:00
+    user: 1
+    content_type: 3
+    object_id: '17'
+    object_repr: 'Fruits: 6'
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 638
+  fields:
+    action_time: 2022-11-02 22:18:56.430371+00:00
+    user: 1
+    content_type: 3
+    object_id: '16'
+    object_repr: 'Eggs: 5'
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 639
+  fields:
+    action_time: 2022-11-02 22:18:56.434118+00:00
+    user: 1
+    content_type: 3
+    object_id: '15'
+    object_repr: 'Poultry: 5'
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 640
+  fields:
+    action_time: 2022-11-02 22:18:56.437908+00:00
+    user: 1
+    content_type: 3
+    object_id: '14'
+    object_repr: 'Fish: 5'
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 641
+  fields:
+    action_time: 2022-11-02 22:18:56.441860+00:00
+    user: 1
+    content_type: 3
+    object_id: '13'
+    object_repr: 'Tofu: 4'
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 642
+  fields:
+    action_time: 2022-11-02 22:18:56.445922+00:00
+    user: 1
+    content_type: 3
+    object_id: '12'
+    object_repr: 'Beans: 4'
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 643
+  fields:
+    action_time: 2022-11-02 22:18:56.449881+00:00
+    user: 1
+    content_type: 3
+    object_id: '11'
+    object_repr: 'Seeds: 4'
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 644
+  fields:
+    action_time: 2022-11-02 22:18:56.453960+00:00
+    user: 1
+    content_type: 3
+    object_id: '10'
+    object_repr: 'Nuts: 4'
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 645
+  fields:
+    action_time: 2022-11-02 22:18:56.458151+00:00
+    user: 1
+    content_type: 3
+    object_id: '9'
+    object_repr: 'Dairy: 3'
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 646
+  fields:
+    action_time: 2022-11-02 22:18:56.462054+00:00
+    user: 1
+    content_type: 3
+    object_id: '8'
+    object_repr: 'Sugar: 2'
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 647
+  fields:
+    action_time: 2022-11-02 22:18:56.465796+00:00
+    user: 1
+    content_type: 3
+    object_id: '7'
+    object_repr: 'Pasta: 2'
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 648
+  fields:
+    action_time: 2022-11-02 22:18:56.469419+00:00
+    user: 1
+    content_type: 3
+    object_id: '6'
+    object_repr: 'White Rice: 2'
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 649
+  fields:
+    action_time: 2022-11-02 22:18:56.474176+00:00
+    user: 1
+    content_type: 3
+    object_id: '5'
+    object_repr: 'White Flour: 2'
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 650
+  fields:
+    action_time: 2022-11-02 22:18:56.478153+00:00
+    user: 1
+    content_type: 3
+    object_id: '4'
+    object_repr: 'Bread Flour: 2'
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 651
+  fields:
+    action_time: 2022-11-02 22:18:56.482011+00:00
+    user: 1
+    content_type: 3
+    object_id: '3'
+    object_repr: 'Refined Grains: 2'
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 652
+  fields:
+    action_time: 2022-11-02 22:18:56.485898+00:00
+    user: 1
+    content_type: 3
+    object_id: '2'
+    object_repr: 'Butter: 1'
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 653
+  fields:
+    action_time: 2022-11-02 22:18:56.491125+00:00
+    user: 1
+    content_type: 3
+    object_id: '1'
+    object_repr: 'Red Meat: 1'
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 654
+  fields:
+    action_time: 2022-11-02 22:19:18.672586+00:00
+    user: 1
+    content_type: 2
+    object_id: '62'
+    object_repr: chaat
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 655
+  fields:
+    action_time: 2022-11-02 22:19:18.675474+00:00
+    user: 1
+    content_type: 2
+    object_id: '61'
+    object_repr: yakitori
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 656
+  fields:
+    action_time: 2022-11-02 22:19:18.677629+00:00
+    user: 1
+    content_type: 2
+    object_id: '60'
+    object_repr: sisig
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 657
+  fields:
+    action_time: 2022-11-02 22:19:18.679898+00:00
+    user: 1
+    content_type: 2
+    object_id: '59'
+    object_repr: larb
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 658
+  fields:
+    action_time: 2022-11-02 22:19:18.682185+00:00
+    user: 1
+    content_type: 2
+    object_id: '58'
+    object_repr: goulash
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 659
+  fields:
+    action_time: 2022-11-02 22:19:18.684563+00:00
+    user: 1
+    content_type: 2
+    object_id: '57'
+    object_repr: pastilla
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 660
+  fields:
+    action_time: 2022-11-02 22:19:18.686799+00:00
+    user: 1
+    content_type: 2
+    object_id: '56'
+    object_repr: injera
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 661
+  fields:
+    action_time: 2022-11-02 22:19:18.689144+00:00
+    user: 1
+    content_type: 2
+    object_id: '55'
+    object_repr: pot-au-feu
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 662
+  fields:
+    action_time: 2022-11-02 22:19:18.691589+00:00
+    user: 1
+    content_type: 2
+    object_id: '54'
+    object_repr: murtabak
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 663
+  fields:
+    action_time: 2022-11-02 22:19:18.693866+00:00
+    user: 1
+    content_type: 2
+    object_id: '53'
+    object_repr: bakso
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 664
+  fields:
+    action_time: 2022-11-02 22:19:18.696337+00:00
+    user: 1
+    content_type: 2
+    object_id: '52'
+    object_repr: rendang
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 665
+  fields:
+    action_time: 2022-11-02 22:19:18.698918+00:00
+    user: 1
+    content_type: 2
+    object_id: '51'
+    object_repr: kimchi
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 666
+  fields:
+    action_time: 2022-11-02 22:19:18.701558+00:00
+    user: 1
+    content_type: 2
+    object_id: '50'
+    object_repr: tabbouleh
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 667
+  fields:
+    action_time: 2022-11-02 22:19:18.703978+00:00
+    user: 1
+    content_type: 2
+    object_id: '49'
+    object_repr: grits
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 668
+  fields:
+    action_time: 2022-11-02 22:19:18.706593+00:00
+    user: 1
+    content_type: 2
+    object_id: '48'
+    object_repr: pancit
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 669
+  fields:
+    action_time: 2022-11-02 22:19:18.709231+00:00
+    user: 1
+    content_type: 2
+    object_id: '47'
+    object_repr: lumpia
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 670
+  fields:
+    action_time: 2022-11-02 22:19:18.711869+00:00
+    user: 1
+    content_type: 2
+    object_id: '46'
+    object_repr: momo
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 671
+  fields:
+    action_time: 2022-11-02 22:19:18.714840+00:00
+    user: 1
+    content_type: 2
+    object_id: '45'
+    object_repr: takoyaki
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 672
+  fields:
+    action_time: 2022-11-02 22:19:18.717753+00:00
+    user: 1
+    content_type: 2
+    object_id: '44'
+    object_repr: spaghetti
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 673
+  fields:
+    action_time: 2022-11-02 22:19:18.721479+00:00
+    user: 1
+    content_type: 2
+    object_id: '43'
+    object_repr: risoto
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 674
+  fields:
+    action_time: 2022-11-02 22:19:18.724422+00:00
+    user: 1
+    content_type: 2
+    object_id: '42'
+    object_repr: naan
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 675
+  fields:
+    action_time: 2022-11-02 22:19:18.727578+00:00
+    user: 1
+    content_type: 2
+    object_id: '41'
+    object_repr: spanakopita
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 676
+  fields:
+    action_time: 2022-11-02 22:19:18.730546+00:00
+    user: 1
+    content_type: 2
+    object_id: '40'
+    object_repr: hummus
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 677
+  fields:
+    action_time: 2022-11-02 22:19:18.733535+00:00
+    user: 1
+    content_type: 2
+    object_id: '39'
+    object_repr: milkshake
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 678
+  fields:
+    action_time: 2022-11-02 22:19:18.737532+00:00
+    user: 1
+    content_type: 2
+    object_id: '38'
+    object_repr: borscht
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 679
+  fields:
+    action_time: 2022-11-02 22:19:18.740746+00:00
+    user: 1
+    content_type: 2
+    object_id: '37'
+    object_repr: couscous
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 680
+  fields:
+    action_time: 2022-11-02 22:19:18.743755+00:00
+    user: 1
+    content_type: 2
+    object_id: '36'
+    object_repr: baklava
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 681
+  fields:
+    action_time: 2022-11-02 22:19:18.746720+00:00
+    user: 1
+    content_type: 2
+    object_id: '35'
+    object_repr: cake
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 682
+  fields:
+    action_time: 2022-11-02 22:19:18.749405+00:00
+    user: 1
+    content_type: 2
+    object_id: '34'
+    object_repr: cookie
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 683
+  fields:
+    action_time: 2022-11-02 22:19:18.752512+00:00
+    user: 1
+    content_type: 2
+    object_id: '33'
+    object_repr: brownie
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 684
+  fields:
+    action_time: 2022-11-02 22:19:18.755917+00:00
+    user: 1
+    content_type: 2
+    object_id: '32'
+    object_repr: calamari
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 685
+  fields:
+    action_time: 2022-11-02 22:19:18.759487+00:00
+    user: 1
+    content_type: 2
+    object_id: '31'
+    object_repr: arepa
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 686
+  fields:
+    action_time: 2022-11-02 22:19:18.762663+00:00
+    user: 1
+    content_type: 2
+    object_id: '30'
+    object_repr: poutine
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 687
+  fields:
+    action_time: 2022-11-02 22:19:18.767090+00:00
+    user: 1
+    content_type: 2
+    object_id: '29'
+    object_repr: pho
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 688
+  fields:
+    action_time: 2022-11-02 22:19:18.770321+00:00
+    user: 1
+    content_type: 2
+    object_id: '28'
+    object_repr: waffle
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 689
+  fields:
+    action_time: 2022-11-02 22:19:18.773736+00:00
+    user: 1
+    content_type: 2
+    object_id: '27'
+    object_repr: cereal
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 690
+  fields:
+    action_time: 2022-11-02 22:19:18.777007+00:00
+    user: 1
+    content_type: 2
+    object_id: '26'
+    object_repr: jumbalaya
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 691
+  fields:
+    action_time: 2022-11-02 22:19:18.780522+00:00
+    user: 1
+    content_type: 2
+    object_id: '25'
+    object_repr: gazpacho
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 692
+  fields:
+    action_time: 2022-11-02 22:19:18.783908+00:00
+    user: 1
+    content_type: 2
+    object_id: '24'
+    object_repr: bibimbap
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 693
+  fields:
+    action_time: 2022-11-02 22:19:18.788265+00:00
+    user: 1
+    content_type: 2
+    object_id: '23'
+    object_repr: bulgogi
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 694
+  fields:
+    action_time: 2022-11-02 22:19:18.791629+00:00
+    user: 1
+    content_type: 2
+    object_id: '22'
+    object_repr: bobotie
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 695
+  fields:
+    action_time: 2022-11-02 22:19:18.795125+00:00
+    user: 1
+    content_type: 2
+    object_id: '21'
+    object_repr: jollof
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 696
+  fields:
+    action_time: 2022-11-02 22:19:18.799032+00:00
+    user: 1
+    content_type: 2
+    object_id: '20'
+    object_repr: flan
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 697
+  fields:
+    action_time: 2022-11-02 22:19:18.803718+00:00
+    user: 1
+    content_type: 2
+    object_id: '19'
+    object_repr: pierogi
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 698
+  fields:
+    action_time: 2022-11-02 22:19:18.808349+00:00
+    user: 1
+    content_type: 2
+    object_id: '18'
+    object_repr: ceviche
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 699
+  fields:
+    action_time: 2022-11-02 22:19:18.812710+00:00
+    user: 1
+    content_type: 2
+    object_id: '17'
+    object_repr: paratha
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 700
+  fields:
+    action_time: 2022-11-02 22:19:18.816698+00:00
+    user: 1
+    content_type: 2
+    object_id: '16'
+    object_repr: pancake
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 701
+  fields:
+    action_time: 2022-11-02 22:19:18.820987+00:00
+    user: 1
+    content_type: 2
+    object_id: '15'
+    object_repr: taco
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 702
+  fields:
+    action_time: 2022-11-02 22:19:18.825449+00:00
+    user: 1
+    content_type: 2
+    object_id: '14'
+    object_repr: quesadilla
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 703
+  fields:
+    action_time: 2022-11-02 22:19:18.829666+00:00
+    user: 1
+    content_type: 2
+    object_id: '13'
+    object_repr: sushi
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 704
+  fields:
+    action_time: 2022-11-02 22:19:18.833650+00:00
+    user: 1
+    content_type: 2
+    object_id: '12'
+    object_repr: pizza
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 705
+  fields:
+    action_time: 2022-11-02 22:19:18.838110+00:00
+    user: 1
+    content_type: 2
+    object_id: '11'
+    object_repr: tiramisu
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 706
+  fields:
+    action_time: 2022-11-02 22:19:18.842316+00:00
+    user: 1
+    content_type: 2
+    object_id: '10'
+    object_repr: omelette
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 707
+  fields:
+    action_time: 2022-11-02 22:19:18.846448+00:00
+    user: 1
+    content_type: 2
+    object_id: '9'
+    object_repr: vindaloo
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 708
+  fields:
+    action_time: 2022-11-02 22:19:18.850189+00:00
+    user: 1
+    content_type: 2
+    object_id: '8'
+    object_repr: paneer
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 709
+  fields:
+    action_time: 2022-11-02 22:19:18.855205+00:00
+    user: 1
+    content_type: 2
+    object_id: '7'
+    object_repr: gyros
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 710
+  fields:
+    action_time: 2022-11-02 22:19:18.859736+00:00
+    user: 1
+    content_type: 2
+    object_id: '6'
+    object_repr: oatmeal
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 711
+  fields:
+    action_time: 2022-11-02 22:19:18.863706+00:00
+    user: 1
+    content_type: 2
+    object_id: '5'
+    object_repr: frankfurter
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 712
+  fields:
+    action_time: 2022-11-02 22:19:18.867920+00:00
+    user: 1
+    content_type: 2
+    object_id: '4'
+    object_repr: falafel
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 713
+  fields:
+    action_time: 2022-11-02 22:19:18.872984+00:00
+    user: 1
+    content_type: 2
+    object_id: '3'
+    object_repr: xialongbao
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 714
+  fields:
+    action_time: 2022-11-02 22:19:18.877121+00:00
+    user: 1
+    content_type: 2
+    object_id: '2'
+    object_repr: fries
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 715
+  fields:
+    action_time: 2022-11-02 22:19:18.881351+00:00
+    user: 1
+    content_type: 2
+    object_id: '1'
+    object_repr: pavlova
+    action_flag: 2
+    change_message: update through import_export
+- model: admin.logentry
+  pk: 716
+  fields:
+    action_time: 2022-11-02 22:21:39.387379+00:00
+    user: 1
+    content_type: 10
+    object_id: '1'
+    object_repr: admin
+    action_flag: 2
+    change_message: '[{"changed": {"fields": ["password"]}}]'
+- model: admin.logentry
+  pk: 717
+  fields:
+    action_time: 2022-11-04 16:03:40.388066+00:00
+    user: 1
+    content_type: 6
+    object_id: '62'
+    object_repr: chaat
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 718
+  fields:
+    action_time: 2022-11-04 16:03:40.389604+00:00
+    user: 1
+    content_type: 6
+    object_id: '61'
+    object_repr: yakitori
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 719
+  fields:
+    action_time: 2022-11-04 16:03:40.390386+00:00
+    user: 1
+    content_type: 6
+    object_id: '60'
+    object_repr: sisig
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 720
+  fields:
+    action_time: 2022-11-04 16:03:40.391108+00:00
+    user: 1
+    content_type: 6
+    object_id: '59'
+    object_repr: larb
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 721
+  fields:
+    action_time: 2022-11-04 16:03:40.391796+00:00
+    user: 1
+    content_type: 6
+    object_id: '58'
+    object_repr: goulash
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 722
+  fields:
+    action_time: 2022-11-04 16:03:40.392572+00:00
+    user: 1
+    content_type: 6
+    object_id: '57'
+    object_repr: pastilla
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 723
+  fields:
+    action_time: 2022-11-04 16:03:40.393363+00:00
+    user: 1
+    content_type: 6
+    object_id: '56'
+    object_repr: injera
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 724
+  fields:
+    action_time: 2022-11-04 16:03:40.394184+00:00
+    user: 1
+    content_type: 6
+    object_id: '55'
+    object_repr: pot-au-feu
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 725
+  fields:
+    action_time: 2022-11-04 16:03:40.395185+00:00
+    user: 1
+    content_type: 6
+    object_id: '54'
+    object_repr: murtabak
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 726
+  fields:
+    action_time: 2022-11-04 16:03:40.395984+00:00
+    user: 1
+    content_type: 6
+    object_id: '53'
+    object_repr: bakso
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 727
+  fields:
+    action_time: 2022-11-04 16:03:40.396633+00:00
+    user: 1
+    content_type: 6
+    object_id: '52'
+    object_repr: rendang
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 728
+  fields:
+    action_time: 2022-11-04 16:03:40.397272+00:00
+    user: 1
+    content_type: 6
+    object_id: '51'
+    object_repr: kimchi
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 729
+  fields:
+    action_time: 2022-11-04 16:03:40.397918+00:00
+    user: 1
+    content_type: 6
+    object_id: '50'
+    object_repr: tabbouleh
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 730
+  fields:
+    action_time: 2022-11-04 16:03:40.398670+00:00
+    user: 1
+    content_type: 6
+    object_id: '49'
+    object_repr: grits
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 731
+  fields:
+    action_time: 2022-11-04 16:03:40.399310+00:00
+    user: 1
+    content_type: 6
+    object_id: '48'
+    object_repr: pancit
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 732
+  fields:
+    action_time: 2022-11-04 16:03:40.399953+00:00
+    user: 1
+    content_type: 6
+    object_id: '47'
+    object_repr: lumpia
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 733
+  fields:
+    action_time: 2022-11-04 16:03:40.400597+00:00
+    user: 1
+    content_type: 6
+    object_id: '46'
+    object_repr: momo
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 734
+  fields:
+    action_time: 2022-11-04 16:03:40.401280+00:00
+    user: 1
+    content_type: 6
+    object_id: '45'
+    object_repr: takoyaki
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 735
+  fields:
+    action_time: 2022-11-04 16:03:40.401916+00:00
+    user: 1
+    content_type: 6
+    object_id: '44'
+    object_repr: spaghetti
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 736
+  fields:
+    action_time: 2022-11-04 16:03:40.402541+00:00
+    user: 1
+    content_type: 6
+    object_id: '43'
+    object_repr: risoto
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 737
+  fields:
+    action_time: 2022-11-04 16:03:40.403197+00:00
+    user: 1
+    content_type: 6
+    object_id: '42'
+    object_repr: naan
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 738
+  fields:
+    action_time: 2022-11-04 16:03:40.403833+00:00
+    user: 1
+    content_type: 6
+    object_id: '41'
+    object_repr: spanakopita
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 739
+  fields:
+    action_time: 2022-11-04 16:03:40.404561+00:00
+    user: 1
+    content_type: 6
+    object_id: '40'
+    object_repr: hummus
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 740
+  fields:
+    action_time: 2022-11-04 16:03:40.405192+00:00
+    user: 1
+    content_type: 6
+    object_id: '39'
+    object_repr: milkshake
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 741
+  fields:
+    action_time: 2022-11-04 16:03:40.405921+00:00
+    user: 1
+    content_type: 6
+    object_id: '38'
+    object_repr: borscht
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 742
+  fields:
+    action_time: 2022-11-04 16:03:40.406572+00:00
+    user: 1
+    content_type: 6
+    object_id: '37'
+    object_repr: couscous
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 743
+  fields:
+    action_time: 2022-11-04 16:03:40.407204+00:00
+    user: 1
+    content_type: 6
+    object_id: '36'
+    object_repr: baklava
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 744
+  fields:
+    action_time: 2022-11-04 16:03:40.407849+00:00
+    user: 1
+    content_type: 6
+    object_id: '35'
+    object_repr: cake
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 745
+  fields:
+    action_time: 2022-11-04 16:03:40.408482+00:00
+    user: 1
+    content_type: 6
+    object_id: '34'
+    object_repr: cookie
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 746
+  fields:
+    action_time: 2022-11-04 16:03:40.409096+00:00
+    user: 1
+    content_type: 6
+    object_id: '33'
+    object_repr: brownie
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 747
+  fields:
+    action_time: 2022-11-04 16:03:40.410057+00:00
+    user: 1
+    content_type: 6
+    object_id: '32'
+    object_repr: calamari
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 748
+  fields:
+    action_time: 2022-11-04 16:03:40.410843+00:00
+    user: 1
+    content_type: 6
+    object_id: '31'
+    object_repr: arepa
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 749
+  fields:
+    action_time: 2022-11-04 16:03:40.411593+00:00
+    user: 1
+    content_type: 6
+    object_id: '30'
+    object_repr: poutine
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 750
+  fields:
+    action_time: 2022-11-04 16:03:40.412274+00:00
+    user: 1
+    content_type: 6
+    object_id: '29'
+    object_repr: pho
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 751
+  fields:
+    action_time: 2022-11-04 16:03:40.413007+00:00
+    user: 1
+    content_type: 6
+    object_id: '28'
+    object_repr: waffle
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 752
+  fields:
+    action_time: 2022-11-04 16:03:40.413667+00:00
+    user: 1
+    content_type: 6
+    object_id: '27'
+    object_repr: cereal
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 753
+  fields:
+    action_time: 2022-11-04 16:03:40.414296+00:00
+    user: 1
+    content_type: 6
+    object_id: '26'
+    object_repr: jumbalaya
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 754
+  fields:
+    action_time: 2022-11-04 16:03:40.414919+00:00
+    user: 1
+    content_type: 6
+    object_id: '25'
+    object_repr: gazpacho
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 755
+  fields:
+    action_time: 2022-11-04 16:03:40.415574+00:00
+    user: 1
+    content_type: 6
+    object_id: '24'
+    object_repr: bibimbap
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 756
+  fields:
+    action_time: 2022-11-04 16:03:40.416314+00:00
+    user: 1
+    content_type: 6
+    object_id: '23'
+    object_repr: bulgogi
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 757
+  fields:
+    action_time: 2022-11-04 16:03:40.417012+00:00
+    user: 1
+    content_type: 6
+    object_id: '22'
+    object_repr: bobotie
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 758
+  fields:
+    action_time: 2022-11-04 16:03:40.417659+00:00
+    user: 1
+    content_type: 6
+    object_id: '21'
+    object_repr: jollof
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 759
+  fields:
+    action_time: 2022-11-04 16:03:40.418280+00:00
+    user: 1
+    content_type: 6
+    object_id: '20'
+    object_repr: flan
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 760
+  fields:
+    action_time: 2022-11-04 16:03:40.418900+00:00
+    user: 1
+    content_type: 6
+    object_id: '19'
+    object_repr: pierogi
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 761
+  fields:
+    action_time: 2022-11-04 16:03:40.419525+00:00
+    user: 1
+    content_type: 6
+    object_id: '18'
+    object_repr: ceviche
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 762
+  fields:
+    action_time: 2022-11-04 16:03:40.420166+00:00
+    user: 1
+    content_type: 6
+    object_id: '17'
+    object_repr: paratha
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 763
+  fields:
+    action_time: 2022-11-04 16:03:40.420845+00:00
+    user: 1
+    content_type: 6
+    object_id: '16'
+    object_repr: pancake
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 764
+  fields:
+    action_time: 2022-11-04 16:03:40.421500+00:00
+    user: 1
+    content_type: 6
+    object_id: '15'
+    object_repr: taco
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 765
+  fields:
+    action_time: 2022-11-04 16:03:40.422118+00:00
+    user: 1
+    content_type: 6
+    object_id: '14'
+    object_repr: quesadilla
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 766
+  fields:
+    action_time: 2022-11-04 16:03:40.422885+00:00
+    user: 1
+    content_type: 6
+    object_id: '13'
+    object_repr: sushi
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 767
+  fields:
+    action_time: 2022-11-04 16:03:40.423625+00:00
+    user: 1
+    content_type: 6
+    object_id: '12'
+    object_repr: pizza
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 768
+  fields:
+    action_time: 2022-11-04 16:03:40.424276+00:00
+    user: 1
+    content_type: 6
+    object_id: '11'
+    object_repr: tiramisu
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 769
+  fields:
+    action_time: 2022-11-04 16:03:40.425043+00:00
+    user: 1
+    content_type: 6
+    object_id: '10'
+    object_repr: omelette
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 770
+  fields:
+    action_time: 2022-11-04 16:03:40.425708+00:00
+    user: 1
+    content_type: 6
+    object_id: '9'
+    object_repr: vindaloo
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 771
+  fields:
+    action_time: 2022-11-04 16:03:40.426454+00:00
+    user: 1
+    content_type: 6
+    object_id: '8'
+    object_repr: paneer
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 772
+  fields:
+    action_time: 2022-11-04 16:03:40.427190+00:00
+    user: 1
+    content_type: 6
+    object_id: '7'
+    object_repr: gyros
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 773
+  fields:
+    action_time: 2022-11-04 16:03:40.427849+00:00
+    user: 1
+    content_type: 6
+    object_id: '6'
+    object_repr: oatmeal
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 774
+  fields:
+    action_time: 2022-11-04 16:03:40.428495+00:00
+    user: 1
+    content_type: 6
+    object_id: '5'
+    object_repr: frankfurter
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 775
+  fields:
+    action_time: 2022-11-04 16:03:40.429186+00:00
+    user: 1
+    content_type: 6
+    object_id: '4'
+    object_repr: falafel
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 776
+  fields:
+    action_time: 2022-11-04 16:03:40.429858+00:00
+    user: 1
+    content_type: 6
+    object_id: '3'
+    object_repr: xialongbao
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 777
+  fields:
+    action_time: 2022-11-04 16:03:40.430566+00:00
+    user: 1
+    content_type: 6
+    object_id: '2'
+    object_repr: fries
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 778
+  fields:
+    action_time: 2022-11-04 16:03:40.431231+00:00
+    user: 1
+    content_type: 6
+    object_id: '1'
+    object_repr: pavlova
+    action_flag: 3
+    change_message: ''
+- model: admin.logentry
+  pk: 779
+  fields:
+    action_time: 2022-11-04 19:54:30.774224+00:00
+    user: 1
+    content_type: 2
+    object_id: '39'
+    object_repr: milkshake
+    action_flag: 2
+    change_message: '[{"changed": {"fields": ["Taste"]}}]'
+- model: admin.logentry
+  pk: 780
+  fields:
+    action_time: 2022-11-04 19:54:39.861246+00:00
+    user: 1
+    content_type: 2
+    object_id: '36'
+    object_repr: baklava
+    action_flag: 2
+    change_message: '[{"changed": {"fields": ["Taste"]}}]'
+- model: admin.logentry
+  pk: 781
+  fields:
+    action_time: 2022-11-04 19:54:49.600969+00:00
+    user: 1
+    content_type: 2
+    object_id: '35'
+    object_repr: cake
+    action_flag: 2
+    change_message: '[{"changed": {"fields": ["Taste"]}}]'
+- model: admin.logentry
+  pk: 782
+  fields:
+    action_time: 2022-11-04 19:54:57.455123+00:00
+    user: 1
+    content_type: 2
+    object_id: '20'
+    object_repr: flan
+    action_flag: 2
+    change_message: '[{"changed": {"fields": ["Taste"]}}]'
+- model: admin.logentry
+  pk: 783
+  fields:
+    action_time: 2022-11-04 19:55:22.422586+00:00
+    user: 1
+    content_type: 2
+    object_id: '8'
+    object_repr: paneer
+    action_flag: 2
+    change_message: '[{"changed": {"fields": ["Taste"]}}]'
 - model: auth.permission
   pk: 1
   fields:
@@ -6656,8 +10498,8 @@
 - model: auth.user
   pk: 1
   fields:
-    password: pbkdf2_sha256$390000$iNIAs9wgvZmCdu6d6vDtYO$TTqVmLFB8KSL6PcYGX/hPfjlakGtYfOP/UhDgu+2p3Y=
-    last_login: 2022-10-30 18:28:02.709121+00:00
+    password: pbkdf2_sha256$390000$zgYQKvPDdOZEUR3tzMIOmH$QNztr2E+dGaFdW639eYjoYa5xX+QKsSwXHnP7pLycHQ=
+    last_login: 2022-11-04 16:03:20.257569+00:00
     is_superuser: true
     username: admin
     first_name: ''
@@ -6733,3 +10575,18 @@
   fields:
     session_data: .eJxVjDsOwjAQRO_iGllZe21jSnrOYO36gwPIkeKkQtydREoBzRTz3sxbBFqXGtae5zAmcREgTr8dU3zmtoP0oHafZJzaMo8sd0UetMvblPLrerh_B5V63dYRkMAze-WcMTpTUWgUclbO8mBxSzVAwULZOLbnonRC9El7AAarxecLzSk3Cw:1opD2Q:KSsZeVqrkY6v5EF9U_MHw4XSBfHxNhKQzGHegW7tr5U
     expire_date: 2022-11-13 18:28:02.713706+00:00
+- model: sessions.session
+  pk: e8myx7584q7fapbpy8dr3v1brkmjb1yx
+  fields:
+    session_data: .eJxVjDEOwjAMRe-SGUUxuGnNyM4ZIttxSQG1UtNOiLtDpQ6w_vfef7nE61LSWm1OQ3ZnB-7wuwnrw8YN5DuPt8nrNC7zIH5T_E6rv07Znpfd_TsoXMu3RmogGGNvABr4RBpEiQ2QpetRJFImyRHIGEJsWxVsUTvCeLRGGvf-APSZOC4:1or168:fIdnJ8cIzRG4Tycgab0AaE6sqCFPHOVVnsuDLs10Pk0
+    expire_date: 2022-11-18 18:07:20.259238+00:00
+- model: sessions.session
+  pk: nbp1w5rjl9hw8i9rfit1guurjjw2neun
+  fields:
+    session_data: .eJxVjDEOwjAMRe-SGUUxuGnNyM4ZIttxSQG1UtNOiLtDpQ6w_vfef7nE61LSWm1OQ3ZnB-7wuwnrw8YN5DuPt8nrNC7zIH5T_E6rv07Znpfd_TsoXMu3RmogGGNvABr4RBpEiQ2QpetRJFImyRHIGEJsWxVsUTvCeLRGGvf-APSZOC4:1oqzA8:b4YF2Ae9xv_ZKWep7GED2bmnZnE3u31T6kr_x5NfTio
+    expire_date: 2022-11-18 16:03:20.259431+00:00
+- model: sessions.session
+  pk: ofvpr1418oi4t6p3x5h8l99t3oiv059q
+  fields:
+    session_data: .eJxVjDsOwjAQRO_iGllZe21jSnrOYO36gwPIkeKkQtydREoBzRTz3sxbBFqXGtae5zAmcREgTr8dU3zmtoP0oHafZJzaMo8sd0UetMvblPLrerh_B5V63dYRkMAze-WcMTpTUWgUclbO8mBxSzVAwULZOLbnonRC9El7AAarxecLzSk3Cw:1opaAY:lgsVsPHZRJwgSXuCzKGkBdWB1SKTYAd1WopaJH871AA
+    expire_date: 2022-11-14 19:09:58.173575+00:00
