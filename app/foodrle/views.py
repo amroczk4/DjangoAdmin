@@ -146,7 +146,7 @@ def register_request(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            messages.success(request, "Registration successful.")
+            messages.success(request, f"Registration successful. Welcome {user.username}")
             return redirect("foodrle:homepage")
         messages.error(request, "Unsuccessful registration. Invalid information.")
     form = NewUserForm()
