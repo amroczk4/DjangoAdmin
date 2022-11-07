@@ -55,6 +55,17 @@
   font-family: 'Francois One';font-size: 22px;
 }
 
+.guess-grid1 {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  flex-grow: 1;
+  grid-template-columns: repeat(7, 6em); /*change back to 5 after demo 2 */
+  grid-template-rows: repeat(1, 6em); /*Change back to 6 after demo 2 */
+  gap: .5em 2em;
+  margin-bottom: 1em;
+}
+
 
 .guess-grid {
   display: grid;
@@ -85,7 +96,20 @@
   text-align: center;
 }
 
+.red
+{
+  color:red;
+}
 
+.green
+{
+  color:green;
+}
+
+.yellow
+{
+  color:rgb(179, 117, 2);
+}
 
 #hint0 {
   background-color:red;
@@ -222,4 +246,55 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.Bwrapper
+{
+  align-items: center;
+  justify-content:center;
+  display:flex;
+}
+
+.button-28 {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #444444;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #8a8a8a;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Francois One';
+  font-size: 22px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 300px;
+  will-change: transform;
+}
+
+.button-28:disabled {
+  pointer-events: none;
+}
+
+.button-28:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-28:active {
+  box-shadow: none;
+  transform: translateY(0);
 }
