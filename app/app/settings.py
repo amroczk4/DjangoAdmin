@@ -43,20 +43,21 @@ INSTALLED_APPS = [
     'crispy_forms',
     'crispy_bootstrap5',
     'import_export',
-    'django_nose',
-    'coverage'
+    # 'django_nose',
+    # 'coverage'
 ]
 
 # Use nose to run all tests
-TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+# TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 
 # Tell nose to measure coverage with these
-NOSE_ARGS = [
-    '--with-coverage',
-    # '--cover-package=foodrle',
-    '--cover-package=.',
-    '--cover-html',
-]
+# NOSE_ARGS = [
+#     '--with-coverage',
+#     '--cover-package=foodrle',
+#     # '--cover-package=.',
+#     '--cover-html',
+#     '--verbosity=2'
+# ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
