@@ -57,6 +57,7 @@
                   </p>
               </button>
           </li>
+
           {% if user.is_authenticated %}
 
           {% if user.is_superuser %}
@@ -79,6 +80,9 @@
 <li class="nav-item">
   <a class="nav-link" href="/login">Login</a>
 </li>
+<li class="nav-item">
+  <a class="nav-link" href="/register">Register</a>
+</li>
 
 </ul>
 </div>
@@ -94,7 +98,7 @@
 <!-- Modal for Tutorial -->
 <div class="modal fade" id="ModalTutorial" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
    aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-xl" role="document">
       <div class="modal-content">
           <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">Tutorial</h5>
@@ -103,17 +107,34 @@
               </button>
           </div>
           <div class="modal-body">
-              <h3>How To Play:</h3>
-              <br>
-              <p>Guess the Foodrle in 6 guesses</p>
-              <br>
-              <h4>>Insert Example Here<</h4>
-              <br>
-              <p>After each guess, you will get the main ingredient, distance from target 
-              country of origin and 3 hints on the taste profile.</p>
-              <br>
-              <h4>Can you get it right in one try?</h4>
-              <br>
+            <h2 class="text-center" style="font-weight:bold; text-decoration:underline;">How To Play:</h2>
+            <br>
+            <h3 class = "text-center">You have 6 tries to guess the dish</h3>
+            <br>
+            <p>After each guess, you will get the main ingredient, distance & direction from the target 
+                country of origin, 3 hints on the taste profile and hint based on calorie count</p>
+            <br>
+            <div data-guess-grid class="guess-grid1">
+                <div class="tile" id="blank">Your Guessed Dish</div>
+                <div class="tile" id="blank">Country, Distance & Direction</div>
+                <div class="tile" id="blank">Taste Profile 1</div>
+                <div class="tile" id="blank">Taste Profile 2</div>
+                <div class="tile" id="blank">Taste Profile 3</div>
+                <div class="tile" id="blank">Calories</div>
+                <div class="tile" id="blank">Main Ingredient</div>
+            </div>
+            <p>Country, Distance & Direction will be provided in one circle</p>
+            <p>Taste profiles will be hinted through three different circles. Although sometimes some dishes may not have more than 2 taste profiles according to our database</p>
+            <p>Calorie hint is based of how far your guess's calorie is different from the answer's calorie</p>
+            <p>Provides the main ingredient of your guessed dish</p>
+            <p>Taste profiles and main ingredient is color coded to have:
+                <ul>
+                    <li><span class="green">Green</span> to be correct</li>
+                    <li><span class="yellow">Yellow</span> to be close</li>
+                    <li><span class="red">Red</span> to be wrong</li>
+                </ul>
+            </p>  
+            <br>
           </div>
           <div class="modal-footer">
               <!--Add Socials here maybe?-->
