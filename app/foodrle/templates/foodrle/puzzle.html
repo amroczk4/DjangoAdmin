@@ -23,16 +23,6 @@
 
 {% block content %}
 
-  {% if messages %}
-  {% for message in messages %}
-    {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
-    <div class="alert">
-      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-      {{ message }}
-    </div> 
-    {% endif %}
-  {% endfor %}
-  {% endif %}
   
 <br>
 <div class ="input-box">
