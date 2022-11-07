@@ -73,10 +73,6 @@
   </div>
 </nav>
 <br>
-<div class="alert">
-  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-  Better Luck Next Time, {{user.username}}
-</div> 
 
 {% else %}
 
@@ -209,6 +205,14 @@
 
   toggleSwitch.addEventListener('change', switchTheme, false);
 </script>
+{% if messages %}
+  {% for message in messages %}
+    <div class="alert">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+      {{ message }}
+    </div> 
+  {% endfor %}
+  {% endif %}
 {% block content %}
 {% endblock %}
 
