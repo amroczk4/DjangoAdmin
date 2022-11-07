@@ -30,7 +30,7 @@ def submit_guess(puzzle_id: int, guess_str: str, guess_no: int) -> bool:
         #TODO: make sure that e.g. guess4 only enters if guess3 exists and so on
         guess_dict = {f'guess{guess_no}': guess_str}
         Puzzle.objects.filter(pk=puzzle_id).update(**guess_dict)
-        print(f'submit_guess: {guess_dict} add successful!')
+        # print(f'submit_guess: {guess_dict} add successful!')
         return True
 
 
@@ -159,7 +159,7 @@ def country_hint(answer_country: Country, guessed_country: Country):
         'dir': direction(guessed_country, answer_country)
         }
     
-    print(f'\tCountry: {res}')
+    # print(f'\tCountry: {res}')
     return res
 
 
@@ -172,7 +172,7 @@ def main_ingredient_hint(answer: MainIngredient, guess_ingr: MainIngredient):
     else:
         res.update({guess_ingr.name: RED})
         
-    print(f'\tIngredient: {res}')
+    # print(f'\tIngredient: {res}')
     return res
 
 
@@ -184,7 +184,7 @@ def calorie_hint(answer: Dishes, guess_dish: Dishes):
     """
     diff = answer.calories - guess_dish.calories
     res = {'calories': diff}
-    print(f'\tCalories: {res}')
+    # print(f'\tCalories: {res}')
     return res
 
 
@@ -202,7 +202,7 @@ def taste_hint (answer: Taste, guess_dish: Taste):
                 res.update({k: RED})
     if len(res) < 3:
         res.update({'placeholder': ''})
-    print("\tTaste: "+ str(res))
+    # print("\tTaste: "+ str(res))
     return res
 
 
