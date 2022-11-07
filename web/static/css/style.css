@@ -61,8 +61,8 @@
   justify-content: center;
   align-content: center;
   flex-grow: 1;
-  grid-template-columns: repeat(6, 6em); /*change back to 5 after demo 2 */
-  grid-template-rows: repeat(6, 6em); /*Change back to 6 after demo 2 */
+  grid-template-columns: repeat(7, 6em); /*change back to 5 after demo 2 */
+  grid-template-rows: repeat(7, 6em); /*Change back to 6 after demo 2 */
   gap: .5em 2em;
   margin-bottom: 1em;
 }

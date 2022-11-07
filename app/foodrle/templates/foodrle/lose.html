@@ -223,9 +223,13 @@
   </script>
 
 
-<div data-guess-grid class="guess-grid">
+  <div data-guess-grid class="guess-grid">
     {% for hints in hints_list %}
         {% for hint in hints|slice:":1" %}
+            <div class="tile" id="blank">{{hint.guess}}</div>
+        {% endfor%}
+
+        {% for hint in hints|slice:"1:2" %}
             {% if hint.dir == 'south' %}
                 <div class="tile" id="blank">{{hint.country}}<br>{{hint.dist}}<br> <i class="bi bi-arrow-down"></i></div> 
             {% elif hint.dir == 'southeast' %}
@@ -249,7 +253,7 @@
 
 
 
-        {% for hint in hints|slice:"1:"  %}
+        {% for hint in hints|slice:"2:"  %}
 
             {% for key, value in hint.items %}
                 {% if key == 'calories'%}
@@ -275,21 +279,9 @@
         {% endfor %}
     {% endfor %}
     <div class="tile" id="blank">Real answer <br> {{answer}}</div>
-    <div class="tile" id="blank">Guess <br> {{guess}}</div>
-</div> 
+</div>  
 
 <a href="/puzzle/new">Play again?</a>
-{% comment %} <div class ="input-box">
-    <form method="post", class="form-group">
-        {% csrf_token %}
-        {{form.dish_name}}
-        <datalist id="dishes">
-            {% for dish in dishes %}
-                <option value="{{ dish }}"></option>
-            {% endfor %}
-        </datalist>
-    </form>
-</div> {% endcomment %}
 
 {% endblock %}
 </body>
