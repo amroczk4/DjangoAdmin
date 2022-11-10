@@ -1,19 +1,19 @@
-# import imp
 from django.shortcuts import render, redirect
 from .forms import NewUserForm, GuessAnswerForm
 from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
-from .models import Dishes, Puzzle
+from .models import Dishes, Puzzle, UserStats
 import foodrle.game as game
+from datetime import datetime
 from random import choice
 
 
 def homepage(request):
     # answer = get_puzzle_of_day().ans_dish.name
-    dishes = Dishes.objects.values_list('name', flat=True)
+    # dishes = Dishes.objects.values_list('name', flat=True)
     # guess_sim = choice(dishes)
-    return render(request=request, template_name='foodrle/home.html', context={"dishes":dishes})
+    return render(request=request, template_name='foodrle/home.html') # , context={"dishes":dishes}
 
 
 def create_puzzle(request):
@@ -24,7 +24,7 @@ def create_puzzle(request):
 
 
 def get_puzzle(request, id, guess_cnt):
-    if guess_cnt < 0 or guess_cnt >= 6:
+    if guess_cnt < 0 or guess_cnt > 6:
         return render(
             request=request, 
             template_name='foodrle/lose.html',
@@ -36,15 +36,15 @@ def get_puzzle(request, id, guess_cnt):
 
     answer = Puzzle.objects.get(pk=id).ans_dish
     dishes = Dishes.objects.values_list('name', flat=True)
-    guess_str = 'INVALID'
+    guess_str = ''
     if request.method == "POST":
         form = GuessAnswerForm(request.POST)
         if form.is_valid():
             guess_str = form.cleaned_data.get('dish_name').lower()
             if game.guess_is_valid_dish(guess_str):
-                guess_cnt = guess_cnt + 1
-                game.submit_guess(id, guess_str, guess_cnt)
-                return display_hints(request, id, guess_cnt)
+                guess_cnt = game.find_guess_cnt(id, guess_cnt+1)
+                if game.submit_guess(id, guess_str, guess_cnt):
+                    return display_hints(request, id, guess_cnt)
         messages.error(request, "Invalid dish, guess again")
     form = GuessAnswerForm()
     if guess_cnt > 0:
@@ -109,43 +109,14 @@ def display_hints(request, id, guess_cnt):
                 })
 
 
-## Testing page
-## Test all functions here (TODO: remove before merge)
-# def test(request):
-#     answer = Puzzle.objects.get(pk=1).ans_dish
-#     dishes = Dishes.objects.values_list('name', flat=True)
-#     guess_sim = choice(dishes)
-#     hints = game.collect_hints(game.get_dish_by_name(guess_sim), answer)
-#     if request.method == "POST":
-#         print(request.POST)
-#         form = GuessAnswerForm(request.POST)
-#         if form.is_valid():
-#             guess_str = form.cleaned_data.get('dish_name')
-#             print(guess_str)
-#             # test valid dish ? return hint : idk
-#             if game.guess_is_valid_dish(guess_str):
-#                 guess_dish = game.get_dish_by_name(guess_str)
-#                 hints = game.collect_hints(guess_dish, answer)
-#                 messages.success(request, "guess went through!")
-#                 return render(request=request, template_name='foodrle/test.html', context={"dishes":dishes, "guess": guess_str, "answer": answer.name, "hints": hints, "form": form})
-#             else:
-#                 messages.error(request, "Invalid dish, guess again")
-#         else:
-#             messages.error(request, "Bad Form!")
-#     form = GuessAnswerForm()    
-#     return render(
-#         request=request, template_name='foodrle/test.html', 
-#         context={
-#             "dishes":dishes, "guess": guess_sim, "answer": answer.name, 
-#             "hints": hints, "form": form})
-
-
 def register_request(request):
     if request.method == "POST":
         form = NewUserForm(request.POST)
         if form.is_valid():
             user = form.save()
             login(request, user)
+            stats = UserStats(id=user.id, user=user, last_played=datetime.now().date())
+            stats.save()
             messages.success(request, f"Registration successful. Welcome {user.username}")
             return redirect("foodrle:homepage")
         messages.error(request, "Unsuccessful registration. Invalid information.")

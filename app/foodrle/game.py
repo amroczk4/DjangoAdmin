@@ -18,20 +18,71 @@ def create_puzzle_answer() -> Puzzle:
     return puzzle
 
 
+def find_guess_cnt(id: int, guess_cnt: int) -> int:
+    """ return the guess number for the 
+        first empty guess value (protect against user changing url)
+    """
+    puzzle = Puzzle.objects.get(pk=id)
+    guess_dict = puzzle.get_guesses_as_dict()
+    print('checking guess_cnt')
+    if guess_can_be_made(puzzle, guess_cnt):
+        return guess_cnt
+    
+    else:
+        for i in range(1,7):
+            if guess_dict.get(f'guess{i}') == '':
+                guess_cnt = i
+                break
+        return guess_cnt
+
+
 def submit_guess(puzzle_id: int, guess_str: str, guess_no: int) -> bool:
+    puzzle = Puzzle.objects.get(pk=puzzle_id)
     if guess_no not in range(1,7):
         print("submit_guess: game over")
         return False
     if not guess_is_valid_dish(guess_str):
         print("submit_guess: invalid guess!")
         return False
-    else:
-        #TODO: make sure guess{guess_no} has not already been made; otherwise return False
-        #TODO: make sure that e.g. guess4 only enters if guess3 exists and so on
+    elif guess_is_unique(puzzle, guess_str) and guess_can_be_made(puzzle, guess_no):
         guess_dict = {f'guess{guess_no}': guess_str}
         Puzzle.objects.filter(pk=puzzle_id).update(**guess_dict)
         # print(f'submit_guess: {guess_dict} add successful!')
         return True
+    else:
+        return False
+
+
+def guess_is_unique(puzzle: Puzzle, guess_str: str) -> bool:
+    guess_dict = puzzle.get_guesses_as_dict()
+    
+    for k, v in guess_dict.items():
+        if guess_str == v:
+            return False
+    
+    return True
+    
+
+def guess_can_be_made(puzzle: Puzzle, guess_cnt: int) -> bool:
+    guess_dict = puzzle.get_guesses_as_dict()
+    
+    # Check all prev guesses
+    for i in range(1, guess_cnt):
+        guess = guess_dict.get(f"guess{i}")
+        if guess == '':
+            print("a previous guess was not entered")
+            return False
+            
+    # Check current guess
+    # Check future guesses
+    for i in range(guess_cnt, 7):
+        guess = guess_dict.get(f'guess{i}')
+        if guess != '':
+            print("current or future guesses have been made")
+            return False
+            
+    # safe to enter the guess
+    return True
 
 
 def get_dish_by_name(dish_name: str):
@@ -232,6 +283,8 @@ def get_hints(puzzle: Puzzle, guess_cnt: int):
     hints_list = []
     for i in range(1, guess_cnt+1):
         guess_n = guess_dict.get(f'guess{i}')
+        if guess_n == '':
+            break
         dish_n = get_dish_by_name(guess_n)
         hint_n = collect_hints(dish_n, answer)
         hints_list.append(hint_n)
