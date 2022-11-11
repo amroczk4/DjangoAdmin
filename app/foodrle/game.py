@@ -1,5 +1,5 @@
 from random import choice
-from .models import Country, Dishes, Taste, MainIngredient, Puzzle
+from .models import User, Country, Dishes, Taste, MainIngredient, Puzzle
 from math import atan2, degrees, sin, cos, radians, asin, sqrt
 
 RED = 0
@@ -7,13 +7,16 @@ YELLOW = 1
 GREEN = 2
 
    
-def create_puzzle_answer() -> Puzzle:
+def create_puzzle_answer(user: User) -> Puzzle:
     """ Chooses a random dish to serve as the
         user puzzle, creates a puzzle entry
         and returns it
     """
     answer = choice(Dishes.objects.all())
-    puzzle = Puzzle(ans_dish=answer)
+    if user.is_authenticated:
+        puzzle = Puzzle(ans_dish=answer, player=user)
+    else:
+        puzzle = Puzzle(ans_dish=answer)
     puzzle.save()
     return puzzle
 
@@ -124,40 +127,40 @@ def distance(guessed_country: Country, answer_country: Country) -> int:
     return round(c * 3956)
 
 
-def direction(guessed_country: Country, answer_country: Country) -> str:
-        """
-        Computes the direction of 'other' in relation to 'self'
-        if the countries are within 'delta' degrees of latitude and
-        longitude of one another bearing is used to compute
-        direction instead
-        """
-        if guessed_country.name == answer_country.name:
-            return 'same'
+# def direction(guessed_country: Country, answer_country: Country) -> str:
+#         """
+#         Computes the direction of 'other' in relation to 'self'
+#         if the countries are within 'delta' degrees of latitude and
+#         longitude of one another bearing is used to compute
+#         direction instead
+#         """
+#         if guessed_country.name == answer_country.name:
+#             return 'same'
         
-        dlat = guessed_country.latitude - answer_country.latitude
-        dlon = guessed_country.longitude - answer_country.longitude
-        north_or_south = ''
-        east_or_west = ''
-        delta = 20
-        while delta > 0:
-            if abs(dlat) > delta:
-                if dlat < 0:
-                    north_or_south = 'north'
-                else:
-                    north_or_south = 'south'
-            if abs(dlon) > delta:
-                if dlon < 0:
-                    east_or_west = 'east'
-                else:
-                    east_or_west = 'west'
-            if north_or_south + east_or_west != '':
-                break
-            delta = delta - 2
+#         dlat = guessed_country.latitude - answer_country.latitude
+#         dlon = guessed_country.longitude - answer_country.longitude
+#         north_or_south = ''
+#         east_or_west = ''
+#         delta = 20
+#         while delta > 0:
+#             if abs(dlat) > delta:
+#                 if dlat < 0:
+#                     north_or_south = 'north'
+#                 else:
+#                     north_or_south = 'south'
+#             if abs(dlon) > delta:
+#                 if dlon < 0:
+#                     east_or_west = 'east'
+#                 else:
+#                     east_or_west = 'west'
+#             if north_or_south + east_or_west != '':
+#                 break
+#             delta = delta - 2
 
-        if north_or_south + east_or_west == '':
-            return bearing(guessed_country, answer_country)
+#         if north_or_south + east_or_west == '':
+#             return bearing(guessed_country, answer_country)
 
-        return north_or_south + east_or_west
+#         return north_or_south + east_or_west
 
 
 def bearing(guessed_country: Country, answer_country: Country) -> str:
@@ -165,6 +168,8 @@ def bearing(guessed_country: Country, answer_country: Country) -> str:
         computes the bearing angle between
         two countries and returns a direction string
     """
+    if guessed_country == answer_country:
+        return 'same'
     
     dest_lon = answer_country.longitude
     dest_lat = answer_country.latitude
@@ -207,7 +212,7 @@ def country_hint(answer_country: Country, guessed_country: Country):
     res = {
         'country': guessed_country.name, 
         'dist': str(distance(guessed_country, answer_country))+' Mi',
-        'dir': direction(guessed_country, answer_country)
+        'dir': bearing(guessed_country, answer_country) # direction
         }
     
     # print(f'\tCountry: {res}')
@@ -245,7 +250,6 @@ def taste_hint (answer: Taste, guess_dish: Taste):
     guess_dict = guess_dish.__dict__
     
     for k, v in guess_dict.items():
-        # NEEDS to be nested if-then-else to work!!!
         if v == True: 
             if ans_dict.get(k) == True:
                 res.update({k: GREEN})

@@ -32,7 +32,7 @@ class MainIngredientAdmin(ImportExportActionModelAdmin):
 
 @admin.register(Puzzle)
 class PuzzleAdmin(ImportExportActionModelAdmin):
-    list_display = ("id", "ans_dish", "guess1", "guess2", "guess3", "guess4", "guess5", "guess6")
+    list_display = ("id", "player", "ans_dish", "guess1", "guess2", "guess3", "guess4", "guess5", "guess6")
     pass
 
 

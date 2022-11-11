@@ -3,7 +3,7 @@ from .forms import NewUserForm, GuessAnswerForm
 from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
-from .models import Dishes, Puzzle, UserStats
+from .models import User, Dishes, Puzzle, UserStats
 import foodrle.game as game
 from datetime import datetime
 from random import choice
@@ -17,13 +17,15 @@ def homepage(request):
 
 
 def create_puzzle(request):
-    answer = game.create_puzzle_answer()
+    user = request.user
+    answer = game.create_puzzle_answer(user)
     guess_cnt = 0
     return redirect(f'/puzzles/{answer.id}/{guess_cnt}',context={"answer":answer.ans_dish.name})
     # return render(request=request, template_name='foodrle/home.html', context={"dishes":dishes, "guess": guess_sim, "answer": answer, "hints": hints}) 
 
 
 def get_puzzle(request, id, guess_cnt):
+    # print(request.user) #TODO: user is null is possible
     if guess_cnt < 0 or guess_cnt > 6:
         return render(
             request=request, 
@@ -39,6 +41,7 @@ def get_puzzle(request, id, guess_cnt):
     guess_str = ''
     if request.method == "POST":
         form = GuessAnswerForm(request.POST)
+        
         if form.is_valid():
             guess_str = form.cleaned_data.get('dish_name').lower()
             if game.guess_is_valid_dish(guess_str):
@@ -77,6 +80,7 @@ def display_hints(request, id, guess_cnt):
     win = game.is_guess_correct(answer, guess_cnt)
     hints_list = game.get_hints(answer, guess_cnt)
     if win:
+        # update stats
         return render(
             request=request, 
             template_name='foodrle/win.html',
