@@ -20,7 +20,8 @@ def create_puzzle(request):
     user = request.user
     answer = game.create_puzzle_answer(user)
     guess_cnt = 0
-    return redirect(f'/puzzles/{answer.id}/{guess_cnt}',context={"answer":answer.ans_dish.name})
+    stats = game.get_game_stats(user.id)
+    return redirect(f'/puzzles/{answer.id}/{guess_cnt}',context={"answer":answer.ans_dish.name, "player_stats": stats})
     # return render(request=request, template_name='foodrle/home.html', context={"dishes":dishes, "guess": guess_sim, "answer": answer, "hints": hints}) 
 
 
@@ -40,8 +41,7 @@ def get_puzzle(request, id, guess_cnt):
     dishes = Dishes.objects.values_list('name', flat=True)
     guess_str = ''
     if request.method == "POST":
-        form = GuessAnswerForm(request.POST)
-        
+        form = GuessAnswerForm(request.POST)    
         if form.is_valid():
             guess_str = form.cleaned_data.get('dish_name').lower()
             if game.guess_is_valid_dish(guess_str):
@@ -76,17 +76,18 @@ def display_hints(request, id, guess_cnt):
                 "hints_list": [], 
                 })
     
-    answer = Puzzle.objects.get(pk=id)
-    win = game.is_guess_correct(answer, guess_cnt)
-    hints_list = game.get_hints(answer, guess_cnt)
+    puzzle = Puzzle.objects.get(pk=id)
+    win = game.is_guess_correct(puzzle, guess_cnt)
+    hints_list = game.get_hints(puzzle, guess_cnt)
     if win:
         # update stats
+        Puzzle.objects.filter(pk=id).update(is_win=win)
         return render(
             request=request, 
             template_name='foodrle/win.html',
             context={ 
                 "guess": 'WIN!!!', 
-                "answer": answer.ans_dish.name, 
+                "answer": puzzle.ans_dish.name, 
                 "hints_list": hints_list, 
                 })
     
@@ -96,7 +97,7 @@ def display_hints(request, id, guess_cnt):
             template_name='foodrle/lose.html',
             context={
                 "guess": 'LOSE :(', 
-                "answer": answer.ans_dish.name, 
+                "answer": puzzle.ans_dish.name, 
                 "hints_list": hints_list, 
                 })
             
@@ -107,7 +108,7 @@ def display_hints(request, id, guess_cnt):
             context={
                 "dishes":dishes, 
                 "guess": 'foo', 
-                "answer": answer.ans_dish.name, 
+                "answer": puzzle.ans_dish.name, 
                 "hints_list": hints_list,
                 "form": GuessAnswerForm(),
                 })

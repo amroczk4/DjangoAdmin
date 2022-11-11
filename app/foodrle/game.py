@@ -10,7 +10,8 @@ GREEN = 2
 def create_puzzle_answer(user: User) -> Puzzle:
     """ Chooses a random dish to serve as the
         user puzzle, creates a puzzle entry
-        and returns it
+        and returns it. If user has an account, 
+        they are assigned the puzzle for their stats
     """
     answer = choice(Dishes.objects.all())
     if user.is_authenticated:
@@ -54,6 +55,17 @@ def submit_guess(puzzle_id: int, guess_str: str, guess_no: int) -> bool:
         return True
     else:
         return False
+
+
+def get_game_stats(player_id: int):
+    total_games = len(Puzzle.objects.raw(
+        "SELECT * FROM foodrle_puzzle WHERE player_id = %d", [player_id]))
+    games_won = len(Puzzle.objects.raw(
+        "SELECT COUNT(*) FROM foodrle_puzzle WHERE is_win AND player_id = %d", [player_id]
+    ))
+    win_pct = round(games_won/total_games * 100)
+    stats_dict = {'wins': games_won, 'total_played': total_games, 'win_pct': win_pct}
+    return stats_dict
 
 
 def guess_is_unique(puzzle: Puzzle, guess_str: str) -> bool:
