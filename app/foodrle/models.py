@@ -86,6 +86,7 @@ class Puzzle(models.Model):
     id = models.BigAutoField(primary_key=True)
     ans_dish = models.ForeignKey(Dishes, on_delete=models.CASCADE)
     player = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
+    is_win = models.BooleanField(default=False)
     guess1 = models.CharField(max_length=128, blank=True, default='')
     guess2 = models.CharField(max_length=128, blank=True, default='')
     guess3 = models.CharField(max_length=128, blank=True, default='')
