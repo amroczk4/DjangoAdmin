@@ -1,9 +1,7 @@
 from django.contrib import admin
 
 from import_export.admin import ImportExportActionModelAdmin
-from .models import Dishes, Puzzle, UserStats, MainIngredient, Taste, Country
-
-admin.site.register(UserStats)
+from .models import Dishes, Puzzle, MainIngredient, Taste, Country
 
 
 @admin.register(Country)
