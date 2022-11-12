@@ -3,7 +3,7 @@ from .forms import NewUserForm, GuessAnswerForm
 from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
-from .models import User, Dishes, Puzzle, UserStats
+from .models import User, Dishes, Puzzle
 import foodrle.game as game
 from datetime import datetime
 from random import choice
@@ -13,15 +13,20 @@ def homepage(request):
     # answer = get_puzzle_of_day().ans_dish.name
     # dishes = Dishes.objects.values_list('name', flat=True)
     # guess_sim = choice(dishes)
-    return render(request=request, template_name='foodrle/home.html') # , context={"dishes":dishes}
+    user = request.user
+    response = render(request=request, template_name='foodrle/home.html') # , context={"dishes":dishes}
+    user_stats = game.get_game_stats(user)
+    for k, v in user_stats.items():
+        response.set_cookie(k, str(v), max_age=120)
+    return response
 
 
 def create_puzzle(request):
     user = request.user
     answer = game.create_puzzle_answer(user)
     guess_cnt = 0
-    stats = game.get_game_stats(user.id)
-    return redirect(f'/puzzles/{answer.id}/{guess_cnt}',context={"answer":answer.ans_dish.name, "player_stats": stats})
+    stats = game.get_game_stats(user)
+    return redirect(f'/puzzles/{answer.id}/{guess_cnt}', context={"answer":answer.ans_dish.name, "player_stats": stats})
     # return render(request=request, template_name='foodrle/home.html', context={"dishes":dishes, "guess": guess_sim, "answer": answer, "hints": hints}) 
 
 
@@ -54,7 +59,7 @@ def get_puzzle(request, id, guess_cnt):
         hints_list = game.get_hints(Puzzle.objects.get(pk=id), guess_cnt)
     else:
         hints_list = []
-    return render(
+    response = render(
         request=request, template_name='foodrle/puzzle.html', 
         context={
             "dishes":dishes, 
@@ -63,11 +68,15 @@ def get_puzzle(request, id, guess_cnt):
             "hints_list": hints_list, 
             "form": form,
             })
+    user_stats = game.get_game_stats(request.user)
+    for k, v in user_stats.items():
+        response.set_cookie(k, str(v), max_age=120)
+    return response
 
 
 def display_hints(request, id, guess_cnt):
     if guess_cnt <= 0 or guess_cnt > 6:
-        return render(
+        response = render(
             request=request, 
             template_name='foodrle/lose.html',
             context={ 
@@ -80,9 +89,8 @@ def display_hints(request, id, guess_cnt):
     win = game.is_guess_correct(puzzle, guess_cnt)
     hints_list = game.get_hints(puzzle, guess_cnt)
     if win:
-        # update stats
         Puzzle.objects.filter(pk=id).update(is_win=win)
-        return render(
+        response = render(
             request=request, 
             template_name='foodrle/win.html',
             context={ 
@@ -90,9 +98,13 @@ def display_hints(request, id, guess_cnt):
                 "answer": puzzle.ans_dish.name, 
                 "hints_list": hints_list, 
                 })
+        user_stats = game.get_game_stats(request.user)
+        for k, v in user_stats.items():
+            response.set_cookie(k, v, max_age=120)        
+        
     
     elif guess_cnt == 6 and not win:
-        return render(
+        response = render(
             request=request, 
             template_name='foodrle/lose.html',
             context={
@@ -100,10 +112,13 @@ def display_hints(request, id, guess_cnt):
                 "answer": puzzle.ans_dish.name, 
                 "hints_list": hints_list, 
                 })
+        user_stats = game.get_game_stats(request.user)
+        for k, v in user_stats.items():
+            response.set_cookie(k, str(v), max_age=120)
             
     else:
         dishes = Dishes.objects.values_list('name', flat=True)
-        return redirect(
+        response = redirect(
             f'/puzzles/{id}/{guess_cnt}',
             context={
                 "dishes":dishes, 
@@ -112,6 +127,8 @@ def display_hints(request, id, guess_cnt):
                 "hints_list": hints_list,
                 "form": GuessAnswerForm(),
                 })
+    
+    return response
 
 
 def register_request(request):
@@ -120,8 +137,6 @@ def register_request(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            stats = UserStats(id=user.id, user=user, last_played=datetime.now().date())
-            stats.save()
             messages.success(request, f"Registration successful. Welcome {user.username}")
             return redirect("foodrle:homepage")
         messages.error(request, "Unsuccessful registration. Invalid information.")
