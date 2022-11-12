@@ -30,38 +30,6 @@ class CountryHintsTests(TestCase):
                 B = country_list[j]
                 self.assertEquals(distance(A, B), distance(B, A))
 
-    def test_dir_parity(self):
-        """
-            Checks that there is parity in direction computation
-            (e.g., if a is north of b, b must be south of a)
-        """
-        for i in range(0, len(country_list)):
-            a = country_list[i]
-            for j in range(0, len(country_list)):
-                b = country_list[j]
-                dir = direction(a, b)
-                # try:
-                if dir == 'same':
-                    self.assertEqual(direction(b, a), 'same')
-                if dir == 'north':
-                    self.assertEqual(direction(b, a), 'south')
-                elif dir == 'south':
-                    self.assertEqual(direction(b, a), 'north')
-                elif dir == 'east':
-                    self.assertEqual(direction(b, a), 'west')
-                elif dir == 'west':
-                    self.assertEqual(direction(b, a), 'east')
-                elif dir == 'northeast':
-                    self.assertEqual(direction(b, a), 'southwest')
-                elif dir == 'southwest':
-                    self.assertEqual(direction(b, a), 'northeast')
-                elif dir == 'northwest':
-                    self.assertEqual(direction(b, a), 'southeast')
-                elif dir == 'southeast':
-                    self.assertEqual(direction(b, a), 'northwest')
-                # except AssertionError as e:
-                #     e.args += (a.name, b.name)
-
 
 class PuzzleModelTests(TestCase):
     def test_dict_contents(self):

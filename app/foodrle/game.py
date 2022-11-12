@@ -57,14 +57,18 @@ def submit_guess(puzzle_id: int, guess_str: str, guess_no: int) -> bool:
         return False
 
 
-def get_game_stats(player_id: int):
-    total_games = len(Puzzle.objects.raw(
-        "SELECT * FROM foodrle_puzzle WHERE player_id = %d", [player_id]))
-    games_won = len(Puzzle.objects.raw(
-        "SELECT COUNT(*) FROM foodrle_puzzle WHERE is_win AND player_id = %d", [player_id]
-    ))
-    win_pct = round(games_won/total_games * 100)
-    stats_dict = {'wins': games_won, 'total_played': total_games, 'win_pct': win_pct}
+def get_game_stats(player: User):
+    stats_dict = {}
+    if player.is_authenticated:
+        player_id = player.id
+        total_games = len(Puzzle.objects.filter(player_id=player_id))
+        games_won = len(Puzzle.objects.filter(player_id=player_id, is_win=True))
+        if total_games != 0:
+            win_pct = round(games_won/total_games * 100)
+        else:
+            win_pct = 0
+        stats_dict = {'wins': str(games_won), 'total_played': str(total_games), 'win_pct': str(win_pct)+'%'}
+        print(stats_dict)
     return stats_dict
 
 
@@ -137,42 +141,6 @@ def distance(guessed_country: Country, answer_country: Country) -> int:
     c = 2 * asin(sqrt(a))
 
     return round(c * 3956)
-
-
-# def direction(guessed_country: Country, answer_country: Country) -> str:
-#         """
-#         Computes the direction of 'other' in relation to 'self'
-#         if the countries are within 'delta' degrees of latitude and
-#         longitude of one another bearing is used to compute
-#         direction instead
-#         """
-#         if guessed_country.name == answer_country.name:
-#             return 'same'
-        
-#         dlat = guessed_country.latitude - answer_country.latitude
-#         dlon = guessed_country.longitude - answer_country.longitude
-#         north_or_south = ''
-#         east_or_west = ''
-#         delta = 20
-#         while delta > 0:
-#             if abs(dlat) > delta:
-#                 if dlat < 0:
-#                     north_or_south = 'north'
-#                 else:
-#                     north_or_south = 'south'
-#             if abs(dlon) > delta:
-#                 if dlon < 0:
-#                     east_or_west = 'east'
-#                 else:
-#                     east_or_west = 'west'
-#             if north_or_south + east_or_west != '':
-#                 break
-#             delta = delta - 2
-
-#         if north_or_south + east_or_west == '':
-#             return bearing(guessed_country, answer_country)
-
-#         return north_or_south + east_or_west
 
 
 def bearing(guessed_country: Country, answer_country: Country) -> str:
