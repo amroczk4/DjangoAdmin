@@ -1997,7 +1997,7 @@
   pk: 28
   fields:
     name: waffle
-    country: 227
+    country: 20
     taste: 8
     main_ingredient: 5
     calories: 450
@@ -2045,7 +2045,7 @@
   pk: 34
   fields:
     name: cookie
-    country: 227
+    country: 72
     taste: 2
     main_ingredient: 8
     calories: 142
@@ -2273,20 +2273,6 @@
     taste: 7
     main_ingredient: 5
     calories: 300
-- model: foodrle.userstats
-  pk: 1
-  fields:
-    user: 1
-    curr_streak: 1
-    max_streak: 4
-    last_played: 2022-10-31
-    games_played: 11
-    win_1: 2
-    win_2: 0
-    win_3: 4
-    win_4: 2
-    win_5: 0
-    win_6: 1
 - model: foodrle.puzzle
   pk: 1
   fields:
