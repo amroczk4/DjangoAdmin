@@ -81,7 +81,7 @@
 .tile {
   font-size: 2em;
   background-color:--alternate-background-color;
-  border: .05em solid hsl(240, 2%, 23%);
+  border: .30em solid hsl(240, 2%, 23%);
   border-radius:50%;
   text-transform: capitalize;
   font-weight: bold;

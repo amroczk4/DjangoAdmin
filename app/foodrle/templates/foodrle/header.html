@@ -155,10 +155,15 @@
               </button>
           </div>
           <div class="modal-body">
-              Bunch of stats here
+             <!-- Bunch of stats here -->
+              <ul>
+                <li>Games Played: {{ request.COOKIES.total_played }}</li>
+                <li>Games Won: {{ request.COOKIES.wins }}</li>
+                <li>Win Percentage: {{ request.COOKIES.win_pct }}</li>
+              </ul>
           </div>
           <div class="modal-footer">
-              <h4>Share your stats with your friends.</h4>
+              <!-- <h4>Share your stats with your friends.</h4> -->
               <!--Add Socials here maybe?-->
           </div>
       </div>

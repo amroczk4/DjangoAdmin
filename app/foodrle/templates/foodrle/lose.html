@@ -22,7 +22,7 @@
 {% block content %}
 <div class="alert">
     <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-    Better Luck Next Time, {{user.username}}
+    Better Luck Next Time {{user.username}}
   </div>
   <div data-guess-grid class="guess-grid">
     {% for hints in hints_list %}
