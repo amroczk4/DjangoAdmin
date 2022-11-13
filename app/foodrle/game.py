@@ -28,7 +28,7 @@ def find_guess_cnt(id: int, guess_cnt: int) -> int:
     """
     puzzle = Puzzle.objects.get(pk=id)
     guess_dict = puzzle.get_guesses_as_dict()
-    print('checking guess_cnt')
+    # print('checking guess_cnt')
     if guess_can_be_made(puzzle, guess_cnt):
         return guess_cnt
     
@@ -68,7 +68,7 @@ def get_game_stats(player: User):
         else:
             win_pct = 0
         stats_dict = {'wins': str(games_won), 'total_played': str(total_games), 'win_pct': str(win_pct)+'%'}
-        print(stats_dict)
+        # print(stats_dict)
     return stats_dict
 
 
