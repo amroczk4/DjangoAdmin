@@ -10,11 +10,8 @@ from random import choice
 
 
 def homepage(request):
-    # answer = get_puzzle_of_day().ans_dish.name
-    # dishes = Dishes.objects.values_list('name', flat=True)
-    # guess_sim = choice(dishes)
     user = request.user
-    response = render(request=request, template_name='foodrle/home.html') # , context={"dishes":dishes}
+    response = render(request=request, template_name='foodrle/home.html')
     user_stats = game.get_game_stats(user)
     for k, v in user_stats.items():
         response.set_cookie(k, str(v), max_age=120)
@@ -25,26 +22,12 @@ def create_puzzle(request):
     user = request.user
     answer = game.create_puzzle_answer(user)
     guess_cnt = 0
-    stats = game.get_game_stats(user)
-    return redirect(f'/puzzles/{answer.id}/{guess_cnt}', context={"answer":answer.ans_dish.name, "player_stats": stats})
-    # return render(request=request, template_name='foodrle/home.html', context={"dishes":dishes, "guess": guess_sim, "answer": answer, "hints": hints}) 
+    return redirect(f'/puzzles/{answer.id}/{guess_cnt}', context={"answer":answer.ans_dish.name})
 
 
 def get_puzzle(request, id, guess_cnt):
-    # print(request.user) #TODO: user is null is possible
-    if guess_cnt < 0 or guess_cnt > 6:
-        return render(
-            request=request, 
-            template_name='foodrle/lose.html',
-            context={ 
-                "guess": 'GAME OVER', 
-                "answer": "CHEATER!!!", 
-                "hints_list": [], 
-                })
-
     answer = Puzzle.objects.get(pk=id).ans_dish
     dishes = Dishes.objects.values_list('name', flat=True)
-    guess_str = ''
     if request.method == "POST":
         form = GuessAnswerForm(request.POST)    
         if form.is_valid():
@@ -63,7 +46,6 @@ def get_puzzle(request, id, guess_cnt):
         request=request, template_name='foodrle/puzzle.html', 
         context={
             "dishes":dishes, 
-            "guess": guess_str, 
             "answer": answer.name, 
             "hints_list": hints_list, 
             "form": form,
@@ -75,16 +57,6 @@ def get_puzzle(request, id, guess_cnt):
 
 
 def display_hints(request, id, guess_cnt):
-    if guess_cnt <= 0 or guess_cnt > 6:
-        response = render(
-            request=request, 
-            template_name='foodrle/lose.html',
-            context={ 
-                "guess": 'GAME OVER', 
-                "answer": 'CHEATER!!!', 
-                "hints_list": [], 
-                })
-    
     puzzle = Puzzle.objects.get(pk=id)
     win = game.is_guess_correct(puzzle, guess_cnt)
     hints_list = game.get_hints(puzzle, guess_cnt)
@@ -94,7 +66,6 @@ def display_hints(request, id, guess_cnt):
             request=request, 
             template_name='foodrle/win.html',
             context={ 
-                "guess": 'WIN!!!', 
                 "answer": puzzle.ans_dish.name, 
                 "hints_list": hints_list, 
                 })
@@ -108,7 +79,6 @@ def display_hints(request, id, guess_cnt):
             request=request, 
             template_name='foodrle/lose.html',
             context={
-                "guess": 'LOSE :(', 
                 "answer": puzzle.ans_dish.name, 
                 "hints_list": hints_list, 
                 })
@@ -122,7 +92,6 @@ def display_hints(request, id, guess_cnt):
             f'/puzzles/{id}/{guess_cnt}',
             context={
                 "dishes":dishes, 
-                "guess": 'foo', 
                 "answer": puzzle.ans_dish.name, 
                 "hints_list": hints_list,
                 "form": GuessAnswerForm(),
@@ -155,7 +124,7 @@ def login_request(request):
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                messages.info(request, f"You are now logged in as {username}.")
+                messages.info(request, f"Welcome {username}.")
                 return redirect("foodrle:homepage")
             else:
                 messages.error(request, "Invalid username or password.")
