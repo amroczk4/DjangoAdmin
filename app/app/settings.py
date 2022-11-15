@@ -15,7 +15,6 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
@@ -27,7 +26,6 @@ SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
 
 # Application definition
 
@@ -43,21 +41,18 @@ INSTALLED_APPS = [
     'crispy_forms',
     'crispy_bootstrap5',
     'import_export',
-    # 'django_nose',
-    # 'coverage'
+    'django_nose',
 ]
 
 # Use nose to run all tests
-# TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 
 # Tell nose to measure coverage with these
-# NOSE_ARGS = [
-#     '--with-coverage',
-#     '--cover-package=foodrle',
-#     # '--cover-package=.',
-#     '--cover-html',
-#     '--verbosity=2'
-# ]
+NOSE_ARGS = [
+    '--with-coverage',
+    '--cover-package=foodrle',
+    '--cover-html',
+]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
@@ -106,16 +101,16 @@ JAZZMIN_SETTINGS = {
     "site_brand": "Foodrle",
 
     # Logo to use for your site, must be present in static files, used for brand on top left
-    #"site_logo": "books/img/logo.png",
+    # "site_logo": "books/img/logo.png",
 
     # Logo to use for your site, must be present in static files, used for login form logo (defaults to site_logo)
-    #"login_logo": None,
+    # "login_logo": None,
 
     # Logo to use for login form in dark themes (defaults to login_logo)
-    #"login_logo_dark": None,
+    # "login_logo_dark": None,
 
     # CSS classes that are applied to the logo above
-    #"site_logo_classes": "img-circle",
+    # "site_logo_classes": "img-circle",
 
     # Relative path to a favicon for your site, will default to site_logo if absent (ideally 32x32 px)
     "site_icon": None,
@@ -140,7 +135,7 @@ JAZZMIN_SETTINGS = {
     "topmenu_links": [
 
         # Url that gets reversed (Permissions can be added)
-        {"name": "Home",  "url": "/", "permissions": ["auth.view_user"]},
+        {"name": "Home", "url": "/", "permissions": ["auth.view_user"]},
 
         # external url that opens in a new window (Permissions can be added)
         # {"name": "Support", "url": "https://github.com/farridav/django-jazzmin/issues", "new_window": True},
@@ -247,7 +242,6 @@ DATABASES = {
     }
 }
 
-
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
@@ -266,7 +260,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
@@ -277,7 +270,6 @@ TIME_ZONE = 'America/Chicago'
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
