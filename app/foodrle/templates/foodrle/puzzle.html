@@ -23,206 +23,8 @@
 
 {% block content %}
 
-
-<!--Navbar-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/">Foodrle</a>
-    <div class="navbar-p">
-        <p>fuhd·earl</p>
-    </div> 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
-            aria-controls="navbarText" aria-expanded="False" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav ml-auto">
-            <li>
-                <button type="button" class="btn btn-link" data-toggle="modal" data-target="#ModalTutorial">
-                    <p class="tutorial-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle-fill" viewBox="0 0 16 16">
-                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
-                        </svg>
-                    </p>
-                </button>
-            </li>
-
-            <li>
-                <button type="button" class="btn btn-link" data-toggle="modal" data-target="#ModalStats">
-                    <p class="stats-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bar-chart-fill" viewBox="0 0 16 16">
-                            <path d="M1 11a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3zm5-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2z"/>
-                        </svg>
-                    </p>
-                </button>
-            </li>
-
-            <li>
-                <button type="button" class="btn btn-link" data-toggle="modal" data-target="#ModalSettings">
-                    <p class="settings-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
-                            <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
-                        </svg>
-                    </p>
-                </button>
-            </li>
-
-            {% if user.is_authenticated %}
-
-            {% if user.is_superuser %}
-            <li class="nav-item">
-                <a class="nav-link" href="/admin">Admin Panel</a>
-            </li>
-
-            {% endif %}
-
-            <li class="nav-item">
-                <a class="nav-link" href="/logout">Logout</a>
-            </li>
-
-        </ul>
-    </div>
-</nav>
+  
 <br>
-{% comment %} <div class="alert">
-    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-    Welcome, {{user.username}}
-  </div>  {% endcomment %}
-
-{% else %}
-
-<li class="nav-item">
-    <a class="nav-link" href="/login">Login</a>
-</li>
-
-</ul>
-</div>
-</nav>
-<br>
-{% endif %}
-
-</ul>
-
-</div>
-</nav>
-
-<!-- Modal for Tutorial -->
-<div class="modal fade" id="ModalTutorial" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Tutorial</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <h3>How To Play:</h3>
-                <br>
-                <p>Guess the Foodrle in 6 guesses</p>
-                <br>
-                <h4>>Insert Example Here<</h4>
-                <br>
-                <p>After each guess, you will get the main ingredient, distance from target 
-                country of origin and 3 hints on the taste profile.</p>
-                <br>
-                <h4>Can you get it right in one try?</h4>
-                <br>
-                <br>
-                <h3>A new Foodrle puzzle will be available everyday!</h3>
-            </div>
-            <div class="modal-footer">
-                <!--Add Socials here maybe?-->
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal for Stats -->
-<div class="modal fade" id="ModalStats" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Stats</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                Bunch of stats here
-            </div>
-            <div class="modal-footer">
-                <h4>Share your stats with your friends.</h4>
-                <!--Add Socials here maybe?-->
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal for Settings -->
-<div class="modal fade" id="ModalSettings" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Settings</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <hr />
-                <h4>Dark Theme</h4>
-                <div class="theme-switch-wrapper">
-                    <label class="theme-switch" for="checkbox">
-                        <input type="checkbox" id="checkbox"/>
-                        <div class="slider round"></div>
-                    </label>
-                </div>
-                <hr />
-            </div>
-            <div class="modal-footer">
-                <h4>Made By:</h4>
-                <ul>
-                    <li>Talal Ghafoor</li>
-                    <li>Matt Congreve</li>
-                    <li>Nikki Beulah</li>
-                    <li>Andrew Mroczkowski</li>
-                    <li>Alfy Varghese</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Script for dark/light mode -->
-<script>
-    const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-    const currentTheme = localStorage.getItem('theme');
-  
-    if (currentTheme) {
-        document.documentElement.setAttribute('data-theme', currentTheme);
-  
-    if (currentTheme === 'dark') {
-        toggleSwitch.checked = true;
-    }
-  }
-  
-    function switchTheme(e) {
-        if (e.target.checked) {
-            document.documentElement.setAttribute('data-theme', 'dark');
-            localStorage.setItem('theme', 'dark');
-        }
-        else {        document.documentElement.setAttribute('data-theme', 'light');
-            localStorage.setItem('theme', 'light');
-        }    
-  }
-  
-    toggleSwitch.addEventListener('change', switchTheme, false);
-  </script>
-
-
 <div class ="input-box">
     <form method="post", class="form-group">
         {% csrf_token %}
@@ -239,6 +41,10 @@
 <div data-guess-grid class="guess-grid">
     {% for hints in hints_list %}
         {% for hint in hints|slice:":1" %}
+            <div class="tile" id="blank">{{hint.guess}}</div>
+        {% endfor%}
+
+        {% for hint in hints|slice:"1:2" %}
             {% if hint.dir == 'south' %}
                 <div class="tile" id="blank">{{hint.country}}<br>{{hint.dist}}<br> <i class="bi bi-arrow-down"></i></div> 
             {% elif hint.dir == 'southeast' %}
@@ -262,7 +68,7 @@
 
 
 
-        {% for hint in hints|slice:"1:"  %}
+        {% for hint in hints|slice:"2:"  %}
 
             {% for key, value in hint.items %}
                 {% if key == 'calories'%}
@@ -287,8 +93,6 @@
             {% endfor %}
         {% endfor %}
     {% endfor %}
-    {% comment %} <div class="tile" id="blank">Real answer <br> {{answer}}</div> {% endcomment %}
-    <div class="tile" id="blank">Guess <br> {{guess}}</div>
 </div> 
 
 

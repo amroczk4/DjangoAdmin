@@ -1,5 +1,5 @@
 from random import choice
-from .models import Country, Dishes, Taste, MainIngredient, Puzzle
+from .models import User, Country, Dishes, Taste, MainIngredient, Puzzle
 from math import atan2, degrees, sin, cos, radians, asin, sqrt
 
 RED = 0
@@ -7,31 +7,101 @@ YELLOW = 1
 GREEN = 2
 
    
-def create_puzzle_answer() -> Puzzle:
+def create_puzzle_answer(user: User) -> Puzzle:
     """ Chooses a random dish to serve as the
         user puzzle, creates a puzzle entry
-        and returns it
+        and returns it. If user has an account, 
+        they are assigned the puzzle for their stats
     """
     answer = choice(Dishes.objects.all())
-    puzzle = Puzzle(ans_dish=answer)
+    if user.is_authenticated:
+        puzzle = Puzzle(ans_dish=answer, player=user)
+    else:
+        puzzle = Puzzle(ans_dish=answer)
     puzzle.save()
     return puzzle
 
 
+def find_guess_cnt(id: int, guess_cnt: int) -> int:
+    """ return the guess number for the 
+        first empty guess value (protect against user changing url)
+    """
+    puzzle = Puzzle.objects.get(pk=id)
+    guess_dict = puzzle.get_guesses_as_dict()
+    # print('checking guess_cnt')
+    if guess_can_be_made(puzzle, guess_cnt):
+        return guess_cnt
+    
+    else:
+        for i in range(1,7):
+            if guess_dict.get(f'guess{i}') == '':
+                guess_cnt = i
+                break
+        return guess_cnt
+
+
 def submit_guess(puzzle_id: int, guess_str: str, guess_no: int) -> bool:
+    puzzle = Puzzle.objects.get(pk=puzzle_id)
     if guess_no not in range(1,7):
         print("submit_guess: game over")
         return False
     if not guess_is_valid_dish(guess_str):
         print("submit_guess: invalid guess!")
         return False
-    else:
-        #TODO: make sure guess{guess_no} has not already been made; otherwise return False
-        #TODO: make sure that e.g. guess4 only enters if guess3 exists and so on
+    elif guess_is_unique(puzzle, guess_str) and guess_can_be_made(puzzle, guess_no):
         guess_dict = {f'guess{guess_no}': guess_str}
         Puzzle.objects.filter(pk=puzzle_id).update(**guess_dict)
-        print(f'submit_guess: {guess_dict} add successful!')
+        # print(f'submit_guess: {guess_dict} add successful!')
         return True
+    else:
+        return False
+
+
+def get_game_stats(player: User):
+    stats_dict = {}
+    if player.is_authenticated:
+        player_id = player.id
+        total_games = len(Puzzle.objects.filter(player_id=player_id))
+        games_won = len(Puzzle.objects.filter(player_id=player_id, is_win=True))
+        if total_games != 0:
+            win_pct = round(games_won/total_games * 100)
+        else:
+            win_pct = 0
+        stats_dict = {'wins': str(games_won), 'total_played': str(total_games), 'win_pct': str(win_pct)+'%'}
+        # print(stats_dict)
+    return stats_dict
+
+
+def guess_is_unique(puzzle: Puzzle, guess_str: str) -> bool:
+    guess_dict = puzzle.get_guesses_as_dict()
+    
+    for k, v in guess_dict.items():
+        if guess_str == v:
+            return False
+    
+    return True
+    
+
+def guess_can_be_made(puzzle: Puzzle, guess_cnt: int) -> bool:
+    guess_dict = puzzle.get_guesses_as_dict()
+    
+    # Check all prev guesses
+    for i in range(1, guess_cnt):
+        guess = guess_dict.get(f"guess{i}")
+        if guess == '':
+            print("a previous guess was not entered")
+            return False
+            
+    # Check current guess
+    # Check future guesses
+    for i in range(guess_cnt, 7):
+        guess = guess_dict.get(f'guess{i}')
+        if guess != '':
+            print("current or future guesses have been made")
+            return False
+            
+    # safe to enter the guess
+    return True
 
 
 def get_dish_by_name(dish_name: str):
@@ -73,47 +143,13 @@ def distance(guessed_country: Country, answer_country: Country) -> int:
     return round(c * 3956)
 
 
-def direction(guessed_country: Country, answer_country: Country) -> str:
-        """
-        Computes the direction of 'other' in relation to 'self'
-        if the countries are within 'delta' degrees of latitude and
-        longitude of one another bearing is used to compute
-        direction instead
-        """
-        if guessed_country.name == answer_country.name:
-            return 'same'
-        
-        dlat = guessed_country.latitude - answer_country.latitude
-        dlon = guessed_country.longitude - answer_country.longitude
-        north_or_south = ''
-        east_or_west = ''
-        delta = 20
-        while delta > 0:
-            if abs(dlat) > delta:
-                if dlat < 0:
-                    north_or_south = 'north'
-                else:
-                    north_or_south = 'south'
-            if abs(dlon) > delta:
-                if dlon < 0:
-                    east_or_west = 'east'
-                else:
-                    east_or_west = 'west'
-            if north_or_south + east_or_west != '':
-                break
-            delta = delta - 2
-
-        if north_or_south + east_or_west == '':
-            return bearing(guessed_country, answer_country)
-
-        return north_or_south + east_or_west
-
-
 def bearing(guessed_country: Country, answer_country: Country) -> str:
     """ Serving as a backup to direction function,
         computes the bearing angle between
         two countries and returns a direction string
     """
+    if guessed_country == answer_country:
+        return 'same'
     
     dest_lon = answer_country.longitude
     dest_lat = answer_country.latitude
@@ -156,10 +192,10 @@ def country_hint(answer_country: Country, guessed_country: Country):
     res = {
         'country': guessed_country.name, 
         'dist': str(distance(guessed_country, answer_country))+' Mi',
-        'dir': direction(guessed_country, answer_country)
+        'dir': bearing(guessed_country, answer_country) # direction
         }
     
-    print(f'\tCountry: {res}')
+    # print(f'\tCountry: {res}')
     return res
 
 
@@ -172,7 +208,7 @@ def main_ingredient_hint(answer: MainIngredient, guess_ingr: MainIngredient):
     else:
         res.update({guess_ingr.name: RED})
         
-    print(f'\tIngredient: {res}')
+    # print(f'\tIngredient: {res}')
     return res
 
 
@@ -184,7 +220,7 @@ def calorie_hint(answer: Dishes, guess_dish: Dishes):
     """
     diff = answer.calories - guess_dish.calories
     res = {'calories': diff}
-    print(f'\tCalories: {res}')
+    # print(f'\tCalories: {res}')
     return res
 
 
@@ -194,7 +230,6 @@ def taste_hint (answer: Taste, guess_dish: Taste):
     guess_dict = guess_dish.__dict__
     
     for k, v in guess_dict.items():
-        # NEEDS to be nested if-then-else to work!!!
         if v == True: 
             if ans_dict.get(k) == True:
                 res.update({k: GREEN})
@@ -202,7 +237,7 @@ def taste_hint (answer: Taste, guess_dish: Taste):
                 res.update({k: RED})
     if len(res) < 3:
         res.update({'placeholder': ''})
-    print("\tTaste: "+ str(res))
+    # print("\tTaste: "+ str(res))
     return res
 
 
@@ -214,13 +249,14 @@ def is_guess_correct(puzzle: Puzzle, guess_cnt: int) -> bool:
 
 
 def collect_hints(guess_dish: Dishes, answer_dish: Dishes):
-        
+    
+    guess_dict = {'guess': guess_dish.name}
     country_dict = country_hint(answer_dish.country, guess_dish.country)
     taste_dict = taste_hint(answer_dish.taste, guess_dish.taste)
     calorie_dict = calorie_hint(answer_dish, guess_dish)
     ingr_dict = main_ingredient_hint(answer_dish.main_ingredient, guess_dish.main_ingredient)
     
-    return [country_dict, taste_dict, calorie_dict, ingr_dict]
+    return [guess_dict, country_dict, taste_dict, calorie_dict, ingr_dict]
 
 
 def get_hints(puzzle: Puzzle, guess_cnt: int):
@@ -231,6 +267,8 @@ def get_hints(puzzle: Puzzle, guess_cnt: int):
     hints_list = []
     for i in range(1, guess_cnt+1):
         guess_n = guess_dict.get(f'guess{i}')
+        if guess_n == '':
+            break
         dish_n = get_dish_by_name(guess_n)
         hint_n = collect_hints(dish_n, answer)
         hints_list.append(hint_n)

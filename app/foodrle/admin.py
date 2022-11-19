@@ -1,9 +1,7 @@
 from django.contrib import admin
 
 from import_export.admin import ImportExportActionModelAdmin
-from .models import Dishes, Puzzle, UserStats, MainIngredient, Taste, Country
-
-admin.site.register(UserStats)
+from .models import Dishes, Puzzle, MainIngredient, Taste, Country
 
 
 @admin.register(Country)
@@ -21,15 +19,9 @@ class MainIngredientAdmin(ImportExportActionModelAdmin):
     list_display = ("id", "name", "food_group")
 
 
-# @admin.register(Puzzle)
-# class PuzzleAdmin(ImportExportActionModelAdmin):
-#     list_display = ("id", "last_used", "dish")
-#     pass
-
-
 @admin.register(Puzzle)
 class PuzzleAdmin(ImportExportActionModelAdmin):
-    list_display = ("id", "ans_dish", "guess1", "guess2", "guess3", "guess4", "guess5", "guess6")
+    list_display = ("id", "player", "is_win", "ans_dish", "guess1", "guess2", "guess3", "guess4", "guess5", "guess6")
 
 
 @admin.register(Dishes)

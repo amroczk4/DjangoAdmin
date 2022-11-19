@@ -61,30 +61,11 @@ class Dishes(models.Model):
         return f"{self.name}"
 
 
-class UserStats(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    curr_streak = models.BigIntegerField(default=0)
-    max_streak = models.BigIntegerField(default=0)
-    last_played = models.DateField()
-    games_played = models.BigIntegerField(default=0)
-    win_1 = models.IntegerField(default=0)
-    win_2 = models.IntegerField(default=0)
-    win_3 = models.IntegerField(default=0)
-    win_4 = models.IntegerField(default=0)
-    win_5 = models.IntegerField(default=0)
-    win_6 = models.IntegerField(default=0)
-
-    def get_win_pct(self):
-        wins = self.win_1 + self.win_2 + self.win_3 + self.win_4 + self.win_5 + self.win_6
-        return wins / self.games_played * 100
-
-    def __str__(self):
-        return str(self.user)
-
-
 class Puzzle(models.Model):
     id = models.BigAutoField(primary_key=True)
     ans_dish = models.ForeignKey(Dishes, on_delete=models.CASCADE)
+    player = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
+    is_win = models.BooleanField(default=False)
     guess1 = models.CharField(max_length=128, blank=True, default='')
     guess2 = models.CharField(max_length=128, blank=True, default='')
     guess3 = models.CharField(max_length=128, blank=True, default='')
