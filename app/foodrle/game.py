@@ -6,7 +6,7 @@ RED = 0
 YELLOW = 1
 GREEN = 2
 
-   
+
 def create_puzzle_answer(user: User) -> Puzzle:
     """ Chooses a random dish to serve as the
         user puzzle, creates a puzzle entry
@@ -31,9 +31,9 @@ def find_guess_cnt(id: int, guess_cnt: int) -> int:
     # print('checking guess_cnt')
     if guess_can_be_made(puzzle, guess_cnt):
         return guess_cnt
-    
+
     else:
-        for i in range(1,7):
+        for i in range(1, 7):
             if guess_dict.get(f'guess{i}') == '':
                 guess_cnt = i
                 break
@@ -42,7 +42,7 @@ def find_guess_cnt(id: int, guess_cnt: int) -> int:
 
 def submit_guess(puzzle_id: int, guess_str: str, guess_no: int) -> bool:
     puzzle = Puzzle.objects.get(pk=puzzle_id)
-    if guess_no not in range(1,7):
+    if guess_no not in range(1, 7):
         print("submit_guess: game over")
         return False
     if not guess_is_valid_dish(guess_str):
@@ -64,34 +64,34 @@ def get_game_stats(player: User):
         total_games = len(Puzzle.objects.filter(player_id=player_id))
         games_won = len(Puzzle.objects.filter(player_id=player_id, is_win=True))
         if total_games != 0:
-            win_pct = round(games_won/total_games * 100)
+            win_pct = round(games_won / total_games * 100)
         else:
             win_pct = 0
-        stats_dict = {'wins': str(games_won), 'total_played': str(total_games), 'win_pct': str(win_pct)+'%'}
+        stats_dict = {'wins': str(games_won), 'total_played': str(total_games), 'win_pct': str(win_pct) + '%'}
         # print(stats_dict)
     return stats_dict
 
 
 def guess_is_unique(puzzle: Puzzle, guess_str: str) -> bool:
     guess_dict = puzzle.get_guesses_as_dict()
-    
+
     for k, v in guess_dict.items():
         if guess_str == v:
             return False
-    
+
     return True
-    
+
 
 def guess_can_be_made(puzzle: Puzzle, guess_cnt: int) -> bool:
     guess_dict = puzzle.get_guesses_as_dict()
-    
+
     # Check all prev guesses
     for i in range(1, guess_cnt):
         guess = guess_dict.get(f"guess{i}")
         if guess == '':
             print("a previous guess was not entered")
             return False
-            
+
     # Check current guess
     # Check future guesses
     for i in range(guess_cnt, 7):
@@ -99,7 +99,7 @@ def guess_can_be_made(puzzle: Puzzle, guess_cnt: int) -> bool:
         if guess != '':
             print("current or future guesses have been made")
             return False
-            
+
     # safe to enter the guess
     return True
 
@@ -120,7 +120,7 @@ def guess_is_valid_dish(guess_str: str) -> bool:
     else:
         return True
 
-        
+
 def distance(guessed_country: Country, answer_country: Country) -> int:
     """ Computes the distance in miles
         between guessed_country and answer_country
@@ -129,9 +129,9 @@ def distance(guessed_country: Country, answer_country: Country) -> int:
         return 0
 
     start_lat, start_lon, dest_lat, dest_lon = map(radians,
-                                                    [guessed_country.latitude, 
-                                                    guessed_country.longitude, 
-                                                    answer_country.latitude, 
+                                                   [guessed_country.latitude,
+                                                    guessed_country.longitude,
+                                                    answer_country.latitude,
                                                     answer_country.longitude])
     # Haversine formula
     dlon = start_lon - dest_lon
@@ -150,7 +150,7 @@ def bearing(guessed_country: Country, answer_country: Country) -> str:
     """
     if guessed_country == answer_country:
         return 'same'
-    
+
     dest_lon = answer_country.longitude
     dest_lat = answer_country.latitude
     start_lat = guessed_country.latitude
@@ -166,15 +166,15 @@ def bearing(guessed_country: Country, answer_country: Country) -> str:
             return 'east'
         elif 112 < brng <= 157:
             return 'southeast'
-        elif 157< brng <= 202:
+        elif 157 < brng <= 202:
             return 'south'
         elif 202 < brng <= 247:
             return 'southwest'
         elif 247 < brng <= 292:
             return 'west'
         else:
-            return 'northwest' 
-    #
+            return 'northwest'
+            #
 
     start_lat, start_lon, dest_lat, dest_lon = map(radians, [start_lat, start_lon, dest_lat, dest_lon])
 
@@ -190,11 +190,11 @@ def bearing(guessed_country: Country, answer_country: Country) -> str:
 
 def country_hint(answer_country: Country, guessed_country: Country):
     res = {
-        'country': guessed_country.name, 
-        'dist': str(distance(guessed_country, answer_country))+' Mi',
-        'dir': bearing(guessed_country, answer_country) # direction
-        }
-    
+        'country': guessed_country.name,
+        'dist': str(distance(guessed_country, answer_country)) + ' Mi',
+        'dir': bearing(guessed_country, answer_country)  # direction
+    }
+
     # print(f'\tCountry: {res}')
     return res
 
@@ -207,7 +207,7 @@ def main_ingredient_hint(answer: MainIngredient, guess_ingr: MainIngredient):
         res.update({guess_ingr.name: YELLOW})
     else:
         res.update({guess_ingr.name: RED})
-        
+
     # print(f'\tIngredient: {res}')
     return res
 
@@ -224,14 +224,14 @@ def calorie_hint(answer: Dishes, guess_dish: Dishes):
     return res
 
 
-def taste_hint (answer: Taste, guess_dish: Taste):
+def taste_hint(answer: Taste, guess_taste: Taste):
     res = {}
     ans_dict = answer.__dict__
-    guess_dict = guess_dish.__dict__
-    
+    guess_dict = guess_taste.__dict__
+
     for k, v in guess_dict.items():
-        if v == True: 
-            if ans_dict.get(k) == True:
+        if v:
+            if ans_dict.get(k):
                 res.update({k: GREEN})
             else:
                 res.update({k: RED})
@@ -249,29 +249,27 @@ def is_guess_correct(puzzle: Puzzle, guess_cnt: int) -> bool:
 
 
 def collect_hints(guess_dish: Dishes, answer_dish: Dishes):
-    
     guess_dict = {'guess': guess_dish.name}
     country_dict = country_hint(answer_dish.country, guess_dish.country)
     taste_dict = taste_hint(answer_dish.taste, guess_dish.taste)
     calorie_dict = calorie_hint(answer_dish, guess_dish)
     ingr_dict = main_ingredient_hint(answer_dish.main_ingredient, guess_dish.main_ingredient)
-    
+
     return [guess_dict, country_dict, taste_dict, calorie_dict, ingr_dict]
 
 
 def get_hints(puzzle: Puzzle, guess_cnt: int):
-    if guess_cnt not in range(1,7):
+    if guess_cnt not in range(1, 7):
         return []
     guess_dict = puzzle.get_guesses_as_dict()
     answer = puzzle.ans_dish
     hints_list = []
-    for i in range(1, guess_cnt+1):
+    for i in range(1, guess_cnt + 1):
         guess_n = guess_dict.get(f'guess{i}')
         if guess_n == '':
             break
         dish_n = get_dish_by_name(guess_n)
         hint_n = collect_hints(dish_n, answer)
         hints_list.append(hint_n)
-    
-    return hints_list
 
+    return hints_list
