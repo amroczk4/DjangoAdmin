@@ -230,8 +230,8 @@ def taste_hint(answer: Taste, guess_taste: Taste):
     guess_dict = guess_taste.__dict__
 
     for k, v in guess_dict.items():
-        if v:
-            if ans_dict.get(k):
+        if v == True:
+            if ans_dict.get(k) == True:
                 res.update({k: GREEN})
             else:
                 res.update({k: RED})

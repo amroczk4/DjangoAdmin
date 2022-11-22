@@ -79,14 +79,13 @@ class TestGenericMethods(TestCase):
     def test_find_guess_cnt_some_guesses(self):
         user = User.objects.get(pk=1)
         puzzle = create_puzzle_answer(user)
-        beginning_guess_cnt = 1
-        submit_guess(puzzle.id, 'slurm', beginning_guess_cnt)
-        guess_cnt = find_guess_cnt(puzzle.id, beginning_guess_cnt + 1)
-        submit_guess(puzzle.id, 'plumbus', beginning_guess_cnt)
-        guess_cnt = find_guess_cnt(puzzle.id, guess_cnt + 1)
-        submit_guess(puzzle.id, 'bingbong', guess_cnt)
-        guess_cnt = find_guess_cnt(puzzle.id, guess_cnt + 1)
-        self.assertEqual(guess_cnt, 3)
+        ans_name = puzzle.ans_dish.name
+        random_dishes = random.choices(list(Dishes.objects.exclude(name=ans_name)), k=3)
+        guess_cnt = 1
+        for rd in random_dishes:
+            guess_cnt += 1
+            submit_guess(puzzle.id, rd.name, guess_cnt)
+        self.assertEqual(guess_cnt, 4)
 
     # def test_is_guess_correct(self):
     #     user = User.objects.get(pk=1)
